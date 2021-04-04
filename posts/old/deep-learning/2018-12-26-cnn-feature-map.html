@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>CNN-feature-map - Alphacks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="CNN-feature-map" />
+<meta property="og:description" content="转至: [Link] CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经网络需要训练的参数的个数。总之，卷积网络的核心思想是将：局部感受野、权值共享" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html" />
+<meta property="og:image" content="https://example.com/logo.png"/>
+<meta property="article:published_time" content="2018-12-26T17:00:59+08:00" />
+<meta property="article:modified_time" content="2018-12-26T17:00:59+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="CNN-feature-map"/>
+<meta name="twitter:description" content="转至: [Link] CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经网络需要训练的参数的个数。总之，卷积网络的核心思想是将：局部感受野、权值共享"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/assets/colin_html/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html" /><link rel="prev" href="https://example.com/posts/old/2018-12-21-adversarial-model.html" /><link rel="next" href="https://example.com/posts/old/deep-learning/cnn.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "CNN-feature-map",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/old\/deep-learning\/2018-12-26-cnn-feature-map.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  2330 ,
+        "url": "https:\/\/example.com\/posts\/old\/deep-learning\/2018-12-26-cnn-feature-map.html","datePublished": "2018-12-26T17:00:59+08:00","dateModified": "2018-12-26T17:00:59+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Alphacks"
+            },"description": ""
+    }
+    </script></head>
+
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div>
+
+        <div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><div class="menu-inner"><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/tags.html"> 标签 </a><a class="menu-item" href="/categories.html"> 分类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/tags.html" title="">标签</a><a class="menu-item" href="/categories.html" title="">分类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="details toc" id="toc-static"  kept="">
+            <div class="details-summary toc-title">
+                <span>目录</span>
+                <span><i class="details-icon fas fa-angle-right"></i></span>
+            </div>
+            <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">CNN-feature-map</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Alphacks</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/unsort.html"><i class="far fa-folder fa-fw"></i>unsort</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-12-26">2018-12-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2330 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="content" id="content"><blockquote>
+<p>转至: [<a href="https://blog.csdn.net/dengheCSDN/article/details/77848246" target="_blank" rel="noopener noreffer">Link</a>]</p>
+</blockquote>
+<p>CNN一个牛逼的地方就在于通过<strong>感受野</strong>和<strong>权值共享</strong>减少了神经网络需要训练的参数的个数。总之，卷积网络的核心思想是将：<strong>局部感受野</strong>、<strong>权值共享</strong>（或者权值复制）以及时间或空间亚采样这三种结构思想结合起来获得了某种程度的位移、尺度、形变不变性。</p>
+<p>​       下图左：如果我们有1000x1000像素的图像，有1百万个隐层神经元，那么他们全连接的话（每个隐层神经元都连接图像的每一个像素点），就有1000x1000x1000000=10^12个连接，也就是10^12个权值参数。然而图像的空间联系是局部的，就像人是通过一个局部的感受野去感受外界图像一样，每一个神经元都不需要对全局图像做感受，每个神经元只感受局部的图像区域，然后在更高层，将这些感受不同局部的神经元综合起来就可以得到全局的信息了。这样，我们就可以减少连接的数目，也就是减少神经网络需要训练的权值参数的个数了。如下图右：假如局部感受野是10x10，隐层每个感受野只需要和这10x10的局部图像相连接，所以1百万个隐层神经元就只有一亿个连接，即10^8个参数。比原来减少了四个0（数量级），这样训练起来就没那么费力了，但还是感觉很多的啊，那还有啥办法没？</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/2018-12-26-CNN-feature-map/20131230210240250.jpg"
+        data-srcset="assets/2018-12-26-CNN-feature-map/20131230210240250.jpg, assets/2018-12-26-CNN-feature-map/20131230210240250.jpg 1.5x, assets/2018-12-26-CNN-feature-map/20131230210240250.jpg 2x"
+        data-sizes="auto"
+        alt="assets/2018-12-26-CNN-feature-map/20131230210240250.jpg"
+        title="img" /></p>
+<p>​       我们知道，隐含层的每一个神经元都连接10x10个图像区域，也就是说每一个神经元存在10x10=100个连接权值参数。那如果我们每个神经元这100个参数是相同的呢？也就是说每个神经元用的是同一个卷积核去卷积图像。这样我们就只有多少个参数？？只有100个参数啊！不管你隐层的神经元个数有多少，两层间的连接我只有100个参数啊！这就是权值共享。
+好了，你就会想，这样提取特征也忒不靠谱吧，这样你只提取了一种特征啊？对了，真聪明，我们需要提取多种特征对不？假如一种滤波器，也就是一种卷积核就是提出图像的一种特征，例如某个方向的边缘。那么我们需要提取不同的特征，怎么办，加多几种滤波器不就行了吗？对了。所以假设我们加到100种滤波器，每种滤波器的参数不一样，表示它提出输入图像的不同特征，例如不同的边缘。这样每种滤波器去卷积图像就得到对图像的不同特征的放映，我们称之为Feature Map。所以100种卷积核就有100个Feature Map。这100个Feature Map就组成了一层神经元。到这个时候明了了吧。我们这一层有多少个参数了？100种卷积核x每种卷积核共享100个参数=100x100=10K，也就是1万个参数。才1万个参数。见下图右：不同的颜色表达不同的滤波器。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/2018-12-26-CNN-feature-map/20131230210323484.jpg"
+        data-srcset="assets/2018-12-26-CNN-feature-map/20131230210323484.jpg, assets/2018-12-26-CNN-feature-map/20131230210323484.jpg 1.5x, assets/2018-12-26-CNN-feature-map/20131230210323484.jpg 2x"
+        data-sizes="auto"
+        alt="assets/2018-12-26-CNN-feature-map/20131230210323484.jpg"
+        title="img" /></p>
+<p>​       嘿哟，遗漏一个问题了。刚才说隐层的参数个数和隐层的神经元个数无关，只和滤波器的大小和滤波器种类的多少有关。那么隐层的神经元个数怎么确定呢？它和原图像，也就是输入的大小（神经元个数）、滤波器的大小和滤波器在图像中的滑动步长都有关！例如，我的图像是1000x1000像素，而滤波器大小是10x10，假设滤波器没有重叠，也就是步长为10，这样隐层的神经元个数就是(1000x1000 )/ (10x10)=100x100个神经元了，假设步长是8，也就是卷积核会重叠两个像素，那么……我就不算了，思想懂了就好。注意了，这只是一种滤波器，也就是一个Feature Map的神经元个数哦，如果100个Feature Map就是100倍了。由此可见，图像越大，神经元个数和需要训练的权值参数个数的贫富差距就越大。</p>
+<p>feature map计算方法：</p>
+<p>在CNN网络中roi从原图映射到feature map中的计算方法</p>
+<p>INPUT为32<em>32，filter的大小即kernel size为5</em>5，stride = 1，pading=0,卷积后得到的feature maps边长的计算公式是：</p>
+<p>output_h =（originalSize_h+padding*2-kernelSize_h）/stride +1</p>
+<p>所以，卷积层的feature map的变长为：conv1_h=（32-5）/1 + 1 = 28</p>
+<p>卷积层的feature maps尺寸为28*28.</p>
+<p>由于同一feature map共享权值，所以总共有6*（5*5+1）=156个参数。</p>
+<p>卷积层之后是pooling层，也叫下采样层或子采样层（subsampling）。它是利用图像局部相关性的原理，对图像进行子抽样，这样在保留有用信息的同时可以减少数据处理量。pooling层不会减少feature maps的数量，只会缩减其尺寸。常用的pooling方法有两种，一种是取最大值，一种是取平均值。</p>
+<p>pooling过程是非重叠的，S2中的每个点对应C1中2<em>2的区域（也叫感受野），也就是说kernelSize=2，stride=2，所以pool1_h = (onv1_h - kernelSize_h)/stride +1 = (28-2)/2+1=14。pooling后的feature map尺寸为14</em>14.</p>
+<p>fast rcnn以及faster rcnn做检测任务的时候，涉及到从图像的roi区域到feature map中roi的映射，然后再进行roi_pooling之类的操作。</p>
+<p>​       比如图像的大小是（600,800），在经过一系列的卷积以及pooling操作之后在某一个层中得到的feature map大小是（38,50），那么在原图中roi是（30,40,200,400），</p>
+<p>在feature map中对应的roi区域应该是</p>
+<p>roi_start_w = round(30 * spatial_scale);</p>
+<p>roi_start_h = round(40 * spatial_scale);</p>
+<p>roi_end_w = round(200 * spatial_scale);</p>
+<p>roi_end_h = round(400 * spatial_scale);</p>
+<p>其中spatial_scale的计算方式是spatial_scale=round(38/600)=round(50/800)=0.0625，所以在feature map中的roi区域[roi_start_w,roi_start_h,roi_end_w,roi_end_h]=[2,3,13,25];</p>
+<p>具体的代码可以参见caffe中roi_pooling_layer.cpp</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2018-12-26</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/unsort.html">unsort</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/old/2018-12-21-adversarial-model.html" class="prev" rel="prev" title="adversarial-model"><i class="fas fa-angle-left fa-fw"></i>adversarial-model</a>
+            <a href="/posts/old/deep-learning/cnn.html" class="next" rel="next" title="cnn">cnn<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphacks</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+
+    
+<section class="widget">
+
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" title="" target="_blank" style="color:red">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://example.com/posts/2104040035-hello.html" title="hello">hello</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html" title="attention-transfomer-bert">attention-transfomer-bert</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905101329-python-call.html" title="python-call">python-call</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/reading-paper/list_paper.html" title="论文阅读">论文阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+    </li>
+    
+</ul>
+
+    
+
+    
+<section class="widget">
+    <h3 class="widget-title">特栏</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/reading-except.html" title="">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note.html" title="">阅读笔记</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"Alphacks","id-2":"Alphacks","id-3":"Alphacks"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":null,"cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

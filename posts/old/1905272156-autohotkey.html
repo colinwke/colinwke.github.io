@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>AutoHotKey - Alphacks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="AutoHotKey" />
+<meta property="og:description" content="1 下载AutoHotKey 官网, 点我直接官网下载 2 编辑脚本 另存下面脚本为capslock_plus.ahk 注: 下面脚本只适用于AutoHot" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/old/1905272156-autohotkey.html" />
+<meta property="og:image" content="https://example.com/logo.png"/>
+<meta property="article:published_time" content="2019-05-27T21:56:17+08:00" />
+<meta property="article:modified_time" content="2019-05-27T21:56:17+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="AutoHotKey"/>
+<meta name="twitter:description" content="1 下载AutoHotKey 官网, 点我直接官网下载 2 编辑脚本 另存下面脚本为capslock_plus.ahk 注: 下面脚本只适用于AutoHot"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/assets/colin_html/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/1905272156-autohotkey.html" /><link rel="prev" href="https://example.com/posts/old/1905121610-reading-may.html" /><link rel="next" href="https://example.com/posts/old/1906101549-proxy.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "AutoHotKey",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/old\/1905272156-autohotkey.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  998 ,
+        "url": "https:\/\/example.com\/posts\/old\/1905272156-autohotkey.html","datePublished": "2019-05-27T21:56:17+08:00","dateModified": "2019-05-27T21:56:17+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "wangke"
+            },"description": ""
+    }
+    </script></head>
+
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div>
+
+        <div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><div class="menu-inner"><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/tags.html"> 标签 </a><a class="menu-item" href="/categories.html"> 分类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/tags.html" title="">标签</a><a class="menu-item" href="/categories.html" title="">分类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="details toc" id="toc-static"  kept="">
+            <div class="details-summary toc-title">
+                <span>目录</span>
+                <span><i class="details-icon fas fa-angle-right"></i></span>
+            </div>
+            <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-下载autohotkey">1 下载AutoHotKey</a></li>
+        <li><a href="#2-编辑脚本">2 编辑脚本</a></li>
+        <li><a href="#3-修改打开方式">3 修改打开方式</a></li>
+        <li><a href="#4-运行">4 运行</a></li>
+        <li><a href="#5-映射表">5 映射表</a></li>
+        <li><a href="#其他参考">其他参考</a></li>
+        <li><a href="#几个capslock">几个capslock</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">AutoHotKey</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>wangke</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/unsort.html"><i class="far fa-folder fa-fw"></i>unsort</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-05-27">2019-05-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 998 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="content" id="content"><h3 id="1-下载autohotkey">1 下载AutoHotKey</h3>
+<p><a href="https://www.autohotkey.com/" target="_blank" rel="noopener noreffer">官网</a>, <a href="https://www.autohotkey.com/download/1.1/AutoHotkey_1.1.30.03.zip" target="_blank" rel="noopener noreffer">点我直接官网下载</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1905272156-AutoHotKey/1558966352586.png"
+        data-srcset="assets/1905272156-AutoHotKey/1558966352586.png, assets/1905272156-AutoHotKey/1558966352586.png 1.5x, assets/1905272156-AutoHotKey/1558966352586.png 2x"
+        data-sizes="auto"
+        alt="assets/1905272156-AutoHotKey/1558966352586.png"
+        title="1558966352586" /></p>
+<h3 id="2-编辑脚本">2 编辑脚本</h3>
+<p>另存下面脚本为<code>capslock_plus.ahk</code></p>
+<p><strong>注:</strong> 下面脚本只适用于AutoHotKey1.XXX, 不使用于2.XXX(V2和其他版本有区别!)<a href="assets/1905272156-AutoHotKey/capslock_plus.ahk" rel="">直接下载</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">;</span> <span class="n">Autohotkey</span> <span class="n">Capslock</span> <span class="n">Remapping</span> <span class="n">Script</span>
+<span class="p">;</span> <span class="n">Colinwke</span>
+<span class="p">;</span> <span class="n">More</span> <span class="n">info</span> <span class="n">at</span><span class="p">:</span> <span class="n">TODO</span>
+<span class="p">;</span>
+<span class="p">;</span> <span class="n">Functionality</span><span class="p">:</span>
+<span class="p">;</span> <span class="o">-</span> <span class="n">Deactivates</span> <span class="n">capslock</span> <span class="k">for</span> <span class="n">normal</span> <span class="p">(</span><span class="n">accidental</span><span class="p">)</span> <span class="n">use</span><span class="o">.</span>
+<span class="p">;</span> <span class="o">-</span> <span class="n">Access</span> <span class="n">the</span> <span class="n">following</span> <span class="n">functions</span> <span class="n">when</span> <span class="n">pressing</span> <span class="n">Capslock</span><span class="p">:</span>
+<span class="p">;</span>     <span class="n">Cursor</span> <span class="n">keys</span>           <span class="o">-</span> <span class="n">J</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">I</span>
+<span class="p">;</span>     <span class="n">Home</span><span class="p">,</span> <span class="n">PgDn</span><span class="p">,</span> <span class="n">PgUp</span><span class="p">,</span> <span class="n">End</span> <span class="o">-</span> <span class="n">U</span><span class="p">,</span> <span class="n">O</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="p">;</span>
+<span class="p">;</span>     <span class="n">Backspace</span> <span class="ow">and</span> <span class="n">Del</span>     <span class="o">-</span> <span class="n">Y</span><span class="p">,</span> <span class="n">H</span>
+<span class="p">;</span>
+<span class="p">;</span>     <span class="n">Insert</span>                <span class="o">-</span> <span class="p">[</span>
+<span class="p">;</span>     <span class="n">Close</span> <span class="n">tab</span><span class="p">,</span> <span class="n">window</span>     <span class="o">-</span> <span class="n">W</span><span class="p">,</span> <span class="n">N</span>
+<span class="p">;</span>     <span class="n">Previous</span><span class="p">,</span> <span class="nb">next</span> <span class="n">tab</span>    <span class="o">-</span> <span class="n">M</span><span class="p">,</span> <span class="p">,</span>
+<span class="p">;</span>     <span class="n">Undo</span><span class="p">,</span> <span class="n">redo</span>            <span class="o">-</span> <span class="o">.</span><span class="p">,</span> <span class="o">/</span>
+<span class="p">;</span>     <span class="n">Menu</span>                  <span class="o">-</span> <span class="s1">&#39;</span>
+<span class="p">;</span> <span class="o">-</span> <span class="n">Numpad</span> <span class="n">at</span> <span class="n">the</span> <span class="n">right</span> <span class="n">hand</span> <span class="n">resting</span> <span class="n">position</span> <span class="n">when</span> <span class="n">holding</span> <span class="n">Ctrl</span><span class="o">+</span><span class="n">Shift</span><span class="o">+</span><span class="n">Alt</span> <span class="p">(</span><span class="n">using</span> <span class="n">keys</span> <span class="n">m</span><span class="p">,</span><span class="o">.</span><span class="n">jkluio</span> <span class="ow">and</span> <span class="n">spacebar</span><span class="p">)</span>
+<span class="p">;</span>
+<span class="p">;</span> <span class="n">To</span> <span class="n">use</span> <span class="n">capslock</span> <span class="k">as</span> <span class="n">you</span> <span class="n">normally</span> <span class="n">would</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">press</span> <span class="n">WinKey</span> <span class="o">+</span> <span class="n">Capslock</span>
+<span class="p">;</span> <span class="n">This</span> <span class="n">script</span> <span class="n">update</span> <span class="kn">from</span> <span class="nn">Danik</span><span class="s1">&#39;s work: https://gist.github.com/Danik/5808330</span>
+
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="c1">#Persistent</span>
+<span class="n">SetCapsLockState</span><span class="p">,</span> <span class="n">AlwaysOff</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Capslock</span> <span class="o">+</span> <span class="p">(</span><span class="n">ikjl</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">up</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">i</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Up</span> <span class="n">DownTemp</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">i</span> <span class="n">up</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Up</span> <span class="n">Up</span><span class="p">}</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">k</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Down</span> <span class="n">DownTemp</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">k</span> <span class="n">up</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Down</span> <span class="n">Up</span><span class="p">}</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">j</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Left</span> <span class="n">DownTemp</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">j</span> <span class="n">up</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Left</span> <span class="n">Up</span><span class="p">}</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">l</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Right</span> <span class="n">DownTemp</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">l</span> <span class="n">up</span><span class="p">::</span><span class="n">Send</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Right</span> <span class="n">Up</span><span class="p">}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Capslock</span> <span class="o">+</span> <span class="p">(</span><span class="n">uop</span><span class="p">;)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">home</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">pgup</span><span class="p">,</span> <span class="n">pgdown</span><span class="p">)</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">u</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Home</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">u</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Home</span> <span class="n">Up</span><span class="p">}</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">o</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">End</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">o</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">End</span> <span class="n">Up</span><span class="p">}</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="err">`</span><span class="p">;::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">PgDn</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="err">`</span><span class="p">;</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">PgDn</span> <span class="n">Up</span><span class="p">}</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">p</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">PgUp</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">p</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">PgUp</span> <span class="n">Up</span><span class="p">}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Capslock</span> <span class="o">+</span> <span class="p">(</span><span class="n">nw</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">close</span> <span class="n">tab</span><span class="o">|</span><span class="n">window</span><span class="p">)</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">n</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">down</span><span class="p">}{</span><span class="n">F4</span><span class="p">}{</span><span class="n">Ctrl</span> <span class="n">up</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">w</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Alt</span> <span class="n">down</span><span class="p">}{</span><span class="n">F4</span><span class="p">}{</span><span class="n">Alt</span> <span class="n">up</span><span class="p">}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Capslock</span> <span class="o">+</span> <span class="p">([</span><span class="n">hy</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">insert</span><span class="p">,</span> <span class="n">backspace</span><span class="p">,</span> <span class="k">del</span><span class="p">)</span>
+
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="p">[::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Insert</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">y</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">Del</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">h</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">BS</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">BS</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Blind</span><span class="p">}{</span><span class="n">BS</span> <span class="n">Down</span><span class="p">}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Capslock</span> <span class="o">+</span> <span class="p">(</span><span class="n">m</span><span class="p">,)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">prev</span><span class="o">|</span><span class="nb">next</span> <span class="n">tab</span><span class="p">)</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">m</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Down</span><span class="p">}{</span><span class="n">Tab</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">m</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Up</span><span class="p">}{</span><span class="n">Tab</span> <span class="n">Up</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="p">,::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Down</span><span class="p">}{</span><span class="n">Shift</span> <span class="n">Down</span><span class="p">}{</span><span class="n">Tab</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="p">,</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Up</span><span class="p">}{</span><span class="n">Shift</span> <span class="n">Up</span><span class="p">}{</span><span class="n">Tab</span> <span class="n">Up</span><span class="p">}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Capslock</span> <span class="o">+</span> <span class="p">(</span><span class="o">./</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">undo</span><span class="p">,</span> <span class="n">redo</span><span class="p">)</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="o">.</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Down</span><span class="p">}{</span><span class="n">z</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="o">.</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Up</span><span class="p">}{</span><span class="n">z</span> <span class="n">Up</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="o">/</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Down</span><span class="p">}{</span><span class="n">y</span> <span class="n">Down</span><span class="p">}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="o">/</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">Up</span><span class="p">}{</span><span class="n">y</span> <span class="n">Up</span><span class="p">}</span>
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Capslock</span> <span class="o">+</span> <span class="p">;</span> <span class="o">-&gt;</span> <span class="n">menu</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="s1">&#39;::Send {Blind}{AppsKey DownTemp}</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="s1">&#39; up::Send {Blind}{AppsKey Up}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Numpad</span> <span class="n">using</span> <span class="n">Ctrl</span><span class="o">+</span><span class="n">Shift</span><span class="o">+</span><span class="n">Alt</span> <span class="o">+</span> <span class="n">m</span><span class="p">,</span><span class="o">.</span><span class="n">jkluio</span> <span class="ow">or</span> <span class="n">space</span>
+
+<span class="o">+^</span><span class="err">!</span><span class="n">Space</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad0</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="n">m</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad1</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="p">,::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad2</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="o">.</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad3</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="n">j</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad4</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="n">k</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad5</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="n">l</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad6</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="n">u</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad7</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="n">i</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad8</span><span class="p">}</span>
+<span class="o">+^</span><span class="err">!</span><span class="n">o</span><span class="p">::</span> <span class="n">SendInput</span> <span class="p">{</span><span class="n">Numpad9</span><span class="p">}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Make</span> <span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">Enter</span> <span class="n">equivalent</span> <span class="n">to</span> <span class="n">Control</span><span class="o">+</span><span class="n">Enter</span>
+<span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">Enter</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">down</span><span class="p">}{</span><span class="n">Enter</span><span class="p">}{</span><span class="n">Ctrl</span> <span class="n">up</span><span class="p">}</span>
+
+<span class="p">;</span> <span class="n">Make</span> <span class="n">Capslock</span> <span class="o">&amp;</span> <span class="n">Alt</span> <span class="n">Equivalent</span> <span class="n">to</span> <span class="n">Control</span><span class="o">+</span><span class="n">Alt</span>
+<span class="err">!</span><span class="n">Capslock</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">down</span><span class="p">}{</span><span class="n">Alt</span> <span class="n">Down</span><span class="p">}</span>
+<span class="err">!</span><span class="n">Capslock</span> <span class="n">up</span><span class="p">::</span><span class="n">SendInput</span> <span class="p">{</span><span class="n">Ctrl</span> <span class="n">up</span><span class="p">}{</span><span class="n">Alt</span> <span class="n">up</span><span class="p">}</span>
+
+
+<span class="p">;</span><span class="o">================================================================</span>
+<span class="p">;</span> <span class="n">Make</span> <span class="n">Win</span> <span class="n">Key</span> <span class="o">+</span> <span class="n">Capslock</span> <span class="n">work</span> <span class="n">like</span> <span class="n">Capslock</span> <span class="p">(</span><span class="ow">in</span> <span class="n">case</span> <span class="n">it</span><span class="s1">&#39;s ever needed)</span>
+<span class="c1">#Capslock::</span>
+<span class="n">If</span> <span class="n">GetKeyState</span><span class="p">(</span><span class="s2">&#34;CapsLock&#34;</span><span class="p">,</span> <span class="s2">&#34;T&#34;</span><span class="p">)</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">SetCapsLockState</span><span class="p">,</span> <span class="n">AlwaysOff</span>
+<span class="n">Else</span>
+    <span class="n">SetCapsLockState</span><span class="p">,</span> <span class="n">AlwaysOn</span>
+<span class="n">Return</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-修改打开方式">3 修改打开方式</h3>
+<p>修改<code>*.ahk</code>的默认打开方式为<code>AutoHotkeyU64.exe</code></p>
+<h3 id="4-运行">4 运行</h3>
+<p>win+r 输入 <code>shell:startup</code> 回车, 把脚本拷贝至当前路径下, 使得自动运行生效</p>
+<p>双击脚本立即生效</p>
+<h3 id="5-映射表">5 映射表</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1905272156-AutoHotKey/1558965817470.png"
+        data-srcset="assets/1905272156-AutoHotKey/1558965817470.png, assets/1905272156-AutoHotKey/1558965817470.png 1.5x, assets/1905272156-AutoHotKey/1558965817470.png 2x"
+        data-sizes="auto"
+        alt="assets/1905272156-AutoHotKey/1558965817470.png"
+        title="1558965817470" /></p>
+<p>参考: <a href="https://gist.github.com/Danik/5808330">https://gist.github.com/Danik/5808330</a></p>
+<h3 id="其他参考">其他参考</h3>
+<p><a href="https://jingyan.baidu.com/article/a3761b2bfacc701577f9aa64.html" target="_blank" rel="noopener noreffer">capslock+ikjl 代替上下左右按键</a></p>
+<p><a href="https://www.zhihu.com/question/22109122" target="_blank" rel="noopener noreffer">ahk注释</a>: 单行注释用分号<code>;</code>，多行同C语言用<code>/* */</code>括起。</p>
+<p><a href="https://wyagd001.github.io/zh-cn/docs/KeyList.htm" target="_blank" rel="noopener noreffer">按键列表</a></p>
+<p><a href="https://zhidao.baidu.com/question/523242441.html" target="_blank" rel="noopener noreffer">映射符号</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">如下输入
+`;::LCtrl
+遇到可能被误引用的字符时，前缀` 比如`&#34; `{ `% ``
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://zhuanlan.zhihu.com/p/35379309" target="_blank" rel="noopener noreffer">比较好的教程</a>, <a href="https://www.cnblogs.com/jadeboy/p/5274995.html" target="_blank" rel="noopener noreffer">另一个教程</a></p>
+<p><a href="https://cjkis.me/capslock&#43;/" target="_blank" rel="noopener noreffer">另外一个神器capslock+</a></p>
+<p><a href="https://wyagd001.github.io/zh-cn/docs/Tutorial.htm" target="_blank" rel="noopener noreffer">初学者向导</a></p>
+<p><a href="https://ahkcn.github.io/docs/Tutorial.htm" target="_blank" rel="noopener noreffer">指南和概述</a></p>
+<p><a href="http://ahkcn.sourceforge.net/docs/scripts/" target="_blank" rel="noopener noreffer">脚本展示</a></p>
+<p><a href="https://blog.csdn.net/Zuostar/article/details/82558130" target="_blank" rel="noopener noreffer">自启动</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">在运行里面输入: shell:startup
+打开之后把要启动的脚本放进去即可
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://wyagd001.github.io/v2/docs/Hotkeys.htm#combo" target="_blank" rel="noopener noreffer">热键, 组合键</a></p>
+<h3 id="几个capslock">几个capslock</h3>
+<p><a href="https://github.com/wo52616111/capslock-plus" target="_blank" rel="noopener noreffer">wsas代替上下左右</a></p>
+<p><a href="https://github.com/matrix1001/capslock-plus-plus/blob/master/README-zh.md" target="_blank" rel="noopener noreffer">hjkl代替上下左右</a></p>
+<p><a href="https://gist.githubusercontent.com/Danik/5808330/raw/4189af0b4c15a173ed66e82331ae998e2cac4406/capslock_remap_alt.ahk" target="_blank" rel="noopener noreffer">ijkl代替上下左右, 推荐</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2019-05-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/unsort.html">unsort</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/old/1905121610-reading-may.html" class="prev" rel="prev" title="五月阅读"><i class="fas fa-angle-left fa-fw"></i>五月阅读</a>
+            <a href="/posts/old/1906101549-proxy.html" class="next" rel="next" title="proxy">proxy<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphacks</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+
+    
+<section class="widget">
+
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" title="" target="_blank" style="color:red">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://example.com/posts/2104040035-hello.html" title="hello">hello</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html" title="attention-transfomer-bert">attention-transfomer-bert</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905101329-python-call.html" title="python-call">python-call</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/reading-paper/list_paper.html" title="论文阅读">论文阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+    </li>
+    
+</ul>
+
+    
+
+    
+<section class="widget">
+    <h3 class="widget-title">特栏</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/reading-except.html" title="">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note.html" title="">阅读笔记</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"Alphacks","id-2":"Alphacks","id-3":"Alphacks"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":null,"cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

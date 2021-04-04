@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>weka - 标签 - Alphacks</title>
+        <link>https://example.com/tags/weka.html</link>
+        <description>weka - 标签 - Alphacks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 24 Jun 2016 17:59:25 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/weka.html" rel="self" type="application/rss+xml" /><item>
+    <title>Weka资源分享</title>
+    <link>https://example.com/posts/old/machine-learning/weka%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB.html</link>
+    <pubDate>Fri, 24 Jun 2016 17:59:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/machine-learning/weka%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB.html</guid>
+    <description><![CDATA[Weka官方网络课程 Data Mining with Weka More Data Mining with Weka Slides是课程所用的幻灯片 Videos中Youku/zh是加上中文字幕的视频 直接下载全部视频，不过]]></description>
+</item></channel>
+</rss>

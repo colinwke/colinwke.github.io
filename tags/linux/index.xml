@@ -1,0 +1,29 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>linux - 标签 - Alphacks</title>
+        <link>https://example.com/tags/linux.html</link>
+        <description>linux - 标签 - Alphacks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 31 Aug 2018 21:17:23 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/linux.html" rel="self" type="application/rss+xml" /><item>
+    <title>linux环境配置</title>
+    <link>https://example.com/posts/old/deep-learning/linux_configuraion.html</link>
+    <pubDate>Fri, 31 Aug 2018 21:17:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/linux_configuraion.html</guid>
+    <description><![CDATA[代理上网 windows安装CCproxy ubuntu设置环境变量 运行vim /etc/profile 添加下面文本到末尾, XXX.XX.XX.XX为你代理服务器的ip]]></description>
+</item><item>
+    <title>Ubuntu安装tensorflow1.10</title>
+    <link>https://example.com/posts/old/deep-learning/install_tensorflow_gpu_on_ubuntu.html</link>
+    <pubDate>Fri, 31 Aug 2018 11:05:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/install_tensorflow_gpu_on_ubuntu.html</guid>
+    <description><![CDATA[安装TensorFlow anaconda 下载: python3.6版本 安装: sudo sh Anaconda3-5.2.0-Linux-x86_64.sh tensorflow 从pypi下载已经编译好的tensorflow_gpu https://pypi.org/project/tensorflow-gpu/#files tensorfl]]></description>
+</item><item>
+    <title>Linux命令行模式</title>
+    <link>https://example.com/posts/old/dabble/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F.html</link>
+    <pubDate>Thu, 21 Jul 2016 17:31:04 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/dabble/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F.html</guid>
+    <description><![CDATA[1 图形界面的开启与关闭 启用超级用户编辑启动配置文件/etc/inittab 修改第26行： 启动图形界面id:5:initdefault: 不启动]]></description>
+</item></channel>
+</rss>

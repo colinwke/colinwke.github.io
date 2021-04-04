@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - Alphacks</title>
+        <link>https://example.com/posts.html</link>
+        <description>所有文章 | Alphacks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>hello</title>
+    <link>https://example.com/posts/2104040035-hello.html</link>
+    <pubDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/2104040035-hello.html</guid>
+    <description><![CDATA[相信未来, 拥抱未来!]]></description>
+</item><item>
+    <title>多git协作</title>
+    <link>https://example.com/posts/old/2104031558-multi-git.html</link>
+    <pubDate>Sat, 03 Apr 2021 15:58:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/2104031558-multi-git.html</guid>
+    <description><![CDATA[多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 条件: git版本号高于2.13(git &ndash;version) 编辑]]></description>
+</item><item>
+    <title>attention-transfomer-bert</title>
+    <link>https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html</link>
+    <pubDate>Tue, 18 Jun 2019 16:07:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html</guid>
+    <description><![CDATA[The Illustrated Transformer 进去的第一篇文章, 说道了attention, 那就先从这个开始吧 Mechanics of Seq2seq Models With Attention &ndash; QA: encoder-decoder是否为针对seq2seq设]]></description>
+</item><item>
+    <title>proxy</title>
+    <link>https://example.com/posts/old/1906101549-proxy.html</link>
+    <pubDate>Mon, 10 Jun 2019 15:49:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1906101549-proxy.html</guid>
+    <description><![CDATA[用了一个很久的, 可以试一下 http://nekom.org/user 特点 简单(中文的, 有详细教程), 成本低(可以每月付, 最低10元) 点我的邀请链接会给我返利哟, 算对我的支持吧 [邀请]]></description>
+</item><item>
+    <title>AutoHotKey</title>
+    <link>https://example.com/posts/old/1905272156-autohotkey.html</link>
+    <pubDate>Mon, 27 May 2019 21:56:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1905272156-autohotkey.html</guid>
+    <description><![CDATA[1 下载AutoHotKey 官网, 点我直接官网下载 2 编辑脚本 另存下面脚本为capslock_plus.ahk 注: 下面脚本只适用于AutoHot]]></description>
+</item><item>
+    <title>五月阅读</title>
+    <link>https://example.com/posts/old/1905121610-reading-may.html</link>
+    <pubDate>Sun, 12 May 2019 16:10:25 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1905121610-reading-may.html</guid>
+    <description><![CDATA[2019-5-12 最近计划学习一下深度学习框架, kaggle是个不错的平台, 就找了其中的比赛Jigsaw Unintended Bias in Toxicity Classification. 在比赛的第四段, 描述了比赛的背景, 和技术中]]></description>
+</item><item>
+    <title>python-call</title>
+    <link>https://example.com/posts/old/1905101329-python-call.html</link>
+    <pubDate>Fri, 10 May 2019 13:29:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1905101329-python-call.html</guid>
+    <description><![CDATA[在一些深度学习框架中(tensorflow, pytorch), 会出现一些对象实例直接加括号调用的方法: 1 2 3 4 # tensorflow hidden1 = keras.layers.Dense(output_size, activation=&#34;relu&#34;)(input) # pytorch hidden1 = nn.Linear(input_size, hidden_size)(input) 其实, 这里使用了将实例]]></description>
+</item><item>
+    <title>mecab</title>
+    <link>https://example.com/posts/old/1905071330-mecab.html</link>
+    <pubDate>Tue, 07 May 2019 13:30:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1905071330-mecab.html</guid>
+    <description><![CDATA[wondows平台, pip安装MeCab: 1 pip install mecab-python3 出现问题: 1 &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。 在网上找了一些资料, 一些]]></description>
+</item><item>
+    <title>论文阅读</title>
+    <link>https://example.com/posts/old/reading-paper/list_paper.html</link>
+    <pubDate>Thu, 10 Jan 2019 15:12:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/reading-paper/list_paper.html</guid>
+    <description><![CDATA[阿里行人重识别(ReID)算法效果取得世界第一 主要贡献 通过局部信息的挖掘，致力于解决行人在识别过程中表观姿态变化剧烈，不容易对齐的问题 主要方]]></description>
+</item><item>
+    <title>save-win10-spotlight</title>
+    <link>https://example.com/posts/old/dabble/save-win10-spotlight.html</link>
+    <pubDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/dabble/save-win10-spotlight.html</guid>
+    <description><![CDATA[保存win10 spotlight 壁纸到D盘下! 1 将下面文本保存为win10_spotlight.bat(直接下载) 1 2 3 4 5 6 7 8 9 10 11 12 13 rem https://blog.csdn.net/qq_34260368/article/details/78364055 rem https://blog.csdn.net/linbounconstraint/article/details/80191846 rem https://blog.csdn.net/Anymake_ren/article/details/51125609 rem https://stackoverflow.com/questions/17587347/batch-file-to-run-xcopy-without-overwriting-existing-files]]></description>
+</item></channel>
+</rss>

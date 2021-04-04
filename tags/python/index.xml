@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>python - 标签 - Alphacks</title>
+        <link>https://example.com/tags/python.html</link>
+        <description>python - 标签 - Alphacks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 10 May 2019 13:29:41 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/python.html" rel="self" type="application/rss+xml" /><item>
+    <title>python-call</title>
+    <link>https://example.com/posts/old/1905101329-python-call.html</link>
+    <pubDate>Fri, 10 May 2019 13:29:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1905101329-python-call.html</guid>
+    <description><![CDATA[在一些深度学习框架中(tensorflow, pytorch), 会出现一些对象实例直接加括号调用的方法: 1 2 3 4 # tensorflow hidden1 = keras.layers.Dense(output_size, activation=&#34;relu&#34;)(input) # pytorch hidden1 = nn.Linear(input_size, hidden_size)(input) 其实, 这里使用了将实例]]></description>
+</item><item>
+    <title>配置python数据分析环境</title>
+    <link>https://example.com/posts/old/data-mining/%E9%85%8D%E7%BD%AEpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%8E%AF%E5%A2%83.html</link>
+    <pubDate>Mon, 17 Oct 2016 17:40:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/data-mining/%E9%85%8D%E7%BD%AEpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%8E%AF%E5%A2%83.html</guid>
+    <description><![CDATA[1 python安装 1.1 下载 官方网站：https://www.python.org/ 搜狐镜像：http://mirrors.sohu.com/p]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Hexo之旅 - Alphacks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="Hexo之旅" />
+<meta property="og:description" content="经过好多天的努力，博客基本上也达到了自己满意的样子。博客以Bootstrap-Blog为蓝本，在此基础上增增减减，修修改改。因为自己并不是很" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/old/dabble/hexo%E4%B9%8B%E6%97%85.html" />
+<meta property="og:image" content="https://example.com/logo.png"/>
+<meta property="article:published_time" content="2016-05-14T11:05:57+08:00" />
+<meta property="article:modified_time" content="2016-05-14T11:05:57+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="Hexo之旅"/>
+<meta name="twitter:description" content="经过好多天的努力，博客基本上也达到了自己满意的样子。博客以Bootstrap-Blog为蓝本，在此基础上增增减减，修修改改。因为自己并不是很"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/assets/colin_html/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/dabble/hexo%E4%B9%8B%E6%97%85.html" /><link rel="prev" href="https://example.com/posts/old/essay/%E5%AD%A6%E4%BC%9A%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB.html" /><link rel="next" href="https://example.com/posts/old/machine-learning/knn%E7%AE%97%E6%B3%95%E7%9A%84c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hexo之旅",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/old\/dabble\/hexo%E4%B9%8B%E6%97%85.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "hexo, 博客搭建","wordcount":  2134 ,
+        "url": "https:\/\/example.com\/posts\/old\/dabble\/hexo%E4%B9%8B%E6%97%85.html","datePublished": "2016-05-14T11:05:57+08:00","dateModified": "2016-05-14T11:05:57+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Alphacks"
+            },"description": ""
+    }
+    </script></head>
+
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div>
+
+        <div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><div class="menu-inner"><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/tags.html"> 标签 </a><a class="menu-item" href="/categories.html"> 分类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/tags.html" title="">标签</a><a class="menu-item" href="/categories.html" title="">分类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="details toc" id="toc-static"  kept="">
+            <div class="details-summary toc-title">
+                <span>目录</span>
+                <span><i class="details-icon fas fa-angle-right"></i></span>
+            </div>
+            <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#所参考的一些链接">所参考的一些链接</a>
+      <ul>
+        <li><a href="#详细教程">详细教程</a></li>
+        <li><a href="#增增减减">增增减减</a></li>
+        <li><a href="#一些问题">一些问题</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#代码块空行问题">代码块空行问题</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#添加公式">添加公式</a>
+      <ul>
+        <li><a href="#mathjax-mixed-content导致不能渲染公式">mathjax Mixed Content导致不能渲染公式</a></li>
+        <li><a href="#或者chrome出现一个拦截图标-不安全连接">或者(chrome出现一个拦截图标, 不安全连接)</a>
+          <ul>
+            <li><a href="#前面的两个错误uncaught-reference-error">前面的两个错误<code>Uncaught Reference Error</code></a></li>
+            <li><a href="#第三个问题-也就是渲染公式">第三个问题, 也就是渲染公式</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#添加新页面">添加新页面</a></li>
+    <li><a href="#hexo-template">hexo template</a></li>
+    <li><a href="#添加目录">添加目录</a>
+      <ul>
+        <li><a href="#windows图床工具">windows图床工具</a></li>
+        <li><a href="#添加-readme">添加 readme</a></li>
+      </ul>
+    </li>
+    <li><a href="#永久链接">永久链接</a></li>
+    <li><a href="#站内搜索">站内搜索</a></li>
+  </ul>
+</nav></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Hexo之旅</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Alphacks</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%B6%89%E7%8C%8E.html"><i class="far fa-folder fa-fw"></i>涉猎</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-14">2016-05-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2134 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="content" id="content"><p>经过好多天的努力，博客基本上也达到了自己满意的样子。博客以<a href="http://cgmartin.github.io/hexo-theme-bootstrap-blog/" target="_blank" rel="noopener noreffer">Bootstrap-Blog</a>为蓝本，在此基础上增增减减，修修改改。因为自己并不是很懂网页，大多时候都是摸索和调试，所以费时还是挺多的。现在终于能踏踏实实的写文章了。</p>
+<p>之前我也用过很多博客，但是自己却很少认认真真的写过文章。原因之一就是自己文笔不好，思考半天都写不出来一句话。从小学到大学，作文一直就是我的痛点，时间费得最多，效果还不是很好，这也是我可提高之处吧！现在，我想我得尽量多写吧，至少搭建这个博客我还是挺费心的。其实很多时候不必思考过多，随心所欲，应该也是很不错的。</p>
+<p>写这篇文章的目的是对我的Hexo之旅做一个小结，也算对这次博客搭建告一段落。</p>
+<h2 id="所参考的一些链接">所参考的一些链接</h2>
+<p>当然，最主要的还是<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener noreffer">Hexo官网</a>上的资源，包括教程、主题等等。</p>
+<h3 id="详细教程">详细教程</h3>
+<p><a href="http://www.jianshu.com/p/05289a4bc8b2/" target="_blank" rel="noopener noreffer">如何搭建一个独立博客——简明Github Pages与Hexo教程</a>
+这篇文章十分详细，作者在后面给了很多其他教程的链接。
+<a href="http://www.ituring.com.cn/minibook/29442" target="_blank" rel="noopener noreffer">图灵社区：Hexo合集</a>
+这篇文章对于Hexo的使用更加详细，适合想要深度折腾的同学。</p>
+<h3 id="增增减减">增增减减</h3>
+<p><a href="http://yehbeats.com/2015/04/06/hexo-topmenu/" target="_blank" rel="noopener noreffer">Hexo，添加返回顶部按钮</a>，如果打不开，请点击<a href="http://blog.disonchen.com/2015/08/31/Hexo%EF%BC%8C%E6%B7%BB%E5%8A%A0%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8%E6%8C%89%E9%92%AE/" target="_blank" rel="noopener noreffer">这里</a></p>
+<h3 id="一些问题">一些问题</h3>
+<p><a href="http://snoopyxdy.blog.163.com/blog/static/60117440201422695653698/" target="_blank" rel="noopener noreffer">npm国内被墙的解决方法</a>，应该前两步就能解决。
+连接挂掉, 补(<a href="http://blog.csdn.net/qq_23329541/article/details/68927747">http://blog.csdn.net/qq_23329541/article/details/68927747</a>)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">npm config set strict-ssl false
+npm config set registry &#34;http://registry.npmjs.org/&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="http://www.jianshu.com/p/0deb70e6f395" target="_blank" rel="noopener noreffer">被墙的另一个解决方法</a>。
+<a href="http://npm.taobao.org/" target="_blank" rel="noopener noreffer">使用taobao npm镜像</a>
+<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>
+<a href="http://www.v2ex.com/t/175940" target="_blank" rel="noopener noreffer">搭建 hexo，在执行 hexo deploy 后,出现 error deployer not found:github 的错误</a></p>
+<p><strong>OK, 剩下的就是好好的写文章吧！</strong></p>
+<hr>
+<h1 id="160622更新">160622更新</h1>
+<p>设置sublime_text为默认编辑器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git config --global core.editor &#34;&#39;D:/Program Files (x86)/Sublime Text/sublime_text.exe&#39; -w&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>设置Notepad++为默认编辑器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git config --global core.editor &#34;&#39;D:/Program Files (x86)/Notepad++/notepad++.exe&#39; -multiInst -nosession&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>直接使用命令<code>subl</code>编辑文本</p>
+<p>把sublime_text.exe的所在目录添加至环境变量的path中
+在Git下直接使用命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">subl filename.txt
+</code></pre></td></tr></table>
+</div>
+</div><p>就可以直接使用sublime text编辑文本文件了</p>
+<p>参考链接: <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a></p>
+<hr>
+<h1 id="161104更新">161104更新</h1>
+<p>使用上述教程部署网站出现错误</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ hexo d
+	...
+nothing to commit, working tree clean
+bash: /dev/tty: No such device or address
+error: failed to execute prompt script (exit code 1)
+fatal: could not read Username for &#39;https://github.com&#39;: Invalid argument
+FATAL Something&#39;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Error: bash: /dev/tty: No such device or address
+error: failed to execute prompt script (exit code 1)
+fatal: could not read Username for &#39;https://github.com&#39;: Invalid argument
+	...
+</code></pre></td></tr></table>
+</div>
+</div><p>解决方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">修改根目录文件：_config.yml
+原有内容：
+	repository: https://github.com/username/username.github.io.git
+修改为：
+	repository: git@github.com:username/username.github.io.git
+</code></pre></td></tr></table>
+</div>
+</div><p>参考链接：http://www.jianshu.com/p/d1fc64c445ce</p>
+<hr>
+<h1 id="update-for-detail-steps">update for detail steps</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">download git
+download node.js
+
+// gen ssh-key
+ssh-keygen -t rsa -C &#34;username@gmail.com&#34;
+
+// add ssh-key to github
+(http://blog.csdn.net/keyboardota/article/details/7603630)
+
+// verify
+ssh -T git@github.com
+
+// config
+git config --global user.name &#34;username&#34;
+git config --global user.email &#34;username@gmail.com&#34;
+
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+cnpm install -g hexo
+cnpm install hexo-deployer-git --save
+
+// or use taobao mirror
+// npm config set strict-ssl false
+// npm config set registry &#34;http://registry.npmjs.org/&#34;
+// npm install -g hexo
+// npm install hexo-deployer-git --save
+
+cd your_hexo_dir
+hexo init
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="2017-9-6-update">2017-9-6 update</h1>
+<p>add quick generate_deploy.bat</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">@</span><span class="k">echo</span> off <span class="p">&amp;</span> <span class="c1">rem not print commond</span>
+<span class="k">title</span> Hexo <span class="p">&amp;</span> <span class="c1">rem setting title</span>
+<span class="c1">rem cd D:/github/hexo</span>
+<span class="s2">&#34;D:\Program Files\Git\bin\sh.exe&#34;</span> --login -i -c <span class="s2">&#34;cd /d/github/hexo &amp;&amp; hexo generate --deploy&#34;</span>
+<span class="k">pause</span>
+<span class="k">exit</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>ref:
+<a href="https://stackoverflow.com/questions/5203723/how-do-i-write-a-batch-file-which-opens-the-gitbash-shell-and-runs-a-command-in">https://stackoverflow.com/questions/5203723/how-do-i-write-a-batch-file-which-opens-the-gitbash-shell-and-runs-a-command-in</a>
+<a href="https://segmentfault.com/q/1010000000263597">https://segmentfault.com/q/1010000000263597</a>
+<a href="https://www.zhihu.com/question/38962022">https://www.zhihu.com/question/38962022</a>
+http://t.cn/RA4BPda</p>
+<h1 id="update">update</h1>
+<h2 id="代码块空行问题">代码块空行问题</h2>
+<p>change hexo util file highlight.js
+file path: your_hexo_dir/node_modules/hexo-util/lib/highlight.js</p>
+<p>update code</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">lines</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">line</span> <span class="o">=</span> <span class="nx">lines</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">tab</span><span class="p">)</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">replaceTabs</span><span class="p">(</span><span class="nx">line</span><span class="p">,</span> <span class="nx">tab</span><span class="p">);</span>
+    <span class="nx">numbers</span> <span class="o">+=</span> <span class="s1">&#39;&lt;span class=&#34;line&#34;&gt;&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">firstLine</span> <span class="o">+</span> <span class="nx">i</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
+    <span class="nx">content</span> <span class="o">+=</span> <span class="s1">&#39;&lt;span class=&#34;line&#39;</span><span class="p">;</span>
+    <span class="nx">content</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">mark</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">firstLine</span> <span class="o">+</span> <span class="nx">i</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39; marked&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+    <span class="nx">content</span> <span class="o">+=</span> <span class="s1">&#39;&#34;&gt;&#39;</span> <span class="o">+</span> <span class="nx">line</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>to code</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">lines</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">line</span> <span class="o">=</span> <span class="nx">lines</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">tab</span><span class="p">)</span> <span class="nx">line</span> <span class="o">=</span> <span class="nx">replaceTabs</span><span class="p">(</span><span class="nx">line</span><span class="p">,</span> <span class="nx">tab</span><span class="p">);</span>
+    <span class="c1">// numbers += &#39;&lt;span class=&#34;line&#34;&gt;&#39; + (firstLine + i) + &#39;&lt;/span&gt;&#39;;
+</span><span class="c1"></span>    <span class="c1">// content += &#39;&lt;span class=&#34;line&#39;;
+</span><span class="c1"></span>    <span class="c1">// content += (mark.indexOf(firstLine + i) !== -1) ? &#39; marked&#39; : &#39;&#39;;
+</span><span class="c1"></span>    <span class="c1">// content += &#39;&#34;&gt;&#39; + line + &#39;&lt;/span&gt;&#39;;
+</span><span class="c1"></span>
+    <span class="nx">numbers</span> <span class="o">+=</span> <span class="s1">&#39;&lt;span class=&#34;line&#34;&gt;&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">firstLine</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;\n&#39;</span><span class="p">;</span>
+    <span class="nx">content</span> <span class="o">+=</span> <span class="s1">&#39;&lt;span class=&#34;line&#34;&gt;&#39;</span> <span class="o">+</span> <span class="nx">line</span> <span class="o">+</span> <span class="s1">&#39;&lt;/span&gt;\n&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>ref:
+<a href="http://blog.csdn.net/tobacco5648/article/details/42584653">http://blog.csdn.net/tobacco5648/article/details/42584653</a>
+<a href="http://xingwu.me/2014/11/08/Hexo-Code-Block-Bugs-Comments-Style-and-Empty-Lines/">http://xingwu.me/2014/11/08/Hexo-Code-Block-Bugs-Comments-Style-and-Empty-Lines/</a></p>
+<h1 id="permalink-config">permalink config</h1>
+<p><a href="https://clearsky.me/hexo-permalinks.html">https://clearsky.me/hexo-permalinks.html</a>
+<a href="http://www.wuliaole.com/post/permalink_and_internal_link_in_hexo/">http://www.wuliaole.com/post/permalink_and_internal_link_in_hexo/</a></p>
+<h1 id="2018-10-13-update">2018-10-13 update</h1>
+<h2 id="添加公式">添加公式</h2>
+<p><code>hexo-math</code>已经被抛弃了, 所以使用<code>hexo-math</code>并无任何效果, 使用<code>hexo-renderer-mathjax</code>进行替代</p>
+<p>如果你已经安装了<code>hexo-math</code>, 需要先卸载</p>
+<p><code>$ npm uninstall hexo-math --save</code></p>
+<p>然后, 安装<code>hexo-renderer-mathjax</code></p>
+<p><code>$ npm install hexo-renderer-mathjax --save</code></p>
+<p>在主题的配置文件<code>_config.yml</code>中添加下面属性, 配置<code>mathjax</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># MathJax Support
+mathjax:
+  enable: true
+  per_page: true
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
+</code></pre></td></tr></table>
+</div>
+</div><p>OK, 下面是一些测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">行內公式 $\sin ^{ 2 }{ \theta +\cos ^{ 2 }{ \theta =1 }  }$ 行內公式
+
+行外公式
+
+$$\frac { dy }{ dx } =\frac { { e }^{ x } }{ 3{ y }^{ 2 } }$$
+</code></pre></td></tr></table>
+</div>
+</div><p>行內公式 $\sin ^{ 2 }{ \theta +\cos ^{ 2 }{ \theta =1 }  }$ 行內公式</p>
+<p>行外公式
+$$\frac { dy }{ dx } =\frac { { e }^{ x } }{ 3{ y }^{ 2 } }$$</p>
+<p>参考链接: <a href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/">https://nathaniel.blog/tutorials/make-hexo-support-math-again/</a></p>
+<p>另外, 推荐一个主题<a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener noreffer">next</a></p>
+<h3 id="mathjax-mixed-content导致不能渲染公式">mathjax Mixed Content导致不能渲染公式</h3>
+<h3 id="或者chrome出现一个拦截图标-不安全连接">或者(chrome出现一个拦截图标, 不安全连接)</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/Hexo%e4%b9%8b%e6%97%85/1540864751192.png"
+        data-srcset="assets/Hexo%e4%b9%8b%e6%97%85/1540864751192.png, assets/Hexo%e4%b9%8b%e6%97%85/1540864751192.png 1.5x, assets/Hexo%e4%b9%8b%e6%97%85/1540864751192.png 2x"
+        data-sizes="auto"
+        alt="assets/Hexo之旅/1540864751192.png"
+        title="1540864751192" /></p>
+<h4 id="前面的两个错误uncaught-reference-error">前面的两个错误<code>Uncaught Reference Error</code></h4>
+<p>加载js的顺序不对, 需要先加载jquery, 然后再加载后两个js</p>
+<h4 id="第三个问题-也就是渲染公式">第三个问题, 也就是渲染公式</h4>
+<p>修改<code>[hexo_root]\node_modules\hexo-renderer-mathjax\mathjax.html:</code></p>
+<p>把最后一行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/x-mathjax-config&#34;</span><span class="p">&gt;</span>
+    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Config</span><span class="p">({</span>
+        <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&#34;$&#34;</span><span class="p">,</span><span class="s2">&#34;$&#34;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&#34;\\(&#34;</span><span class="p">,</span><span class="s2">&#34;\\)&#34;</span><span class="p">]</span> <span class="p">],</span>
+            <span class="nx">skipTags</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;script&#39;</span><span class="p">,</span> <span class="s1">&#39;noscript&#39;</span><span class="p">,</span> <span class="s1">&#39;style&#39;</span><span class="p">,</span> <span class="s1">&#39;textarea&#39;</span><span class="p">,</span> <span class="s1">&#39;pre&#39;</span><span class="p">,</span> <span class="s1">&#39;code&#39;</span><span class="p">],</span>
+            <span class="nx">processEscapes</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">Queue</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">all</span> <span class="o">=</span> <span class="nx">MathJax</span><span class="p">.</span><span class="nx">Hub</span><span class="p">.</span><span class="nx">getAllJax</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">all</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span>
+            <span class="nx">all</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">SourceElement</span><span class="p">().</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">className</span> <span class="o">+=</span> <span class="s1">&#39; has-jax&#39;</span><span class="p">;</span>
+    <span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>替换为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>即修改了渲染js的地址, 地址来源于官网: <a href="https://docs.mathjax.org/en/latest/start.html">https://docs.mathjax.org/en/latest/start.html</a></p>
+<p>参考: <a href="https://github.com/hexojs/hexo/issues/3279">https://github.com/hexojs/hexo/issues/3279</a></p>
+<p>! 尝试了修改hexo下的配置和主题下的配置添加下面内容都无效</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mathjax:
+  cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="添加新页面">添加新页面</h2>
+<p><a href="https://github.com/hexojs/hexo/issues/1453">https://github.com/hexojs/hexo/issues/1453</a></p>
+<h2 id="hexo-template">hexo template</h2>
+<ul>
+<li><a href="https://hexo.io/docs/templates.html">https://hexo.io/docs/templates.html</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/helpers.html">https://hexo.io/zh-cn/docs/helpers.html</a></li>
+</ul>
+<h2 id="添加目录">添加目录</h2>
+<p><code>article.ejs</code>中添加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">  &lt;!-- TOC --&gt;
+  &lt;% var mtoc = toc(post.content, {list_number: false}); %&gt;
+  &lt;% if (mtoc) { %&gt;
+    &lt;div class=&#34;toc&#34;&gt;
+      &lt;h3&gt;Content&lt;/h3&gt;
+      &lt;%- mtoc %&gt;
+    &lt;/div&gt;
+  &lt;% } %&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p><code>custom.css</code>中添加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">.toc {
+  background-color: #eee;
+  padding-left: 25px;
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>参考:</p>
+<ul>
+<li><a href="http://izhaoyi.top/2017/05/30/my-blog/#%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95">http://izhaoyi.top/2017/05/30/my-blog/#%E6%96%87%E7%AB%A0%E7%9B%AE%E5%BD%95</a></li>
+</ul>
+<h3 id="windows图床工具">windows图床工具</h3>
+<ul>
+<li><a href="https://jverson.com/2017/05/28/qiniu-image-v2/">https://jverson.com/2017/05/28/qiniu-image-v2/</a></li>
+</ul>
+<p>七牛云不支持测试域名了, 需要自己的域名, 后面就没测试了</p>
+<hr>
+<p>awesome themes:</p>
+<ul>
+<li><a href="https://github.com/geekplux/hexo-theme-typing">https://github.com/geekplux/hexo-theme-typing</a></li>
+</ul>
+<h3 id="添加-readme">添加 readme</h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/25258660/how-do-i-add-a-readme-md-file-into-the-root-directory-of-the-generated-blog-by-h/31051913#31051913">https://stackoverflow.com/questions/25258660/how-do-i-add-a-readme-md-file-into-the-root-directory-of-the-generated-blog-by-h/31051913#31051913</a></li>
+</ul>
+<p>注意, 上面很多方法都是不可行的</p>
+<p>包含</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/25258660/how-do-i-add-a-readme-md-file-into-the-root-directory-of-the-generated-blog-by-h">https://stackoverflow.com/questions/25258660/how-do-i-add-a-readme-md-file-into-the-root-directory-of-the-generated-blog-by-h</a></li>
+<li><a href="https://github.com/hexojs/hexo/issues/3158">https://github.com/hexojs/hexo/issues/3158</a></li>
+<li><a href="https://github.com/hexojs/hexo/issues/3248">https://github.com/hexojs/hexo/issues/3248</a></li>
+<li><a href="http://xchb.work/2017/04/08/hexo%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6-skip-render-%E9%85%8D%E7%BD%AE/">http://xchb.work/2017/04/08/hexo%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6-skip-render-%E9%85%8D%E7%BD%AE/</a></li>
+<li><a href="https://xuanwo.org/2014/08/14/hexo-usual-problem/">https://xuanwo.org/2014/08/14/hexo-usual-problem/</a></li>
+</ul>
+<p>正确的解决方法</p>
+<ul>
+<li><a href="https://hexo.io/docs/configuration#Directory">https://hexo.io/docs/configuration#Directory</a></li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/Hexo%e4%b9%8b%e6%97%85/1540576273243.png"
+        data-srcset="assets/Hexo%e4%b9%8b%e6%97%85/1540576273243.png, assets/Hexo%e4%b9%8b%e6%97%85/1540576273243.png 1.5x, assets/Hexo%e4%b9%8b%e6%97%85/1540576273243.png 2x"
+        data-sizes="auto"
+        alt="assets/Hexo之旅/1540576273243.png"
+        title="1540576273243" /></p>
+<p>即README.md文件必须要在source目录下!!!</p>
+<h2 id="永久链接">永久链接</h2>
+<p><a href="https://clearsky.me/hexo-permalinks.html">https://clearsky.me/hexo-permalinks.html</a></p>
+<p>参考链接</p>
+<p><a href="https://juejin.im/entry/5a8079a85188257a6e402c17">https://juejin.im/entry/5a8079a85188257a6e402c17</a></p>
+<h2 id="站内搜索">站内搜索</h2>
+<p><a href="https://hackfun.org/2017/10/04/%E7%BB%99hexo%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%AB%99%E5%86%85%E5%8A%9F%E8%83%BD/">https://hackfun.org/2017/10/04/%E7%BB%99hexo%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E7%AB%99%E5%86%85%E5%8A%9F%E8%83%BD/</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2016-05-14</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hexo.html">hexo</a>,&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html">博客搭建</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/old/essay/%E5%AD%A6%E4%BC%9A%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB.html" class="prev" rel="prev" title="学会工作，学会生活"><i class="fas fa-angle-left fa-fw"></i>学会工作，学会生活</a>
+            <a href="/posts/old/machine-learning/knn%E7%AE%97%E6%B3%95%E7%9A%84c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0.html" class="next" rel="next" title="KNN算法的C语言实现">KNN算法的C语言实现<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphacks</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+
+    
+<section class="widget">
+
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" title="" target="_blank" style="color:red">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://example.com/posts/2104040035-hello.html" title="hello">hello</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html" title="attention-transfomer-bert">attention-transfomer-bert</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905101329-python-call.html" title="python-call">python-call</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/reading-paper/list_paper.html" title="论文阅读">论文阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+    </li>
+    
+</ul>
+
+    
+
+    
+<section class="widget">
+    <h3 class="widget-title">特栏</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/reading-except.html" title="">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note.html" title="">阅读笔记</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"Alphacks","id-2":"Alphacks","id-3":"Alphacks"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":null,"cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

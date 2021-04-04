@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tensorflow - 分类 - Alphacks</title>
+        <link>https://example.com/categories/tensorflow.html</link>
+        <description>tensorflow - 分类 - Alphacks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 31 Aug 2018 11:05:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/tensorflow.html" rel="self" type="application/rss+xml" /><item>
+    <title>Ubuntu安装tensorflow1.10</title>
+    <link>https://example.com/posts/old/deep-learning/install_tensorflow_gpu_on_ubuntu.html</link>
+    <pubDate>Fri, 31 Aug 2018 11:05:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/install_tensorflow_gpu_on_ubuntu.html</guid>
+    <description><![CDATA[安装TensorFlow anaconda 下载: python3.6版本 安装: sudo sh Anaconda3-5.2.0-Linux-x86_64.sh tensorflow 从pypi下载已经编译好的tensorflow_gpu https://pypi.org/project/tensorflow-gpu/#files tensorfl]]></description>
+</item></channel>
+</rss>

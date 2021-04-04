@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Columns on Alphacks</title>
+    <link>https://example.com/columns.html</link>
+    <description>Recent content in Columns on Alphacks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+    <webMaster>wangkest@qq.com (Alphacks)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 05 May 2016 20:19:59 +0000</lastBuildDate><atom:link href="https://example.com/columns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于</title>
+      <link>https://example.com/columns/page-about.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/page-about.html</guid>
+      <description>前方漫漫 愿我成风 欢迎关注 新浪微博: 王虚极 github: colinwke 最后更新：2016-05-13</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>https://example.com/columns/page-archives.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/page-archives.html</guid>
+      <description>title: &amp;ldquo;归档&amp;rdquo; type: archives</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>https://example.com/columns/page-search.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/page-search.html</guid>
+      <description>title: &amp;ldquo;搜索&amp;rdquo; description: &amp;ldquo;搜索页面&amp;rdquo; type: &amp;ldquo;search&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>博客精华</title>
+      <link>https://example.com/columns/good-blog.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/good-blog.html</guid>
+      <description>[TOC] 苏建林 | 科学空间 里面很多干货, 主要偏NLP方向 作者本来是学数学的, 后面对NLP方向有较高的兴趣, 所以数学机器非常的棒 作者博客中涉猎特别广,</description>
+    </item>
+    
+    <item>
+      <title>特栏</title>
+      <link>https://example.com/columns/page-spec.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/page-spec.html</guid>
+      <description>hello</description>
+    </item>
+    
+    <item>
+      <title>阅读推荐</title>
+      <link>https://example.com/columns/good-post.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/good-post.html</guid>
+      <description>[TOC] 2016-05 程序人生 这是雷军1996年在BBS上写的一篇帖子，现在读起来，也别有一番韵味。尤其是那一句“编程不仅仅是技术，还是艺术”更是说出了编程的</description>
+    </item>
+    
+    <item>
+      <title>阅读推荐</title>
+      <link>https://example.com/columns/reading-note.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/reading-note.html</guid>
+      <description>[TOC] 2016-05 程序人生 这是雷军1996年在BBS上写的一篇帖子，现在读起来，也别有一番韵味。尤其是那一句“编程不仅仅是技术，还是艺术”更是说出了编程的</description>
+    </item>
+    
+    <item>
+      <title>阅读摘抄</title>
+      <link>https://example.com/columns/reading-except.html</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
+      <author>wangkest@qq.com (Alphacks)</author>
+      <guid>https://example.com/columns/reading-except.html</guid>
+      <description>[TOC] 2016-05 被克服的困难就是胜利的契机（契诃夫） 于千万人之中，遇见你要遇见的人。于千万年之中，时间无涯的荒野里，没有早一步，也没有迟一步，遇上了也只</description>
+    </item>
+    
+  </channel>
+</rss>

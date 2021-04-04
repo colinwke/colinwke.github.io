@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>pytorch tutorial - Alphacks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="pytorch tutorial" />
+<meta property="og:description" content="tutorial 地址: pytorch: Training a Classifier. 当使用新的数据集进行测试时, 出现的问题及解决的方法. Problem 1 error: 1 RuntimeError: invalid argument 0: Sizes of tensors must match except in dimension 0. Got 484 and 549 in dimension 2 at /pytorch/aten/src/TH/generic/THTensorMath.cpp:3616 location: 1 images, labels = data_iter.next() solution: 1 2 数" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/old/deep-learning/pytorch_tutorial.html" />
+<meta property="og:image" content="https://example.com/logo.png"/>
+<meta property="article:published_time" content="2018-10-24T11:40:58+08:00" />
+<meta property="article:modified_time" content="2018-10-24T11:40:58+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="pytorch tutorial"/>
+<meta name="twitter:description" content="tutorial 地址: pytorch: Training a Classifier. 当使用新的数据集进行测试时, 出现的问题及解决的方法. Problem 1 error: 1 RuntimeError: invalid argument 0: Sizes of tensors must match except in dimension 0. Got 484 and 549 in dimension 2 at /pytorch/aten/src/TH/generic/THTensorMath.cpp:3616 location: 1 images, labels = data_iter.next() solution: 1 2 数"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/assets/colin_html/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/deep-learning/pytorch_tutorial.html" /><link rel="prev" href="https://example.com/posts/old/deep-learning/how_gpu_accelerate_compute.html" /><link rel="next" href="https://example.com/posts/old/deep-learning/gans.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "pytorch tutorial",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/old\/deep-learning\/pytorch_tutorial.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "dl, pytorch","wordcount":  3436 ,
+        "url": "https:\/\/example.com\/posts\/old\/deep-learning\/pytorch_tutorial.html","datePublished": "2018-10-24T11:40:58+08:00","dateModified": "2018-10-24T11:40:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Alphacks"
+            },"description": ""
+    }
+    </script></head>
+
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div>
+
+        <div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu"><a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><div class="menu-inner"><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/tags.html"> 标签 </a><a class="menu-item" href="/categories.html"> 分类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphacks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/tags.html" title="">标签</a><a class="menu-item" href="/categories.html" title="">分类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="details toc" id="toc-static"  kept="">
+            <div class="details-summary toc-title">
+                <span>目录</span>
+                <span><i class="details-icon fas fa-angle-right"></i></span>
+            </div>
+            <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#problem-1">Problem 1</a></li>
+    <li><a href="#problem-2">Problem 2</a></li>
+    <li><a href="#problem-3">Problem 3</a></li>
+    <li><a href="#problem-4">Problem 4</a></li>
+    <li><a href="#其他">其他</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#pytorch中的可训练性设置">pytorch中的可训练性设置</a>
+      <ul>
+        <li><a href="#requires_grad">requires_grad</a></li>
+        <li><a href="#moduletrainmode">Module.train(mode)</a></li>
+        <li><a href="#如何固定预训练的resnet">如何固定预训练的ResNet</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#官网教程httpspytorchorgtutorialsbeginnerdeep_learning_60min_blitzhtml"><a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html">官网教程</a></a>
+      <ul>
+        <li><a href="#pytorch是什么">pytorch是什么?</a>
+          <ul>
+            <li><a href="#tensor">tensor</a></li>
+            <li><a href="#function">function</a></li>
+            <li><a href="#autograd">autograd</a></li>
+            <li><a href="#gradient">gradient</a></li>
+          </ul>
+        </li>
+        <li><a href="#neural-networks">neural networks</a>
+          <ul>
+            <li><a href="#define-the-networks">define the networks</a></li>
+            <li><a href="#basic-classes">basic classes</a></li>
+            <li><a href="#backprop">backprop</a></li>
+          </ul>
+        </li>
+        <li><a href="#training-a-classifier">training a classifier</a></li>
+      </ul>
+    </li>
+    <li><a href="#github-pytorch-tutorialhttpsgithubcomyunjeypytorch-tutorial"><a href="https://github.com/yunjey/pytorch-tutorial">Github: pytorch-tutorial</a></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#参考">参考:</a></li>
+          </ul>
+        </li>
+        <li><a href="#torchtensorregister_hooklinkhttpspytorchorgdocsstableautogradhtmltorchtensorregister_hook">torch.Tensor.register_hook[<a href="https://pytorch.org/docs/stable/autograd.html#torch.Tensor.register_hook">link</a>]</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">pytorch tutorial</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Alphacks</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/dl.html"><i class="far fa-folder fa-fw"></i>dl</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-10-24">2018-10-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 3436 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 7 分钟&nbsp;</div>
+        </div><div class="content" id="content"><p>tutorial 地址: <a href="https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html" target="_blank" rel="noopener noreffer">pytorch: Training a Classifier</a>.</p>
+<p>当使用新的数据集进行测试时, 出现的问题及解决的方法.</p>
+<h2 id="problem-1">Problem 1</h2>
+<p>error:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">argument</span> <span class="mi">0</span><span class="p">:</span> <span class="n">Sizes</span> <span class="n">of</span> <span class="n">tensors</span> <span class="n">must</span> <span class="n">match</span> <span class="k">except</span> <span class="ow">in</span> <span class="n">dimension</span> <span class="mf">0.</span> <span class="n">Got</span> <span class="mi">484</span> <span class="ow">and</span> <span class="mi">549</span> <span class="ow">in</span> <span class="n">dimension</span> <span class="mi">2</span> <span class="n">at</span> <span class="o">/</span><span class="n">pytorch</span><span class="o">/</span><span class="n">aten</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">TH</span><span class="o">/</span><span class="n">generic</span><span class="o">/</span><span class="n">THTensorMath</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">3616</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>location:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">images</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">data_iter</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>solution:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">数据集中的图像大小不一致</span><span class="o">.</span>
+<span class="err">需要使用</span><span class="sb">`transforms.Resize([height, width])`</span><span class="err">把所有图像缩放到同一大小</span><span class="o">.</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="problem-2">Problem 2</h2>
+<p>error:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">argument</span> <span class="mi">2</span><span class="p">:</span> <span class="n">size</span> <span class="s1">&#39;[-1 x 400]&#39;</span> <span class="ow">is</span> <span class="n">invalid</span> <span class="k">for</span> <span class="nb">input</span> <span class="k">with</span> <span class="mi">719104</span> <span class="n">elements</span> <span class="n">at</span> <span class="o">/</span><span class="n">pytorch</span><span class="o">/</span><span class="n">aten</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">TH</span><span class="o">/</span><span class="n">THStorage</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">80</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>location:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>solution:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="sb">`Tensor.view()`</span> <span class="err">相当于</span> <span class="sb">`numpy.reshape()`</span> <span class="err">方法</span><span class="p">,</span> <span class="err">即重塑形状</span><span class="o">.</span>
+<span class="err">其中</span><span class="sb">`-1`</span><span class="err">表示依据其他维度进行推理得出的维度</span><span class="o">.</span>
+<span class="err">这里的参数需要计算得出</span><span class="p">,</span> <span class="err">不同的输入尺寸需要计算对应的参数!</span>
+<span class="o">---</span>
+<span class="err">我们来计算一下</span><span class="p">,</span> <span class="err">计算公式见下面的图片</span><span class="o">.</span>
+<span class="o">---</span>
+<span class="nb">input</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">32</span><span class="o">*</span><span class="mi">32</span>
+<span class="o">-</span>
+<span class="k">class</span> <span class="nc">Net_t1</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Net_t1</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">16</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">84</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+<span class="o">-</span>
+<span class="mi">1</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">]),</span> <span class="n">conv1</span><span class="p">,</span> <span class="p">(</span><span class="mi">32</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">28</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span>
+<span class="mi">2</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">14</span><span class="p">]),</span> <span class="n">pool</span><span class="p">,</span> <span class="mi">28</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="mi">3</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]),</span> <span class="n">conv2</span><span class="p">,</span> <span class="p">(</span><span class="mi">14</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span>
+<span class="mi">4</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]),</span> <span class="n">pool</span><span class="p">,</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="mi">5</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">400</span><span class="p">]),</span> <span class="n">view</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">400</span>
+<span class="mi">6</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">120</span><span class="p">]),</span> <span class="n">full_connect</span>
+<span class="mi">7</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">84</span><span class="p">]),</span> <span class="n">full_connect</span>
+<span class="mi">8</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">]),</span> <span class="n">full_connect</span>
+<span class="o">---</span>
+<span class="nb">input</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="mi">224</span><span class="o">*</span><span class="mi">224</span>
+<span class="o">-</span>
+<span class="k">class</span> <span class="nc">Net_t2</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Net_t2</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">16</span> <span class="o">*</span> <span class="mi">53</span> <span class="o">*</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">120</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">84</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">84</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">53</span> <span class="o">*</span> <span class="mi">53</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+<span class="o">-</span>
+<span class="mi">1</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">]),</span> <span class="n">conv1</span><span class="p">,</span> <span class="p">(</span><span class="mi">224</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">220</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span>
+<span class="mi">2</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">110</span><span class="p">]),</span> <span class="n">pool</span><span class="p">,</span> <span class="mi">220</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">110</span>
+<span class="mi">3</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">106</span><span class="p">,</span> <span class="mi">106</span><span class="p">]),</span> <span class="n">conv2</span><span class="p">,</span> <span class="p">(</span><span class="mi">110</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">106</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">0</span>
+<span class="mi">4</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">53</span><span class="p">]),</span> <span class="n">pool</span><span class="p">,</span> <span class="mi">106</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">53</span>
+<span class="mi">5</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">44944</span><span class="p">]),</span> <span class="n">view</span><span class="p">,</span> <span class="mi">16</span> <span class="o">*</span> <span class="mi">53</span> <span class="o">*</span> <span class="mi">53</span> <span class="o">=</span> <span class="mi">44944</span>
+<span class="mi">6</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">120</span><span class="p">]),</span> <span class="n">full_connect</span>
+<span class="mi">7</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">84</span><span class="p">]),</span> <span class="n">full_connect</span>
+<span class="mi">8</span> <span class="n">torch</span><span class="o">.</span><span class="n">Size</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">31</span><span class="p">]),</span> <span class="n">full_connect</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/pytorch_tutorial/1540383351683.png"
+        data-srcset="assets/pytorch_tutorial/1540383351683.png, assets/pytorch_tutorial/1540383351683.png 1.5x, assets/pytorch_tutorial/1540383351683.png 2x"
+        data-sizes="auto"
+        alt="assets/pytorch_tutorial/1540383351683.png"
+        title="1540383351683" /></p>
+<h2 id="problem-3">Problem 3</h2>
+<p>error:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">Assertion</span> <span class="err">`</span><span class="n">cur_target</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">cur_target</span> <span class="o">&lt;</span> <span class="n">n_classes</span><span class="s1">&#39; failed.  at /pytorch/aten/src/THNN/generic/ClassNLLCriterion.c:93</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>location:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>solution:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">预测的标签向量和实际的标签向量维度不一致!</span>
+<span class="err">设置输出层</span><span class="p">(</span><span class="err">最后一层</span><span class="p">)</span><span class="err">神经元个数为真实的标签个数</span><span class="o">.</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="problem-4">Problem 4</h2>
+<p>error:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="ne">RuntimeError</span><span class="p">:</span> <span class="n">Expected</span> <span class="nb">object</span> <span class="n">of</span> <span class="nb">type</span> <span class="n">torch</span><span class="o">.</span><span class="n">FloatTensor</span> <span class="n">but</span> <span class="n">found</span> <span class="nb">type</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">FloatTensor</span> <span class="k">for</span> <span class="n">argument</span> <span class="c1">#2 &#39;weight&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>location:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">net</span> <span class="o">=</span> <span class="n">Net</span><span class="p">()</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>solution:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="err">在做计算时</span><span class="p">,</span> <span class="err">需要把所有需要计算的量都放在</span><span class="sb">`device`</span><span class="err">上面</span><span class="o">.</span> <span class="err">因此不仅网络需要放在</span><span class="sb">`device上面`</span><span class="p">,</span> <span class="sb">`inputs`</span><span class="err">和</span><span class="sb">`labels`</span><span class="err">也要放在</span><span class="sb">`device`</span><span class="err">上面</span><span class="o">.</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="其他">其他</h2>
+<ol>
+<li><code>torchvision.datasets.ImageFolder()</code>会自动加载标签信息.
+<ul>
+<li>可以通过上述语句返回的对象调用<code>len(dataset)</code>返回样本个数, 调用<code>dataset.classes</code>返回标签集合.</li>
+</ul>
+</li>
+</ol>
+<h1 id="2018-10-30">2018-10-30</h1>
+<h2 id="pytorch中的可训练性设置">pytorch中的可训练性设置</h2>
+<p>在代码中看到两种设置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># method 1</span>
+<span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">base_network</span><span class="o">.</span><span class="n">parameters</span><span class="p">():</span>
+    <span class="n">param</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="c1"># method 2</span>
+<span class="n">base_network</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>字面意思都是不训练<code>base_network</code>, 但是两个训练的结果不同.</p>
+<h3 id="requires_grad">requires_grad</h3>
+<ul>
+<li>是pytorch中变量自动求导的一个属性<a href="https://pytorch.org/docs/master/notes/autograd.html" target="_blank" rel="noopener noreffer">[AUTOGRAD MECHANICS]</a>.</li>
+<li>当设置为<code>False</code>时, 反向传播时不使用梯度更新变量.</li>
+<li>他的作用是用来冻结模型中的部分(freeze part of your model).</li>
+</ul>
+<h3 id="moduletrainmode">Module.train(mode)</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/pytorch_tutorial/1540889233643.png"
+        data-srcset="assets/pytorch_tutorial/1540889233643.png, assets/pytorch_tutorial/1540889233643.png 1.5x, assets/pytorch_tutorial/1540889233643.png 2x"
+        data-sizes="auto"
+        alt="assets/pytorch_tutorial/1540889233643.png"
+        title="1540889233643" /></p>
+<p><a href="https://pytorch.org/docs/master/nn.html#torch.nn.Module.train" target="_blank" rel="noopener noreffer">pytorch doc: Module.train(mode)</a></p>
+<p>针对于特有模型的特有表现, 比如<code>Dropout</code>, <code>BathNorm</code>等模型中, 不是需要梯度更新的参数(Dropout: mean, std).</p>
+<blockquote>
+<p>Even the parameters are the same, it doesn’t mean the inferences are the same.</p>
+<p>For dropout, when <code>train(True)</code>, it does dropout; when  <code>train(False)</code> it doesn’t do dropout (identitical output).</p>
+<p>And for batchnorm, <code>train(True)</code> uses batch mean and batch var; and <code>train(False)</code> use running mean and running var.  <a href="https://discuss.pytorch.org/t/model-train-true-and-model-train-false-give-different-results-for-the-same-input/5825/2" target="_blank" rel="noopener noreffer">[link]</a></p>
+<p>For dropout (there’s even no parameter in dropout), the dropout position is changing when train is True.
+For BatchNorm, the <code>train(True)</code> will use the batch norm instead of <code>running_mean</code> and <code>running_var</code> and also <code>running_mean</code> and <code>running_var</code> will also change. <a href="https://discuss.pytorch.org/t/model-train-true-and-model-train-false-give-different-results-for-the-same-input/5825/8" target="_blank" rel="noopener noreffer">[link]</a></p>
+<p>A layer doesn’t have <code>requires_grad</code>, only Variables have. <code>running_mean</code> and <code>running_var</code> are buffers, and are updated during forwarding. I assume <code>train(True)</code> will still use the batch mean and batch var. <a href="https://discuss.pytorch.org/t/model-train-true-and-model-train-false-give-different-results-for-the-same-input/5825/6" target="_blank" rel="noopener noreffer">[link]</a></p>
+</blockquote>
+<h3 id="如何固定预训练的resnet">如何固定预训练的ResNet</h3>
+<blockquote>
+<p>I am wondering whether to set <code>.eval()</code> for those frozen layers since it may still update its running mean and running var. <a href="https://discuss.pytorch.org/t/how-the-pytorch-freeze-network-in-some-layers-only-the-rest-of-the-training/7088/4" target="_blank" rel="noopener noreffer">[link]</a></p>
+<p>Setting <code>.requires_grad = False</code> should work for convolution and FC layers. But how about networks that have instanceNormalization? Is setting <code>.requires_grad = False</code> enough for normalization layers too? <a href="https://discuss.pytorch.org/t/how-the-pytorch-freeze-network-in-some-layers-only-the-rest-of-the-training/7088/7" target="_blank" rel="noopener noreffer">[link]</a></p>
+</blockquote>
+<p>当需要固定要预训练的ResNet, 相当于只做预测任务. 因此只需把模型的状态设置为<code>.eval()</code>即可.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">):</span>
+    <span class="c1"># Make a prediction based on the current network weights</span>
+    <span class="n">net</span><span class="o">.</span><span class="n">train</span><span class="p">()</span> <span class="c1"># Set to training mode</span>
+    <span class="n">pred_tr</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">z_tr</span><span class="p">)</span> <span class="c1"># Pass in input</span>
+    <span class="n">loss_tr</span> <span class="o">=</span> <span class="n">lossfn</span><span class="p">(</span><span class="n">pred_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">)</span> <span class="c1"># Compute error between prediction and target</span>
+
+    <span class="c1"># Optimize</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>  <span class="c1"># zero the gradient buffers</span>
+    <span class="n">loss_tr</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>     <span class="c1"># Run a backward pass through the network</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>       <span class="c1"># Update your network parameters</span>
+
+    <span class="c1"># Display loss &amp; results on test data</span>
+    <span class="n">net</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span> <span class="c1"># Set to eval mode</span>
+    <span class="n">pred_te</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">z_te</span><span class="p">)</span>
+    <span class="n">loss_te</span> <span class="o">=</span> <span class="n">lossfn</span><span class="p">(</span><span class="n">pred_te</span><span class="p">,</span> <span class="n">y_te</span><span class="p">)</span> <span class="c1"># Compute error between prediction and target</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Iter: {}, Training loss: {}, Test loss: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">loss_tr</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">loss_te</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="c1"># ref: https://courses.cs.washington.edu/courses/cse490r/18wi/lecture_slides/02_16/pytorch-tutorial.py</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>refs:</p>
+<ul>
+<li><a href="https://stackoverflow.com/a/48270921/6494418">https://stackoverflow.com/a/48270921/6494418</a></li>
+<li><a href="https://stackoverflow.com/questions/50233272/pytorch-forward-pass-changes-each-time">https://stackoverflow.com/questions/50233272/pytorch-forward-pass-changes-each-time</a></li>
+<li><a href="https://discuss.pytorch.org/t/batchnorm-eval-cause-worst-result/15948/6">https://discuss.pytorch.org/t/batchnorm-eval-cause-worst-result/15948/6</a></li>
+<li><a href="https://github.com/bethgelab/foolbox/issues/74">https://github.com/bethgelab/foolbox/issues/74</a></li>
+<li><a href="https://courses.cs.washington.edu/courses/cse490r/18wi/lecture_slides/02_16/pytorch-tutorial.py">https://courses.cs.washington.edu/courses/cse490r/18wi/lecture_slides/02_16/pytorch-tutorial.py</a></li>
+</ul>
+<p><a href="https://stackoverflow.com/questions/42703500/best-way-to-save-a-trained-model-in-pytorch" target="_blank" rel="noopener noreffer">pytorch save model</a></p>
+<h1 id="2018-10-31">2018-10-31</h1>
+<ol>
+<li>当数据为图片时, 并且图片的标签是按照文件夹表示的, 使用<code>torchvision.datasets.ImageFolder()</code>读取数据后, 使用<code>torch.utils.data.DataLoader()</code>配置数据时, 一定要加入参数<code>shuffle=True</code>, 不然网络无法训练! 因为一个批量数据中可能就只有一个类别, 无法反向传播, 致使参数不下降, 或者为nan.</li>
+<li>若使用GPU进行训练, 在读取<code>DataLoader</code>时, 把数据加载到GPU, 而不是在iteration时加入GPU, 将大大提升运行时间!</li>
+</ol>
+<h1 id="2018-11-13">2018-11-13</h1>
+<p>tensor() 是不能直接和int, 等非tensor类型计算的, 计算结果会成0</p>
+<h1 id="2018-11-16">2018-11-16</h1>
+<h2 id="官网教程httpspytorchorgtutorialsbeginnerdeep_learning_60min_blitzhtml"><a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank" rel="noopener noreffer">官网教程</a></h2>
+<h3 id="pytorch是什么">pytorch是什么?</h3>
+<p>基于python的科学计算工具包:</p>
+<ul>
+<li>基于GPU计算的numpy的替代物</li>
+<li>深度学习研究平台</li>
+</ul>
+<h4 id="tensor">tensor</h4>
+<p>就是numpy的<code>ndarray</code>, 不同之处在于基于GPU的tensor能加速计算.</p>
+<blockquote>
+<p><code>torch.Tensor</code> is the central class of the package. If you set its attribute <code>.requires_grad</code> as <code>True</code>, it starts to track all operations on it. When you finish your computation you can call <code>.backward()</code> and have all the gradients computed automatically. The gradient for this tensor will be accumulated into <code>.grad</code> attribute.</p>
+</blockquote>
+<ul>
+<li>Tensor是核心的数据结构</li>
+<li><code>.requires_grad</code>用来追踪Tensor是否需要计算每个算子的梯度</li>
+<li><code>.backward()</code>用来计算梯度</li>
+</ul>
+<h4 id="function">function</h4>
+<p>Tensor和Function是相互联系的, 构成了一个非循环图, 它编码了完整的计算历史.</p>
+<h4 id="autograd">autograd</h4>
+<p>pytorch中所有神经网络的核心是autograd.</p>
+<h4 id="gradient">gradient</h4>
+<p>反向传播(backprop)阶段, 损失是一个标量(scalar)</p>
+<ul>
+<li>因为损失函数也是计算图中的一部分(最上层部分), 然后通过梯度分布在各个label上</li>
+</ul>
+<h3 id="neural-networks">neural networks</h3>
+<blockquote>
+<p>A typical training procedure for a neural network is as follows:</p>
+<ul>
+<li>Define the neural network that has some learnable parameters (or weights)</li>
+<li>Iterate over a dataset of inputs</li>
+<li>Process input through the network</li>
+<li>Compute the loss (how far is the output from being correct)</li>
+<li>Propagate gradients back into the network’s parameters</li>
+<li>Update the weights of the network, typically using a simple update rule: <code>weight = weight - learning_rate* gradient</code></li>
+</ul>
+</blockquote>
+<h4 id="define-the-networks">define the networks</h4>
+<blockquote>
+<p>You just have to define the <code>forward</code> function, and the <code>backward</code> function (where gradients are computed) is automatically defined for you using <code>autograd</code>. You can use any of the Tensor operations in the <code>forward</code> function.</p>
+</blockquote>
+<h4 id="basic-classes">basic classes</h4>
+<blockquote>
+<p><strong>Recap:</strong></p>
+<ul>
+<li><code>torch.Tensor</code> - A <em>multi-dimensional array</em> with support for autograd operations like <code>backward()</code>. Also <em>holds the gradient</em> w.r.t. the tensor.</li>
+<li><code>nn.Module</code> - Neural network module. <em>Convenient way of encapsulating parameters</em>, with helpers for moving them to GPU, exporting, loading, etc.</li>
+<li><code>nn.Parameter</code> - A kind of Tensor, that is <em>automatically registered as a parameter when assigned as an attribute to a</em><code>Module</code>.</li>
+<li><code>autograd.Function</code> - Implements <em>forward and backward definitions of an autograd operation</em>. Every <code>Tensor</code>operation, creates at least a single <code>Function</code> node, that connects to functions that created a <code>Tensor</code> and <em>encodes its history</em>.</li>
+</ul>
+</blockquote>
+<h4 id="backprop">backprop</h4>
+<p>To backpropagate the error all we have to do is to <code>loss.backward()</code>. You need to clear the existing gradients though, else gradients will be accumulated to existing gradients.</p>
+<p>Now we shall call <code>loss.backward()</code>, and have a look at conv1’s bias gradients before and after the backward.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">net</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>     <span class="c1"># zeroes the gradient buffers of all parameters</span>
+<span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>     <span class="c1"># backprop, calculate gradients</span>
+<span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>    <span class="c1"># Does the update the weight</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="training-a-classifier">training a classifier</h3>
+<p>代码框架:</p>
+<ol>
+<li>loading and normalizing data</li>
+<li>define the neural network</li>
+<li>define loss function and optimizer</li>
+<li>train the network</li>
+<li>test the network</li>
+</ol>
+<h2 id="github-pytorch-tutorialhttpsgithubcomyunjeypytorch-tutorial"><a href="https://github.com/yunjey/pytorch-tutorial" target="_blank" rel="noopener noreffer">Github: pytorch-tutorial</a></h2>
+<h1 id="2018-12-10">2018-12-10</h1>
+<p>对于<code>tensor.detach()</code>的理解.</p>
+<blockquote>
+<p>pytorch想做<strong>gpu加速</strong>版的numpy，取代numpy在python中科学计算的地位。</p>
+<p>pytorch的python前端在竭力从语法、命名规则、函数功能上与numpy统一，加持的<strong>自动微分</strong>和<strong>gpu加速</strong>功能尽可能地在吸引更大范围内的python用户人群。</p>
+<p>[<a href="https://www.zhihu.com/question/305054691/answer/548005678" target="_blank" rel="noopener noreffer">Link</a>]</p>
+</blockquote>
+<p>因此, 在使用pytorch的时候, 仅需要注意自动微分就行了!</p>
+<p>而<code>tensor.detach()</code>就是解决禁用自动微分的方法[<a href="https://discuss.pytorch.org/t/clone-and-detach-in-v0-4-0/16861" target="_blank" rel="noopener noreffer">Link</a>].</p>
+<ul>
+<li>(与<code>tensor.clone()</code>区别, <code>tensor.clone()</code>保持了源<code>tensor</code>的<code>requires_grad</code>)</li>
+</ul>
+<p>简单理解, 就是把计算图中的一部分拆解下来, 而这部分不需要自动微分.</p>
+<p><strong>update</strong></p>
+<p>作用: 利用<code>detach</code>截断梯度流[<a href="https://www.cnblogs.com/king-lps/p/8570021.html" target="_blank" rel="noopener noreffer">Link</a>]</p>
+<ul>
+<li>
+<blockquote>
+<p>返回一个新变量，与当前计算图分离。结果将永远不需要改变。</p>
+<p>如果输入是易失的，输出也将变得不稳定。</p>
+<p><strong>返回的 Variable 永远不会需要梯度</strong>。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="参考">参考:</h4>
+<ul>
+<li>
+<p><a href="https://discuss.pytorch.org/t/clone-and-detach-in-v0-4-0/16861/2">https://discuss.pytorch.org/t/clone-and-detach-in-v0-4-0/16861/2</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/u012436149/article/details/76714349">https://blog.csdn.net/u012436149/article/details/76714349</a></p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/Hungryof/article/details/78035332">https://blog.csdn.net/Hungryof/article/details/78035332</a></p>
+</li>
+</ul>
+<h3 id="torchtensorregister_hooklinkhttpspytorchorgdocsstableautogradhtmltorchtensorregister_hook">torch.Tensor.register_hook[<a href="https://pytorch.org/docs/stable/autograd.html#torch.Tensor.register_hook" target="_blank" rel="noopener noreffer">link</a>]</h3>
+<blockquote>
+<p><code>register_hook</code>(<em>hook</em>)[<a href="https://pytorch.org/docs/stable/_modules/torch/tensor.html#Tensor.register_hook" target="_blank" rel="noopener noreffer">SOURCE]</a></p>
+<p>Registers a backward hook.</p>
+<p>The hook will be called every time a gradient with respect to the Tensor is computed. The hook should have the following signature:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">hook(grad) -&gt; Tensor or None
+</code></pre></td></tr></table>
+</div>
+</div><p>The hook should not modify its argument, but it can optionally return a new gradient which will be used in place of <a href="https://pytorch.org/docs/stable/autograd.html#torch.Tensor.grad" target="_blank" rel="noopener noreffer"><code>grad</code></a>.</p>
+<p>This function returns a handle with a method <code>handle.remove()</code> that removes the hook from the module.</p>
+</blockquote>
+<p>登记一个钩子, 在<strong>反向传播</strong>是调用!</p>
+<p>refs:</p>
+<ul>
+<li><a href="https://discuss.pytorch.org/t/solved-reverse-gradients-in-backward-pass/3589">https://discuss.pytorch.org/t/solved-reverse-gradients-in-backward-pass/3589</a></li>
+<li><a href="https://discuss.pytorch.org/t/why-cant-i-see-grad-of-an-intermediate-variable/94">https://discuss.pytorch.org/t/why-cant-i-see-grad-of-an-intermediate-variable/94</a></li>
+</ul>
+<h1 id="2018-12-13">2018-12-13</h1>
+<ul>
+<li>比赛心得和pytorch（等）踩得坑[<a href="https://www.jianshu.com/p/95b6362f58e4" target="_blank" rel="noopener noreffer">Link</a>]</li>
+</ul>
+<h1 id="2018-12-14-203533">2018-12-14 20:35:33</h1>
+<p>在使用某个工具之前, 一定要先看看别人已经踩过那些坑.</p>
+<p>比如说使用github上面的开源代码, 先要看看<code>issue</code>里面别人踩过的坑, 然后自己尽量避免, 或者早有准备.</p>
+<p>知乎上有一个问题, 里面的回答也非常有建设性: <a href="https://www.zhihu.com/question/67209417" target="_blank" rel="noopener noreffer">PyTorch 有哪些坑/bug？</a></p>
+<p>里面的一些回答也非常的不错, 比如:</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/67209417/answer/268789688" target="_blank" rel="noopener noreffer">总结一个代码模板</a></li>
+</ul>
+<h1 id="2019-1-7-220819">2019-1-7 22:08:19</h1>
+<p>又找到一个不错的教程</p>
+<p><a href="https://github.com/chenyuntc/pytorch-book">https://github.com/chenyuntc/pytorch-book</a></p>
+<p>作者陈云, 北邮的研究生, 著有&lt;深度学习框架PyTorch：入门与实践&gt;, 热爱分享, 知乎和github都有不错的干货.</p>
+<h1 id="2019-1-9-171417">2019-1-9 17:14:17</h1>
+<p><a href="https://mp.weixin.qq.com/s/mPmFOm32-ipbiIp8mPSd-A">https://mp.weixin.qq.com/s/mPmFOm32-ipbiIp8mPSd-A</a></p>
+<p>黄海广老师对官网1.0版本教程的翻译</p>
+<h1 id="2019-1-13-153159">2019-1-13 15:31:59</h1>
+<p>在XXXLoss的前面不要加softmax?</p>
+<p>有些损失需要加, 有些损失已经包含了softmax的计算.</p>
+<p>具体来讲</p>
+<ul>
+<li><code>nn.BCELoss</code>前面需要加<code>nn.Sigmoid()</code>, 并且输出一维向量</li>
+<li><code>nn.BCEWithLogitsLoss</code>相当于(<code>nn.Sigmoid()</code> + <code>nn.BCELoss</code>), 因为损失函数包含了归一化</li>
+<li><code>nn.CrossEntropyLoss</code>不需要加<code>nn.Softmax(dim=1)</code>, 因为损失函数里面包含了归一化</li>
+</ul>
+<p>参考: <a href="https://blog.csdn.net/zhangxb35/article/details/72464152" target="_blank" rel="noopener noreffer">pytorch loss function 总结</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2018-10-24</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/dl.html">dl</a>,&nbsp;<a href="/tags/pytorch.html">pytorch</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/old/deep-learning/how_gpu_accelerate_compute.html" class="prev" rel="prev" title="GPU是如何加速计算的?"><i class="fas fa-angle-left fa-fw"></i>GPU是如何加速计算的?</a>
+            <a href="/posts/old/deep-learning/gans.html" class="next" rel="next" title="survey-of-gans">survey-of-gans<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphacks</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+
+    
+<section class="widget">
+
+    <ul class="widget-list">
+        
+        <li>
+            <a href="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" title="" target="_blank" style="color:red">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://example.com/posts/2104040035-hello.html" title="hello">hello</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html" title="attention-transfomer-bert">attention-transfomer-bert</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905101329-python-call.html" title="python-call">python-call</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/reading-paper/list_paper.html" title="论文阅读">论文阅读</a>
+    </li>
+    
+    <li>
+        <a href="https://example.com/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+    </li>
+    
+</ul>
+
+    
+
+    
+<section class="widget">
+    <h3 class="widget-title">特栏</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/reading-except.html" title="">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note.html" title="">阅读笔记</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"Alphacks","id-2":"Alphacks","id-3":"Alphacks"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":null,"cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

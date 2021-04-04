@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>pytorch - 标签 - Alphacks</title>
+        <link>https://example.com/tags/pytorch.html</link>
+        <description>pytorch - 标签 - Alphacks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 24 Oct 2018 11:40:58 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/pytorch.html" rel="self" type="application/rss+xml" /><item>
+    <title>pytorch tutorial</title>
+    <link>https://example.com/posts/old/deep-learning/pytorch_tutorial.html</link>
+    <pubDate>Wed, 24 Oct 2018 11:40:58 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/pytorch_tutorial.html</guid>
+    <description><![CDATA[tutorial 地址: pytorch: Training a Classifier. 当使用新的数据集进行测试时, 出现的问题及解决的方法. Problem 1 error: 1 RuntimeError: invalid argument 0: Sizes of tensors must match except in dimension 0. Got 484 and 549 in dimension 2 at /pytorch/aten/src/TH/generic/THTensorMath.cpp:3616 location: 1 images, labels = data_iter.next() solution: 1 2 数]]></description>
+</item></channel>
+</rss>

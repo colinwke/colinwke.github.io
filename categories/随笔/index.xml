@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>随笔 - 分类 - Alphacks</title>
+        <link>https://example.com/categories/%E9%9A%8F%E7%AC%94.html</link>
+        <description>随笔 - 分类 - Alphacks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 08 Jul 2016 15:20:44 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/%E9%9A%8F%E7%AC%94.html" rel="self" type="application/rss+xml" /><item>
+    <title>别闹心</title>
+    <link>https://example.com/posts/old/essay/%E5%88%AB%E9%97%B9%E5%BF%83.html</link>
+    <pubDate>Fri, 08 Jul 2016 15:20:44 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/essay/%E5%88%AB%E9%97%B9%E5%BF%83.html</guid>
+    <description><![CDATA[一 前些天又准备开始写那个计划了很久的小软件。虽然是一个小软件，但是对于我这种技术还没到家的人也显得有些困难，而且时间有限，写得一点也不舒服。]]></description>
+</item><item>
+    <title>学会工作，学会生活</title>
+    <link>https://example.com/posts/old/essay/%E5%AD%A6%E4%BC%9A%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB.html</link>
+    <pubDate>Sun, 03 Apr 2016 15:31:00 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/essay/%E5%AD%A6%E4%BC%9A%E5%B7%A5%E4%BD%9C%E5%AD%A6%E4%BC%9A%E7%94%9F%E6%B4%BB.html</guid>
+    <description><![CDATA[很多时候发现自己过于浮躁，一些简单的事都不能好好的完成。总是一会看看这里，一会又做做那里，最后什么也没有做。或者是整天都循环的、重复的看一些]]></description>
+</item></channel>
+</rss>
