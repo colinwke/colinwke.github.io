@@ -15,7 +15,7 @@ if [[ ${op} == "s" ]]; then
     hugo && hugo server -D
 elif [[ ${op} == "d" ]]; then
     find ./public ! -name '.git' -mindepth 1 -maxdepth 1 -print0 -exec rm -rf {} +
-    hugo && cd public && git add . && git commit -m "update online $(date "+%F %T")" && git push -f
+    hugo && cd public && git add . && git commit -m "update online $(date "+%F %T")" && git push -f --set-upstream origin master
 else
     sh /Users/wangke/blog/static/assets/script/hugo_new.sh "${op}"
 fi
