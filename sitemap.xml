@@ -2,13 +2,14 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://example.com/</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/categories.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/categories.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/posts/2104051146-hugo-note.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/posts.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags/unsort.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/categories/unsort.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/posts/2104040035-hello.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/posts.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/tags.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/tags/unsort.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/categories/unsort.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/posts/old/2104031558-multi-git.html</loc><lastmod>2021-04-03T15:58:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html</loc><lastmod>2019-06-18T16:07:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/1906101549-proxy.html</loc><lastmod>2019-06-10T15:49:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -32,9 +33,9 @@
             <loc>https://example.com/tags/cnn.html</loc><lastmod>2018-12-05T15:06:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/deep-learning/cs231n-visulization.html</loc><lastmod>2018-12-05T15:06:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/dl.html</loc><lastmod>2018-12-05T15:06:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/cross-entropy-loss.html</loc><lastmod>2018-11-28T13:59:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/ml.html</loc><lastmod>2018-11-28T13:59:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/ml.html</loc><lastmod>2018-11-28T13:59:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/posts/old/cross-entropy-loss.html</loc><lastmod>2018-11-28T13:59:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/email-for-source-code-template.html</loc><lastmod>2018-11-26T11:29:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/paper.html</loc><lastmod>2018-11-26T11:29:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/paper.html</loc><lastmod>2018-11-26T11:29:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
