@@ -20,24 +20,6 @@
     </item>
     
     <item>
-      <title>关于</title>
-      <link>https://example.com/columns/page-archives.html</link>
-      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
-      <author>wangkest@qq.com (Alphacks)</author>
-      <guid>https://example.com/columns/page-archives.html</guid>
-      <description>title: &amp;ldquo;归档&amp;rdquo; type: archives</description>
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>https://example.com/columns/page-search.html</link>
-      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
-      <author>wangkest@qq.com (Alphacks)</author>
-      <guid>https://example.com/columns/page-search.html</guid>
-      <description>title: &amp;ldquo;搜索&amp;rdquo; description: &amp;ldquo;搜索页面&amp;rdquo; type: &amp;ldquo;search&amp;rdquo;</description>
-    </item>
-    
-    <item>
       <title>博客精华</title>
       <link>https://example.com/columns/good-blog.html</link>
       <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>

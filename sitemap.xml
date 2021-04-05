@@ -82,8 +82,6 @@
             <loc>https://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html</loc><lastmod>2016-05-14T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/page-about.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/columns/page-archives.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/columns/page-search.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/good-blog.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/page-spec.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/good-post.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
