@@ -4,14 +4,7 @@
         <link>https://example.com/tags/attention.html</link>
         <description>attention - 标签 - Alphacks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 29 Oct 2018 16:05:51 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/attention.html" rel="self" type="application/rss+xml" /><item>
-    <title>SA-GAN</title>
-    <link>https://example.com/posts/old/reading-paper/sagan.html</link>
-    <pubDate>Mon, 29 Oct 2018 16:05:51 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/reading-paper/sagan.html</guid>
-    <description><![CDATA[摘要 传统的卷积函数在低分辨率特征图中只生成空间局部点的高分辨率细节 在SAGAN中，可以使用来自所有特性位置的提示生成详细信息。 问题: 难以对多]]></description>
-</item><item>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Oct 2018 16:12:43 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/attention.html" rel="self" type="application/rss+xml" /><item>
     <title>Attention</title>
     <link>https://example.com/posts/old/deep-learning/attention.html</link>
     <pubDate>Thu, 18 Oct 2018 16:12:43 &#43;0800</pubDate>

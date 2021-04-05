@@ -4,14 +4,7 @@
         <link>https://example.com/tags/paper.html</link>
         <description>paper - 标签 - Alphacks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 26 Nov 2018 11:29:25 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/paper.html" rel="self" type="application/rss+xml" /><item>
-    <title>email-for-source-code-template</title>
-    <link>https://example.com/posts/old/email-for-source-code-template.html</link>
-    <pubDate>Mon, 26 Nov 2018 11:29:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/email-for-source-code-template.html</guid>
-    <description><![CDATA[整理一些索要源码的邮件 1 标题： “A greeting from Xiangxiang Zeng”，或者“Regarding your microRNA-disease association article” 正文： Dear (千万不要写成Dead，如果是非英]]></description>
-</item><item>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 31 Oct 2018 16:54:23 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/paper.html" rel="self" type="application/rss+xml" /><item>
     <title>迁移学习资源整理</title>
     <link>https://example.com/posts/old/transfer-learning/transfer-scholar.html</link>
     <pubDate>Wed, 31 Oct 2018 16:54:23 &#43;0800</pubDate>

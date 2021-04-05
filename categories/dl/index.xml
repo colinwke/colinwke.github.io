@@ -12,13 +12,6 @@
     <guid>https://example.com/posts/old/2018-12-21-adversarial-model.html</guid>
     <description><![CDATA[损失函数 在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model. 而Generative Model的目标是最大化的混淆Adve]]></description>
 </item><item>
-    <title>cs231n-visulization</title>
-    <link>https://example.com/posts/old/deep-learning/cs231n-visulization.html</link>
-    <pubDate>Wed, 05 Dec 2018 15:06:11 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/deep-learning/cs231n-visulization.html</guid>
-    <description><![CDATA[CNN特征可视化 课时30：12.1 特征可视化、倒置、对抗样本 https://www.bilibili.com/video/av17204303/?p=27 每层在寻找什么 卷积核正在寻找什么? 第一层: 都在寻找有向边 中间层: 某个部位的最大]]></description>
-</item><item>
     <title>survey-of-gans</title>
     <link>https://example.com/posts/old/deep-learning/gans.html</link>
     <pubDate>Fri, 26 Oct 2018 14:55:20 &#43;0800</pubDate>

@@ -4,14 +4,7 @@
         <link>https://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</link>
         <description>机器学习 - 分类 - Alphacks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 24 Jun 2016 17:59:25 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html" rel="self" type="application/rss+xml" /><item>
-    <title>Weka资源分享</title>
-    <link>https://example.com/posts/old/machine-learning/weka-share.html</link>
-    <pubDate>Fri, 24 Jun 2016 17:59:25 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/machine-learning/weka-share.html</guid>
-    <description><![CDATA[Weka官方网络课程 Data Mining with Weka More Data Mining with Weka Slides是课程所用的幻灯片 Videos中Youku/zh是加上中文字幕的视频 直接下载全部视频，不过]]></description>
-</item><item>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 May 2016 20:38:20 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html" rel="self" type="application/rss+xml" /><item>
     <title>KNN算法的C语言实现</title>
     <link>https://example.com/posts/old/machine-learning/knn-in-c.html</link>
     <pubDate>Sat, 14 May 2016 20:38:20 &#43;0800</pubDate>

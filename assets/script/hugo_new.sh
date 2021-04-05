@@ -10,7 +10,7 @@ if [[ $# != 1 ]]; then echo "[ERROR] args(file name) need!" && exit 1; fi
 md_dir="/Users/wangke/blog/content/posts"
 md_name=$(echo "$1" | tr " " "-")
 
-found=$(find ${md_dir} -maxdepth 1 -type f -name "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-${md_name}.md")
+found=$(find ${md_dir} -type f -name "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-${md_name}.md")
 
 if [[ ${found} ]]; then
     open -a "Typora" "${found}"
@@ -21,15 +21,15 @@ else
     info="\
 ---
 title: \"$(echo "${md_name}" | tr ' ' '-')\"
-
 categories: [\"unsort\"]
 tags: [\"unsort\"]
 author: \"wangke\"
 email: \"wangkest@qq.com\"
 homepage: \"colinwke.github.io\"
 date: \"${runtime_flag_show}\"
-toc: false
-draft: false
+toc: true
+draft: true
+math: false
 ---
 
 "

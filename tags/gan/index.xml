@@ -12,13 +12,6 @@
     <guid>https://example.com/posts/old/2018-12-21-adversarial-model.html</guid>
     <description><![CDATA[损失函数 在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model. 而Generative Model的目标是最大化的混淆Adve]]></description>
 </item><item>
-    <title>SA-GAN</title>
-    <link>https://example.com/posts/old/reading-paper/sagan.html</link>
-    <pubDate>Mon, 29 Oct 2018 16:05:51 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/reading-paper/sagan.html</guid>
-    <description><![CDATA[摘要 传统的卷积函数在低分辨率特征图中只生成空间局部点的高分辨率细节 在SAGAN中，可以使用来自所有特性位置的提示生成详细信息。 问题: 难以对多]]></description>
-</item><item>
     <title>survey-of-gans</title>
     <link>https://example.com/posts/old/deep-learning/gans.html</link>
     <pubDate>Fri, 26 Oct 2018 14:55:20 &#43;0800</pubDate>

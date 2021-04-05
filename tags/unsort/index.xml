@@ -19,13 +19,6 @@
     <guid>https://example.com/posts/old/2104031558-multi-git.html</guid>
     <description><![CDATA[多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 条件: git版本号高于2.13(git &ndash;version) 编辑]]></description>
 </item><item>
-    <title>attention-transfomer-bert</title>
-    <link>https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html</link>
-    <pubDate>Tue, 18 Jun 2019 16:07:17 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html</guid>
-    <description><![CDATA[The Illustrated Transformer 进去的第一篇文章, 说道了attention, 那就先从这个开始吧 Mechanics of Seq2seq Models With Attention &ndash; QA: encoder-decoder是否为针对seq2seq设]]></description>
-</item><item>
     <title>proxy</title>
     <link>https://example.com/posts/old/1906101549-proxy.html</link>
     <pubDate>Mon, 10 Jun 2019 15:49:35 &#43;0800</pubDate>
@@ -47,13 +40,6 @@
     <guid>https://example.com/posts/old/1905071330-mecab.html</guid>
     <description><![CDATA[wondows平台, pip安装MeCab: 1 pip install mecab-python3 出现问题: 1 &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。 在网上找了一些资料, 一些]]></description>
 </item><item>
-    <title>论文阅读</title>
-    <link>https://example.com/posts/old/reading-paper/list_paper.html</link>
-    <pubDate>Thu, 10 Jan 2019 15:12:11 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/reading-paper/list_paper.html</guid>
-    <description><![CDATA[阿里行人重识别(ReID)算法效果取得世界第一 主要贡献 通过局部信息的挖掘，致力于解决行人在识别过程中表观姿态变化剧烈，不容易对齐的问题 主要方]]></description>
-</item><item>
     <title>cnn</title>
     <link>https://example.com/posts/old/deep-learning/cnn.html</link>
     <pubDate>Fri, 28 Dec 2018 15:52:18 &#43;0800</pubDate>
@@ -67,12 +53,5 @@
     <author>作者</author>
     <guid>https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html</guid>
     <description><![CDATA[转至: [Link] CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经网络需要训练的参数的个数。总之，卷积网络的核心思想是将：局部感受野、权值共享]]></description>
-</item><item>
-    <title>README</title>
-    <link>https://example.com/posts/old/readme.html</link>
-    <pubDate>Tue, 30 Oct 2018 11:14:30 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/readme.html</guid>
-    <description><![CDATA[记录一些笔记 在网页端访问有更好的体验: https://colinwke.github.io/]]></description>
 </item></channel>
 </rss>

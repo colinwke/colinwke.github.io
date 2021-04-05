@@ -2,28 +2,20 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://example.com/</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/tags/blog.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/categories/blog.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/categories.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/posts/2104051146-hugo-note.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/posts.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/tags.html</loc><lastmod>2021-04-05T11:46:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/categories.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/posts/2104040035-hello.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/posts.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/tags/unsort.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/categories/unsort.html</loc><lastmod>2021-04-04T00:35:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/posts/old/2104031558-multi-git.html</loc><lastmod>2021-04-03T15:58:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/posts/old/deep-learning/1906181607-attention-transfomer-bert.html</loc><lastmod>2019-06-18T16:07:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/1906101549-proxy.html</loc><lastmod>2019-06-10T15:49:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/1905272156-autohotkey.html</loc><lastmod>2019-05-27T21:56:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/reading.html</loc><lastmod>2019-05-12T16:10:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/reading.html</loc><lastmod>2019-05-12T16:10:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/1905121610-reading-may.html</loc><lastmod>2019-05-12T16:10:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/python.html</loc><lastmod>2019-05-10T13:29:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/categories/python.html</loc><lastmod>2019-05-10T13:29:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/1905101329-python-call.html</loc><lastmod>2019-05-10T13:29:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/1905071330-mecab.html</loc><lastmod>2019-05-07T13:30:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/reading-paper/list_paper.html</loc><lastmod>2019-01-10T15:12:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/dabble/save-win10-spotlight.html</loc><lastmod>2018-12-29T14:05:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/win.html</loc><lastmod>2018-12-29T14:05:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/win.html</loc><lastmod>2018-12-29T14:05:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -32,57 +24,34 @@
             <loc>https://example.com/posts/old/2018-12-21-adversarial-model.html</loc><lastmod>2018-12-21T21:49:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/dl.html</loc><lastmod>2018-12-21T21:49:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/gan.html</loc><lastmod>2018-12-21T21:49:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/cnn.html</loc><lastmod>2018-12-05T15:06:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/deep-learning/cs231n-visulization.html</loc><lastmod>2018-12-05T15:06:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/dl.html</loc><lastmod>2018-12-05T15:06:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/ml.html</loc><lastmod>2018-11-28T13:59:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/ml.html</loc><lastmod>2018-11-28T13:59:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/cross-entropy-loss.html</loc><lastmod>2018-11-28T13:59:15&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/email-for-source-code-template.html</loc><lastmod>2018-11-26T11:29:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/paper.html</loc><lastmod>2018-11-26T11:29:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/categories/paper.html</loc><lastmod>2018-11-26T11:29:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/essay/stay-foolish.html</loc><lastmod>2018-11-04T22:23:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/%E6%84%9F%E5%8F%97.html</loc><lastmod>2018-11-04T22:23:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/%E6%84%9F%E5%8F%97.html</loc><lastmod>2018-11-04T22:23:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/tags/paper.html</loc><lastmod>2018-10-31T16:54:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/categories/paper.html</loc><lastmod>2018-10-31T16:54:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/transfer-learning.html</loc><lastmod>2018-10-31T16:54:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/transfer-learning/transfer-scholar.html</loc><lastmod>2018-10-31T16:54:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/readme.html</loc><lastmod>2018-10-30T11:14:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/attention.html</loc><lastmod>2018-10-29T16:05:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/reading-paper/sagan.html</loc><lastmod>2018-10-29T16:05:51&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/tags/dl.html</loc><lastmod>2018-10-26T14:55:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/deep-learning/gans.html</loc><lastmod>2018-10-26T14:55:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/pytorch.html</loc><lastmod>2018-10-24T11:40:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/deep-learning/pytorch_tutorial.html</loc><lastmod>2018-10-24T11:40:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/deep-learning/how_gpu_accelerate_compute.html</loc><lastmod>2018-10-23T21:22:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/deep-learning/attention.html</loc><lastmod>2018-10-18T16:12:43&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/tags/attention.html</loc><lastmod>2018-10-18T16:12:43&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/reading-web/web.html</loc><lastmod>2018-10-18T14:23:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/linux.html</loc><lastmod>2018-08-31T21:17:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/categories/linux.html</loc><lastmod>2018-08-31T21:17:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/deep-learning/linux_configuraion.html</loc><lastmod>2018-08-31T21:17:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/tensorflow.html</loc><lastmod>2018-08-31T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/categories/tensorflow.html</loc><lastmod>2018-08-31T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/deep-learning/install_tensorflow_gpu_on_ubuntu.html</loc><lastmod>2018-08-31T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/git.html</loc><lastmod>2017-11-13T18:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/dabble/git-usage.html</loc><lastmod>2017-11-13T18:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/categories/%E6%B6%89%E7%8C%8E.html</loc><lastmod>2017-11-13T18:47:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html</loc><lastmod>2017-09-09T21:32:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/categories/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.html</loc><lastmod>2017-09-09T21:32:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/data-mining/configure-pyspark-envir-for-pycharm.html</loc><lastmod>2017-09-09T21:32:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/hexo.html</loc><lastmod>2017-09-06T16:59:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/dabble/categorical-with-cat-md.html</loc><lastmod>2017-09-06T16:59:29&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/data-mining/python-env-for-data-sci.html</loc><lastmod>2016-10-17T17:40:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/dabble/linux-command.html</loc><lastmod>2016-07-21T17:31:04&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/essay/stay-silence.html</loc><lastmod>2016-07-08T15:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/categories/%E9%9A%8F%E7%AC%94.html</loc><lastmod>2016-07-08T15:20:44&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/weka.html</loc><lastmod>2016-06-24T17:59:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/machine-learning/weka-share.html</loc><lastmod>2016-06-24T17:59:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</loc><lastmod>2016-06-24T17:59:25&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/posts/old/dabble/git-github-user-problem.html</loc><lastmod>2016-06-22T17:36:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/github.html</loc><lastmod>2016-06-22T17:36:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/machine-learning/knn-in-c.html</loc><lastmod>2016-05-14T20:38:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</loc><lastmod>2016-05-14T20:38:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0.html</loc><lastmod>2016-05-14T20:38:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/%E7%AE%97%E6%B3%95.html</loc><lastmod>2016-05-14T20:38:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/tags/hexo.html</loc><lastmod>2016-05-14T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/dabble/hexo-note.html</loc><lastmod>2016-05-14T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html</loc><lastmod>2016-05-14T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/categories/%E6%B6%89%E7%8C%8E.html</loc><lastmod>2016-05-14T11:05:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/page-about.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/good-blog.html</loc><lastmod>2016-05-05T20:19:59&#43;00:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

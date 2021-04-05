@@ -4,21 +4,7 @@
         <link>https://example.com/tags/dl.html</link>
         <description>dl - 标签 - Alphacks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 05 Dec 2018 15:06:11 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/dl.html" rel="self" type="application/rss+xml" /><item>
-    <title>cs231n-visulization</title>
-    <link>https://example.com/posts/old/deep-learning/cs231n-visulization.html</link>
-    <pubDate>Wed, 05 Dec 2018 15:06:11 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/deep-learning/cs231n-visulization.html</guid>
-    <description><![CDATA[CNN特征可视化 课时30：12.1 特征可视化、倒置、对抗样本 https://www.bilibili.com/video/av17204303/?p=27 每层在寻找什么 卷积核正在寻找什么? 第一层: 都在寻找有向边 中间层: 某个部位的最大]]></description>
-</item><item>
-    <title>SA-GAN</title>
-    <link>https://example.com/posts/old/reading-paper/sagan.html</link>
-    <pubDate>Mon, 29 Oct 2018 16:05:51 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/reading-paper/sagan.html</guid>
-    <description><![CDATA[摘要 传统的卷积函数在低分辨率特征图中只生成空间局部点的高分辨率细节 在SAGAN中，可以使用来自所有特性位置的提示生成详细信息。 问题: 难以对多]]></description>
-</item><item>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Oct 2018 14:55:20 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/dl.html" rel="self" type="application/rss+xml" /><item>
     <title>survey-of-gans</title>
     <link>https://example.com/posts/old/deep-learning/gans.html</link>
     <pubDate>Fri, 26 Oct 2018 14:55:20 &#43;0800</pubDate>

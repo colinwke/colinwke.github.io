@@ -27,7 +27,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/old\/deep-learning\/how_gpu_accelerate_compute.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "dl","wordcount":  260 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "dl","wordcount":  258 ,
         "url": "https:\/\/example.com\/posts\/old\/deep-learning\/how_gpu_accelerate_compute.html","datePublished": "2018-10-23T21:22:18+08:00","dateModified": "2018-10-23T21:22:18+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -110,24 +110,19 @@
             </div>
             <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#gpu-与-cpu-性能比较">GPU 与 CPU 性能比较</a>
-      <ul>
-        <li><a href="#cpu串行处理-vs-gpu并行处理">CPU串行处理 VS GPU并行处理</a></li>
-        <li><a href="#cuda">cuda</a></li>
-        <li><a href="#cuda-1">CUDA</a>
-          <ul>
-            <li><a href="#tensor-core">tensor core</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
+    <li><a href="#nvidia">Nvidia</a></li>
+    <li><a href="#gpu-与-cpu-性能比较">GPU 与 CPU 性能比较</a></li>
+    <li><a href="#cpu串行处理-vs-gpu并行处理">CPU串行处理 VS GPU并行处理</a></li>
+    <li><a href="#参考">参考</a></li>
+    <li><a href="#cuda">cuda</a></li>
+    <li><a href="#tensor-core">tensor core</a></li>
   </ul>
 </nav></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">GPU是如何加速计算的?</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Alphacks</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/dl.html"><i class="far fa-folder fa-fw"></i>dl</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-10-23">2018-10-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 260 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-10-23">2018-10-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 258 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
-        </div><div class="content" id="content"><h1 id="nvidia">Nvidia</h1>
+        </div><div class="content" id="content"><h2 id="nvidia">Nvidia</h2>
 <p><a href="https://www.nvidia.cn/object/what-is-gpu-computing-cn.html">https://www.nvidia.cn/object/what-is-gpu-computing-cn.html</a></p>
 <h2 id="gpu-与-cpu-性能比较">GPU 与 CPU 性能比较</h2>
 <blockquote>
@@ -141,7 +136,7 @@
         data-sizes="auto"
         alt="assets/how_gpu_accelerate_compute/cpu-and-gpu.jpg"
         title="assets/how_gpu_accelerate_compute/cpu-and-gpu.jpg" /></p>
-<h3 id="cpu串行处理-vs-gpu并行处理">CPU串行处理 VS GPU并行处理</h3>
+<h2 id="cpu串行处理-vs-gpu并行处理">CPU串行处理 VS GPU并行处理</h2>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -151,7 +146,7 @@
         alt="assets/how_gpu_accelerate_compute/1540283604051.png"
         title="1540283604051" /></p>
 <p>总的来说在于核心数上面的优势, CPU一般核心数是较少了(Intel Core i9-7980XE @ 2.60GHz, 18core), 而GPU核心数较多(NVIDIA TESLA V100/CUDA 5120)</p>
-<p>参考:</p>
+<h2 id="参考">参考</h2>
 <ul>
 <li><a href="http://itianti.sinaapp.com/index.php/cpu">http://itianti.sinaapp.com/index.php/cpu</a></li>
 <li><a href="http://itianti.sinaapp.com/index.php/gpu">http://itianti.sinaapp.com/index.php/gpu</a></li>
@@ -159,11 +154,10 @@
 <li><a href="https://www.nvidia.com/zh-cn/deep-learning-ai/">https://www.nvidia.com/zh-cn/deep-learning-ai/</a></li>
 <li><a href="https://item.jd.com/31346484884.html">https://item.jd.com/31346484884.html</a> [京东NVIDIA TESLA V100介绍]</li>
 </ul>
-<h3 id="cuda">cuda</h3>
-<h3 id="cuda-1">CUDA</h3>
+<h2 id="cuda">cuda</h2>
 <p>CUDA 是 NVIDIA 发明的一种并行计算平台和编程模型。它通过利用图形处理器 (GPU) 的处理能力，可大幅提升计算性能。</p>
 <p><a href="https://www.geforce.cn/hardware/technology/cuda">https://www.geforce.cn/hardware/technology/cuda</a></p>
-<h4 id="tensor-core">tensor core</h4>
+<h2 id="tensor-core">tensor core</h2>
 <p><a href="https://www.nvidia.com/en-us/data-center/tensorcore/">https://www.nvidia.com/en-us/data-center/tensorcore/</a></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
@@ -193,7 +187,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphacks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2021-04-05 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphacks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2021-04-06 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
@@ -201,19 +195,11 @@
     <ul class="widget-list">
         
         <li>
-            <a href="/posts/2104051146-hugo-note.html" title="hugo之旅">hugo之旅</a>
-        </li>
-        
-        <li>
             <a href="/posts/2104040035-hello.html" title="hello">hello</a>
         </li>
         
         <li>
             <a href="/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/deep-learning/1906181607-attention-transfomer-bert.html" title="attention-transfomer-bert">attention-transfomer-bert</a>
         </li>
         
         <li>
@@ -229,15 +215,23 @@
         </li>
         
         <li>
-            <a href="/posts/old/1905101329-python-call.html" title="python-call">python-call</a>
-        </li>
-        
-        <li>
             <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
         </li>
         
         <li>
-            <a href="/posts/old/reading-paper/list_paper.html" title="论文阅读">论文阅读</a>
+            <a href="/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/deep-learning/cnn.html" title="cnn">cnn</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/deep-learning/2018-12-26-cnn-feature-map.html" title="CNN-feature-map">CNN-feature-map</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/2018-12-21-adversarial-model.html" title="adversarial-model">adversarial-model</a>
         </li>
         
     </ul>
