@@ -13,10 +13,10 @@
     <description><![CDATA[1 下载 https://spark.apache.org/downloads.html 注: 不要追求最新的版本, 最新的版本意味着坑可能多. 示例版本: spark-2.1.1-bin-hadoop2.6.tgz 2 解压 注: 解压后的路径不能包含空格 (尤其注意Program File, 另外, sp]]></description>
 </item><item>
     <title>配置python数据分析环境</title>
-    <link>https://example.com/posts/old/data-mining/%E9%85%8D%E7%BD%AEpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%8E%AF%E5%A2%83.html</link>
+    <link>https://example.com/posts/old/data-mining/python-env-for-data-sci.html</link>
     <pubDate>Mon, 17 Oct 2016 17:40:40 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://example.com/posts/old/data-mining/%E9%85%8D%E7%BD%AEpython%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%8E%AF%E5%A2%83.html</guid>
+    <guid>https://example.com/posts/old/data-mining/python-env-for-data-sci.html</guid>
     <description><![CDATA[1 python安装 1.1 下载 官方网站：https://www.python.org/ 搜狐镜像：http://mirrors.sohu.com/p]]></description>
 </item></channel>
 </rss>

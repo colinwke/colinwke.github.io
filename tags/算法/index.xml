@@ -6,10 +6,10 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
             <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 May 2016 20:38:20 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E7%AE%97%E6%B3%95.html" rel="self" type="application/rss+xml" /><item>
     <title>KNN算法的C语言实现</title>
-    <link>https://example.com/posts/old/machine-learning/knn%E7%AE%97%E6%B3%95%E7%9A%84c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0.html</link>
+    <link>https://example.com/posts/old/machine-learning/knn-in-c.html</link>
     <pubDate>Sat, 14 May 2016 20:38:20 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://example.com/posts/old/machine-learning/knn%E7%AE%97%E6%B3%95%E7%9A%84c%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0.html</guid>
+    <guid>https://example.com/posts/old/machine-learning/knn-in-c.html</guid>
     <description><![CDATA[k-NN(k-Nearest Neighbors) k-近邻算法 概述 k-近邻算法采用测量不同的特征值之间的距离方法进行分类 k-近邻算法的一般流程 收集数据：可以使用任何方法 准备数据：距离计算]]></description>
 </item></channel>
 </rss>

@@ -20,10 +20,10 @@
     <description><![CDATA[安装TensorFlow anaconda 下载: python3.6版本 安装: sudo sh Anaconda3-5.2.0-Linux-x86_64.sh tensorflow 从pypi下载已经编译好的tensorflow_gpu https://pypi.org/project/tensorflow-gpu/#files tensorfl]]></description>
 </item><item>
     <title>Linux命令行模式</title>
-    <link>https://example.com/posts/old/dabble/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F.html</link>
+    <link>https://example.com/posts/old/dabble/linux-command.html</link>
     <pubDate>Thu, 21 Jul 2016 17:31:04 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://example.com/posts/old/dabble/linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F.html</guid>
+    <guid>https://example.com/posts/old/dabble/linux-command.html</guid>
     <description><![CDATA[1 图形界面的开启与关闭 启用超级用户编辑启动配置文件/etc/inittab 修改第26行： 启动图形界面id:5:initdefault: 不启动]]></description>
 </item></channel>
 </rss>

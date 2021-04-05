@@ -4,14 +4,7 @@
         <link>https://example.com/categories/unsort.html</link>
         <description>unsort - 分类 - Alphacks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 05 Apr 2021 11:46:01 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/unsort.html" rel="self" type="application/rss+xml" /><item>
-    <title>hugo-note</title>
-    <link>https://example.com/posts/2104051146-hugo-note.html</link>
-    <pubDate>Mon, 05 Apr 2021 11:46:01 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/2104051146-hugo-note.html</guid>
-    <description><![CDATA[2021-04-05 MathJax渲染问题 使用KaTex部分公式不能渲染, 使用MathJax解决 参考 对于公式不能自动换行, 把换行的\\修改为4个\\\\就可以]]></description>
-</item><item>
+            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/unsort.html" rel="self" type="application/rss+xml" /><item>
     <title>hello</title>
     <link>https://example.com/posts/2104040035-hello.html</link>
     <pubDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</pubDate>
@@ -74,5 +67,12 @@
     <author>作者</author>
     <guid>https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html</guid>
     <description><![CDATA[转至: [Link] CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经网络需要训练的参数的个数。总之，卷积网络的核心思想是将：局部感受野、权值共享]]></description>
+</item><item>
+    <title>README</title>
+    <link>https://example.com/posts/old/readme.html</link>
+    <pubDate>Tue, 30 Oct 2018 11:14:30 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/readme.html</guid>
+    <description><![CDATA[记录一些笔记 在网页端访问有更好的体验: https://colinwke.github.io/]]></description>
 </item></channel>
 </rss>

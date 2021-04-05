@@ -29,15 +29,6 @@
     </item>
     
     <item>
-      <title>特栏</title>
-      <link>https://example.com/columns/page-spec.html</link>
-      <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>
-      <author>wangkest@qq.com (Alphacks)</author>
-      <guid>https://example.com/columns/page-spec.html</guid>
-      <description>hello</description>
-    </item>
-    
-    <item>
       <title>阅读推荐</title>
       <link>https://example.com/columns/good-post.html</link>
       <pubDate>Thu, 05 May 2016 20:19:59 +0000</pubDate>

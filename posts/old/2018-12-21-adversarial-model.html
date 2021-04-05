@@ -18,7 +18,27 @@
 <meta name="twitter:title" content="adversarial-model"/>
 <meta name="twitter:description" content="损失函数 在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model. 而Generative Model的目标是最大化的混淆Adve"/>
 <meta name="application-name" content="LoveIt">
-<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/assets/colin_html/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/2018-12-21-adversarial-model.html" /><link rel="prev" href="https://example.com/posts/old/deep-learning/cs231n-visulization.html" /><link rel="next" href="https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/assets/colin_html/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/2018-12-21-adversarial-model.html" /><link rel="prev" href="https://example.com/posts/old/deep-learning/cs231n-visulization.html" /><link rel="next" href="https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [["$", "$"]],
+        },
+        displayMath: [
+            ["$$", "$$"]
+        ],
+        svg: {
+            fontCache: "global",
+        },
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+<script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -27,7 +47,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/old\/2018-12-21-adversarial-model.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "gan","wordcount":  903 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "gan","wordcount":  893 ,
         "url": "https:\/\/example.com\/posts\/old\/2018-12-21-adversarial-model.html","datePublished": "2018-12-21T21:49:16+08:00","dateModified": "2018-12-21T21:49:16+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -101,14 +121,14 @@
 <main class="main">
                 <div class="container"><article class="page single"><h1 class="single-title animated flipInX">adversarial-model</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Alphacks</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/dl.html"><i class="far fa-folder fa-fw"></i>dl</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-12-21">2018-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 903 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-12-21">2018-12-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 893 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="content" id="content"><h1 id="损失函数">损失函数</h1>
 <p>在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model.</p>
 <p>而Generative Model的目标是最大化的混淆Adversarial Model.</p>
 <p>判别模型的目标函数
 $$
-\max _ { D } E _ { x \sim P _ { r } } [ \log D ( x ) ] + E _ { x \sim P _ { g } } [ \log ( 1 - D ( x ) ]
+\max_{ D } E_{ x \sim P_{ r } } [ \log D ( x ) ] + E_{ x \sim P_{ g } } [ \log ( 1 - D ( x ) ]
 $$
 这难道不是最大化判别模型交叉熵损失吗?</p>
 <p>但是, 当最大化交叉熵损失的时, 也就是全部样本分错的情况, 也不能混淆对抗模型呢?</p>
@@ -199,7 +219,7 @@ $$</p>
     <ul class="widget-list">
         
         <li>
-            <a href="/posts/2104051146-hugo-note.html" title="hugo-note">hugo-note</a>
+            <a href="/posts/2104051146-hugo-note.html" title="hugo之旅">hugo之旅</a>
         </li>
         
         <li>
