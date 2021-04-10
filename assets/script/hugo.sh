@@ -16,7 +16,7 @@ if [[ ${op} == "s" ]]; then
 elif [[ ${op} == "d" ]]; then
     sed -i '' -E "s/updateDate = \"[0-9]{4}-[0-9]{2}-[0-9]{2}\"/updateDate = \"$(date +%F)\"/g" config.toml
     find ./public ! -name '.git' -mindepth 1 -maxdepth 1 -print0 -exec rm -rf {} +
-    hugo && cd public && git add . && git commit -m "update online $(date "+%F %T")" && git push -f --set-upstream origin master
+    hugo && cd public && git add . && git commit -m "update online $(date "+%F %T")" && git push -f # --set-upstream origin master
 else
     sh /Users/wangke/blog/static/assets/script/hugo_new.sh "${op}"
 fi
