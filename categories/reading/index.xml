@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>reading - 分类 - Alphacks</title>
+        <title>reading - 分类 - Alphaks</title>
         <link>https://example.com/categories/reading.html</link>
-        <description>reading - 分类 - Alphacks</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 12 May 2019 16:10:25 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/reading.html" rel="self" type="application/rss+xml" /><item>
+        <description>reading - 分类 - Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 12 May 2019 16:10:25 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/reading.html" rel="self" type="application/rss+xml" /><item>
     <title>五月阅读</title>
     <link>https://example.com/posts/old/1905121610-reading-may.html</link>
     <pubDate>Sun, 12 May 2019 16:10:25 &#43;0800</pubDate>

@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>dl - 分类 - Alphacks</title>
+        <title>dl - 分类 - Alphaks</title>
         <link>https://example.com/categories/dl.html</link>
-        <description>dl - 分类 - Alphacks</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Dec 2018 21:49:16 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/dl.html" rel="self" type="application/rss+xml" /><item>
+        <description>dl - 分类 - Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Dec 2018 21:49:16 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/dl.html" rel="self" type="application/rss+xml" /><item>
     <title>adversarial-model</title>
     <link>https://example.com/posts/old/2018-12-21-adversarial-model.html</link>
     <pubDate>Fri, 21 Dec 2018 21:49:16 &#43;0800</pubDate>

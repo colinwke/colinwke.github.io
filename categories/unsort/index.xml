@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>unsort - 分类 - Alphacks</title>
+        <title>unsort - 分类 - Alphaks</title>
         <link>https://example.com/categories/unsort.html</link>
-        <description>unsort - 分类 - Alphacks</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/unsort.html" rel="self" type="application/rss+xml" /><item>
+        <description>unsort - 分类 - Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/unsort.html" rel="self" type="application/rss+xml" /><item>
     <title>hello</title>
     <link>https://example.com/posts/2104040035-hello.html</link>
     <pubDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</pubDate>

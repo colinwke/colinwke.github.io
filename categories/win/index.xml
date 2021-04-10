@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>win - 分类 - Alphacks</title>
+        <title>win - 分类 - Alphaks</title>
         <link>https://example.com/categories/win.html</link>
-        <description>win - 分类 - Alphacks</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/win.html" rel="self" type="application/rss+xml" /><item>
+        <description>win - 分类 - Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/win.html" rel="self" type="application/rss+xml" /><item>
     <title>save-win10-spotlight</title>
     <link>https://example.com/posts/old/dabble/save-win10-spotlight.html</link>
     <pubDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</pubDate>

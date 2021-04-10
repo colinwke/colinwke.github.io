@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>生活 - 标签 - Alphacks</title>
+        <title>生活 - 标签 - Alphaks</title>
         <link>https://example.com/tags/%E7%94%9F%E6%B4%BB.html</link>
-        <description>生活 - 标签 - Alphacks</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphacks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphacks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 03 Apr 2016 15:31:00 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E7%94%9F%E6%B4%BB.html" rel="self" type="application/rss+xml" /><item>
+        <description>生活 - 标签 - Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 03 Apr 2016 15:31:00 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E7%94%9F%E6%B4%BB.html" rel="self" type="application/rss+xml" /><item>
     <title>学会工作，学会生活</title>
     <link>https://example.com/posts/old/essay/work-and-another.html</link>
     <pubDate>Sun, 03 Apr 2016 15:31:00 &#43;0800</pubDate>
