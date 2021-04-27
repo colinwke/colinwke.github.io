@@ -4,9 +4,16 @@
         <link>https://example.com/</link>
         <description>Let there be light</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</lastBuildDate>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 27 Apr 2021 11:04:05 &#43;0800</lastBuildDate>
             <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>dropout笔记</title>
+    <link>https://example.com/posts/2104271104-dropout-note.html</link>
+    <pubDate>Tue, 27 Apr 2021 11:04:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/2104271104-dropout-note.html</guid>
+    <description><![CDATA[原理 dropout原理, 随机丢弃一些(输入)神经元, 防止参数过拟合 Applies Dropout to the input. Dropout consists in randomly setting a fraction rate of input units to 0 at each update during training time, which helps prevent overfitting. The units that are kept are scaled by 1]]></description>
+</item><item>
     <title>hello</title>
     <link>https://example.com/posts/2104040035-hello.html</link>
     <pubDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <author>作者</author>
     <guid>https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html</guid>
     <description><![CDATA[转至: [Link] CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经网络需要训练的参数的个数。总之，卷积网络的核心思想是将：局部感受野、权值共享]]></description>
-</item><item>
-    <title>adversarial-model</title>
-    <link>https://example.com/posts/old/2018-12-21-adversarial-model.html</link>
-    <pubDate>Fri, 21 Dec 2018 21:49:16 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/2018-12-21-adversarial-model.html</guid>
-    <description><![CDATA[损失函数 在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model. 而Generative Model的目标是最大化的混淆Adve]]></description>
 </item></channel>
 </rss>

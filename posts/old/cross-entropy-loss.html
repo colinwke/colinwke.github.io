@@ -18,7 +18,7 @@
 <meta name="twitter:title" content="谈一谈熵"/>
 <meta name="twitter:description" content="在迁移学习中, 领域判别损失如下: 咋一看还看不懂了, 交叉熵损失也就是logloss不是这个样子的吗: $$ H(x)\ =\ -\sum_{i}p_{i}\log q_{i}\ =\ -y\log{\hat{y}}-(1-y)\log(1-{\hat{y}}) $$ 其实也是啊, 可以从两个角度"/>
 <meta name="application-name" content="LoveIt">
-<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/assets/colin_html/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/cross-entropy-loss.html" /><link rel="prev" href="https://example.com/posts/old/essay/stay-foolish.html" /><link rel="next" href="https://example.com/posts/old/2018-12-21-adversarial-model.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/cross-entropy-loss.html" /><link rel="prev" href="https://example.com/posts/old/essay/stay-foolish.html" /><link rel="next" href="https://example.com/posts/old/2018-12-21-adversarial-model.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
 <script>
     MathJax = {
         tex: {
@@ -284,12 +284,16 @@ KL散度代表的是利用熵的概念来表示分布之间的距离；
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2021-04-10 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2021-04-27 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
     <h3 class="widget-title">最近文章</h3>
     <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2104271104-dropout-note.html" title="dropout笔记">dropout笔记</a>
+        </li>
         
         <li>
             <a href="/posts/2104040035-hello.html" title="hello">hello</a>
@@ -325,10 +329,6 @@ KL散度代表的是利用熵的概念来表示分布之间的距离；
         
         <li>
             <a href="/posts/old/deep-learning/2018-12-26-cnn-feature-map.html" title="CNN-feature-map">CNN-feature-map</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/2018-12-21-adversarial-model.html" title="adversarial-model">adversarial-model</a>
         </li>
         
     </ul>
