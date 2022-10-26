@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>gan | 标签 | Alphaks</title>
+        <link>https://example.com/tags/gan.html</link>
+        <description>gan | 标签 | Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Dec 2018 21:49:16 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/gan.html" rel="self" type="application/rss+xml" /><item>
+    <title>adversarial-model</title>
+    <link>https://example.com/posts/old/2018-12-21-adversarial-model.html</link>
+    <pubDate>Fri, 21 Dec 2018 21:49:16 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/2018-12-21-adversarial-model.html</guid>
+    <description><![CDATA[损失函数 在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model. 而Generative Model的目标是最大化的混淆Adve]]></description>
+</item><item>
+    <title>survey-of-gans</title>
+    <link>https://example.com/posts/old/deep-learning/gans.html</link>
+    <pubDate>Fri, 26 Oct 2018 14:55:20 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/gans.html</guid>
+    <description><![CDATA[深入浅出：GAN原理与应用入门介绍 是一类在无监督学习中使用的神经网络 致力于通过学习恒等函数 f（x）= x 从数据中提取特征，且都依赖马尔可夫链来]]></description>
+</item></channel>
+</rss>

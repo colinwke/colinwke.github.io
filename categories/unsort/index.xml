@@ -1,0 +1,66 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>unsort | 分类 | Alphaks</title>
+        <link>https://example.com/categories/unsort.html</link>
+        <description>unsort | 分类 | Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/unsort.html" rel="self" type="application/rss+xml" /><item>
+    <title>pyspark udf udaf with jar</title>
+    <link>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</link>
+    <pubDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</guid>
+    <description><![CDATA[[TOC] 问题描述 使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用 使用udaf有两种方法: 第一种是hive使用 1 2]]></description>
+</item><item>
+    <title>hello</title>
+    <link>https://example.com/posts/2104040035-hello.html</link>
+    <pubDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/2104040035-hello.html</guid>
+    <description><![CDATA[相信未来, 拥抱未来!]]></description>
+</item><item>
+    <title>多git协作</title>
+    <link>https://example.com/posts/old/2104031558-multi-git.html</link>
+    <pubDate>Sat, 03 Apr 2021 15:58:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/2104031558-multi-git.html</guid>
+    <description><![CDATA[多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 条件: git版本号高于2.13(git --version) 编辑]]></description>
+</item><item>
+    <title>proxy</title>
+    <link>https://example.com/posts/old/1906101549-proxy.html</link>
+    <pubDate>Mon, 10 Jun 2019 15:49:35 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1906101549-proxy.html</guid>
+    <description><![CDATA[用了一个很久的, 可以试一下 http://nekom.org/user 特点 简单(中文的, 有详细教程), 成本低(可以每月付, 最低10元) 点我的邀请链接会给我返利哟, 算对我的支持吧 [邀请]]></description>
+</item><item>
+    <title>AutoHotKey</title>
+    <link>https://example.com/posts/old/1905272156-autohotkey.html</link>
+    <pubDate>Mon, 27 May 2019 21:56:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1905272156-autohotkey.html</guid>
+    <description><![CDATA[1 下载AutoHotKey 官网, 点我直接官网下载 2 编辑脚本 另存下面脚本为capslock_plus.ahk 注: 下面脚本只适用于AutoHot]]></description>
+</item><item>
+    <title>mecab</title>
+    <link>https://example.com/posts/old/1905071330-mecab.html</link>
+    <pubDate>Tue, 07 May 2019 13:30:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/1905071330-mecab.html</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/assets/1903191558-mecab/1552982337981.png" referrerpolicy="no-referrer">
+            </div>wondows平台, pip安装MeCab: 1 pip install mecab-python3 出现问题: 1 &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。 在网上找了一些资料, 一些]]></description>
+</item><item>
+    <title>cnn</title>
+    <link>https://example.com/posts/old/deep-learning/cnn.html</link>
+    <pubDate>Fri, 28 Dec 2018 15:52:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/cnn.html</guid>
+    <description><![CDATA[先看一个DNN, CNN, RNN的比较 深度 输入 参数 输出 DNN 神经元堆叠层数 向量 连接 向量 RNN 序列长度 向量 连接 向量 CNN 一组操作(卷积, 池化) 特征图 连接, 卷积核 特]]></description>
+</item><item>
+    <title>CNN-feature-map</title>
+    <link>https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html</link>
+    <pubDate>Wed, 26 Dec 2018 17:00:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/deep-learning/2018-12-26-cnn-feature-map.html</guid>
+    <description><![CDATA[转至: [Link] CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经网络需要训练的参数的个数。总之，卷积网络的核心思想是将：局部感受野、权值共享]]></description>
+</item></channel>
+</rss>

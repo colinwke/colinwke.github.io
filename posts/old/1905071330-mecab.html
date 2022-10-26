@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>mecab | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="mecab" />
+<meta property="og:description" content="wondows平台, pip安装MeCab: 1 pip install mecab-python3 出现问题: 1 &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。 在网上找了一些资料, 一些" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/old/1905071330-mecab.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-05-07T13:30:24+08:00" />
+<meta property="article:modified_time" content="2022-04-18T23:00:58+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="mecab"/>
+<meta name="twitter:description" content="wondows平台, pip安装MeCab: 1 pip install mecab-python3 出现问题: 1 &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。 在网上找了一些资料, 一些"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/1905071330-mecab.html" /><link rel="prev" href="https://example.com/posts/old/dabble/save-win10-spotlight.html" /><link rel="next" href="https://example.com/posts/old/1905121610-reading-may.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "mecab",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/old\/1905071330-mecab.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  1245 ,
+        "url": "https:\/\/example.com\/posts\/old\/1905071330-mecab.html","datePublished": "2019-05-07T13:30:24+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "wangke"
+            },"description": ""
+    }
+    </script></head>
+
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><div class="menu-inner"><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/categories.html"> 归类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/categories.html" title="">归类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"></div>
+    </div>
+    <div class="details toc" id="toc-static"  kept="">
+        <div class="details-summary toc-title">
+            <span>目录</span>
+            <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#mecab使用">MeCab使用</a>
+      <ul>
+        <li><a href="#mecab-ipadic字典提取">mecab ipadic字典提取</a></li>
+      </ul>
+    </li>
+    <li><a href="#wikipedia-dictionary-download日本语">wikipedia dictionary download(日本语)</a></li>
+  </ul>
+</nav></div>
+    </div><article class="page single"><h1 class="single-title animated flipInX">mecab</h1><div class="post-meta">
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-05-07">2019-05-07</time>&nbsp;&nbsp;<span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</div>
+        <div class="post-meta-line">
+            <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1245 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+    </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1903191558-mecab/1552982337981.png"
+        data-srcset="assets/1903191558-mecab/1552982337981.png, assets/1903191558-mecab/1552982337981.png 1.5x, assets/1903191558-mecab/1552982337981.png 2x"
+        data-sizes="auto"
+        alt="assets/1903191558-mecab/1552982337981.png"
+        title="assets/1903191558-mecab/1552982337981.png" /></div><div class="content" id="content"><p>wondows平台, pip安装MeCab:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">pip install mecab-python3
+</code></pre></td></tr></table>
+</div>
+</div><p>出现问题:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。
+</code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1903191558-mecab/1552982337981.png"
+        data-srcset="assets/1903191558-mecab/1552982337981.png, assets/1903191558-mecab/1552982337981.png 1.5x, assets/1903191558-mecab/1552982337981.png 2x"
+        data-sizes="auto"
+        alt="assets/1903191558-mecab/1552982337981.png"
+        title="1552982337981" /></p>
+<p>在网上找了一些资料, 一些日文资料写的云里雾里的, 比如这篇<a href="https://qiita.com/satetsu007/items/187e5a3f0ed0b898b152" target="_blank" rel="noopener noreffer">Windows環境でのMeCab(Python)のインストール(没有必要打开)</a>.</p>
+<p>然后找到一篇中文的<a href="https://blog.csdn.net/ZYXpaidaxing/article/details/81913708" target="_blank" rel="noopener noreffer">windows10+py36+MeCab安装总结</a>, 按照步骤安装成功!</p>
+<p>===我是分割线===</p>
+<p>上文的有些步骤可以精简, 具体步骤可以如下:</p>
+<p>1 在pip安装之前, 需要先安装<a href="https://taku910.github.io/mecab/#download" target="_blank" rel="noopener noreffer">MeCab.exe</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1903191558-mecab/1552985336863.png"
+        data-srcset="assets/1903191558-mecab/1552985336863.png, assets/1903191558-mecab/1552985336863.png 1.5x, assets/1903191558-mecab/1552985336863.png 2x"
+        data-sizes="auto"
+        alt="assets/1903191558-mecab/1552985336863.png"
+        title="1552985336863" /></p>
+<p>懒得麻烦, <a href="https://drive.google.com/uc?export=download&amp;id=0B4y35FiV1wh7WElGUGt6ejlpVXc" target="_blank" rel="noopener noreffer">点我直接下载</a></p>
+<p>2 安装, 中间有个选择字典编码, 选择<code>UTF-8</code></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1903191558-mecab/1552985925895.png"
+        data-srcset="assets/1903191558-mecab/1552985925895.png, assets/1903191558-mecab/1552985925895.png 1.5x, assets/1903191558-mecab/1552985925895.png 2x"
+        data-sizes="auto"
+        alt="assets/1903191558-mecab/1552985925895.png"
+        title="1552985925895" /></p>
+<p>3 安装python依赖包</p>
+<p>首先, 需要把MeCab安装路径下的<code>./bin/libmecab.dll</code>和<code>./sdk/libmecab.lib</code>拷贝到python的<code>./Lib/site-packages</code>下面.</p>
+<p>然后, 就可以使用<code>pip install mecab-python-windows</code>安装依赖包了.</p>
+<p>4 测试</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">MeCab</span>
+<span class="n">mecab</span> <span class="o">=</span> <span class="n">MeCab</span><span class="o">.</span><span class="n">Tagger</span><span class="p">(</span><span class="s2">&#34;-Ochasen&#34;</span><span class="p">)</span>  <span class="c1"># `-Owakati` 只做分词</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mecab</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s2">&#34;pythonが大好きです&#34;</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>参考:</p>
+<p><a href="https://segmentfault.com/q/1010000015969023" target="_blank" rel="noopener noreffer">https://segmentfault.com/q/1010000015969023</a></p>
+<p><a href="https://blog.csdn.net/ZYXpaidaxing/article/details/81913708" target="_blank" rel="noopener noreffer">https://blog.csdn.net/ZYXpaidaxing/article/details/81913708</a></p>
+<p><a href="https://www.jianshu.com/p/8f0ce2cff8d9" target="_blank" rel="noopener noreffer">https://www.jianshu.com/p/8f0ce2cff8d9</a></p>
+<p><a href="http://www.flickering.cn/nlp/2014/06/%E6%97%A5%E6%96%87%E5%88%86%E8%AF%8D%E5%99%A8-mecab-%E6%96%87%E6%A1%A3/" target="_blank" rel="noopener noreffer">http://www.flickering.cn/nlp/2014/06/%E6%97%A5%E6%96%87%E5%88%86%E8%AF%8D%E5%99%A8-mecab-%E6%96%87%E6%A1%A3/</a></p>
+<hr>
+<h2 id="mecab使用">MeCab使用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># date: 2019/3/21 10:53</span>
+<span class="c1"># author: wang ke</span>
+<span class="c1"># concat: ke.wang@ctrip.com</span>
+<span class="c1"># ================================</span>
+
+<span class="s2">&#34;&#34;&#34;MeCab test.
+</span><span class="s2">---
+</span><span class="s2">MeCab output format(http://taku910.github.io/mecab/):
+</span><span class="s2">    -Owakati: only segment
+</span><span class="s2">        python が 大好き です
+</span><span class="s2">    -Ochasen: ChaSen compatible(segment and tag?)
+</span><span class="s2">        python	python	python	名詞-固有名詞-組織
+</span><span class="s2">        が	ガ	が	助詞-格助詞-一般
+</span><span class="s2">        大好き	ダイスキ	大好き	名詞-形容動詞語幹
+</span><span class="s2">        です	デス	です	助動詞	特殊・デス	基本形
+</span><span class="s2">        EOS
+</span><span class="s2">    -Oyomi: Yomi given(only translate?)
+</span><span class="s2">        pythonガダイスキデス
+</span><span class="s2">    -Odump: all information output
+</span><span class="s2">        0 BOS BOS/EOS,*,*,*,*,*,*,*,* 0 0 0 0 0 0 2 1 0.000000 0.000000 0.000000 0
+</span><span class="s2">        3 python 名詞,固有名詞,組織,*,*,*,* 0 6 1292 1292 45 5 1 1 0.000000 0.000000 0.000000 12857
+</span><span class="s2">        8 が 助詞,格助詞,一般,*,*,*,が,ガ,ガ 6 9 148 148 13 6 0 1 0.000000 0.000000 0.000000 11729
+</span><span class="s2">        21 大好き 名詞,形容動詞語幹,*,*,*,*,大好き,ダイスキ,ダイスキ 9 18 1287 1287 40 2 0 1 0.000000 0.000000 0.000000 13008
+</span><span class="s2">        48 です 助動詞,*,*,*,特殊・デス,基本形,です,デス,デス 18 24 460 460 25 6 0 1 0.000000 0.000000 0.000000 12875
+</span><span class="s2">        56 EOS BOS/EOS,*,*,*,*,*,*,*,* 24 24 0 0 0 0 3 1 0.000000 0.000000 0.000000 11634
+</span><span class="s2">    &#34;&#34;:
+</span><span class="s2">        python	名詞,固有名詞,組織,*,*,*,*
+</span><span class="s2">        が	助詞,格助詞,一般,*,*,*,が,ガ,ガ
+</span><span class="s2">        大好き	名詞,形容動詞語幹,*,*,*,*,大好き,ダイスキ,ダイスキ
+</span><span class="s2">        です	助動詞,*,*,*,特殊・デス,基本形,です,デス,デス
+</span><span class="s2">        EOS
+</span><span class="s2">&#34;&#34;&#34;</span>
+
+<span class="kn">import</span> <span class="nn">MeCab</span>
+
+
+<span class="k">def</span> <span class="nf">format_tag_result</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">pieces</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">i</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">pieces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">pieces</span>
+
+
+<span class="n">mecab_tagger</span> <span class="o">=</span> <span class="n">MeCab</span><span class="o">.</span><span class="n">Tagger</span><span class="p">(</span><span class="s2">&#34;-Ochasen&#34;</span><span class="p">)</span>  <span class="c1"># `-Owakati` 只做分词</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;pythonが大好きです&#34;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">format_tag_result</span><span class="p">(</span><span class="n">mecab_tagger</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">text</span><span class="p">)))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="mecab-ipadic字典提取">mecab ipadic字典提取</h3>
+<p>因为ipadic字典是用csv保存的, 因此还是很好提取的.</p>
+<p>需要注意的是, 在打开csv时, 选择的文本编码是<code>shift-jis</code>.</p>
+<p>比如说提取地点<code>Noun.place.csv</code></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1903191558-mecab/1553162622677.png"
+        data-srcset="assets/1903191558-mecab/1553162622677.png, assets/1903191558-mecab/1553162622677.png 1.5x, assets/1903191558-mecab/1553162622677.png 2x"
+        data-sizes="auto"
+        alt="assets/1903191558-mecab/1553162622677.png"
+        title="1553162622677" /></p>
+<h2 id="wikipedia-dictionary-download日本语">wikipedia dictionary download(日本语)</h2>
+<p><a href="https://www.zhihu.com/question/19803440" target="_blank" rel="noopener noreffer">https://www.zhihu.com/question/19803440</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/Wikipedia:%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD" target="_blank" rel="noopener noreffer">https://zh.wikipedia.org/wiki/Wikipedia:%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD</a></p>
+<p>google wikipedia dictionary 日本語ダウンロード</p>
+<p><a href="https://ja.wikipedia.org/wiki/Wikipedia:%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89" target="_blank" rel="noopener noreffer">Wikipedia:データベースダウンロード</a></p>
+<p>下面是翻译成中文的</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1903191558-mecab/1553223683713.png"
+        data-srcset="assets/1903191558-mecab/1553223683713.png, assets/1903191558-mecab/1553223683713.png 1.5x, assets/1903191558-mecab/1553223683713.png 2x"
+        data-sizes="auto"
+        alt="assets/1903191558-mecab/1553223683713.png"
+        title="1553223683713" /></p>
+<p>日文: <a href="https://dumps.wikimedia.org/jawiki/latest/" target="_blank" rel="noopener noreffer">https://dumps.wikimedia.org/jawiki/latest/</a></p>
+<p>中文: <a href="https://dumps.wikimedia.org/chwiki/latest/" target="_blank" rel="noopener noreffer">https://dumps.wikimedia.org/chwiki/latest/</a></p>
+<p>随便下载一个: chwiki-latest-geo_tags.sql</p>
+<p>注意, 这是sql文件, 即为可执行的文件, 包含创建数据库和插入数据, 并不是数据库文件, 这个可以直接使用文本编辑软件打开</p>
+<p>但是里面好像并没有什么&hellip;</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/1903191558-mecab/1553224006791.png"
+        data-srcset="assets/1903191558-mecab/1553224006791.png, assets/1903191558-mecab/1553224006791.png 1.5x, assets/1903191558-mecab/1553224006791.png 2x"
+        data-sizes="auto"
+        alt="assets/1903191558-mecab/1553224006791.png"
+        title="1553224006791" /></p>
+<p>中文搞错了, 应该是这个: <a href="https://dumps.wikimedia.org/zhwiki/latest/" target="_blank" rel="noopener noreffer">https://dumps.wikimedia.org/zhwiki/latest/</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-04-18&nbsp;<a class="git-hash" href="https://github.com/colinwke/colinwke.github.io/commit/852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9" target="_blank" title="commit by wangke09(wangke09@58.com) 852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9: add post">
+                                    <i class="fas fa-hashtag fa-fw"></i>852e2d8</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <div style="opacity: 60%"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</div>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/old/dabble/save-win10-spotlight.html" class="prev" rel="prev" title="save-win10-spotlight"><i class="fas fa-angle-left fa-fw"></i>save-win10-spotlight</a>
+            <a href="/posts/old/1905121610-reading-may.html" class="next" rel="next" title="五月阅读">五月阅读<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2022-10-26 updated</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+    <section class="widget">
+    <h3 class="widget-title">最近文章</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2210211456-pyspark-udf-udaf-jar.html" title="pyspark udf udaf with jar">pyspark udf udaf with jar</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104271104-dropout-note.html" title="dropout笔记">dropout笔记</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104040035-hello.html" title="hello">hello</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/deep-learning/cnn.html" title="cnn">cnn</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+    
+<section class="widget">
+    <h3 class="widget-title" title="特别的爱给特别的你">特栏</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/reading-except.html" title="阅读摘抄">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note-2022.html" title="bingo">阅读笔记2022</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="文章推荐">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="博主推荐">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+<section class="widget">
+
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/colin.html" title="" target="_blank" style="color:red">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"Alphaks","id-2":"Alphaks","id-3":"Alphaks"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

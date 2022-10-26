@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ml | 分类 | Alphaks</title>
+        <link>https://example.com/categories/ml.html</link>
+        <description>ml | 分类 | Alphaks</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 28 Nov 2018 13:59:15 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/ml.html" rel="self" type="application/rss+xml" /><item>
+    <title>谈一谈熵</title>
+    <link>https://example.com/posts/old/cross-entropy-loss.html</link>
+    <pubDate>Wed, 28 Nov 2018 13:59:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/old/cross-entropy-loss.html</guid>
+    <description><![CDATA[在迁移学习中, 领域判别损失如下: 咋一看还看不懂了, 交叉熵损失也就是logloss不是这个样子的吗: $$ H(x)\ =\ -\sum_{i}p_{i}\log q_{i}\ =\ -y\log{\hat{y}}-(1-y)\log(1-{\hat{y}}) $$ 其实也是啊, 可以从两个角度]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>pyspark udf udaf with jar | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="pyspark udf udaf with jar" />
+<meta property="og:description" content="[TOC] 问题描述 使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用 使用udaf有两种方法: 第一种是hive使用 1 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-21T14:56:11+08:00" />
+<meta property="article:modified_time" content="2022-10-21T14:56:11+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="pyspark udf udaf with jar"/>
+<meta name="twitter:description" content="[TOC] 问题描述 使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用 使用udaf有两种方法: 第一种是hive使用 1 2"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html" /><link rel="prev" href="https://example.com/posts/2104271104-dropout-note.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "pyspark udf udaf with jar",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/2210211456-pyspark-udf-udaf-jar.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  820 ,
+        "url": "https:\/\/example.com\/posts\/2210211456-pyspark-udf-udaf-jar.html","datePublished": "2022-10-21T14:56:11+08:00","dateModified": "2022-10-21T14:56:11+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "wangke"
+            },"description": ""
+    }
+    </script></head>
+
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><div class="menu-inner"><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/categories.html"> 归类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/categories.html" title="">归类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"></div>
+    </div>
+    <div class="details toc" id="toc-static"  kept="">
+        <div class="details-summary toc-title">
+            <span>目录</span>
+            <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#好像pyspark3x和hive不支持aggx">好像pyspark3.x和hive不支持Aggx</a></li>
+    <li><a href="#scala调用">scala调用</a></li>
+    <li><a href="#结论">结论</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#开发参考">开发参考</a></li>
+        <li><a href="#待回答问题">待回答问题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><article class="page single"><h1 class="single-title animated flipInX">pyspark udf udaf with jar</h1><div class="post-meta">
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-10-21">2022-10-21</time>&nbsp;&nbsp;<span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</div>
+        <div class="post-meta-line">
+            <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 820 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+    </div><div class="content" id="content"><p>[TOC]</p>
+<h1 id="问题描述">问题描述</h1>
+<p>使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用</p>
+<p>使用udaf有两种方法:</p>
+<p><em>第一种是hive使用</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&#34;CREATE TEMPORARY FUNCTION MostFreq22 AS &#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39; USING JAR &#39;</span><span class="si">%s</span><span class="s2">&#39;&#34;</span> <span class="o">%</span> <span class="n">jar_path</span><span class="p">)</span>
+<span class="c1"># SparkConf未指定spark.jars</span>
+<span class="c1"># error</span>
+<span class="c1"># pyspark.sql.utils.AnalysisException: Can not load class &#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39; when registering the function &#39;MostFreq22&#39;, please make sure it is on the classpath</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>当指定了spark.jars, 仍然报错</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">config</span><span class="p">(</span><span class="s2">&#34;spark.jars&#34;</span><span class="p">,</span> <span class="n">jar_path</span><span class="p">)</span>  <span class="c1"># IMPORTANT for java dependence jar</span>
+<span class="c1"># 22/10/21 15:16:08 WARN SparkContext: The jar /Users/wangke/working/bussiness_data_offline/python/pyspark/bussiness_data_offline_1.0.9_shaded.jar has been added already. Overwriting of added jars is not supported in the current version.</span>
+<span class="c1"># ...</span>
+<span class="c1"># pyspark.sql.utils.AnalysisException: Can not load class &#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39; when registering the function &#39;MostFreq22&#39;, please make sure it is on the classpath</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>添加了下面参数, 仍然为找到classpath</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span>
+<span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;wktk_pyspark_env&#34;</span><span class="p">)</span>  <span class="c1"># basename(__file__)</span>
+<span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&#34;spark.jars&#34;</span><span class="p">,</span> <span class="n">jar_path</span><span class="p">)</span>  <span class="c1"># IMPORTANT for java dependence jar</span>
+<span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&#34;spark.driver.extraLibraryPath&#34;</span><span class="p">,</span> <span class="n">jar_path</span><span class="p">)</span>
+<span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&#34;spark.executor.extraLibraryPath&#34;</span><span class="p">,</span> <span class="n">jar_path</span><span class="p">)</span>
+<span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&#34;spark.driver.extraClassPath&#34;</span><span class="p">,</span> <span class="n">jar_path</span><span class="p">)</span>
+<span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&#34;spark.executor.extraClassPath&#34;</span><span class="p">,</span> <span class="n">jar_path</span><span class="p">)</span>
+<span class="o">.</span><span class="n">enableHiveSupport</span><span class="p">()</span>
+<span class="o">.</span><span class="n">getOrCreate</span><span class="p">())</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>问题1: 为什么找不到classpath?</p>
+<ol>
+<li>因为本地配置错误?</li>
+</ol>
+<p>线上运行</p>
+<p>SparkConf配置jar参数, sql不含ADD JAR</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&#34;&#34;&#34;CREATE TEMPORARY FUNCTION MostFreq22 AS &#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39;&#34;&#34;&#34;</span><span class="p">)</span>
+<span class="c1"># ERROR</span>
+<span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">AnalysisException</span><span class="p">:</span> <span class="n">No</span> <span class="n">handler</span> <span class="k">for</span> <span class="n">UDF</span><span class="o">/</span><span class="n">UDAF</span><span class="o">/</span><span class="n">UDTF</span> <span class="s1">&#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39;</span><span class="p">;</span> <span class="n">line</span> <span class="mi">1</span> <span class="n">pos</span> <span class="mi">7</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>猜想: handler</p>
+<p><em>第二种为register</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">ss</span><span class="o">.</span><span class="n">udf</span><span class="o">.</span><span class="n">registerJavaUDAF</span><span class="p">(</span><span class="s2">&#34;MostFreq22&#34;</span><span class="p">,</span> <span class="s2">&#34;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#34;</span><span class="p">)</span>
+<span class="c1"># ERROR</span>
+<span class="n">pyspark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">AnalysisException</span><span class="p">:</span> <span class="n">Can</span> <span class="ow">not</span> <span class="n">load</span> <span class="k">class</span> <span class="nc">com</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">strategy</span><span class="o">.</span><span class="n">rank</span><span class="o">.</span><span class="n">bussiness</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">udf</span><span class="o">.</span><span class="n">MostFreqUDAF</span><span class="p">,</span> <span class="n">please</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">on</span> <span class="n">the</span> <span class="n">classpath</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>线上运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># ERROR
+pyspark.sql.utils.AnalysisException: class com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF doesn&#39;t implement interface UserDefinedAggregateFunction
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="好像pyspark3x和hive不支持aggx">好像pyspark3.x和hive不支持Aggx</h2>
+<p>pyspark.sql.udf.UDFRegistration.registerJavaUDAF</p>
+<p><a href="https://github.com/apache/spark/blob/master/sql/core/src/test/java/test/org/apache/spark/sql/MyDoubleAvg.java" target="_blank" rel="noopener noreffer">https://github.com/apache/spark/blob/master/sql/core/src/test/java/test/org/apache/spark/sql/MyDoubleAvg.java</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python">    <span class="k">def</span> <span class="nf">registerJavaUDAF</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">javaClassName</span><span class="p">):</span>
+        <span class="s2">&#34;&#34;&#34;Register a Java user-defined aggregate function as a SQL function.
+</span><span class="s2">
+</span><span class="s2">        .. versionadded:: 2.3.0
+</span><span class="s2">
+</span><span class="s2">        name : str
+</span><span class="s2">            name of the user-defined aggregate function
+</span><span class="s2">        javaClassName : str
+</span><span class="s2">            fully qualified name of java class
+</span><span class="s2">
+</span><span class="s2">        Examples
+</span><span class="s2">        --------
+</span><span class="s2">        &gt;&gt;&gt; spark.udf.registerJavaUDAF(&#34;javaUDAF&#34;, &#34;test.org.apache.spark.sql.MyDoubleAvg&#34;)
+</span><span class="s2">        ... # doctest: +SKIP
+</span><span class="s2">        &gt;&gt;&gt; df = spark.createDataFrame([(1, &#34;a&#34;),(2, &#34;b&#34;), (3, &#34;a&#34;)],[&#34;id&#34;, &#34;name&#34;])
+</span><span class="s2">        &gt;&gt;&gt; df.createOrReplaceTempView(&#34;df&#34;)
+</span><span class="s2">        &gt;&gt;&gt; q = &#34;SELECT name, javaUDAF(id) as avg from df group by name order by name desc&#34;
+</span><span class="s2">        &gt;&gt;&gt; spark.sql(q).collect()  # doctest: +SKIP
+</span><span class="s2">        [Row(name=&#39;b&#39;, avg=102.0), Row(name=&#39;a&#39;, avg=102.0)]
+</span><span class="s2">        &#34;&#34;&#34;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">sparkSession</span><span class="o">.</span><span class="n">_jsparkSession</span><span class="o">.</span><span class="n">udf</span><span class="p">()</span><span class="o">.</span><span class="n">registerJavaUDAF</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">javaClassName</span><span class="p">)</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="scala调用">scala调用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">&#34;&#34;&#34;CREATE TEMPORARY FUNCTION MostFreq22 AS &#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39; USING JAR &#39;/Users/wangke/working/bussiness_data_offline/target/bussiness_data_offline_1.0.9_shaded.jar&#39;&#34;&#34;&#34;</span><span class="o">)</span>
+<span class="k">#</span> <span class="nc">ERROR</span>
+<span class="nc">Exception</span> <span class="n">in</span> <span class="n">thread</span> <span class="s">&#34;main&#34;</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="nc">AnalysisException</span><span class="k">:</span> <span class="kt">No</span> <span class="kt">handler</span> <span class="kt">for</span> <span class="kt">UDF/UDAF/UDTF</span> <span class="err">&#39;</span><span class="kt">com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF</span><span class="err">&#39;</span><span class="o">;</span> <span class="n">line</span> <span class="mi">1</span> <span class="n">pos</span> <span class="mi">7</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="结论">结论</h2>
+<ol>
+<li>hive和pyspark目前并不能直接register继承<code>Aggregator</code>实现的UDAF(version3.1), 只有java/scala支持, 且注册为<code>spark.udf.register(&quot;MostFreq22&quot;, functions.udaf(MostFreq))</code></li>
+<li>hive是支持继承类UserDefinedAggregateFunction的</li>
+<li>是否可以添加转化使得pyspark和hive支持Aggregator? 没有成功!</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="k">object</span> <span class="nc">UDFHandler</span> <span class="o">{</span>
+    <span class="k">def</span> <span class="n">evaluate</span><span class="o">()</span><span class="k">:</span> <span class="kt">UserDefinedFunction</span> <span class="o">=</span> <span class="o">{</span>
+        <span class="n">functions</span><span class="o">.</span><span class="n">udaf</span><span class="o">(</span><span class="nc">MostFreq</span><span class="o">)</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">java_import</span><span class="p">(</span><span class="n">sc</span><span class="o">.</span><span class="n">_gateway</span><span class="o">.</span><span class="n">jvm</span><span class="p">,</span> <span class="s2">&#34;com.company.strategy.rank.bussiness.util.udf.UDFHandler&#34;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">sc</span><span class="o">.</span><span class="n">_gateway</span><span class="o">.</span><span class="n">jvm</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">strategy</span><span class="o">.</span><span class="n">rank</span><span class="o">.</span><span class="n">bussiness</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">udf</span><span class="o">.</span><span class="n">UDFHandler</span><span class="p">))</span>
+<span class="n">inst</span> <span class="o">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">_gateway</span><span class="o">.</span><span class="n">jvm</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">strategy</span><span class="o">.</span><span class="n">rank</span><span class="o">.</span><span class="n">bussiness</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">udf</span><span class="o">.</span><span class="n">UDFHandler</span><span class="p">()</span>
+<span class="n">ss</span><span class="o">.</span><span class="n">udf</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s2">&#34;MostFreq22&#34;</span><span class="p">,</span> <span class="n">inst</span><span class="o">.</span><span class="n">evaluate</span><span class="p">)</span>
+<span class="c1"># ERROR</span>
+<span class="n">py4j</span><span class="o">.</span><span class="n">Py4JException</span><span class="p">:</span> <span class="n">Constructor</span> <span class="n">com</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">strategy</span><span class="o">.</span><span class="n">rank</span><span class="o">.</span><span class="n">bussiness</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">udf</span><span class="o">.</span><span class="n">UDFHandler</span><span class="p">([])</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span>
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="引用">引用</h1>
+<h3 id="开发参考">开发参考</h3>
+<ol>
+<li><a href="https://spark.apache.org/docs/3.1.1/sql-ref-functions-udf-aggregate.html" target="_blank" rel="noopener noreffer">https://spark.apache.org/docs/3.1.1/sql-ref-functions-udf-aggregate.html</a></li>
+<li><a href="https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/sql/UserDefinedUntypedAggregation.scala" target="_blank" rel="noopener noreffer">https://github.com/apache/spark/blob/master/examples/src/main/scala/org/apache/spark/examples/sql/UserDefinedUntypedAggregation.scala</a></li>
+<li><a href="https://stackoverflow.com/a/66819248/6494418" target="_blank" rel="noopener noreffer">https://stackoverflow.com/a/66819248/6494418</a></li>
+</ol>
+<p><a href="https://docs.databricks.com/spark/latest/spark-sql/udaf-scala.html" target="_blank" rel="noopener noreffer">https://docs.databricks.com/spark/latest/spark-sql/udaf-scala.html</a></p>
+<p><a href="https://blog.csdn.net/Bayerngu/article/details/118035754" target="_blank" rel="noopener noreffer">https://blog.csdn.net/Bayerngu/article/details/118035754</a> handler?</p>
+<p><a href="https://stackoverflow.com/questions/67776394/no-handler-for-udf-udaf-udtf-spark-udf3" target="_blank" rel="noopener noreffer">https://stackoverflow.com/questions/67776394/no-handler-for-udf-udaf-udtf-spark-udf3</a> handler by 继承</p>
+<h3 id="待回答问题">待回答问题</h3>
+<p><a href="https://stackoverflow.com/questions/73327627/spark-custom-aggregator-register-and-invoke-through-pyspark" target="_blank" rel="noopener noreffer">https://stackoverflow.com/questions/73327627/spark-custom-aggregator-register-and-invoke-through-pyspark</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-10-21</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <div style="opacity: 60%"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</div>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2104271104-dropout-note.html" class="prev" rel="prev" title="dropout笔记"><i class="fas fa-angle-left fa-fw"></i>dropout笔记</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2022-10-26 updated</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+    <section class="widget">
+    <h3 class="widget-title">最近文章</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2210211456-pyspark-udf-udaf-jar.html" title="pyspark udf udaf with jar">pyspark udf udaf with jar</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104271104-dropout-note.html" title="dropout笔记">dropout笔记</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104040035-hello.html" title="hello">hello</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/deep-learning/cnn.html" title="cnn">cnn</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+    
+<section class="widget">
+    <h3 class="widget-title" title="特别的爱给特别的你">特栏</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/reading-except.html" title="阅读摘抄">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note-2022.html" title="bingo">阅读笔记2022</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="文章推荐">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="博主推荐">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+<section class="widget">
+
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/colin.html" title="" target="_blank" style="color:red">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"Alphaks","id-2":"Alphaks","id-3":"Alphaks"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

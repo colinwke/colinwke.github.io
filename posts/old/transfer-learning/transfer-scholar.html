@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>迁移学习资源整理 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="迁移学习资源整理" />
+<meta property="og:description" content="2018-11-5 关于迁移学习, 领域适应, 对抗学习的论文, 代码汇总 zhaoxin94 / awsome-domain-adaptation jindongwang / transferlearning artix41 / awesome-transfer-learning zhaoxin94 / awsome-domain-adaptation barebell / DA zhangqianhui / AdversarialNetsPapers 2019-1-3 update https://xiaosean.github.io/posts/ 台湾一名学生的主页, 主要包含一些阅读笔记, 包含的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/old/transfer-learning/transfer-scholar.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-10-31T16:54:23+08:00" />
+<meta property="article:modified_time" content="2022-04-18T23:00:58+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="迁移学习资源整理"/>
+<meta name="twitter:description" content="2018-11-5 关于迁移学习, 领域适应, 对抗学习的论文, 代码汇总 zhaoxin94 / awsome-domain-adaptation jindongwang / transferlearning artix41 / awesome-transfer-learning zhaoxin94 / awsome-domain-adaptation barebell / DA zhangqianhui / AdversarialNetsPapers 2019-1-3 update https://xiaosean.github.io/posts/ 台湾一名学生的主页, 主要包含一些阅读笔记, 包含的"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/transfer-learning/transfer-scholar.html" /><link rel="prev" href="https://example.com/posts/old/deep-learning/gans.html" /><link rel="next" href="https://example.com/posts/old/essay/stay-foolish.html" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "迁移学习资源整理",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/old\/transfer-learning\/transfer-scholar.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "paper, transfer-learning","wordcount":  433 ,
+        "url": "https:\/\/example.com\/posts\/old\/transfer-learning\/transfer-scholar.html","datePublished": "2018-10-31T16:54:23+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Alphaks"
+            },"description": ""
+    }
+    </script></head>
+
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><div class="menu-inner"><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/categories.html"> 归类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/categories.html" title="">归类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"></div>
+    </div>
+    <div class="details toc" id="toc-static"  kept="">
+        <div class="details-summary toc-title">
+            <span>目录</span>
+            <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#2018-11-5">2018-11-5</a></li>
+    <li><a href="#2019-1-3-update">2019-1-3 update</a></li>
+    <li><a href="#迁移学习学者调研">迁移学习学者调研</a>
+      <ul>
+        <li><a href="#qiang-yanghttpsscholargooglecomcitationshlenuser1lxwzlqaaaajview_oplist_workspagesize100"><a href="https://scholar.google.com/citations?hl=en&amp;user=1LxWZLQAAAAJ&amp;view_op=list_works&amp;pagesize=100">Qiang Yang</a></a></li>
+        <li><a href="#derek-hao-huhttpsscholargooglecomcitationshlzh-cnuserks81ao0aaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=Ks81aO0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Derek Hao Hu</a></a></li>
+        <li><a href="#vincent-w-zhenghttpsscholargooglecomcitationshlenuserkaq_-mcaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=en&amp;user=kAq_-McAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Vincent W. Zheng</a></a></li>
+        <li><a href="#sinno-jialin-panhttpsscholargooglecomcitationshlenuserp6wcnfkaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=en&amp;user=P6WcnfkAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Sinno Jialin Pan</a></a></li>
+        <li><a href="#lixin-duanhttpsscholargooglecoidcitationshlenuserinrics0aaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.co.id/citations?hl=en&amp;user=inRIcS0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Lixin Duan</a></a></li>
+        <li><a href="#mingsheng-longhttpsscholargooglecomcitationshlenuser_mjxpxkaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=en&amp;user=_MjXpXkAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Mingsheng Long</a></a></li>
+        <li><a href="#judy-hoffmanhttpsscholargooglecoidcitationshlenusermqpjat4aaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.co.id/citations?hl=en&amp;user=mqpjAt4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Judy Hoffman</a></a></li>
+        <li><a href="#fuzhen-zhuang-庄福振httpsscholargooglecomhkcitationshlenuserkljbyraaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com.hk/citations?hl=en&amp;user=klJBYrAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Fuzhen Zhuang 庄福振</a></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><article class="page single"><h1 class="single-title animated flipInX">迁移学习资源整理</h1><div class="post-meta">
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2018-10-31">2018-10-31</time>&nbsp;&nbsp;<span class="post-category"><a href="/categories/paper.html" title="paper"><i class="fas fa-folder fa-fw"></i>&nbsp;paper</a></span>&nbsp;<span class="post-category"><a href="/tags/paper.html" title="paper"><i class="fas fa-tags fa-fw"></i>&nbsp;paper</a>&nbsp;<a href="/tags/transfer-learning.html" title="transfer-learning"><i class="fas fa-tags fa-fw"></i>&nbsp;transfer-learning</a></span>&nbsp;</div>
+        <div class="post-meta-line">
+            <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 433 字&nbsp;
+            <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+    </div><div class="content" id="content"><h2 id="2018-11-5">2018-11-5</h2>
+<p>关于迁移学习, 领域适应, 对抗学习的论文, 代码汇总</p>
+<ul>
+<li><a href="https://github.com/zhaoxin94/awsome-domain-adaptation" target="_blank" rel="noopener noreffer">zhaoxin94 / awsome-domain-adaptation</a></li>
+<li><a href="https://github.com/jindongwang/transferlearning" target="_blank" rel="noopener noreffer">jindongwang / transferlearning</a></li>
+<li><a href="https://github.com/artix41/awesome-transfer-learning" target="_blank" rel="noopener noreffer">artix41 / awesome-transfer-learning</a></li>
+<li><a href="https://github.com/zhaoxin94/awsome-domain-adaptation" target="_blank" rel="noopener noreffer">zhaoxin94 / awsome-domain-adaptation</a></li>
+<li><a href="https://github.com/barebell/DA" target="_blank" rel="noopener noreffer">barebell / DA</a></li>
+<li><a href="https://github.com/zhangqianhui/AdversarialNetsPapers" target="_blank" rel="noopener noreffer">zhangqianhui / AdversarialNetsPapers</a></li>
+</ul>
+<h2 id="2019-1-3-update">2019-1-3 update</h2>
+<p><a href="https://xiaosean.github.io/posts/" target="_blank" rel="noopener noreffer">https://xiaosean.github.io/posts/</a></p>
+<p>台湾一名学生的主页, 主要包含一些阅读笔记, 包含的领域有领域适应, 生成对抗网络等.</p>
+<hr>
+<h2 id="迁移学习学者调研">迁移学习学者调研</h2>
+<p>参考<a href="https://github.com/jindongwang/transferlearning/blob/master/doc/scholar_TL.md" target="_blank" rel="noopener noreffer">jindongwang: transfer learning scholars</a>, 对相关学者目前的状态做一个整理</p>
+<h3 id="qiang-yanghttpsscholargooglecomcitationshlenuser1lxwzlqaaaajview_oplist_workspagesize100"><a href="https://scholar.google.com/citations?hl=en&amp;user=1LxWZLQAAAAJ&amp;view_op=list_works&amp;pagesize=100" target="_blank" rel="noopener noreffer">Qiang Yang</a></h3>
+<p>杨强老师貌似不怎么做一线的研究了, <a href="http://www.cs.ust.hk/~qyang/publications.html" target="_blank" rel="noopener noreffer">主页</a>上没有什么新文章, 最后更新的也都是2016年的文章.</p>
+<p><a href="https://scholar.google.com/citations?hl=en&amp;user=1LxWZLQAAAAJ&amp;view_op=list_works&amp;pagesize=100" target="_blank" rel="noopener noreffer">Google Scholar</a>有一些较新的文章, 关于迁移学习的文章比例大约为1/5, 且大多是第三作者.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540990068617.png"
+        data-srcset="assets/transfer-scholar/1540990068617.png, assets/transfer-scholar/1540990068617.png 1.5x, assets/transfer-scholar/1540990068617.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540990068617.png"
+        title="1540990068617" /></p>
+<h3 id="derek-hao-huhttpsscholargooglecomcitationshlzh-cnuserks81ao0aaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=Ks81aO0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreffer">Derek Hao Hu</a></h3>
+<p>这位学者已经不活跃了, 最近的论文也是2013年的.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540986428668.png"
+        data-srcset="assets/transfer-scholar/1540986428668.png, assets/transfer-scholar/1540986428668.png 1.5x, assets/transfer-scholar/1540986428668.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540986428668.png"
+        title="1540986428668" /></p>
+<h3 id="vincent-w-zhenghttpsscholargooglecomcitationshlenuserkaq_-mcaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=en&amp;user=kAq_-McAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreffer">Vincent W. Zheng</a></h3>
+<p>这位学者还战斗在一线, 但迁移学习的文章较少.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540986608855.png"
+        data-srcset="assets/transfer-scholar/1540986608855.png, assets/transfer-scholar/1540986608855.png 1.5x, assets/transfer-scholar/1540986608855.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540986608855.png"
+        title="1540986608855" /></p>
+<h3 id="sinno-jialin-panhttpsscholargooglecomcitationshlenuserp6wcnfkaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=en&amp;user=P6WcnfkAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreffer">Sinno Jialin Pan</a></h3>
+<p>杨强老师的学生, 现在为老师, 比较年轻, 在2017年有部分迁移学习的文章.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540990216274.png"
+        data-srcset="assets/transfer-scholar/1540990216274.png, assets/transfer-scholar/1540990216274.png 1.5x, assets/transfer-scholar/1540990216274.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540990216274.png"
+        title="1540990216274" /></p>
+<h3 id="lixin-duanhttpsscholargooglecoidcitationshlenuserinrics0aaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.co.id/citations?hl=en&amp;user=inRIcS0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreffer">Lixin Duan</a></h3>
+<p>2012年发表过关于迁移学习的文章, 现在在亚马逊任职, 主要做视觉方面的研究.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540990664010.png"
+        data-srcset="assets/transfer-scholar/1540990664010.png, assets/transfer-scholar/1540990664010.png 1.5x, assets/transfer-scholar/1540990664010.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540990664010.png"
+        title="1540990664010" /></p>
+<h3 id="mingsheng-longhttpsscholargooglecomcitationshlenuser_mjxpxkaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com/citations?hl=en&amp;user=_MjXpXkAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreffer">Mingsheng Long</a></h3>
+<p>挺年轻的一位学者, 坚持在迁移学习的一线. 推荐!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540990921746.png"
+        data-srcset="assets/transfer-scholar/1540990921746.png, assets/transfer-scholar/1540990921746.png 1.5x, assets/transfer-scholar/1540990921746.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540990921746.png"
+        title="1540990921746" /></p>
+<h3 id="judy-hoffmanhttpsscholargooglecoidcitationshlenusermqpjat4aaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.co.id/citations?hl=en&amp;user=mqpjAt4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreffer">Judy Hoffman</a></h3>
+<p>16, 17年有几篇迁移学习相关的论文, 主要做Domain Adaption, 包含<strong>对抗学习</strong>. 推荐!</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540991248330.png"
+        data-srcset="assets/transfer-scholar/1540991248330.png, assets/transfer-scholar/1540991248330.png 1.5x, assets/transfer-scholar/1540991248330.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540991248330.png"
+        title="1540991248330" /></p>
+<h3 id="fuzhen-zhuang-庄福振httpsscholargooglecomhkcitationshlenuserkljbyraaaaajview_oplist_workssortbypubdate"><a href="https://scholar.google.com.hk/citations?hl=en&amp;user=klJBYrAAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener noreffer">Fuzhen Zhuang 庄福振</a></h3>
+<p>主要做Multi-Task的.</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="assets/transfer-scholar/1540993832749.png"
+        data-srcset="assets/transfer-scholar/1540993832749.png, assets/transfer-scholar/1540993832749.png 1.5x, assets/transfer-scholar/1540993832749.png 2x"
+        data-sizes="auto"
+        alt="assets/transfer-scholar/1540993832749.png"
+        title="1540993832749" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-04-18&nbsp;<a class="git-hash" href="https://github.com/colinwke/colinwke.github.io/commit/852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9" target="_blank" title="commit by wangke09(wangke09@58.com) 852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9: add post">
+                                    <i class="fas fa-hashtag fa-fw"></i>852e2d8</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <div style="opacity: 60%"><span class="post-category"><a href="/categories/paper.html" title="paper"><i class="fas fa-folder fa-fw"></i>&nbsp;paper</a></span>&nbsp;<span class="post-category"><a href="/tags/paper.html" title="paper"><i class="fas fa-tags fa-fw"></i>&nbsp;paper</a>&nbsp;<a href="/tags/transfer-learning.html" title="transfer-learning"><i class="fas fa-tags fa-fw"></i>&nbsp;transfer-learning</a></span>&nbsp;</div>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/old/deep-learning/gans.html" class="prev" rel="prev" title="survey-of-gans"><i class="fas fa-angle-left fa-fw"></i>survey-of-gans</a>
+            <a href="/posts/old/essay/stay-foolish.html" class="next" rel="next" title="stay-foolish">stay-foolish<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2022-10-26 updated</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+    <section class="widget">
+    <h3 class="widget-title">最近文章</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2210211456-pyspark-udf-udaf-jar.html" title="pyspark udf udaf with jar">pyspark udf udaf with jar</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104271104-dropout-note.html" title="dropout笔记">dropout笔记</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104040035-hello.html" title="hello">hello</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/deep-learning/cnn.html" title="cnn">cnn</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+    
+<section class="widget">
+    <h3 class="widget-title" title="特别的爱给特别的你">特栏</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/reading-except.html" title="阅读摘抄">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note-2022.html" title="bingo">阅读笔记2022</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="文章推荐">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="博主推荐">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+<section class="widget">
+
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/colin.html" title="" target="_blank" style="color:red">
+                
+                    <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.8/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"data":{"id-1":"Alphaks","id-2":"Alphaks","id-3":"Alphaks"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
