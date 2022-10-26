@@ -16,7 +16,8 @@ if [[ ${op} == "s" || ${op} == "d" ]]; then
     if [[ ${op} == "s" ]]; then
         hugo && hugo server --disableFastRender
     elif [[ ${op} == "d" ]]; then
-        hugo && cd public && git add . && git commit -m "update online $(date "+%F %T")" && git push -f --set-upstream origin master
+        # git remote add origin git@github.com:colinwke/colinwke.github.io.git
+        hugo && cd public && git add . && git commit -m "update online $(date "+%F %T")" && git push -f --set-upstream origin main
     fi
 else
     sh /Users/wangke/blog/static/assets/script/hugo_new.sh "${op}"
