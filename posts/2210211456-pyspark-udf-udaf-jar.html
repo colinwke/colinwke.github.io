@@ -108,13 +108,14 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#好像pyspark3x和hive不支持aggx">好像pyspark3.x和hive不支持Aggx</a></li>
+    <li><a href="#问题描述">问题描述</a>
+      <ul>
+        <li><a href="#好像pyspark3x和hive不支持aggx">好像pyspark3.x和hive不支持Aggx</a></li>
+      </ul>
+    </li>
     <li><a href="#scala调用">scala调用</a></li>
     <li><a href="#结论">结论</a></li>
-  </ul>
-
-  <ul>
-    <li>
+    <li><a href="#引用">引用</a>
       <ul>
         <li><a href="#开发参考">开发参考</a></li>
         <li><a href="#待回答问题">待回答问题</a></li>
@@ -128,7 +129,7 @@
             <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 820 字&nbsp;
             <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
     </div><div class="content" id="content"><p>[TOC]</p>
-<h1 id="问题描述">问题描述</h1>
+<h2 id="问题描述">问题描述</h2>
 <p>使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用</p>
 <p>使用udaf有两种方法:</p>
 <p><em>第一种是hive使用</em></p>
@@ -229,7 +230,7 @@
 pyspark.sql.utils.AnalysisException: class com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF doesn&#39;t implement interface UserDefinedAggregateFunction
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="好像pyspark3x和hive不支持aggx">好像pyspark3.x和hive不支持Aggx</h2>
+</div><h3 id="好像pyspark3x和hive不支持aggx">好像pyspark3.x和hive不支持Aggx</h3>
 <p>pyspark.sql.udf.UDFRegistration.registerJavaUDAF</p>
 <p><a href="https://github.com/apache/spark/blob/master/sql/core/src/test/java/test/org/apache/spark/sql/MyDoubleAvg.java" target="_blank" rel="noopener noreffer">https://github.com/apache/spark/blob/master/sql/core/src/test/java/test/org/apache/spark/sql/MyDoubleAvg.java</a></p>
 <div class="highlight"><div class="chroma">
@@ -337,7 +338,7 @@ pyspark.sql.utils.AnalysisException: class com.company.strategy.rank.bussiness.u
 <span class="n">py4j</span><span class="o">.</span><span class="n">Py4JException</span><span class="p">:</span> <span class="n">Constructor</span> <span class="n">com</span><span class="o">.</span><span class="n">company</span><span class="o">.</span><span class="n">strategy</span><span class="o">.</span><span class="n">rank</span><span class="o">.</span><span class="n">bussiness</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">udf</span><span class="o">.</span><span class="n">UDFHandler</span><span class="p">([])</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span>
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="引用">引用</h1>
+</div><h2 id="引用">引用</h2>
 <h3 id="开发参考">开发参考</h3>
 <ol>
 <li><a href="https://spark.apache.org/docs/3.1.1/sql-ref-functions-udf-aggregate.html" target="_blank" rel="noopener noreffer">https://spark.apache.org/docs/3.1.1/sql-ref-functions-udf-aggregate.html</a></li>
