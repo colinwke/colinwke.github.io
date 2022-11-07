@@ -4,7 +4,14 @@
         <link>https://example.com/categories/unsort.html</link>
         <description>unsort | 分类 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/unsort.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/unsort.html" rel="self" type="application/rss+xml" /><item>
+    <title>ssh git github permission denied problem</title>
+    <link>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html</link>
+    <pubDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html</guid>
+    <description><![CDATA[问题描述 原来在/etc/hosts配置了github的ip解析, 突然有一天push很慢, 甚至经常timeout. 然后自己把hosts中关于g]]></description>
+</item><item>
     <title>pyspark udf udaf with jar</title>
     <link>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</link>
     <pubDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</pubDate>

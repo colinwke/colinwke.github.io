@@ -5,7 +5,7 @@
 # ================================================================
 # hexo new md post and open with typera with alfred workflow
 
-if [[ $# != 1 ]]; then echo "[ERROR] args(file name) need!" && exit 1; fi
+if [[ $# -lt 1 ]]; then echo "[ERROR] args(file name) need!" && exit 1; fi
 path="/Users/wangke/wk/blog/static/assets/script"
 cmd="cd ${path} && sh hugo.sh $1"
 if [[ $1 == "s" || $1 == "d" ]]; then
@@ -17,8 +17,7 @@ if [[ $1 == "s" || $1 == "d" ]]; then
 fi
 
 md_dir="/Users/wangke/wk/blog/content/posts"
-md_name_raw="$1"
-md_name=$(echo "$1" | tr " " "-")
+md_name=$(echo "$*" | tr " " "-")
 
 found=$(find ${md_dir} -type f -name "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]-${md_name}.md")
 
@@ -30,7 +29,7 @@ else
     md_abs_path="${md_dir}/${runtime_flag}-${md_name}.md"
     info="\
 ---
-title: \"${md_name_raw}\"
+title: \"${*}\"
 categories: [\"unsort\"]
 tags: [\"unsort\"]
 author: \"wangke\"

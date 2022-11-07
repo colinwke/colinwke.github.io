@@ -47,7 +47,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/old\/dabble\/hexo-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "hexo, 博客搭建","wordcount":  2135 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "hexo, 博客搭建","wordcount":  2152 ,
         "url": "https:\/\/example.com\/posts\/old\/dabble\/hexo-note.html","datePublished": "2016-05-14T11:05:57+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -168,7 +168,7 @@
     </div><article class="page single"><h1 class="single-title animated flipInX">Hexo之旅</h1><div class="post-meta">
         <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2016-05-14">2016-05-14</time>&nbsp;&nbsp;<span class="post-category"><a href="/categories/%E6%B6%89%E7%8C%8E.html" title="涉猎"><i class="fas fa-folder fa-fw"></i>&nbsp;涉猎</a></span>&nbsp;<span class="post-category"><a href="/tags/hexo.html" title="hexo"><i class="fas fa-tags fa-fw"></i>&nbsp;hexo</a>&nbsp;<a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html" title="博客搭建"><i class="fas fa-tags fa-fw"></i>&nbsp;博客搭建</a></span>&nbsp;</div>
         <div class="post-meta-line">
-            <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2135 字&nbsp;
+            <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2152 字&nbsp;
             <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
     </div><div class="content" id="content"><p>[TOC]</p>
 <p>经过好多天的努力，博客基本上也达到了自己满意的样子。博客以<a href="http://cgmartin.github.io/hexo-theme-bootstrap-blog/" target="_blank" rel="noopener noreffer">Bootstrap-Blog</a>为蓝本，在此基础上增增减减，修修改改。因为自己并不是很懂网页，大多时候都是摸索和调试，所以费时还是挺多的。现在终于能踏踏实实的写文章了。</p>
@@ -316,36 +316,38 @@ fatal: could not read Username for &#39;https://github.com&#39;: Invalid argumen
 </span><span class="lnt">27
 </span><span class="lnt">28
 </span><span class="lnt">29
+</span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">download git
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">download git
 download node.js
 
 // gen ssh-key
-ssh-keygen -t rsa -C &#34;username@gmail.com&#34;
+ssh-keygen -t rsa -C <span class="s2">&#34;wangkest@qq.com&#34;</span> <span class="c1">#  -C comment 你的ssh名称(本地)</span>
 
 // add ssh-key to github
-(http://blog.csdn.net/keyboardota/article/details/7603630)
+// https://github.com/settings/keys
+<span class="o">(</span>http://blog.csdn.net/keyboardota/article/details/7603630<span class="o">)</span>
 
 // verify
 ssh -T git@github.com
 
 // config
-git config --global user.name &#34;username&#34;
-git config --global user.email &#34;username@gmail.com&#34;
+git config --global user.name <span class="s2">&#34;username&#34;</span>
+git config --global user.email <span class="s2">&#34;username@gmail.com&#34;</span>
 
-npm install -g cnpm --registry=https://registry.npm.taobao.org
+npm install -g cnpm --registry<span class="o">=</span>https://registry.npm.taobao.org
 
 cnpm install -g hexo
 cnpm install hexo-deployer-git --save
 
 // or use taobao mirror
-// npm config set strict-ssl false
-// npm config set registry &#34;http://registry.npmjs.org/&#34;
+// npm config <span class="nb">set</span> strict-ssl <span class="nb">false</span>
+// npm config <span class="nb">set</span> registry <span class="s2">&#34;http://registry.npmjs.org/&#34;</span>
 // npm install -g hexo
 // npm install hexo-deployer-git --save
 
-cd your_hexo_dir
+<span class="nb">cd</span> your_hexo_dir
 hexo init
 </code></pre></td></tr></table>
 </div>
@@ -678,12 +680,16 @@ $$\frac { dy }{ dx } =\frac { { e }^{ x } }{ 3{ y }^{ 2 } }$$</p>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2022-10-26 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2022-11-07 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
     <h3 class="widget-title">最近文章</h3>
     <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2211031619-ssh-git-github-permission-denied-problem.html" title="ssh git github permission denied problem">ssh git github permission denied problem</a>
+        </li>
         
         <li>
             <a href="/posts/2210211456-pyspark-udf-udaf-jar.html" title="pyspark udf udaf with jar">pyspark udf udaf with jar</a>
@@ -719,10 +725,6 @@ $$\frac { dy }{ dx } =\frac { { e }^{ x } }{ 3{ y }^{ 2 } }$$</p>
         
         <li>
             <a href="/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/deep-learning/cnn.html" title="cnn">cnn</a>
         </li>
         
     </ul>

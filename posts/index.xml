@@ -4,7 +4,14 @@
         <link>https://example.com/posts.html</link>
         <description>所有文章 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>ssh git github permission denied problem</title>
+    <link>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html</link>
+    <pubDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html</guid>
+    <description><![CDATA[问题描述 原来在/etc/hosts配置了github的ip解析, 突然有一天push很慢, 甚至经常timeout. 然后自己把hosts中关于g]]></description>
+</item><item>
     <title>pyspark udf udaf with jar</title>
     <link>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</link>
     <pubDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</pubDate>
@@ -69,12 +76,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://colinwke.github.io/posts/old/dabble/assets/save-win10-spotlight/1546063951450.png" referrerpolicy="no-referrer">
             </div>保存win10 spotlight 壁纸到D盘下! 1 将下面文本保存为win10_spotlight.bat(直接下载) 1 2 3 4 5 6 7 8 9 10 11 12 13 rem https://blog.csdn.net/qq_34260368/article/details/78364055 rem https://blog.csdn.net/linbounconstraint/article/details/80191846 rem https://blog.csdn.net/Anymake_ren/article/details/51125609 rem https://stackoverflow.com/questions/17587347/batch-file-to-run-xcopy-without-overwriting-existing-files]]></description>
-</item><item>
-    <title>cnn</title>
-    <link>https://example.com/posts/old/deep-learning/cnn.html</link>
-    <pubDate>Fri, 28 Dec 2018 15:52:18 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://example.com/posts/old/deep-learning/cnn.html</guid>
-    <description><![CDATA[先看一个DNN, CNN, RNN的比较 深度 输入 参数 输出 DNN 神经元堆叠层数 向量 连接 向量 RNN 序列长度 向量 连接 向量 CNN 一组操作(卷积, 池化) 特征图 连接, 卷积核 特]]></description>
 </item></channel>
 </rss>
