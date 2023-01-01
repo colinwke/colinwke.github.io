@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>attention - 标签 | Alphaks</title>
+        <title>attention | 标签 | Alphaks</title>
         <link>https://example.com/tags/attention.html</link>
-        <description>attention - 标签 | Alphaks</description>
+        <description>attention | 标签 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
             <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Oct 2018 16:12:43 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/attention.html" rel="self" type="application/rss+xml" /><item>
     <title>Attention</title>
