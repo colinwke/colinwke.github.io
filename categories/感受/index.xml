@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>感受 | 分类 | Alphaks</title>
+        <title>感受 - 分类 | Alphaks</title>
         <link>https://example.com/categories/%E6%84%9F%E5%8F%97.html</link>
-        <description>感受 | 分类 | Alphaks</description>
+        <description>感受 - 分类 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
             <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 04 Nov 2018 22:23:17 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/%E6%84%9F%E5%8F%97.html" rel="self" type="application/rss+xml" /><item>
     <title>stay-foolish</title>
     <link>https://example.com/posts/old/essay/stay-foolish.html</link>
     <pubDate>Sun, 04 Nov 2018 22:23:17 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/essay/stay-foolish.html</guid>
     <description><![CDATA[一 本科考研的时候, 我可能看上去比别人更努力一些. 为什么? 因为我知道我基础并不好, 所以我需要更多的努力. 俗话说, 笨鸟先飞, 我深深的铭记这句话.]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

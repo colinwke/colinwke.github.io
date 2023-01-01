@@ -8,73 +8,83 @@
     <title>ssh git github permission denied problem</title>
     <link>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html</link>
     <pubDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html</guid>
     <description><![CDATA[问题描述 原来在/etc/hosts配置了github的ip解析, 突然有一天push很慢, 甚至经常timeout. 然后自己把hosts中关于g]]></description>
-</item><item>
+</item>
+<item>
     <title>pyspark udf udaf with jar</title>
     <link>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</link>
     <pubDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</guid>
     <description><![CDATA[[TOC] 问题描述 使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用 使用udaf有两种方法: 第一种是hive使用 1 2]]></description>
-</item><item>
+</item>
+<item>
     <title>dropout笔记</title>
     <link>https://example.com/posts/2104271104-dropout-note.html</link>
     <pubDate>Tue, 27 Apr 2021 11:04:05 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/2104271104-dropout-note.html</guid>
     <description><![CDATA[原理 dropout原理, 随机丢弃一些(输入)神经元, 防止参数过拟合 Applies Dropout to the input. Dropout consists in randomly setting a fraction rate of input units to 0 at each update during training time, which helps prevent overfitting. The units that are kept are scaled by 1]]></description>
-</item><item>
+</item>
+<item>
     <title>hello</title>
     <link>https://example.com/posts/2104040035-hello.html</link>
     <pubDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/2104040035-hello.html</guid>
     <description><![CDATA[相信未来, 拥抱未来!]]></description>
-</item><item>
+</item>
+<item>
     <title>多git协作</title>
     <link>https://example.com/posts/old/2104031558-multi-git.html</link>
     <pubDate>Sat, 03 Apr 2021 15:58:49 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/old/2104031558-multi-git.html</guid>
     <description><![CDATA[多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 条件: git版本号高于2.13(git --version) 编辑]]></description>
-</item><item>
+</item>
+<item>
     <title>proxy</title>
     <link>https://example.com/posts/old/1906101549-proxy.html</link>
     <pubDate>Mon, 10 Jun 2019 15:49:35 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/old/1906101549-proxy.html</guid>
     <description><![CDATA[用了一个很久的, 可以试一下 http://nekom.org/user 特点 简单(中文的, 有详细教程), 成本低(可以每月付, 最低10元) 点我的邀请链接会给我返利哟, 算对我的支持吧 [邀请]]></description>
-</item><item>
+</item>
+<item>
     <title>AutoHotKey</title>
     <link>https://example.com/posts/old/1905272156-autohotkey.html</link>
     <pubDate>Mon, 27 May 2019 21:56:17 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/old/1905272156-autohotkey.html</guid>
     <description><![CDATA[1 下载AutoHotKey 官网, 点我直接官网下载 2 编辑脚本 另存下面脚本为capslock_plus.ahk 注: 下面脚本只适用于AutoHot]]></description>
-</item><item>
+</item>
+<item>
     <title>五月阅读</title>
     <link>https://example.com/posts/old/1905121610-reading-may.html</link>
     <pubDate>Sun, 12 May 2019 16:10:25 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/old/1905121610-reading-may.html</guid>
     <description><![CDATA[2019-5-12 最近计划学习一下深度学习框架, kaggle是个不错的平台, 就找了其中的比赛Jigsaw Unintended Bias in Toxicity Classification. 在比赛的第四段, 描述了比赛的背景, 和技术中]]></description>
-</item><item>
+</item>
+<item>
     <title>mecab</title>
     <link>https://example.com/posts/old/1905071330-mecab.html</link>
     <pubDate>Tue, 07 May 2019 13:30:24 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/old/1905071330-mecab.html</guid>
     <description><![CDATA[wondows平台, pip安装MeCab: 1 pip install mecab-python3 出现问题: 1 &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。 在网上找了一些资料, 一些]]></description>
-</item><item>
+</item>
+<item>
     <title>save-win10-spotlight</title>
     <link>https://example.com/posts/old/dabble/save-win10-spotlight.html</link>
     <pubDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/dabble/save-win10-spotlight.html</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://colinwke.github.io/posts/old/dabble/assets/save-win10-spotlight/1546063951450.png" referrerpolicy="no-referrer">
             </div>保存win10 spotlight 壁纸到D盘下! 1 将下面文本保存为win10_spotlight.bat(直接下载) 1 2 3 4 5 6 7 8 9 10 11 12 13 rem https://blog.csdn.net/qq_34260368/article/details/78364055 rem https://blog.csdn.net/linbounconstraint/article/details/80191846 rem https://blog.csdn.net/Anymake_ren/article/details/51125609 rem https://stackoverflow.com/questions/17587347/batch-file-to-run-xcopy-without-overwriting-existing-files]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

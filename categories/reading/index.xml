@@ -1,22 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>reading | 分类 | Alphaks</title>
+        <title>reading - 分类 | Alphaks</title>
         <link>https://example.com/categories/reading.html</link>
-        <description>reading | 分类 | Alphaks</description>
+        <description>reading - 分类 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
             <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 12 May 2019 16:10:25 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/reading.html" rel="self" type="application/rss+xml" /><item>
     <title>五月阅读</title>
     <link>https://example.com/posts/old/1905121610-reading-may.html</link>
     <pubDate>Sun, 12 May 2019 16:10:25 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/old/1905121610-reading-may.html</guid>
     <description><![CDATA[2019-5-12 最近计划学习一下深度学习框架, kaggle是个不错的平台, 就找了其中的比赛Jigsaw Unintended Bias in Toxicity Classification. 在比赛的第四段, 描述了比赛的背景, 和技术中]]></description>
-</item><item>
+</item>
+<item>
     <title>web reading</title>
     <link>https://example.com/posts/old/reading-web/web.html</link>
     <pubDate>Thu, 18 Oct 2018 14:23:22 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/reading-web/web.html</guid>
     <description><![CDATA[2018-11-20 数据标注|人工智能背后的人 之前有了解过ImageNet有过巨大的标记成本, 找了些资料看了看, 这篇文章的信息量还是非常巨大的, 无论是从人工智]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

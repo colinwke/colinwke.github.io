@@ -1,17 +1,18 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>win | 标签 | Alphaks</title>
+        <title>win - 标签 | Alphaks</title>
         <link>https://example.com/tags/win.html</link>
-        <description>win | 标签 | Alphaks</description>
+        <description>win - 标签 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
             <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/win.html" rel="self" type="application/rss+xml" /><item>
     <title>save-win10-spotlight</title>
     <link>https://example.com/posts/old/dabble/save-win10-spotlight.html</link>
     <pubDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/dabble/save-win10-spotlight.html</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://colinwke.github.io/posts/old/dabble/assets/save-win10-spotlight/1546063951450.png" referrerpolicy="no-referrer">
             </div>保存win10 spotlight 壁纸到D盘下! 1 将下面文本保存为win10_spotlight.bat(直接下载) 1 2 3 4 5 6 7 8 9 10 11 12 13 rem https://blog.csdn.net/qq_34260368/article/details/78364055 rem https://blog.csdn.net/linbounconstraint/article/details/80191846 rem https://blog.csdn.net/Anymake_ren/article/details/51125609 rem https://stackoverflow.com/questions/17587347/batch-file-to-run-xcopy-without-overwriting-existing-files]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

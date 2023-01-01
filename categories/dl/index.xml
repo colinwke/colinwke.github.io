@@ -1,50 +1,56 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>dl | 分类 | Alphaks</title>
+        <title>dl - 分类 | Alphaks</title>
         <link>https://example.com/categories/dl.html</link>
-        <description>dl | 分类 | Alphaks</description>
+        <description>dl - 分类 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
             <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 27 Apr 2021 11:04:05 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/dl.html" rel="self" type="application/rss+xml" /><item>
     <title>dropout笔记</title>
     <link>https://example.com/posts/2104271104-dropout-note.html</link>
     <pubDate>Tue, 27 Apr 2021 11:04:05 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/posts/2104271104-dropout-note.html</guid>
     <description><![CDATA[原理 dropout原理, 随机丢弃一些(输入)神经元, 防止参数过拟合 Applies Dropout to the input. Dropout consists in randomly setting a fraction rate of input units to 0 at each update during training time, which helps prevent overfitting. The units that are kept are scaled by 1]]></description>
-</item><item>
+</item>
+<item>
     <title>adversarial-model</title>
     <link>https://example.com/posts/old/2018-12-21-adversarial-model.html</link>
     <pubDate>Fri, 21 Dec 2018 21:49:16 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/2018-12-21-adversarial-model.html</guid>
     <description><![CDATA[损失函数 在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model. 而Generative Model的目标是最大化的混淆Adve]]></description>
-</item><item>
+</item>
+<item>
     <title>survey-of-gans</title>
     <link>https://example.com/posts/old/deep-learning/gans.html</link>
     <pubDate>Fri, 26 Oct 2018 14:55:20 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/deep-learning/gans.html</guid>
     <description><![CDATA[深入浅出：GAN原理与应用入门介绍 是一类在无监督学习中使用的神经网络 致力于通过学习恒等函数 f（x）= x 从数据中提取特征，且都依赖马尔可夫链来]]></description>
-</item><item>
+</item>
+<item>
     <title>pytorch tutorial</title>
     <link>https://example.com/posts/old/deep-learning/pytorch_tutorial.html</link>
     <pubDate>Wed, 24 Oct 2018 11:40:58 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/deep-learning/pytorch_tutorial.html</guid>
     <description><![CDATA[tutorial 地址: pytorch: Training a Classifier. 当使用新的数据集进行测试时, 出现的问题及解决的方法. Problem 1 error: 1 RuntimeError: invalid argument 0: Sizes of tensors must match except in dimension 0. Got 484 and 549 in dimension 2 at /pytorch/aten/src/TH/generic/THTensorMath.cpp:3616 location: 1 images, labels = data_iter.next() solution: 1 2 数]]></description>
-</item><item>
+</item>
+<item>
     <title>GPU是如何加速计算的?</title>
     <link>https://example.com/posts/old/deep-learning/how_gpu_accelerate_compute.html</link>
     <pubDate>Tue, 23 Oct 2018 21:22:18 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/deep-learning/how_gpu_accelerate_compute.html</guid>
     <description><![CDATA[Nvidia https://www.nvidia.cn/object/what-is-gpu-computing-cn.html GPU 与 CPU 性能比较 理解 GPU 和 CPU 之间区别的一种简单方式是比较它们如何处理任务。CPU 由专为顺序串行处理而优化的几个核心组成，而 GPU 则拥有一个由数以]]></description>
-</item><item>
+</item>
+<item>
     <title>Attention</title>
     <link>https://example.com/posts/old/deep-learning/attention.html</link>
     <pubDate>Thu, 18 Oct 2018 16:12:43 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>Alphaks</author>
     <guid>https://example.com/posts/old/deep-learning/attention.html</guid>
     <description><![CDATA[传说BERT牛皮得不行, 好奇看了看. 里面用到了Transformer Block, 这是什么结构? 其实也就是Attention as all you need的Transf]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

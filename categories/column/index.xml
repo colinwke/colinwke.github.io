@@ -1,50 +1,56 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>column | 分类 | Alphaks</title>
+        <title>column - 分类 | Alphaks</title>
         <link>https://example.com/categories/column.html</link>
-        <description>column | 分类 | Alphaks</description>
+        <description>column - 分类 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
             <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 10 Mar 2022 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/column.html" rel="self" type="application/rss+xml" /><item>
     <title>阅读笔记2022</title>
     <link>https://example.com/columns/reading-note-2022.html</link>
     <pubDate>Thu, 10 Mar 2022 00:35:57 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/columns/reading-note-2022.html</guid>
-    <description><![CDATA[[TOC] 2022-03 【译文】谷歌搜索正在消亡 https://mp.weixin.qq.com/s/qgnCUw7tp27eUT_GqK6V6Q 受众群体不一样, 产品定位不一样, 经营模式不一样. 2021年，算法工程师必备的能力是什么？ https://mp.weixin.qq.com/s/ngT7cGDeeGsh7PoTOXIfUQ bakURL 前几天听博客有个嘉]]></description>
-</item><item>
+    <description><![CDATA[[TOC] 2022-12 机器学习工程方面的最佳做法 https://developers.google.com/machine-learning/guides/rules-of-ml 你一生的故事: 不论怎样, 未来都会爱你 https://www.xiaoyuzhoufm.com/episode/63aa28e83c5c5f89defdd606 我们注定要失去, 所以我们可以用多重视角看待我们经历的事, 我们所面对的问]]></description>
+</item>
+<item>
     <title>关于</title>
     <link>https://example.com/columns/page-about.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/columns/page-about.html</guid>
     <description><![CDATA[前方漫漫 愿我成风 欢迎关注 新浪微博: 王虚极 github: colinwke 最后更新：2016-05-13]]></description>
-</item><item>
+</item>
+<item>
     <title>博客精华</title>
     <link>https://example.com/columns/good-blog.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/columns/good-blog.html</guid>
     <description><![CDATA[[TOC] 友情推荐 charmby 无详细介绍! 还有一个马甲地址charmby 苏建林 | 科学空间 里面很多干货, 主要偏NLP方向 作者本来是学数学的, 后面对NLP方向有较]]></description>
-</item><item>
+</item>
+<item>
     <title>阅读推荐</title>
     <link>https://example.com/columns/good-post.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/columns/good-post.html</guid>
     <description><![CDATA[[TOC] 2021-05 李沐: 工作五年反思 李沐大神这篇文章对工作中的价值进行了剖析, 也是工作五年的反思总结, 其中最难为可贵为对自己价值和对他人的价值, 对自己的价]]></description>
-</item><item>
+</item>
+<item>
     <title>阅读推荐</title>
     <link>https://example.com/columns/reading-note.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/columns/reading-note.html</guid>
     <description><![CDATA[[TOC] 2021-05 真感觉太崇拜雷军了, 简直快成为了他的教徒了! 今天偶人看了两个视频: 许知远vs雷军《灵魂对话》 这里很打动的两个点是 要适当跳出自己的舒适圈,]]></description>
-</item><item>
+</item>
+<item>
     <title>阅读摘抄</title>
     <link>https://example.com/columns/reading-except.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
-    <author>作者</author>
+    <author>wangke</author>
     <guid>https://example.com/columns/reading-except.html</guid>
     <description><![CDATA[[TOC] 2016-05 被克服的困难就是胜利的契机（契诃夫） 于千万人之中，遇见你要遇见的人。于千万年之中，时间无涯的荒野里，没有早一步，也没有迟一步，遇上了也只]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>
