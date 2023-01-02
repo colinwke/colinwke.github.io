@@ -12,12 +12,15 @@ op=$1
 cd "/Users/wangke/wk/wk_blog" || exit
 if [[ ${op} == "s" || ${op} == "d" ]]; then
     sed -i '' -E "s/updateDate = \"[0-9]{4}-[0-9]{2}-[0-9]{2}\"/updateDate = \"$(date +%F)\"/g" config.toml
+    # 直接推public路径到线上, 注意, public包含git配置, 不要删除!
     find ./public ! -name '.git' -mindepth 1 -maxdepth 1 -print0 -exec rm -rf {} +
     if [[ ${op} == "s" ]]; then
         hugo && hugo server --disableFastRender
     elif [[ ${op} == "d" ]]; then
         # git remote add origin git@github.com:colinwke/colinwke.github.io.git
-        hugo && cd public && git add . && git commit -m "update online $(date "+%F %T")" && git push -f --set-upstream origin main
+        hugo && cd public && git add -A . && git commit -m "update online $(date "+%F %T")" && git push -f --set-upstream origin main
+        # 推送文章
+        cd "/Users/wangke/wk/wk_blog/content" && git add -A . && git commit -m "update online $(date "+%F %T")" && git push -f --set-upstream origin main
     fi
 else
     sh /Users/wangke/wk_blog/static/assets/script/hugo_new.sh "${op}"
