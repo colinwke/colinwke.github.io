@@ -4,7 +4,15 @@
         <link>https://example.com/tags/column.html</link>
         <description>column | 标签 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 10 Mar 2022 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/column.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 10 Jan 2023 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/column.html" rel="self" type="application/rss+xml" /><item>
+    <title>阅读笔记</title>
+    <link>https://example.com/columns/reading-note.html</link>
+    <pubDate>Tue, 10 Jan 2023 00:35:57 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/columns/reading-note.html</guid>
+    <description><![CDATA[2023-02 快手精排模型实践 https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg 业务特点, 时序的重要性, 可能RNN, transformer等不及sum pooling, 那么就需要思考是否是相关性大于时序性了 推荐的相关]]></description>
+</item>
+<item>
     <title>阅读笔记2022</title>
     <link>https://example.com/columns/reading-note-2022.html</link>
     <pubDate>Thu, 10 Mar 2022 00:35:57 &#43;0800</pubDate>
@@ -26,7 +34,7 @@
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
     <author>wangke</author>
     <guid>https://example.com/columns/good-blog.html</guid>
-    <description><![CDATA[[TOC] 友情推荐 charmby 无详细介绍! 还有一个马甲地址charmby 苏建林 | 科学空间 里面很多干货, 主要偏NLP方向 作者本来是学数学的, 后面对NLP方向有较]]></description>
+    <description><![CDATA[[TOC] 友情推荐 charmby https://charmbyforever.blogspot.com/ 无详细介绍! 还有一个马甲地址charmby 计算广告 王喆的机器学习笔记 https://zhuanlan.zhihu.com/wangzhenotes 关注计算广告，推荐系统等机器学习领域前沿知识 广告/推荐 Sr.]]></description>
 </item>
 <item>
     <title>阅读推荐</title>
@@ -37,20 +45,20 @@
     <description><![CDATA[[TOC] 2021-05 李沐: 工作五年反思 李沐大神这篇文章对工作中的价值进行了剖析, 也是工作五年的反思总结, 其中最难为可贵为对自己价值和对他人的价值, 对自己的价]]></description>
 </item>
 <item>
-    <title>阅读推荐</title>
-    <link>https://example.com/columns/reading-note.html</link>
+    <title>阅读摘抄</title>
+    <link>https://example.com/columns/good-except.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
     <author>wangke</author>
-    <guid>https://example.com/columns/reading-note.html</guid>
-    <description><![CDATA[[TOC] 2021-05 真感觉太崇拜雷军了, 简直快成为了他的教徒了! 今天偶人看了两个视频: 许知远vs雷军《灵魂对话》 这里很打动的两个点是 要适当跳出自己的舒适圈,]]></description>
+    <guid>https://example.com/columns/good-except.html</guid>
+    <description><![CDATA[[TOC] 2016-05 被克服的困难就是胜利的契机（契诃夫） 于千万人之中，遇见你要遇见的人。于千万年之中，时间无涯的荒野里，没有早一步，也没有迟一步，遇上了也只]]></description>
 </item>
 <item>
-    <title>阅读摘抄</title>
-    <link>https://example.com/columns/reading-except.html</link>
+    <title>阅读笔记2019</title>
+    <link>https://example.com/columns/reading-note-2019.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
     <author>wangke</author>
-    <guid>https://example.com/columns/reading-except.html</guid>
-    <description><![CDATA[[TOC] 2016-05 被克服的困难就是胜利的契机（契诃夫） 于千万人之中，遇见你要遇见的人。于千万年之中，时间无涯的荒野里，没有早一步，也没有迟一步，遇上了也只]]></description>
+    <guid>https://example.com/columns/reading-note-2019.html</guid>
+    <description><![CDATA[[TOC] 2021-05 真感觉太崇拜雷军了, 简直快成为了他的教徒了! 今天偶人看了两个视频: 许知远vs雷军《灵魂对话》 这里很打动的两个点是 要适当跳出自己的舒适圈,]]></description>
 </item>
 </channel>
 </rss>

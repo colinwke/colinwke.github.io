@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/2211031619-ssh-git-github-permission-denied-problem.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "git, github, ssh","wordcount":  651 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "git, github, ssh","wordcount":  1057 ,
         "url": "https:\/\/example.com\/posts\/2211031619-ssh-git-github-permission-denied-problem.html","datePublished": "2022-11-03T16:19:41+08:00","dateModified": "2023-01-02T11:59:50+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -116,8 +116,8 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ssh git github permission denied problem</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/git.html" title="git"><i class="fas fa-tags fa-fw"></i>&nbsp;git</a>&nbsp;<a href="/tags/github.html" title="github"><i class="fas fa-tags fa-fw"></i>&nbsp;github</a>&nbsp;<a href="/tags/ssh.html" title="ssh"><i class="fas fa-tags fa-fw"></i>&nbsp;ssh</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-03">2022-11-03</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 651 字&nbsp;
- <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-03">2022-11-03</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1057 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
     </div><div class="content" id="content"><h2 id="问题描述">问题描述</h2>
 <p>原来在/etc/hosts配置了github的ip解析, 突然有一天push很慢, 甚至经常timeout. 然后自己把hosts中关于github的映射都删除了, 但是链接不上了github了, 自己有用飞机软件.</p>
 <h3 id="具体表象">具体表象</h3>
@@ -212,7 +212,164 @@ nslookup ssh.github.com 8.8.8.8 <span class="p">|</span> awk <span class="s1">&#
 <p><a href="https://stackoverflow.com/a/72236267/6494418" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/a/72236267/6494418</a></p>
 </li>
 </ul>
-</div><div class="post-footer" id="post-footer">
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">git push
+To igit.58corp.com:RecruitBusiness/AdRetrievalSys/lego_scf_zpdsp.git
+ ! <span class="o">[</span>rejected<span class="o">]</span>            4.1.43_dev_wangke_2022-12-22 -&gt; 4.1.43_dev_wangke_2022-12-22 <span class="o">(</span>non-fast-forward<span class="o">)</span>
+error: failed to push some refs to <span class="s1">&#39;igit.58corp.com:RecruitBusiness/AdRetrievalSys/lego_scf_zpdsp.git&#39;</span>
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes <span class="o">(</span>e.g.
+hint: <span class="s1">&#39;git pull ...&#39;</span><span class="o">)</span> before pushing again.
+hint: See the <span class="s1">&#39;Note about fast-forwards&#39;</span> in <span class="s1">&#39;git push --help&#39;</span> <span class="k">for</span> details.
+
+<span class="o">[</span>wangke@colin service<span class="o">]</span> $ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can <span class="k">do</span> so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase <span class="nb">false</span>  <span class="c1"># merge</span>
+hint:   git config pull.rebase <span class="nb">true</span>   <span class="c1"># rebase</span>
+hint:   git config pull.ff only       <span class="c1"># fast-forward only</span>
+hint: 
+hint: You can replace <span class="s2">&#34;git config&#34;</span> with <span class="s2">&#34;git config --global&#34;</span> to <span class="nb">set</span> a default
+hint: preference <span class="k">for</span> all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the <span class="nb">command</span> line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+
+</code></pre></td></tr></table>
+</div>
+</div><p>solution</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># https://stackoverflow.com/questions/20467179/git-push-rejected-non-fast-forward</span>
+git fetch
+git rebase feature/my_feature_branch
+git push origin feature/my_feature_branch
+
+or 
+<span class="c1"># https://docs.github.com/en/get-started/using-git/dealing-with-non-fast-forward-errors</span>
+git fetch origin
+git merge origin YOUR_BRANCH_NAME
+git pull origin YOUR_BRANCH_NAME
+</code></pre></td></tr></table>
+</div>
+</div><p>new error</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>wangke@colin service<span class="o">]</span> $ git pull origin 4.1.43_dev_wangke_2022-12-22 
+From igit.58corp.com:RecruitBusiness/AdRetrievalSys/lego_scf_zpdsp
+ * branch                4.1.43_dev_wangke_2022-12-22 -&gt; FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can <span class="k">do</span> so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase <span class="nb">false</span>  <span class="c1"># merge</span>
+hint:   git config pull.rebase <span class="nb">true</span>   <span class="c1"># rebase</span>
+hint:   git config pull.ff only       <span class="c1"># fast-forward only</span>
+hint: 
+hint: You can replace <span class="s2">&#34;git config&#34;</span> with <span class="s2">&#34;git config --global&#34;</span> to <span class="nb">set</span> a default
+hint: preference <span class="k">for</span> all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the <span class="nb">command</span> line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+
+</code></pre></td></tr></table>
+</div>
+</div><p>solution</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">git config --global pull.ff only
+git config pull.ff only
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">git pull -a
+fatal: Not possible to fast-forward, aborting.
+
+git pull --no-ff
+or
+git pull --rebase
+
+<span class="c1"># then </span>
+git push
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod" style="opacity: 0.8;">
@@ -238,7 +395,7 @@ nslookup ssh.github.com 8.8.8.8 <span class="p">|</span> awk <span class="s1">&#
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-01-02 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-02-19 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
@@ -299,11 +456,11 @@ nslookup ssh.github.com 8.8.8.8 <span class="p">|</span> awk <span class="s1">&#
     <ul class="widget-list">
         
         <li>
-            <a href="/columns/reading-except.html" title="阅读摘抄">阅读摘抄</a>
+            <a href="/columns/good-except.html" title="阅读摘抄">阅读摘抄</a>
         </li>
         
         <li>
-            <a href="/columns/reading-note-2022.html" title="bingo">阅读笔记2022</a>
+            <a href="/columns/reading-note.html" title="bingo">阅读笔记</a>
         </li>
         
         <li>
