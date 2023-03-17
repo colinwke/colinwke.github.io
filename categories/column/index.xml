@@ -4,13 +4,21 @@
         <link>https://example.com/categories/column.html</link>
         <description>column | 分类 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 10 Jan 2023 00:35:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/column.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 11 Mar 2023 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/column.html" rel="self" type="application/rss+xml" /><item>
+    <title>阅读推荐</title>
+    <link>https://example.com/columns/good-post.html</link>
+    <pubDate>Sat, 11 Mar 2023 00:00:00 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/columns/good-post.html</guid>
+    <description><![CDATA[[TOC] 2023-03 总理华语群众大会演讲完整视频（National Day Rally 2019 - Chinese) https://www.youtube.com/watch?v=d6SOV4FX1DE 像新加坡这样的&quot;小&quot;国家, 甚至可以简单的看做一个非常大的公]]></description>
+</item>
+<item>
     <title>阅读笔记</title>
     <link>https://example.com/columns/reading-note.html</link>
     <pubDate>Tue, 10 Jan 2023 00:35:57 &#43;0800</pubDate>
     <author>wangke</author>
     <guid>https://example.com/columns/reading-note.html</guid>
-    <description><![CDATA[2023-02 快手精排模型实践 https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg 业务特点, 时序的重要性, 可能RNN, transformer等不及sum pooling, 那么就需要思考是否是相关性大于时序性了 推荐的相关]]></description>
+    <description><![CDATA[待读 冷启动 https://zhuanlan.zhihu.com/p/377229717 https://zhuanlan.zhihu.com/p/548297540 检索 https://theory.stanford.edu/~sergei/papers/vldb09-indexing.pdf https://zhuanlan.zhihu.com/p/591048449 https://www.zhihu.com/question/68232124/answer/2498391364 https://www.zhihu.com/people/leon_zju/posts?page=1 2023-03 https://mp.weixin.qq.com/s/S8gPrKzvzpYH1pCJCzGyzA 通常以百亿/千亿级参数量作为 LLM 研究的分水岭. 大规模语言模型也被看作是实现通用人工智能(AGI)的希望. ChatGPT 的三个]]></description>
 </item>
 <item>
     <title>阅读笔记2022</title>
@@ -29,7 +37,7 @@
     <description><![CDATA[前方漫漫 愿我成风 欢迎关注 新浪微博: 王虚极 github: colinwke 最后更新：2016-05-13]]></description>
 </item>
 <item>
-    <title>博客精华</title>
+    <title>博客推荐</title>
     <link>https://example.com/columns/good-blog.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
     <author>wangke</author>
@@ -37,11 +45,11 @@
     <description><![CDATA[[TOC] 友情推荐 charmby https://charmbyforever.blogspot.com/ 无详细介绍! 还有一个马甲地址charmby 计算广告 王喆的机器学习笔记 https://zhuanlan.zhihu.com/wangzhenotes 关注计算广告，推荐系统等机器学习领域前沿知识 广告/推荐 Sr.]]></description>
 </item>
 <item>
-    <title>阅读推荐</title>
-    <link>https://example.com/columns/good-post.html</link>
+    <title>阅读推荐2021</title>
+    <link>https://example.com/columns/good-post-2021.html</link>
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
     <author>wangke</author>
-    <guid>https://example.com/columns/good-post.html</guid>
+    <guid>https://example.com/columns/good-post-2021.html</guid>
     <description><![CDATA[[TOC] 2021-05 李沐: 工作五年反思 李沐大神这篇文章对工作中的价值进行了剖析, 也是工作五年的反思总结, 其中最难为可贵为对自己价值和对他人的价值, 对自己的价]]></description>
 </item>
 <item>
@@ -50,7 +58,7 @@
     <pubDate>Thu, 05 May 2016 20:19:59 &#43;0800</pubDate>
     <author>wangke</author>
     <guid>https://example.com/columns/good-except.html</guid>
-    <description><![CDATA[[TOC] 2016-05 被克服的困难就是胜利的契机（契诃夫） 于千万人之中，遇见你要遇见的人。于千万年之中，时间无涯的荒野里，没有早一步，也没有迟一步，遇上了也只]]></description>
+    <description><![CDATA[[TOC] 2023-02 眼看他起朱楼，眼看他宴宾客，眼看他楼塌了。 https://so.gushiwen.cn/mingju/juv_0678a4494431.aspx 摘自《桃花扇·续四十出·余韵》 解释：看着人家建起那栋美丽的楼阁，看着人家在楼阁上宴请宾客，一]]></description>
 </item>
 <item>
     <title>阅读笔记2019</title>

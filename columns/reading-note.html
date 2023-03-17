@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>阅读笔记 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="阅读笔记" />
-<meta property="og:description" content="2023-02 快手精排模型实践 https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg 业务特点, 时序的重要性, 可能RNN, transformer等不及sum pooling, 那么就需要思考是否是相关性大于时序性了 推荐的相关" />
+<meta property="og:description" content="待读 冷启动 https://zhuanlan.zhihu.com/p/377229717 https://zhuanlan.zhihu.com/p/548297540 检索 https://theory.stanford.edu/~sergei/papers/vldb09-indexing.pdf https://zhuanlan.zhihu.com/p/591048449 https://www.zhihu.com/question/68232124/answer/2498391364 https://www.zhihu.com/people/leon_zju/posts?page=1 2023-03 https://mp.weixin.qq.com/s/S8gPrKzvzpYH1pCJCzGyzA 通常以百亿/千亿级参数量作为 LLM 研究的分水岭. 大规模语言模型也被看作是实现通用人工智能(AGI)的希望. ChatGPT 的三个" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/columns/reading-note.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="columns" />
 <meta property="article:published_time" content="2023-01-10T00:35:57+08:00" />
@@ -15,9 +15,9 @@
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="阅读笔记"/>
-<meta name="twitter:description" content="2023-02 快手精排模型实践 https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg 业务特点, 时序的重要性, 可能RNN, transformer等不及sum pooling, 那么就需要思考是否是相关性大于时序性了 推荐的相关"/>
+<meta name="twitter:description" content="待读 冷启动 https://zhuanlan.zhihu.com/p/377229717 https://zhuanlan.zhihu.com/p/548297540 检索 https://theory.stanford.edu/~sergei/papers/vldb09-indexing.pdf https://zhuanlan.zhihu.com/p/591048449 https://www.zhihu.com/question/68232124/answer/2498391364 https://www.zhihu.com/people/leon_zju/posts?page=1 2023-03 https://mp.weixin.qq.com/s/S8gPrKzvzpYH1pCJCzGyzA 通常以百亿/千亿级参数量作为 LLM 研究的分水岭. 大规模语言模型也被看作是实现通用人工智能(AGI)的希望. ChatGPT 的三个"/>
 <meta name="application-name" content="LoveIt">
-<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/columns/reading-note.html" /><link rel="prev" href="https://example.com/columns/reading-note-2022.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/columns/reading-note.html" /><link rel="prev" href="https://example.com/columns/reading-note-2022.html" /><link rel="next" href="https://example.com/columns/good-post.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/columns\/reading-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  208 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  2384 ,
         "url": "https:\/\/example.com\/columns\/reading-note.html","datePublished": "2023-01-10T00:35:57+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -105,20 +105,122 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#待读">待读</a></li>
+    <li><a href="#2023-03">2023-03</a>
+      <ul>
+        <li><a href="#gpt-4-一张手绘草图能生一个网站-60-秒搞定一个游戏开发">GPT-4: 一张手绘草图能生一个网站, 60 秒搞定一个游戏开发!</a></li>
+        <li><a href="#openai-发布多模态-gpt-4-模型-会开创哪些新的研究方向">OpenAI 发布多模态 GPT-4 模型, 会开创哪些新的研究方向?</a></li>
+        <li><a href="#sigir22--大规模推荐系统中冷启动用户预热的融合序列建模">SIGIR'22 | 大规模推荐系统中冷启动用户预热的融合序列建模</a></li>
+        <li><a href="#新时期的阿里妈妈广告引擎">新时期的阿里妈妈广告引擎</a></li>
+      </ul>
+    </li>
     <li><a href="#2023-02">2023-02</a>
       <ul>
+        <li><a href="#java生态圈技术框架中间件系统架构汇总">Java生态圈技术框架,中间件,系统架构汇总</a></li>
         <li><a href="#快手精排模型实践">快手精排模型实践</a></li>
         <li><a href="#阿里新一代rank技术">阿里新一代Rank技术</a></li>
-        <li><a href="#算法工程师的天地之间">算法工程师的「天地之间」</a></li>
+        <li><a href="#算法工程师的天地之间">算法工程师的&quot;天地之间&rdquo;</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">阅读笔记</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/column.html" title="column"><i class="fas fa-folder fa-fw"></i>&nbsp;column</a></span>&nbsp;<span class="post-category"><a href="/tags/column.html" title="column"><i class="fas fa-tags fa-fw"></i>&nbsp;column</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 208 字&nbsp;
- <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
-    </div><div class="content" id="content"><h2 id="2023-02">2023-02</h2>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2384 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+    </div><div class="content" id="content"><h2 id="待读">待读</h2>
+<p>冷启动</p>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/377229717" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/377229717</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/548297540" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/548297540</a></li>
+</ol>
+<p>检索</p>
+<ol>
+<li><a href="https://theory.stanford.edu/~sergei/papers/vldb09-indexing.pdf" target="_blank" rel="noopener noreffer ">https://theory.stanford.edu/~sergei/papers/vldb09-indexing.pdf</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/591048449" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/591048449</a></li>
+<li><a href="https://www.zhihu.com/question/68232124/answer/2498391364" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/68232124/answer/2498391364</a></li>
+<li><a href="https://www.zhihu.com/people/leon_zju/posts?page=1" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/people/leon_zju/posts?page=1</a></li>
+</ol>
+<h2 id="2023-03">2023-03</h2>
+<p><a href="https://mp.weixin.qq.com/s/S8gPrKzvzpYH1pCJCzGyzA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/S8gPrKzvzpYH1pCJCzGyzA</a></p>
+<blockquote>
+<p>通常以百亿/千亿级参数量作为 LLM 研究的分水岭. 大规模语言模型也被看作是实现通用人工智能(AGI)的希望.</p>
+</blockquote>
+<blockquote>
+<p>ChatGPT 的三个关键技术为: 情景学习, 思维链, 自然指令学习</p>
+<p><strong>情景学习(In-context learning)</strong>: 对于一些 LLM 没有见过的新任务，只需要设计一些任务的语言描述，并给出几个任务实例，作为模型的输入，即可让模型从给定的情景中学习新任务并给出满意的回答结果。这种训练方式能够有效提升模型小样本学习的能力。(QA: 这个和word2vec所具有的距离关系是否相似? 模型学习的的知识具备一定的数据结构, 而这个数据结构是通用的, 可以通过部分少数描述来组合这种数据结构?)</p>
+<p><strong>思维链(Chain-of-Thought, CoT)</strong>: 对于一些逻辑较为复杂的问题，直接向大规模语言模型提问可能会得到不准确的回答，但是如果以提示的方式在输入中给出有逻辑的解题步骤的示例后再提出问题，大模型就能给出正确题解。也就是说将复杂问题拆解为多个子问题解决再从中抽取答案，就可以得到正确的答案。由于 CoT 技术能够激发大规模语言模型对复杂问题的求解能力，该技术也被认为是打破比例定律的关键。</p>
+<p><strong>自然指令学习(Learning from Natural Instructions)</strong>: 早期研究人员希望把所有的自然语言处理任务都能够指令化，对每个任务标注数据。这种训练方式就是会在前面添加一个“指令”，该指令能够以自然语言的形式描述任务内容，从而使得大模型根据输入来输出任务期望的答案。该方式将下游任务进一步和自然语言形式对齐，能显著提升模型对未知任务的泛化能力。(QA: 指令对于多任务模型来说, 就是监督的label(task), 但是对于LLM模型来说, 他也可以成为label下的input, 所以已经弱化了多任务学习, 而是学习一个task, 但是这个task是复合的)</p>
+<p>人们把 NLP 任务做到 1000 多种，目前最新模型可以做到 2000 多种 NLP 任务，接下来再对 NLP 任务进行分类，比如能力 A、能力 B，大模型指令能力、泛化能力非常强，学到四五十个任务时就可以泛化到上百种任务。但距离真正的 ChatGPT 还有一步，那就是和真实的人类意图对齐，这就是 OpenAI 做的 GPT。核心逻辑非常简单，一开始时让人写答案，但是成本太高，改成让人来选答案，这样对标注员的能力要求稍微低一点，可以迅速提升迭代和规模。基于打分再训练一个打分器，通过打分器自动评价模型的好坏，然后用强化学习开始迭代，这种方法可以大规模地把数据模型迭代给转起来，这是 OpenAI 做的 Instruct GPT 逻辑，<strong>强化学习的人类反馈(RLHF)</strong>。</p>
+</blockquote>
+<p>总结: LLM模型是走向AGI的一个途径, 在图片领域飞速发展后, NLP也迎来了快速发展(Transformer, Bert, GPT), 文本和图像因为数据结构的特殊性, 在模型训练上有更多的挑战和可能. 另外, GPT的应用在特定的垂直领域, 仍然是一个发展的方向.</p>
+<h3 id="gpt-4-一张手绘草图能生一个网站-60-秒搞定一个游戏开发">GPT-4: 一张手绘草图能生一个网站, 60 秒搞定一个游戏开发!</h3>
+<p><a href="https://mp.weixin.qq.com/s/wNQK_vPGhj5YOVVRLPmF_g" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/wNQK_vPGhj5YOVVRLPmF_g</a></p>
+<blockquote>
+<p>&ldquo;我们花了 6 个月的时间, 利用对抗性测试项目以及 ChatGPT 的经验, 反复调整 GPT-4, 结果在真实性, 可操作性以及拒绝超出道德等边界方面取得了有史以来最好的结果(尽管远非完美)&rdquo;, OpenAI 分享道.</p>
+</blockquote>
+<blockquote>
+<p>微软的 Azure 与 OpenAI 共同设计了一台超级计算机, 搭载了英伟达上万颗 A100 芯片. 基于这台超算, OpenAI 在一年前将 GPT-3.5 作为系统的第一次&quot;测试运行&quot;进行了训练, 在修复一些 Bug 并提高理论基础之上, OpenAI 基于此又训练出了首个能够提前准确预测其训练性能的大模型 GPT-4.</p>
+</blockquote>
+<blockquote>
+<p>OpenAI 表示, 他们的目标是开发能够在任何智力任务方面取代人类的 AGI(通用人工智能), 尽管 GPT-4 还没有达到这个目标.</p>
+<p>尽管有这样的能力, GPT-4 与早期的 GPT 模型有类似的局限性: 它不是完全可靠的, 比如, 它也会对事实产生&quot;幻觉&quot;, 推理出错误的结果.</p>
+<p>对此, OpenAI 首席执行官 Sam Altman 在推特上说: &ldquo;它(GPT-4)仍然有缺陷, 仍然有局限性, 但它在首次使用时仍然能给你留下深刻印象. &quot;</p>
+</blockquote>
+<p><a href="https://mp.weixin.qq.com/s/wkTciKHC8jmYacvp3lg8xA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/wkTciKHC8jmYacvp3lg8xA</a> GPT-4测试案例</p>
+<h3 id="openai-发布多模态-gpt-4-模型-会开创哪些新的研究方向">OpenAI 发布多模态 GPT-4 模型, 会开创哪些新的研究方向?</h3>
+<p><a href="https://www.zhihu.com/question/589640227" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/589640227</a></p>
+<p>@张俊林 <a href="https://www.zhihu.com/question/589640227/answer/2937925226" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/589640227/answer/2937925226</a></p>
+<ol>
+<li>竞争关系和训练集(模型)缺陷可能导致LLM封闭化发展</li>
+<li>训练的高效性仍然是LLM的一个方向(例如模型蒸馏后的小模型)</li>
+<li>强化学习仍然是固有数据集的一种增强方式, 可以让模型更加的鲁棒</li>
+</ol>
+<p>相关阅读</p>
+<ol>
+<li><a href="https://www.zhihu.com/question/589639535" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/589639535</a></li>
+<li><a href="https://www.zhihu.com/question/584515782" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/584515782</a></li>
+</ol>
+<h3 id="sigir22--大规模推荐系统中冷启动用户预热的融合序列建模">SIGIR'22 | 大规模推荐系统中冷启动用户预热的融合序列建模</h3>
+<ol>
+<li>对整个用户向量进行建模, 而不是对用户id进行建模</li>
+<li>基于DSSM模型</li>
+<li>正负反馈融合建模, 利用充分的负反馈增加模型的信息</li>
+<li>交互数据中的二八原则, 是否是二的用户贡献了八的交互</li>
+</ol>
+<p><a href="https://mp.weixin.qq.com/s/SmFYTlhYZQr3Tf3Km8cg2g" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/SmFYTlhYZQr3Tf3Km8cg2g</a></p>
+<h3 id="新时期的阿里妈妈广告引擎">新时期的阿里妈妈广告引擎</h3>
+<p><a href="https://zhuanlan.zhihu.com/p/523549804" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/523549804</a></p>
+<p>讲的还算全面, 查漏补缺, 主要是对整个服务架构的由全图化架构(服务化?)到serverless化架构, 主要内容有:</p>
+<ol>
+<li>
+<p>整体架构上serverless</p>
+<ol>
+<li>特征抽取, 业务算子; 数据规范, 抽象, 规范; 统一框架, 抽象, 接口, 配置化(数据+算子+模型)</li>
+<li>serverless就是在原有全图化的基础上, 再次做拆分和抽象, 实现服务化的拆分为去服务化</li>
+</ol>
+</li>
+<li>
+<p>召回架构</p>
+</li>
+<li>
+<p>智能出价</p>
+<ol>
+<li>基于公式的出价: 业务整体的限制, 可个性化不高, 业务限制大, 迭代成本高, 尝试的空间不高</li>
+<li>基于模型的出价有更大的个性化空间, 更大的参数空间, 最优化能力更强.</li>
+</ol>
+</li>
+<li>
+<p>智能创意</p>
+<ol>
+<li>这里创意可以在b端客户发帖时建议多个标题, 供客户筛选, 而线上则简单的选取创意模型保证创意的可控(创意工具化)</li>
+</ol>
+</li>
+</ol>
+<h2 id="2023-02">2023-02</h2>
+<h3 id="java生态圈技术框架中间件系统架构汇总"><del>Java生态圈技术框架,中间件,系统架构汇总</del></h3>
+<p><a href="https://juejin.cn/post/6844903620979212296" target="_blank" rel="noopener noreffer ">https://juejin.cn/post/6844903620979212296</a></p>
+<p>2018年的汇总文章, 但是对java开发的整体框架有一个较好的总结</p>
 <h3 id="快手精排模型实践">快手精排模型实践</h3>
 <p><a href="https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg</a></p>
 <ol>
@@ -133,14 +235,14 @@
 <li>DIN(18), DIEN(19), MIMN(19), SIM(20)</li>
 </ol>
 </li>
-<li>GSU/ESU
+<li>SIM: GSU/ESU
 <ol>
 <li>GSU: general search: actioned embedding distance</li>
 <li>ESU: exact search: cate tree etc.</li>
 </ol>
 </li>
 </ol>
-<h3 id="算法工程师的天地之间">算法工程师的「天地之间」</h3>
+<h3 id="算法工程师的天地之间">算法工程师的&quot;天地之间&rdquo;</h3>
 <p><a href="https://zhuanlan.zhihu.com/p/495479206" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/495479206</a></p>
 <p><del>系统架构是天, 数据细节是地, 天地之间, 建模能力和技术能力才是算法工程师的术与道</del></p>
 <p>系统架构是天, 业务理解是地, 建模能力和工程技术才是算法工程师的核心</p>
@@ -168,11 +270,12 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/columns/reading-note-2022.html" class="prev" rel="prev" title="阅读笔记2022"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>阅读笔记2022</a></div>
+    <div class="post-nav"><a href="/columns/reading-note-2022.html" class="prev" rel="prev" title="阅读笔记2022"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>阅读笔记2022</a>
+            <a href="/columns/good-post.html" class="next" rel="next" title="阅读推荐">阅读推荐<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-02-19 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-03-17 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">

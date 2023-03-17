@@ -8,6 +8,7 @@
             <loc>https://example.com/categories/column.html</loc><lastmod>2023-01-02T11:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns.html</loc><lastmod>2023-01-02T11:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags.html</loc><lastmod>2023-01-02T11:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/columns/good-post.html</loc><lastmod>2022-04-18T23:00:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/reading-note.html</loc><lastmod>2022-04-18T23:00:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/git.html</loc><lastmod>2023-01-02T11:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/github.html</loc><lastmod>2023-01-02T11:59:50&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -67,7 +68,7 @@
             <loc>https://example.com/categories/%E6%B6%89%E7%8C%8E.html</loc><lastmod>2022-11-07T14:54:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/page-about.html</loc><lastmod>2022-04-18T23:00:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/good-blog.html</loc><lastmod>2022-04-18T23:00:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/columns/good-post.html</loc><lastmod>2022-04-18T23:00:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://example.com/columns/good-post-2021.html</loc><lastmod>2016-05-05T20:19:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/good-except.html</loc><lastmod>2016-05-05T20:19:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/columns/reading-note-2019.html</loc><lastmod>2016-05-05T20:19:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/old/essay/work-and-another.html</loc><lastmod>2022-04-18T23:00:58&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
