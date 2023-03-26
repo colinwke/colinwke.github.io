@@ -18,7 +18,7 @@
     <pubDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</pubDate>
     <author>wangke</author>
     <guid>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</guid>
-    <description><![CDATA[[TOC] 问题描述 使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用 使用udaf有两种方法: 第一种是hive使用 1 2]]></description>
+    <description><![CDATA[问题描述 使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用 使用udaf有两种方法: 第一种是hive使用 1 2 3]]></description>
 </item>
 <item>
     <title>hello</title>
