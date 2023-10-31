@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>save DataFrame as partition of hive table | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="save DataFrame as partition of hive table" />
+<meta property="og:description" content="使用DataFrame直接创建hive表, 并作为其中的一个分区数据 test 1 1 2 3 4 5 6 table .write .format(&#34;hive&#34;) .mode(&#34;overwrite&#34;) .option(&#34;path&#34;, inputPath &#43; &#34;_table&#34;) .insertInto(tableName) error, 需要先创建表 1 Exception in thread &#34;main&#34; org.apache.spark.sql.AnalysisException: Table not found: hdp_lbg_ectech_ads.zp_compensate_ad_detail_test1; test 2 首" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/2304271038-dataframe-create-hive-table.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-04-27T10:38:16+08:00" />
+<meta property="article:modified_time" content="2023-04-27T10:38:16+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="save DataFrame as partition of hive table"/>
+<meta name="twitter:description" content="使用DataFrame直接创建hive表, 并作为其中的一个分区数据 test 1 1 2 3 4 5 6 table .write .format(&#34;hive&#34;) .mode(&#34;overwrite&#34;) .option(&#34;path&#34;, inputPath &#43; &#34;_table&#34;) .insertInto(tableName) error, 需要先创建表 1 Exception in thread &#34;main&#34; org.apache.spark.sql.AnalysisException: Table not found: hdp_lbg_ectech_ads.zp_compensate_ad_detail_test1; test 2 首"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/2304271038-dataframe-create-hive-table.html" /><link rel="prev" href="https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "save DataFrame as partition of hive table",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/2304271038-dataframe-create-hive-table.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "data","wordcount":  1117 ,
+        "url": "https:\/\/example.com\/posts\/2304271038-dataframe-create-hive-table.html","datePublished": "2023-04-27T10:38:16+08:00","dateModified": "2023-04-27T10:38:16+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "wangke"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu">
+            <div class="menu-inner"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/categories.html"> 归类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/categories.html" title="">归类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" style="overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+        <div class="details-summary toc-title">
+            <span>目录</span>
+            <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#test-1">test 1</a></li>
+        <li><a href="#test-2">test 2</a></li>
+        <li><a href="#test-3worked">test 3(worked)</a></li>
+        <li><a href="#其他">其他</a>
+          <ul>
+            <li><a href="#1-使用ddl生成建表sql">1 使用DDL生成建表sql</a></li>
+            <li><a href="#2-format-parquet-和format-hive的区别">2 format parquet 和format hive的区别</a></li>
+            <li><a href="#3-其他方式">3 其他方式</a></li>
+            <li><a href="#4-是否可以直接使用parquet创建表">4 是否可以直接使用parquet创建表?</a></li>
+            <li><a href="#5-null值处理">5 NULL值处理</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#json-reader">json reader</a>
+      <ul>
+        <li><a href="#refs">refs</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">save DataFrame as partition of hive table</h1><div class="post-meta">
+        <div class="post-meta-line"><span class="post-category"><a href="/categories/data.html" title="data"><i class="fas fa-folder fa-fw"></i>&nbsp;data</a></span>&nbsp;<span class="post-category"><a href="/tags/data.html" title="data"><i class="fas fa-tags fa-fw"></i>&nbsp;data</a></span>&nbsp;</div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-04-27">2023-04-27</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1117 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+    </div><div class="content" id="content"><p>使用DataFrame直接创建hive表, 并作为其中的一个分区数据</p>
+<h3 id="test-1">test 1</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="n">table</span>
+    <span class="o">.</span><span class="n">write</span>
+    <span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&#34;hive&#34;</span><span class="o">)</span>
+    <span class="o">.</span><span class="n">mode</span><span class="o">(</span><span class="s">&#34;overwrite&#34;</span><span class="o">)</span>
+    <span class="o">.</span><span class="n">option</span><span class="o">(</span><span class="s">&#34;path&#34;</span><span class="o">,</span> <span class="n">inputPath</span> <span class="o">+</span> <span class="s">&#34;_table&#34;</span><span class="o">)</span>
+    <span class="o">.</span><span class="n">insertInto</span><span class="o">(</span><span class="n">tableName</span><span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>error, 需要先创建表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Exception in thread &#34;main&#34; org.apache.spark.sql.AnalysisException: Table not found: hdp_lbg_ectech_ads.zp_compensate_ad_detail_test1;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="test-2">test 2</h3>
+<p>首先判别表是否存在</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">checkTableExist</span><span class="o">(</span><span class="n">tableName</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="c1">// https://www.mikulskibartosz.name/save-spark-dataframe-as-partitioned-hive-table/
+</span><span class="c1"></span>    <span class="k">val</span> <span class="n">tableDbName</span> <span class="k">=</span> <span class="n">tableName</span><span class="o">.</span><span class="n">split</span><span class="o">(</span><span class="s">&#34;\\.&#34;</span><span class="o">)</span>
+    <span class="c1">// Dog.print(tableName, tableDbName.mkString(&#34;..&#34;))
+</span><span class="c1"></span>    <span class="nc">SparkEnvir</span><span class="o">.</span><span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">s&#34;SHOW TABLES IN </span><span class="si">${</span><span class="n">tableDbName</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span><span class="si">}</span><span class="s">&#34;</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">where</span><span class="o">(</span><span class="n">col</span><span class="o">(</span><span class="s">&#34;tableName&#34;</span><span class="o">)</span> <span class="o">===</span> <span class="n">tableDbName</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span>
+        <span class="o">.</span><span class="n">count</span><span class="o">()</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>表存在则直接插入, 表不存在则创建</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">&#34;SET hive.exec.dynamic.partition=true&#34;</span><span class="o">)</span>
+<span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">&#34;SET hive.exec.dynamic.partition.mode=nonstrict&#34;</span><span class="o">)</span>
+<span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">&#34;SET hive.exec.max.dynamic.partitions.pernode=400&#34;</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">writer</span><span class="k">:</span> <span class="kt">DataFrameWriter</span><span class="o">[</span><span class="kt">Row</span><span class="o">]</span> <span class="k">=</span> <span class="n">table</span>
+    <span class="o">.</span><span class="n">write</span>
+    <span class="o">.</span><span class="n">mode</span><span class="o">(</span><span class="s">&#34;append&#34;</span><span class="o">)</span> <span class="c1">// overwrite
+</span><span class="c1"></span>    <span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&#34;parquet&#34;</span><span class="o">)</span> <span class="c1">// difference of hive and parquet(different with format(SERDE, INPUT, OUTPUT))
+</span><span class="c1"></span>    <span class="o">.</span><span class="n">option</span><span class="o">(</span><span class="s">&#34;path&#34;</span><span class="o">,</span> <span class="n">outputTablePath</span><span class="o">)</span> <span class="c1">// external table
+</span><span class="c1"></span><span class="k">val</span> <span class="n">tableExist</span> <span class="k">=</span> <span class="nc">SparkUtils</span><span class="o">.</span><span class="n">checkTableExist</span><span class="o">(</span><span class="n">tableName</span><span class="o">)</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">tableExist</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">s&#34;[insertInto(tableName)] </span><span class="si">${</span><span class="n">tableName</span><span class="si">}</span><span class="s">&#34;</span><span class="o">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">insertInto</span><span class="o">(</span><span class="n">tableName</span><span class="o">)</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">s&#34;[saveAsTable(tableName)] </span><span class="si">${</span><span class="n">tableName</span><span class="si">}</span><span class="s">&#34;</span><span class="o">)</span>
+    <span class="n">writer</span>
+        <span class="o">.</span><span class="n">partitionBy</span><span class="o">(</span><span class="s">&#34;dt&#34;</span><span class="o">)</span>
+        <span class="o">.</span><span class="n">saveAsTable</span><span class="o">(</span><span class="n">tableName</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这里创建表时没有问题的, path下会根据partition自动生成路径, path/partition_name=xx</p>
+<p>但是insertInto(tableName)一直在hanging状态, 这里还未排查出原因, 怀疑是external path的问题?</p>
+<p>这里另外需要注意的是, 创建表需要partition信息, 而insertInto就不需要partition信息了, 会根据表名的metadata获取partition信息. <a href="https://www.mikulskibartosz.name/save-spark-dataframe-as-partitioned-hive-table/" target="_blank" rel="noopener noreffer ">参考</a></p>
+<h3 id="test-3worked">test 3(worked)</h3>
+<p>创建表使用saveAsTable, 添加分区数据使用parquet, 然后使用<code>MSCK REPAIR TABLE ${tableName}</code>更新数据路径的映射.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">&#34;SET hive.exec.dynamic.partition=true&#34;</span><span class="o">)</span>
+<span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">&#34;SET hive.exec.dynamic.partition.mode=nonstrict&#34;</span><span class="o">)</span>
+<span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">&#34;SET hive.exec.max.dynamic.partitions.pernode=400&#34;</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">writer</span><span class="k">:</span> <span class="kt">DataFrameWriter</span><span class="o">[</span><span class="kt">Row</span><span class="o">]</span> <span class="k">=</span> <span class="n">table</span>
+    <span class="o">.</span><span class="n">coalesce</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+    <span class="o">.</span><span class="n">write</span>
+    <span class="o">.</span><span class="n">mode</span><span class="o">(</span><span class="s">&#34;append&#34;</span><span class="o">)</span> <span class="c1">// overwrite
+</span><span class="c1"></span>    <span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&#34;parquet&#34;</span><span class="o">)</span> <span class="c1">// difference of hive and parquet(different with format(SERDE, INPUT, OUTPUT))
+</span><span class="c1"></span>    <span class="o">.</span><span class="n">option</span><span class="o">(</span><span class="s">&#34;path&#34;</span><span class="o">,</span> <span class="n">outputTablePath</span><span class="o">)</span> <span class="c1">// external table
+</span><span class="c1"></span>    <span class="o">.</span><span class="n">option</span><span class="o">(</span><span class="s">&#34;partitionOverwriteMode&#34;</span><span class="o">,</span> <span class="s">&#34;dynamic&#34;</span><span class="o">)</span>
+    <span class="c1">// .partitionBy(&#34;dt&#34;)
+</span><span class="c1"></span><span class="k">val</span> <span class="n">tableExist</span> <span class="k">=</span> <span class="nc">SparkUtils</span><span class="o">.</span><span class="n">checkTableExist</span><span class="o">(</span><span class="n">tableName</span><span class="o">)</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">tableExist</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">s&#34;[insertInto(tableName)] </span><span class="si">${</span><span class="n">tableName</span><span class="si">}</span><span class="s">&#34;</span><span class="o">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">parquet</span><span class="o">(</span><span class="n">outputTablePath</span><span class="o">)</span>
+    <span class="c1">// writer.insertInto(tableName)
+</span><span class="c1"></span><span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">s&#34;[saveAsTable(tableName)] </span><span class="si">${</span><span class="n">tableName</span><span class="si">}</span><span class="s">&#34;</span><span class="o">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">saveAsTable</span><span class="o">(</span><span class="n">tableName</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="s">s&#34;MSCK REPAIR TABLE </span><span class="si">${</span><span class="n">tableName</span><span class="si">}</span><span class="s">&#34;</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">selectExample</span> <span class="k">=</span> <span class="s">s&#34;SELECT * FROM </span><span class="si">${</span><span class="n">tableName</span><span class="si">}</span><span class="s"> WHERE dt=</span><span class="si">${</span><span class="n">date</span><span class="si">}</span><span class="s">&#34;</span>
+<span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">&#34;[selectExample] &#34;</span> <span class="o">+</span> <span class="n">selectExample</span><span class="o">)</span>
+<span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="o">(</span><span class="n">selectExample</span><span class="o">).</span><span class="n">show</span><span class="o">()</span>
+<span class="nc">SparkEnvir</span><span class="o">.</span><span class="n">close</span><span class="o">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="其他">其他</h3>
+<h4 id="1-使用ddl生成建表sql">1 使用DDL生成建表sql</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">getCreateTableSql</span><span class="o">(</span><span class="n">df</span><span class="k">:</span> <span class="kt">DataFrame</span><span class="o">,</span> <span class="n">tableName</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">partitioned</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="c1">// https://stackoverflow.com/a/69365683/6494418
+</span><span class="c1"></span>    <span class="k">val</span> <span class="n">schemaDDL</span> <span class="k">=</span> <span class="n">df</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">toDDL</span>
+    <span class="k">val</span> <span class="n">partitionedStr</span> <span class="k">=</span> <span class="n">partitioned</span><span class="o">.</span><span class="n">map</span><span class="o">(</span><span class="k">_</span> <span class="o">+</span> <span class="s">&#34; STRING&#34;</span><span class="o">).</span><span class="n">mkString</span><span class="o">(</span><span class="s">&#34;,&#34;</span><span class="o">)</span>
+    <span class="k">val</span> <span class="n">createTableSql</span> <span class="k">=</span> <span class="s">s&#34;CREATE TABLE </span><span class="si">${</span><span class="n">tableName</span><span class="si">}</span><span class="s"> (</span><span class="si">${</span><span class="n">schemaDDL</span><span class="si">}</span><span class="s">) PARTITIONED BY (</span><span class="si">${</span><span class="n">partitionedStr</span><span class="si">}</span><span class="s">)&#34;</span>
+    <span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">&#34;[df.schema.fields] &#34;</span> <span class="o">+</span> <span class="n">df</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">fields</span><span class="o">.</span><span class="n">mkString</span><span class="o">(</span><span class="s">&#34;, &#34;</span><span class="o">))</span>
+    <span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">&#34;[create table sql] &#34;</span> <span class="o">+</span> <span class="n">createTableSql</span><span class="o">)</span>
+    <span class="nc">Dog</span><span class="o">.</span><span class="n">print</span><span class="o">(</span><span class="s">&#34;[schemaDDL       ] &#34;</span> <span class="o">+</span> <span class="n">schemaDDL</span><span class="o">)</span>
+    <span class="n">createTableSql</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="2-format-parquet-和format-hive的区别">2 format parquet 和format hive的区别</h4>
+<p>两者的区别在于序列化方式不同, 查看建表语句<code>show create table tableName</code></p>
+<p>parquet</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">ROW</span> <span class="err">FORMAT</span> <span class="err">SERDE</span> 
+  <span class="err">&#39;org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe&#39;</span> 
+<span class="err">STORED</span> <span class="err">AS</span> <span class="err">INPUTFORMAT</span> 
+  <span class="err">&#39;org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat&#39;</span> 
+<span class="err">OUTPUTFORMAT</span> 
+  <span class="err">&#39;org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>hive</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">ROW</span> <span class="err">FORMAT</span> <span class="err">SERDE</span>
+  <span class="err">&#39;org.apache.hadoop.hive.serde</span><span class="mi">2</span><span class="err">.lazy.LazySimpleSerDe&#39;</span>
+<span class="err">STORED</span> <span class="err">AS</span> <span class="err">INPUTFORMAT</span>
+  <span class="err">&#39;org.apache.hadoop.mapred.TextInputFormat&#39;</span>
+<span class="err">OUTPUTFORMAT</span>
+  <span class="err">&#39;org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="3-其他方式">3 其他方式</h4>
+<p>之前使用DataFrame创建hive表的一个分区一直使用的是手动的, hivesql的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="c1">---- CREATE TABLE IF NOT EXIST
+</span><span class="c1"></span><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="err">${</span><span class="k">table_name</span><span class="err">}</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span><span class="w">    </span><span class="err">${</span><span class="n">col_normal_str</span><span class="err">}</span><span class="w">
+</span><span class="w"></span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="k">COMMENT</span><span class="w"> </span><span class="s2">&#34;create by wangke09&#34;</span><span class="w">
+</span><span class="w"></span><span class="n">PARTITIONED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="w">
+</span><span class="w">    </span><span class="err">${</span><span class="n">col_partition_str</span><span class="err">}</span><span class="w">
+</span><span class="w"></span><span class="p">)</span><span class="w">
+</span><span class="w"></span><span class="k">ROW</span><span class="w"> </span><span class="n">FORMAT</span><span class="w"> </span><span class="n">DELIMITED</span><span class="w">
+</span><span class="w">    </span><span class="n">FIELDS</span><span class="w"> </span><span class="n">TERMINATED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s2">&#34;${fields_terminated}&#34;</span><span class="w">
+</span><span class="w">    </span><span class="n">LINES</span><span class="w">  </span><span class="n">TERMINATED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s2">&#34;\n&#34;</span><span class="w">
+</span><span class="w"></span><span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TEXTFILE</span><span class="w"> </span><span class="k">LOCATION</span><span class="w"> </span><span class="s2">&#34;${table_location}&#34;</span><span class="p">;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c1">---- LINK DATA
+</span><span class="c1"></span><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="err">${</span><span class="k">table_name</span><span class="err">}</span><span class="w">
+</span><span class="w"></span><span class="k">ADD</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">PARTITION</span><span class="p">(</span><span class="err">${</span><span class="n">partition_valued</span><span class="err">}</span><span class="p">)</span><span class="w">  </span><span class="c1">-- partition valued and sep by(,), like dt=&#39;1&#39;, bg=&#39;2&#39;
+</span><span class="c1"></span><span class="k">LOCATION</span><span class="w"> </span><span class="s2">&#34;${partition_location}&#34;</span><span class="p">;</span><span class="w">  
+</span><span class="w"></span><span class="c1">-- link partition_location to partition_valued(no need align to partition_valued like table_location/1/2)
+</span><span class="c1"></span><span class="w">
+</span><span class="w"></span><span class="c1">---- DROP TABLE IF EXISTS ${table_name};
+</span><span class="c1">---- SELECT * FROM ${table_name} WHERE ${partition_valued_and} ORDER BY RAND() LIMIT 500;
+</span></code></pre></td></tr></table>
+</div>
+</div><p>主要使用add partition去链接external data, 现在可以用更简单的方式创建表和连接表, 但是可能会有下面问题(未验证):</p>
+<ol>
+<li>external path的格式, 如果不是创建表的标准格式, MSCK REPAIR可能不能扫描(未测试), 这种情况只有通过add partition链接数据</li>
+<li>parquet是一种序列化方法(类似json, hive?, csv, 等), 非文本格式, 不能直接使用hadoop -text 查看原数据</li>
+<li>创建表不能添加comment, 需要自己修改metadata</li>
+</ol>
+<h4 id="4-是否可以直接使用parquet创建表">4 是否可以直接使用parquet创建表?</h4>
+<h4 id="5-null值处理">5 NULL值处理</h4>
+<p>不处理null值检索全部列(<code>*</code>)貌似非常的慢, 最后做缺失值填充</p>
+<h2 id="json-reader">json reader</h2>
+<p>json没有</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="k">var</span> <span class="n">rawData</span><span class="k">:</span> <span class="kt">DataFrame</span> <span class="o">=</span> <span class="n">ss</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">json</span><span class="o">(</span><span class="n">files</span><span class="k">:</span> <span class="k">_</span><span class="kt">*</span><span class="o">).</span><span class="n">repartition</span><span class="o">(</span><span class="n">numPartition</span><span class="o">).</span><span class="n">cache</span><span class="o">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="refs">refs</h3>
+<ol>
+<li><a href="https://www.jianshu.com/p/c1b0dc86f9b0" target="_blank" rel="noopener noreffer ">https://www.jianshu.com/p/c1b0dc86f9b0</a> msck repair</li>
+<li><a href="https://www.mikulskibartosz.name/save-spark-dataframe-as-partitioned-hive-table/" target="_blank" rel="noopener noreffer ">https://www.mikulskibartosz.name/save-spark-dataframe-as-partitioned-hive-table/</a></li>
+<li><a href="https://stackoverflow.com/a/31371571/6494418" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/a/31371571/6494418</a></li>
+<li><a href="https://stackoverflow.com/a/48251020/6494418" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/a/48251020/6494418</a></li>
+<li><a href="https://stackoverflow.com/a/45706191/6494418" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/a/45706191/6494418</a></li>
+</ol>
+<p>[TOC]</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod" style="opacity: 0.8;">
+                <span>更新于 2023-04-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more" style="opacity: 0.4;">
+        <section class="post-tags"><span class="post-category"><a href="/categories/data.html" title="data"><i class="fas fa-folder fa-fw"></i>&nbsp;data</a></span>&nbsp;<span class="post-category"><a href="/tags/data.html" title="data"><i class="fas fa-tags fa-fw"></i>&nbsp;data</a></span>&nbsp;</section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2211031619-ssh-git-github-permission-denied-problem.html" class="prev" rel="prev" title="ssh git github permission denied problem"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>ssh git github permission denied problem</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-10-31 updated</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+    <section class="widget">
+    <h3 class="widget-title">
+        <a href="/posts.html" title="click ok" >最近文章</a>
+    </h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2304271038-dataframe-create-hive-table.html" title="save DataFrame as partition of hive table">save DataFrame as partition of hive table</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2211031619-ssh-git-github-permission-denied-problem.html" title="ssh git github permission denied problem">ssh git github permission denied problem</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2210211456-pyspark-udf-udaf-jar.html" title="pyspark udf udaf with jar">pyspark udf udaf with jar</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104271104-dropout-note.html" title="dropout笔记">dropout笔记</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104040035-hello.html" title="hello">hello</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+    
+<section class="widget">
+    <h3 class="widget-title" title="特别的爱给特别的你">
+        <a href="/categories/column.html">特栏</a>
+    </h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/good-except.html" title="阅读摘抄">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note.html" title="bingo">阅读笔记</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="文章推荐">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="博主推荐">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+<section class="widget">
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/colin.html" title="" target="_blank" style="color:red">
+                
+                <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":999},"comment":{},"data":{"id-1":"Alphaks","id-2":"Alphaks","id-3":"Alphaks"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

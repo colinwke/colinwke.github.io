@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>阅读笔记 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="阅读笔记" />
-<meta property="og:description" content="2023-03 从用户体验洞察到商业价值变现，以京东为例 https://mp.weixin.qq.com/s/NG39SvW4TGlU0_4I6TfJdQ 焦文健 京东 技术与数据中心 数据产品专家 京东零售数据产品专家, 十年大数据和算法智能领域的产品经验, 在" />
+<meta property="og:description" content="2023-10 线上多参数调整 预估排序 https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu 复杂多目标: Ensemble Sort 和在线自动调参 https://zhuanlan.zhihu.com/p/441117034 推荐系统中的多任务学习与多目标排序工程实践(下) https://tech.meituan.com/2015/12/07/rerank-solution-offline.html 美团O2O排序解决方案——线下篇" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/columns/reading-note.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="columns" />
 <meta property="article:published_time" content="2023-01-10T00:35:57+08:00" />
-<meta property="article:modified_time" content="2022-04-18T23:00:58+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2023-09-28T14:53:08+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="阅读笔记"/>
-<meta name="twitter:description" content="2023-03 从用户体验洞察到商业价值变现，以京东为例 https://mp.weixin.qq.com/s/NG39SvW4TGlU0_4I6TfJdQ 焦文健 京东 技术与数据中心 数据产品专家 京东零售数据产品专家, 十年大数据和算法智能领域的产品经验, 在"/>
+<meta name="twitter:description" content="2023-10 线上多参数调整 预估排序 https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu 复杂多目标: Ensemble Sort 和在线自动调参 https://zhuanlan.zhihu.com/p/441117034 推荐系统中的多任务学习与多目标排序工程实践(下) https://tech.meituan.com/2015/12/07/rerank-solution-offline.html 美团O2O排序解决方案——线下篇"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/columns/reading-note.html" /><link rel="prev" href="https://example.com/columns/reading-note-2022.html" /><link rel="next" href="https://example.com/columns/good-post.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -28,8 +28,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/columns\/reading-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  3552 ,
-        "url": "https:\/\/example.com\/columns\/reading-note.html","datePublished": "2023-01-10T00:35:57+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  6968 ,
+        "url": "https:\/\/example.com\/columns\/reading-note.html","datePublished": "2023-01-10T00:35:57+08:00","dateModified": "2023-09-28T14:53:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -105,14 +105,46 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#2023-10">2023-10</a>
+      <ul>
+        <li><a href="#线上多参数调整--预估排序">线上多参数调整  预估排序</a></li>
+      </ul>
+    </li>
+    <li><a href="#2023-08">2023-08</a>
+      <ul>
+        <li><a href="#围绕-transformers-构建现代-nlp-开发环境">围绕 transformers 构建现代 NLP 开发环境</a></li>
+        <li><a href="#llm">LLM</a></li>
+        <li><a href="#多场景多目标">多场景/多目标</a></li>
+      </ul>
+    </li>
+    <li><a href="#2023-07">2023-07</a>
+      <ul>
+        <li><a href="#profile-性能分析">profile 性能分析</a></li>
+      </ul>
+    </li>
+    <li><a href="#2023-06">2023-06</a>
+      <ul>
+        <li><a href="#依赖注入inject与解耦">依赖注入inject与解耦</a></li>
+        <li><a href="#北极星指标图">北极星指标图</a></li>
+      </ul>
+    </li>
+    <li><a href="#2023-05">2023-05</a>
+      <ul>
+        <li><a href="#你真的懂点击率ctr建模吗">你真的懂点击率(CTR)建模吗?</a></li>
+        <li><a href="#canco-action-network">CAN(Co-Action Network)</a></li>
+      </ul>
+    </li>
+    <li><a href="#2023-04">2023-04</a>
+      <ul>
+        <li><a href="#如何评价-openai-的超级对话模型-chatgpt-">如何评价 OpenAI 的超级对话模型 ChatGPT ？</a></li>
+        <li><a href="#从腾讯离职了四年工作总结">从腾讯离职了，四年工作总结</a></li>
+      </ul>
+    </li>
     <li><a href="#2023-03">2023-03</a>
       <ul>
-        <li><a href="#从用户体验洞察到商业价值变现以京东为例">从用户体验洞察到商业价值变现，以京东为例</a>
-          <ul>
-            <li><a href="#1-这类问题可能有历史可参照">1 这类问题可能有历史可参照</a></li>
-            <li><a href="#2-如何做好用户体验洞察">2 如何做好用户体验洞察</a></li>
-          </ul>
-        </li>
+        <li><a href="#多场景多任务学习在美团到店餐饮推荐的实践">多场景多任务学习在美团到店餐饮推荐的实践</a></li>
+        <li><a href="#快手精排模型实践">快手精排模型实践</a></li>
+        <li><a href="#从用户体验洞察到商业价值变现以京东为例">从用户体验洞察到商业价值变现，以京东为例</a></li>
         <li><a href="#复旦邱锡鹏深度剖析-chatgpt-类大语言模型的关键技术">复旦邱锡鹏：深度剖析 ChatGPT 类大语言模型的关键技术</a></li>
         <li><a href="#gpt-4-一张手绘草图能生一个网站-60-秒搞定一个游戏开发">GPT-4: 一张手绘草图能生一个网站, 60 秒搞定一个游戏开发!</a></li>
         <li><a href="#openai-发布多模态-gpt-4-模型-会开创哪些新的研究方向">OpenAI 发布多模态 GPT-4 模型, 会开创哪些新的研究方向?</a></li>
@@ -123,19 +155,196 @@
     <li><a href="#2023-02">2023-02</a>
       <ul>
         <li><a href="#java生态圈技术框架中间件系统架构汇总">Java生态圈技术框架,中间件,系统架构汇总</a></li>
-        <li><a href="#快手精排模型实践">快手精排模型实践</a></li>
+        <li><a href="#快手精排模型实践-1">快手精排模型实践</a></li>
         <li><a href="#阿里新一代rank技术">阿里新一代Rank技术</a></li>
         <li><a href="#算法工程师的天地之间">算法工程师的&quot;天地之间&rdquo;</a></li>
       </ul>
     </li>
-    <li><a href="#待读">待读</a></li>
+    <li><a href="#待读">待读</a>
+      <ul>
+        <li><a href="#unsort">UNSORT</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">阅读笔记</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/column.html" title="column"><i class="fas fa-folder fa-fw"></i>&nbsp;column</a></span>&nbsp;<span class="post-category"><a href="/tags/column.html" title="column"><i class="fas fa-tags fa-fw"></i>&nbsp;column</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 3552 字&nbsp;
- <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 8 分钟&nbsp;</div>
-    </div><div class="content" id="content"><h2 id="2023-03">2023-03</h2>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 6968 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 14 分钟&nbsp;</div>
+    </div><div class="content" id="content"><h2 id="2023-10">2023-10</h2>
+<h3 id="线上多参数调整--预估排序">线上多参数调整  预估排序</h3>
+<ol>
+<li>
+<p><a href="https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu" target="_blank" rel="noopener noreffer ">https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu</a> 复杂多目标: Ensemble Sort 和在线自动调参</p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/441117034" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/441117034</a> 推荐系统中的多任务学习与多目标排序工程实践(下)</p>
+</li>
+<li>
+<p><a href="https://tech.meituan.com/2015/12/07/rerank-solution-offline.html" target="_blank" rel="noopener noreffer ">https://tech.meituan.com/2015/12/07/rerank-solution-offline.html</a> 美团O2O排序解决方案——线下篇</p>
+</li>
+<li>
+<p><a href="https://help.aliyun.com/document_detail/419538.html" target="_blank" rel="noopener noreffer ">https://help.aliyun.com/document_detail/419538.html</a> 推荐全链路 / 深度定制开放平台 / 选型指导</p>
+</li>
+<li>
+<p><a href="https://juejin.cn/post/7210310775276519484" target="_blank" rel="noopener noreffer ">https://juejin.cn/post/7210310775276519484</a> 重排在快手短视频推荐系统中的应用&amp;手淘信息流多兴趣多目标重排技术</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/cn/blogs/china/optimization-practice-of-the-ranking-model-of-the-recommendation-system-series/" target="_blank" rel="noopener noreffer ">https://aws.amazon.com/cn/blogs/china/optimization-practice-of-the-ranking-model-of-the-recommendation-system-series/</a> amazon</p>
+</li>
+<li>
+<p><a href="https://mx-1024.github.io/posts/2020/02/09/62333/" target="_blank" rel="noopener noreffer ">https://mx-1024.github.io/posts/2020/02/09/62333/</a> 推荐系统排序优化迭代的一些经验</p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/500237779" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/500237779</a> 推荐系统多目标优化专题(2)—融合公式设计思路</p>
+</li>
+</ol>
+<h2 id="2023-08">2023-08</h2>
+<h3 id="围绕-transformers-构建现代-nlp-开发环境">围绕 transformers 构建现代 NLP 开发环境</h3>
+<p><a href="https://mp.weixin.qq.com/s/quyUMyFyoYYub0MJ5EoWVQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/quyUMyFyoYYub0MJ5EoWVQ</a> 5⭐️</p>
+<p>围绕transformers构建现代NLP开发环境 -&gt; 围绕huggingFace构建个性化的NLP开发环境</p>
+<p>本文首先介绍了如何重写部分代码, 实现huggingFace个性化(存储, 方法)兼容; 然后是如何基于其他插件进行整个pipeline的管理, 而这个whole pipeline已经具有software2.0的雏形(或者叫形态).</p>
+<p>什么是软件2.0</p>
+<blockquote>
+<p>他预⾔, 为了实现软件2.0, 需要⼀整套服务于深度模型开发的⼯具栈, 就像传统软件需要 pip, conda 这类包管理器(package manager), GDB 这类 debug ⼯具, Github 这类开源社区⼀ 样, 深度学习也需要模型 debug ⼯具, 模型和数据集的管理器和开源社区.</p>
+<p>但他没有预⾔到的是, 类transformer 架构在之后的年⽉⾥⼤放异彩, 不仅统⼀了 NLP 领域, ⽽ 且 正 在 逐 步 统 ⼀ CV 等 其 他 领 域 . &quot; 预 训 练 - 微 调 &quot; 成 为 业 界 最 常 ⻅ 的 模 型 开 发 范 式 . ⽽ huggingface 公 司 , 借 着 transformers 库 的 东 ⻛ , 以 及 围 绕 它 建 设 的 模 型 开 源 社 区 (huggingface hub), 成为当前 NLP 开发事实上的标准, 连⽬前最⽕的⼤模型, 都选择在 huggingface 发布, 例如 ChatGLM, 这些已经有了软件 2.0 的雏形.</p>
+</blockquote>
+<p>最后的问题可谓这篇文章的点睛之笔</p>
+<blockquote>
+<p>随着软件 2.0 ⼯具栈的成熟, 算法开发流程将逐步标准化, ⼯程化, 流⽔线化, 不仅⼤量⾮科班 的玩家都能⽤ LoRA 微调⼤模型, ⽤ diffusers ⽣成⼈物了, 甚⾄连 AI 都能开发软件了, 那么在未来, &ldquo;算法⼯程师&rdquo; 这个 title 会变成什么呢, 会调⽤ import transformers 算不算懂 NLP 呢? 这道题作为课后练习, 留给同学们进⾏思考!</p>
+</blockquote>
+<p>对这个问题的思考: 从现有的工作环境中, 包含有AI平台工程, 我想就是把算法开发流程标准化, 工程化, 流水化的工作. 智能类的AI应用且基于算法手段做优化的仍然是算法工程师的主要工作范畴, 算法工程师就是针对某一目标使用某种(算法)手段做最优化的一群人, 对某一目标做优化除了使用现有的<em>软件2.0</em>之外, 还涉及到数据优化, 模型优化, 目标优化等算法范畴的工作.</p>
+<p>我们再来看看huggingFace(<a href="https://huggingface.co/models" target="_blank" rel="noopener noreffer ">https://huggingface.co/models</a>)</p>
+<blockquote>
+<p>The AI community building the future.
+The platform where the machine learning community collaborates on models, datasets, and applications.</p>
+</blockquote>
+<h3 id="llm">LLM</h3>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/589747432" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/589747432</a> ChatGPT内核：InstructGPT，基于反馈指令的PPO强化学习</li>
+</ol>
+<h3 id="多场景多目标">多场景/多目标</h3>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/639351273" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/639351273</a> 多目标 or 多场景? &ndash; 推荐系统的细枝末节(第四章)</li>
+<li><a href="https://zhuanlan.zhihu.com/p/580951049" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/580951049</a> 动态权重在推荐系统中的应用</li>
+<li><a href="https://zhuanlan.zhihu.com/p/472726462" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/472726462</a> poso</li>
+<li><a href="https://mp.weixin.qq.com/s/GdB4le5ZSFHAAETHYxbJSA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/GdB4le5ZSFHAAETHYxbJSA</a>  POSO方法的实际应用和分析思考
+<ol>
+<li>POSO: Personalized Cold Start Modules for Large-scale Recommender Systems</li>
+<li><a href="https://t.zsxq.com/10fQsAzPr" target="_blank" rel="noopener noreffer ">https://t.zsxq.com/10fQsAzPr</a> 知识星球链接</li>
+</ol>
+</li>
+</ol>
+<h2 id="2023-07">2023-07</h2>
+<h3 id="profile-性能分析">profile 性能分析</h3>
+<p><a href="https://mp.weixin.qq.com/s/RKqmy8dw7B7WtQc6Xy2CLA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/RKqmy8dw7B7WtQc6Xy2CLA</a></p>
+<h2 id="2023-06">2023-06</h2>
+<h3 id="依赖注入inject与解耦">依赖注入inject与解耦</h3>
+<blockquote>
+<p>深深耦合在一起了, 如果要换手机, 他就要拿起刀来改造自己, 把自己体内所有方法中的iphone6 都换成 iphoneX</p>
+<p>我也从其中获得了这样的感悟: 如果一个类A 的功能实现需要借助于类B, 那么就称类B是类A的依赖, 如果在类A的内部去实例化类B, 那么两者之间会出现较高的耦合, 一旦类B出现了问题, 类A也需要进行改造, 如果这样的情况较多, 每个类之间都有很多依赖, 那么就会出现牵一发而动全身的情况, 程序会极难维护, 并且很容易出现问题. 要解决这个问题, <em>就要把A类对B类的控制权抽离出来, 交给一个第三方去做, 把控制权反转给第三方, 就称作控制反转</em>(IOC Inversion Of Control). 控制反转是一种思想, 是能够解决问题的一种可能的结果, 而依赖注入(Dependency Injection)就是其最典型的实现方法. 由第三方(我们称作IOC容器)来控制依赖, 把他通过构造函数, 属性或者工厂模式等方法, <em>注入到类A内</em>, 这样就极大程度的对类A和类B进行了解耦.</p>
+</blockquote>
+<p>Injector对象是Guice的核心, 它负责创建和管理对象的生命周期</p>
+<h3 id="北极星指标图">北极星指标图</h3>
+<p><a href="https://www.woshipm.com/operate/3291568.html" target="_blank" rel="noopener noreffer ">https://www.woshipm.com/operate/3291568.html</a></p>
+<p><a href="https://www.woshipm.com/operate/1072916.html" target="_blank" rel="noopener noreffer ">https://www.woshipm.com/operate/1072916.html</a></p>
+<blockquote>
+<p>北极星指标也叫唯一关键指标, 产品现阶段最关键的指标, 其实简单说来就是公司制定的发展目标, 不同阶段会有不同的目标. 为什么叫&quot;北极星&quot;指标, 其实大概的寓意就是要像北极星一样指引公司前进的方向, 目标制定最好是能符合SMART原则.</p>
+</blockquote>
+<h2 id="2023-05">2023-05</h2>
+<h3 id="你真的懂点击率ctr建模吗">你真的懂点击率(CTR)建模吗?</h3>
+<p><a href="https://mp.weixin.qq.com/s/p13DHPO59d4a_LWKV41lrg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/p13DHPO59d4a_LWKV41lrg</a></p>
+<p>ctr模型性能评价的两个维度:</p>
+<ol>
+<li>
+<p>序的准确性 auc/gauc</p>
+</li>
+<li>
+<p>值的准确性 copc/logloss</p>
+<ol>
+<li>
+<p>模型训练的时候是基于全空间坐标系, 评估可能是一个子坐标系, 存在偏差</p>
+</li>
+<li>
+<blockquote>
+<p>校准本质上是在基础模型之上, 引入了第二个学习目标. 基础模型的目标是在给定解空间拟合数据, 最大化AUC(序的准确性); 校准模型的目标是在后验的统计意义上调整pCTR值的大小, 使得预测值尽可能逼近观测到的统计值(值的准确性). 然而, 这种两段式建模方式, 虽然第二阶段的校准可以尽量保序, 从而不影响模型的AUC表现, 但两段式建模非最优. 因为基础模型预测的pCTR分布代表了模型对数据的归纳; 现在既然已经知道有特定维度上这个归纳不准确, end-2-end联合建模显然能够触及更高的天花板. 这个方向的工作我们团队正在推进.</p>
+</blockquote>
+<p>这里说的end2end的方法是否可以是把子空间作为特征, 然后做<code>多场景多任务</code>学习, 即把子空间作为一个场景?</p>
+</li>
+</ol>
+</li>
+</ol>
+<p>其他参考</p>
+<ol>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/262877350" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/262877350</a> 推荐系统采样评估指标及线上线下一致性问题</p>
+</li>
+<li>
+<p><a href="https://blog.csdn.net/u013019431/article/details/102473137" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/u013019431/article/details/102473137</a> ctr预估中的评估指标及校准</p>
+<ol>
+<li>
+<blockquote>
+<p>ctr预估不仅要保序, 即正负样本排序好, 还需要保距, 即pctr之间的比值关系与真实ctr的比值也基本相等, 这也是ctr预估中最难的地方.</p>
+<p>怎样的模型是个好的ctr预估模型?
+最理想的模型当然是开了上帝之眼, 预估为5%点击的流量群统计后也是5%, 即在各个流量上的预估都非常准. <code>这里就是各个场景的统计</code></p>
+<p>logloss主要用于评估模型输出概率与训练数据的概率的一致程度</p>
+<p>保序回归: 在不改变模型输出auc的情况下根据样本调整每个pctr区间内的预估值, 有点像前面copc部分, 为每个细分流量都进行校准从而保证模型输出在有序的基础上还能保距.</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<p>其他思考</p>
+<ol>
+<li>各个位置模型/排序策略的效果差异</li>
+<li>是否还是预估越准, ecpm就越高, 这里还需要考虑其他排序因子对序的影响</li>
+<li>先提升各个场景的准确率(多场景), 再提升模型的准确率(多任务, sim, can)</li>
+</ol>
+<p>2023-06-08 update</p>
+<p>点击率预估的目标维度我想是人, 而不是物品. 所以在正样本中, 丢弃掉没有点击(非冷启动)用户的样本(没有指导意义的样本)是业务上正确的选择, 因为你还是预估的是有点击(正常用户)对于这些帖子的点击率 &hellip;</p>
+<h3 id="canco-action-network">CAN(Co-Action Network)</h3>
+<p><a href="https://mp.weixin.qq.com/s/XFXBgMhf5TGCprF46kOOJg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/XFXBgMhf5TGCprF46kOOJg</a> 点击率模型特征交叉方向的发展及CAN模型介绍</p>
+<p><a href="https://github.com/CAN-Paper/Co-Action-Network" target="_blank" rel="noopener noreffer ">https://github.com/CAN-Paper/Co-Action-Network</a> can code</p>
+<p><a href="https://github.com/UIC-Paper/MIMN" target="_blank" rel="noopener noreffer ">https://github.com/UIC-Paper/MIMN</a> mimn code</p>
+<p><a href="https://github.com/mouna99/dien" target="_blank" rel="noopener noreffer ">https://github.com/mouna99/dien</a> dien code</p>
+<p><a href="https://github.com/tttwwy/sim" target="_blank" rel="noopener noreffer ">https://github.com/tttwwy/sim</a> sim code</p>
+<p><a href="https://github.com/ruozhichen/deep_learning/tree/master" target="_blank" rel="noopener noreffer ">https://github.com/ruozhichen/deep_learning/tree/master</a> mmoe</p>
+<p><a href="https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main" target="_blank" rel="noopener noreffer ">https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main</a></p>
+<p><a href="https://github.com/qiaoguan/deep-ctr-prediction" target="_blank" rel="noopener noreffer ">https://github.com/qiaoguan/deep-ctr-prediction</a></p>
+<p><a href="https://github.com/openbenchmark/BARS" target="_blank" rel="noopener noreffer ">https://github.com/openbenchmark/BARS</a></p>
+<p>scholar  TODO(整理迭代路径)</p>
+<ul>
+<li><a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=click-through&#43;rate&#43;prediction" target="_blank" rel="noopener noreffer ">https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=click-through+rate+prediction</a></li>
+<li><a href="https://scholar.google.com/citations?user=PXO4ygEAAAAJ" target="_blank" rel="noopener noreffer ">https://scholar.google.com/citations?user=PXO4ygEAAAAJ</a> gaikun</li>
+<li><a href="https://scholar.google.com/citations?user=eUMnOc0AAAAJ" target="_blank" rel="noopener noreffer ">https://scholar.google.com/citations?user=eUMnOc0AAAAJ</a> zhuxiaoqiang</li>
+<li><a href="https://scholar.google.com/citations?user=n_E0Bg4AAAAJ" target="_blank" rel="noopener noreffer ">https://scholar.google.com/citations?user=n_E0Bg4AAAAJ</a> zhouguorui</li>
+<li><a href="https://scholar.google.com/citations?user=_LnryAgAAAAJ" target="_blank" rel="noopener noreffer ">https://scholar.google.com/citations?user=_LnryAgAAAAJ</a> piqi</li>
+<li><a href="https://scholar.google.com/citations?user=3Gq0df8AAAAJ" target="_blank" rel="noopener noreffer ">https://scholar.google.com/citations?user=3Gq0df8AAAAJ</a> mouna</li>
+<li><a href="https://dblp.org/pid/205/2948.html" target="_blank" rel="noopener noreffer ">https://dblp.org/pid/205/2948.html</a> bianweijie</li>
+<li><a href="https://github.com/wjbianjason" target="_blank" rel="noopener noreffer ">https://github.com/wjbianjason</a> bianweijie</li>
+</ul>
+<p>可以实践</p>
+<h2 id="2023-04">2023-04</h2>
+<h3 id="如何评价-openai-的超级对话模型-chatgpt-">如何评价 OpenAI 的超级对话模型 ChatGPT ？</h3>
+<p><a href="https://www.zhihu.com/question/570189639/answer/2804667785" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/570189639/answer/2804667785</a></p>
+<p><strong>ChatGPT如何解决 “AI校正(Alignment)“这个问题</strong></p>
+<blockquote>
+<p>感觉驱动器: Alignment就是对模型的校正，使其精度更高。
+至于如何进行alignment，总体来说就是人工干预，防止模型自主学习过程中的“好坏通吃”。
+就相当于你小时候吃东西（样本），什么都吃，不知道什么是好是坏，这时候父母一方面告诉你什么是好的食物，什么是坏的食物（强监督式学习），另一方面惩罚你吃垃圾食品的行为，奖励你吃健康食品的行为（强化学习）。(RLHF)</p>
+</blockquote>
+<h3 id="从腾讯离职了四年工作总结">从腾讯离职了，四年工作总结</h3>
+<p><a href="https://mp.weixin.qq.com/s/s0hnAdLHIQYxUXQV4aIJLA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/s0hnAdLHIQYxUXQV4aIJLA</a></p>
+<p>普普通通吧, 虽然没有醍醐灌顶, 但是怎么也会有可借鉴之处.</p>
+<p>前面一段时间, 和同事闲谈了一个结论, 就是不要替老板操心, 更不能也不可能替老板做决策. 我们能做的是做好自己, 实现自己的价值与在公司的价值. 也即精进自我专业技能, 提升自我核心竞争力, 这样才能无论到哪里, 都有口饭吃.</p>
+<p>接受自己的平凡, 接受自己的选择带来的结果, 但也并非是不思进取, 更需要思考在接受的同时怎么能做的更好.</p>
+<p>技术上要不断学习, 开拓眼界, 增强自我竞争力(技术沉淀, 技术分享), 注重方法论(系统的, 规范的, 文档化的, 专业的)</p>
+<p>加油吧, 已不再是少年.</p>
+<h2 id="2023-03">2023-03</h2>
+<h3 id="多场景多任务学习在美团到店餐饮推荐的实践">多场景多任务学习在美团到店餐饮推荐的实践</h3>
+<p><a href="https://mp.weixin.qq.com/s/v-GN1ors-bWutfsIJcZYbQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/v-GN1ors-bWutfsIJcZYbQ</a></p>
+<h3 id="快手精排模型实践">快手精排模型实践</h3>
+<p><a href="https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg</a></p>
 <h3 id="从用户体验洞察到商业价值变现以京东为例">从用户体验洞察到商业价值变现，以京东为例</h3>
 <p><a href="https://mp.weixin.qq.com/s/NG39SvW4TGlU0_4I6TfJdQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/NG39SvW4TGlU0_4I6TfJdQ</a></p>
 <blockquote>
@@ -144,7 +353,7 @@
 <p>业务型算法工程师应当具备较好的数据能力, 产品能力, 来解决业务中的问题. 所以这类文章虽然读起来仍然会发现和职业的产品经理, 数据分析师有一定的差距, 但是整体来说还是非常受益的, 毕竟业务型算法工程师是个全栈更好[哭笑].</p>
 <p>最近一段时间一直在思考技术驱动和产品驱动的问题, 他们的目标基本上是一致的, 都是以一定的方法去解决业务上的某一问题, 只不过解决的方法论可能不同. 作为算法工程师, 可以多从技术角度思考如何解决问题, 或者在现有的产品上如何去解决问题, 这就设计到数据分析能力和问题建模能力了.</p>
 <p>抛开职能的讨论, 回到这篇文章讨论问题: 如今移动互联网基本饱和, 如何从增量时代向存量时代的转变过程总, 有哪些机遇及挑战, 以及经营思路的转变?</p>
-<h4 id="1-这类问题可能有历史可参照">1 这类问题可能有历史可参照</h4>
+<p><strong>1 这类问题可能有历史可参照</strong></p>
 <p>虽然互联网是还算新兴行业, 但是对于某项新型技术或者产品来说, 他们发展可能都有所参见的.</p>
 <p>对于竞争问题, 文章就举例了美的和格兰仕的微波炉之争, 及最后美的如何从泥潭中完成自救与扭亏为盈, 其主要不在价格的竞争, 价格的竞争只会两败俱伤, 或者被反垄断请喝茶, 而是从跟随策略向差异化策略的转变, 持续的以用户&amp;客户的产品创新, 在产品上更具有竞争力(参见boss直聘).</p>
 <p>对于存量与增量问题, 文章又举例了添可的品类创新带来的增量, 所以持续的品类创新带来持续的增量? (目前来见, 电子行业多数是的(手机, 相机), 但是很多行业可能已经遇到天花板了, 又如何的创新?)</p>
@@ -152,7 +361,7 @@
 <blockquote>
 <p>微笑曲线的两端, 一个是面向消费者的体验管理, 存量时代已无法仅靠投广告拉流量来 保持增长, 而是应该注重提升消费者体验; 另一个是产品的创新, 通过前文中的实例已经可以看 到产品差异化是可以带来显著增长的.</p>
 </blockquote>
-<h4 id="2-如何做好用户体验洞察">2 如何做好用户体验洞察</h4>
+<p><strong>2 如何做好用户体验洞察</strong></p>
 <p>主要在于用户/客户需求的精细化识别, 包含画像/行为/认知的洞察. 理解用户/客户的需求是第一要务:</p>
 <p>站在平台角度(三方:用户/客户/平台):</p>
 <ul>
@@ -245,7 +454,7 @@
 <h3 id="java生态圈技术框架中间件系统架构汇总"><del>Java生态圈技术框架,中间件,系统架构汇总</del></h3>
 <p><a href="https://juejin.cn/post/6844903620979212296" target="_blank" rel="noopener noreffer ">https://juejin.cn/post/6844903620979212296</a></p>
 <p>2018年的汇总文章, 但是对java开发的整体框架有一个较好的总结</p>
-<h3 id="快手精排模型实践">快手精排模型实践</h3>
+<h3 id="快手精排模型实践-1">快手精排模型实践</h3>
 <p><a href="https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg</a></p>
 <ol>
 <li>业务特点, 时序的重要性, 可能RNN, transformer等不及sum pooling, 那么就需要思考是否是相关性大于时序性了</li>
@@ -256,7 +465,11 @@
 <ol>
 <li>阿里巴巴深度学习迭代路径
 <ol>
-<li>DIN(18), DIEN(19), MIMN(19), SIM(20)</li>
+<li>DIN(18) 多峰兴趣建模</li>
+<li>DIEN(19) 多峰兴趣漂移&amp;演化建模</li>
+<li>MIMN(19) 长期兴趣建模</li>
+<li>SIM(20) life-long兴趣建模</li>
+<li>注意: 这一系列一直致力于<code>用户兴趣建模</code></li>
 </ol>
 </li>
 <li>SIM: GSU/ESU
@@ -283,13 +496,33 @@
 <li><a href="https://www.zhihu.com/question/68232124/answer/2498391364" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/68232124/answer/2498391364</a></li>
 <li><a href="https://www.zhihu.com/people/leon_zju/posts?page=1" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/people/leon_zju/posts?page=1</a></li>
 </ol>
+<p>多场景&amp;多目标</p>
+<ol>
+<li><a href="https://github.com/shenweichen/DeepCTR" target="_blank" rel="noopener noreffer ">https://github.com/shenweichen/DeepCTR</a></li>
+<li><a href="https://github.com/shenweichen/DeepMatch" target="_blank" rel="noopener noreffer ">https://github.com/shenweichen/DeepMatch</a></li>
+<li><a href="https://mp.weixin.qq.com/s/Nm5sMkeYJmr-zShVY1WoPQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/Nm5sMkeYJmr-zShVY1WoPQ</a> 一文梳理业界多场景多目标精排建模方案</li>
+<li><a href="https://mp.weixin.qq.com/s/4FRc-keU_4H8ZCYiKftqaA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/4FRc-keU_4H8ZCYiKftqaA</a> 多场景多任务推荐方法汇总</li>
+<li><a href="https://mp.weixin.qq.com/s/0GfIdgnYvQWANTiLh2qH3A" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/0GfIdgnYvQWANTiLh2qH3A</a> 多目标推荐场景下的深度学习实践(58罗景)</li>
+</ol>
+<p>chatGLM</p>
+<ol>
+<li><a href="https://mp.weixin.qq.com/s/kNXAuCiX4I7Tj4iwZSTP2Q" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/kNXAuCiX4I7Tj4iwZSTP2Q</a> 保姆级部署, 但是没有fineturn</li>
+<li><a href="https://mp.weixin.qq.com/s/JDd7aSZRHIPtJWlSRevzlg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/JDd7aSZRHIPtJWlSRevzlg</a> 一篇功能介绍和测评的, 还有与其他大模型的对比</li>
+<li><a href="https://mp.weixin.qq.com/s/51EtMK4SQLR4TvYDi_Uxxw" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/51EtMK4SQLR4TvYDi_Uxxw</a> fineturn 推荐</li>
+<li><a href="https://mp.weixin.qq.com/s/gbdV0L2bD-8ToXVGEKhdpQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/gbdV0L2bD-8ToXVGEKhdpQ</a> 简单部署+论文解读</li>
+<li><a href="https://mp.weixin.qq.com/s/ob0EBqiTANlePKrDC9_uQA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/ob0EBqiTANlePKrDC9_uQA</a> 部署(这个挺详细的)</li>
+</ol>
+<p>lora</p>
+<h3 id="unsort">UNSORT</h3>
+<p><a href="https://zhuanlan.zhihu.com/p/651080682" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/651080682</a> KDD 2023 | 搜广推相关论文集锦</p>
+<p><a href="https://www.zhihu.com/question/515459299/answer/2519427121" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/515459299/answer/2519427121</a> 羽毛球掌握什么原理后让你球技大涨?</p>
 <p>[TOC]</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod" style="opacity: 0.8;">
-                <span>更新于 2022-04-18&nbsp;<a class="git-hash" href="https://github.com/colinwke/colinwke.github.io/commit/852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9" target="_blank" title="commit by wangke09(wangke09@58.com) 852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9: add post">
-                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>852e2d8</a></span>
+                <span>更新于 2023-09-28&nbsp;<a class="git-hash" href="https://github.com/colinwke/colinwke.github.io/commit/574d573444f0eb9eba7fba083dc9d12eebc06088" target="_blank" title="commit by wangke(wangkest@qq.com) 574d573444f0eb9eba7fba083dc9d12eebc06088: cache update">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>574d573</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
@@ -311,7 +544,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-03-26 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-10-31 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
@@ -319,6 +552,10 @@
         <a href="/posts.html" title="click ok" >最近文章</a>
     </h3>
     <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2304271038-dataframe-create-hive-table.html" title="save DataFrame as partition of hive table">save DataFrame as partition of hive table</a>
+        </li>
         
         <li>
             <a href="/posts/2211031619-ssh-git-github-permission-denied-problem.html" title="ssh git github permission denied problem">ssh git github permission denied problem</a>
@@ -354,10 +591,6 @@
         
         <li>
             <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
         </li>
         
     </ul>

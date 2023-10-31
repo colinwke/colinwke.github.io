@@ -4,7 +4,15 @@
         <link>https://example.com/posts.html</link>
         <description>所有文章 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 27 Apr 2023 10:38:16 &#43;0800</lastBuildDate><atom:link href="https://example.com/posts.html" rel="self" type="application/rss+xml" /><item>
+    <title>save DataFrame as partition of hive table</title>
+    <link>https://example.com/posts/2304271038-dataframe-create-hive-table.html</link>
+    <pubDate>Thu, 27 Apr 2023 10:38:16 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2304271038-dataframe-create-hive-table.html</guid>
+    <description><![CDATA[使用DataFrame直接创建hive表, 并作为其中的一个分区数据 test 1 1 2 3 4 5 6 table .write .format(&#34;hive&#34;) .mode(&#34;overwrite&#34;) .option(&#34;path&#34;, inputPath + &#34;_table&#34;) .insertInto(tableName) error, 需要先创建表 1 Exception in thread &#34;main&#34; org.apache.spark.sql.AnalysisException: Table not found: hdp_lbg_ectech_ads.zp_compensate_ad_detail_test1; test 2 首]]></description>
+</item>
+<item>
     <title>ssh git github permission denied problem</title>
     <link>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem.html</link>
     <pubDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</pubDate>
@@ -50,7 +58,7 @@
     <pubDate>Mon, 10 Jun 2019 15:49:35 &#43;0800</pubDate>
     <author>wangke</author>
     <guid>https://example.com/posts/old/1906101549-proxy.html</guid>
-    <description><![CDATA[用了一个很久的, 可以试一下 http://nekom.org/user 特点 简单(中文的, 有详细教程), 成本低(可以每月付, 最低10元) 点我的邀请链接会给我返利哟, 算对我的支持吧 [邀请]]></description>
+    <description><![CDATA[用了一个很久的, 可以试一下 https://sbirdo.me 特点 简单(中文的, 有详细教程), 成本低(可以每月付, 最低10元) 点我的邀请链接会给我返利哟, 算对我的支持吧 [邀请]]></description>
 </item>
 <item>
     <title>AutoHotKey</title>
@@ -75,16 +83,6 @@
     <author>wangke</author>
     <guid>https://example.com/posts/old/1905071330-mecab.html</guid>
     <description><![CDATA[wondows平台, pip安装MeCab: 1 pip install mecab-python3 出现问题: 1 &#39;mecab-config&#39; 不是内部或外部命令，也不是可运行的程序或批处理文件。 在网上找了一些资料, 一些]]></description>
-</item>
-<item>
-    <title>save-win10-spotlight</title>
-    <link>https://example.com/posts/old/dabble/save-win10-spotlight.html</link>
-    <pubDate>Sat, 29 Dec 2018 14:05:17 &#43;0800</pubDate>
-    <author>Alphaks</author>
-    <guid>https://example.com/posts/old/dabble/save-win10-spotlight.html</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://colinwke.github.io/posts/old/dabble/assets/save-win10-spotlight/1546063951450.png" referrerpolicy="no-referrer">
-            </div>保存win10 spotlight 壁纸到D盘下! 1 将下面文本保存为win10_spotlight.bat(直接下载) 1 2 3 4 5 6 7 8 9 10 11 12 13 rem https://blog.csdn.net/qq_34260368/article/details/78364055 rem https://blog.csdn.net/linbounconstraint/article/details/80191846 rem https://blog.csdn.net/Anymake_ren/article/details/51125609 rem https://stackoverflow.com/questions/17587347/batch-file-to-run-xcopy-without-overwriting-existing-files]]></description>
 </item>
 </channel>
 </rss>

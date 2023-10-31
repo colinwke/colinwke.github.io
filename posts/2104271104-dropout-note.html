@@ -9,7 +9,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/posts/2104271104-dropout-note.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-27T11:04:05+08:00" />
-<meta property="article:modified_time" content="2022-04-18T23:00:58+08:00" /><meta property="og:site_name" content="My cool site" />
+<meta property="article:modified_time" content="2023-09-28T14:53:08+08:00" /><meta property="og:site_name" content="My cool site" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://example.com/logo.png"/>
@@ -28,8 +28,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/2104271104-dropout-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "tf, dl","wordcount":  750 ,
-        "url": "https:\/\/example.com\/posts\/2104271104-dropout-note.html","datePublished": "2021-04-27T11:04:05+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "tf, dl","wordcount":  972 ,
+        "url": "https:\/\/example.com\/posts\/2104271104-dropout-note.html","datePublished": "2021-04-27T11:04:05+08:00","dateModified": "2023-09-28T14:53:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
                 "@type": "Person",
@@ -112,7 +112,7 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">dropout笔记</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/tf.html" title="tf"><i class="fas fa-folder fa-fw"></i>&nbsp;tf</a>&nbsp;<a href="/categories/dl.html" title="dl"><i class="fas fa-folder fa-fw"></i>&nbsp;dl</a></span>&nbsp;<span class="post-category"><a href="/tags/tf.html" title="tf"><i class="fas fa-tags fa-fw"></i>&nbsp;tf</a>&nbsp;<a href="/tags/dl.html" title="dl"><i class="fas fa-tags fa-fw"></i>&nbsp;dl</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-04-27">2021-04-27</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 750 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-04-27">2021-04-27</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 972 字&nbsp;
  <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
     </div><div class="content" id="content"><h2 id="原理">原理</h2>
 <p>dropout原理, 随机丢弃一些(输入)神经元, 防止参数过拟合</p>
@@ -146,7 +146,7 @@ sum is unchanged at training time and inference time.</p>
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># tensorflow.python.ops.nn_ops.dropout_v2</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># tensorflow.python.ops.nn_ops.dropout_v2 ln:4174</span>
 <span class="n">noise_shape</span> <span class="o">=</span> <span class="n">_get_noise_shape</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">noise_shape</span><span class="p">)</span>
 <span class="c1"># Sample a uniform distribution on [0.0, 1.0) and select values larger than</span>
 <span class="c1"># rate.</span>
@@ -205,7 +205,46 @@ sum is unchanged at training time and inference time.</p>
   <span class="k">return</span> <span class="n">output</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>综合上面来看, tensorflow dropout的处理方法是在训练的时候按照dropout(<code>rate</code>)丢弃一些神经元, 丢弃后, 然后在整体上, 又乘以一个scale(<code> = 1 / keep_prob, keep_prob = 1 - rate</code>), 所以在预估的时候是不需要做任何处理的.</p>
+</div><p>综合上面来看, tensorflow dropout的处理方法是在<code>训练的时候</code>按照dropout(<code>rate</code>)丢弃一些神经元, 丢弃后, 然后在整体上, 又乘以一个scale(<code> = 1 / keep_prob, keep_prob = 1 - rate</code>), 所以在预估的时候是不需要做任何处理的.</p>
+<p>所以在训练时, 一定要加<code>training=True or False</code>?</p>
+<p>但是, 这里有一个判定是否是<code>learning_phase</code>, 所以, 其实不传也没有问题?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="c1"># tensorflow.python.keras.layers.core.Dropout.call ln:149</span>
+  <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">training</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">training</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># -- see me</span>
+      <span class="n">training</span> <span class="o">=</span> <span class="n">K</span><span class="o">.</span><span class="n">learning_phase</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">dropped_inputs</span><span class="p">():</span>
+      <span class="k">return</span> <span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span>
+          <span class="n">inputs</span><span class="p">,</span>
+          <span class="n">noise_shape</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_noise_shape</span><span class="p">(</span><span class="n">inputs</span><span class="p">),</span>
+          <span class="n">seed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">seed</span><span class="p">,</span>
+          <span class="n">rate</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">rate</span><span class="p">)</span>
+
+    <span class="n">output</span> <span class="o">=</span> <span class="n">tf_utils</span><span class="o">.</span><span class="n">smart_cond</span><span class="p">(</span><span class="n">training</span><span class="p">,</span>
+                                 <span class="n">dropped_inputs</span><span class="p">,</span>
+                                 <span class="k">lambda</span><span class="p">:</span> <span class="n">array_ops</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">inputs</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这里可能是错误的, <code>tf_utils.smart_cond</code>根据<code>training</code>进行下一步调用, 如果第一个参数是<code>phase_pred</code>则调用第一个方法(<code>dropped_inputs</code>), 否则调用第二个方法(<code>lambda: array_ops.identity(inputs)</code>)</p>
 <h2 id="问题思考">问题思考</h2>
 <p>dropout是防止下层参数的过拟合还是上层参数的过拟合呢?</p>
 <ul>
@@ -223,8 +262,8 @@ sum is unchanged at training time and inference time.</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod" style="opacity: 0.8;">
-                <span>更新于 2022-04-18&nbsp;<a class="git-hash" href="https://github.com/colinwke/colinwke.github.io/commit/852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9" target="_blank" title="commit by wangke09(wangke09@58.com) 852e2d80fa2ff2da4bb8363cf24ddf7ffc46b8f9: add post">
-                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>852e2d8</a></span>
+                <span>更新于 2023-09-28&nbsp;<a class="git-hash" href="https://github.com/colinwke/colinwke.github.io/commit/574d573444f0eb9eba7fba083dc9d12eebc06088" target="_blank" title="commit by wangke(wangkest@qq.com) 574d573444f0eb9eba7fba083dc9d12eebc06088: cache update">
+                                    <i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>574d573</a></span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
@@ -246,7 +285,7 @@ sum is unchanged at training time and inference time.</p>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-03-26 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-10-31 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
@@ -254,6 +293,10 @@ sum is unchanged at training time and inference time.</p>
         <a href="/posts.html" title="click ok" >最近文章</a>
     </h3>
     <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2304271038-dataframe-create-hive-table.html" title="save DataFrame as partition of hive table">save DataFrame as partition of hive table</a>
+        </li>
         
         <li>
             <a href="/posts/2211031619-ssh-git-github-permission-denied-problem.html" title="ssh git github permission denied problem">ssh git github permission denied problem</a>
@@ -289,10 +332,6 @@ sum is unchanged at training time and inference time.</p>
         
         <li>
             <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/dabble/save-win10-spotlight.html" title="save-win10-spotlight">save-win10-spotlight</a>
         </li>
         
     </ul>
