@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>阅读笔记 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="阅读笔记" />
-<meta property="og:description" content="2023-10 线上多参数调整 预估排序 https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu 复杂多目标: Ensemble Sort 和在线自动调参 https://zhuanlan.zhihu.com/p/441117034 推荐系统中的多任务学习与多目标排序工程实践(下) https://tech.meituan.com/2015/12/07/rerank-solution-offline.html 美团O2O排序解决方案——线下篇" />
+<meta property="og:description" content="2023-11 thinking in chat-gpt https://github.com/AntonOsika/gpt-engineer gpt的应用在于如何把GLM中的信息给串联起来, 且以什么样的方式串联起来 为了特定的某个问题(应用), gpt可能并没有创建针对性的连" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/columns/reading-note.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="columns" />
 <meta property="article:published_time" content="2023-01-10T00:35:57+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="阅读笔记"/>
-<meta name="twitter:description" content="2023-10 线上多参数调整 预估排序 https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu 复杂多目标: Ensemble Sort 和在线自动调参 https://zhuanlan.zhihu.com/p/441117034 推荐系统中的多任务学习与多目标排序工程实践(下) https://tech.meituan.com/2015/12/07/rerank-solution-offline.html 美团O2O排序解决方案——线下篇"/>
+<meta name="twitter:description" content="2023-11 thinking in chat-gpt https://github.com/AntonOsika/gpt-engineer gpt的应用在于如何把GLM中的信息给串联起来, 且以什么样的方式串联起来 为了特定的某个问题(应用), gpt可能并没有创建针对性的连"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/columns/reading-note.html" /><link rel="prev" href="https://example.com/columns/reading-note-2022.html" /><link rel="next" href="https://example.com/columns/good-post.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/columns\/reading-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  6968 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  7737 ,
         "url": "https:\/\/example.com\/columns\/reading-note.html","datePublished": "2023-01-10T00:35:57+08:00","dateModified": "2023-09-28T14:53:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -105,6 +105,17 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#2023-11">2023-11</a>
+      <ul>
+        <li><a href="#thinking-in-chat-gpt">thinking in chat-gpt</a></li>
+        <li><a href="#推荐算法线上最成功的一次提升是什么">推荐算法线上最成功的一次提升是什么？</a></li>
+        <li><a href="#如何利用深度上下文兴趣网络提升点击率">如何利用「深度上下文兴趣网络」提升点击率？</a>
+          <ul>
+            <li><a href="#附深度时空网络">附深度时空网络</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#2023-10">2023-10</a>
       <ul>
         <li><a href="#线上多参数调整--预估排序">线上多参数调整  预估排序</a></li>
@@ -169,9 +180,66 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">阅读笔记</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/column.html" title="column"><i class="fas fa-folder fa-fw"></i>&nbsp;column</a></span>&nbsp;<span class="post-category"><a href="/tags/column.html" title="column"><i class="fas fa-tags fa-fw"></i>&nbsp;column</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 6968 字&nbsp;
- <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 14 分钟&nbsp;</div>
-    </div><div class="content" id="content"><h2 id="2023-10">2023-10</h2>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 7737 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 16 分钟&nbsp;</div>
+    </div><div class="content" id="content"><h2 id="2023-11">2023-11</h2>
+<h3 id="thinking-in-chat-gpt">thinking in chat-gpt</h3>
+<p><a href="https://github.com/AntonOsika/gpt-engineer" target="_blank" rel="noopener noreffer ">https://github.com/AntonOsika/gpt-engineer</a></p>
+<p>gpt的应用在于如何把GLM中的信息给串联起来, 且以什么样的方式串联起来</p>
+<p>为了特定的某个问题(应用), gpt可能并没有创建针对性的连接, 为了创建这个连接, 你可能需要输入一定的prompt并给出答案, 来训练模型.</p>
+<p>但是对于已经针对某一问题训练而成的gpt, 这时可以变成一个应用, 这个应用基于已有的连接, 把你需要的答案检索出来.</p>
+<p>例如应用1: 输入某一个公司的财报, 输出财报的可视化解读及是否值得投资(这里还需要注意模型的实时性问题)</p>
+<h3 id="推荐算法线上最成功的一次提升是什么">推荐算法线上最成功的一次提升是什么？</h3>
+<p><a href="https://www.zhihu.com/question/487938087/answer/3276892449" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/487938087/answer/3276892449</a></p>
+<blockquote>
+<p>算法优化核心是要找到关键问题, 而不是 follow 最新的模型.</p>
+<p>这类优化可以叫做问题驱动型优化, 优点是基本上都能拿到收益.</p>
+<ul>
+<li>WB排序的关键问题是什么?
+<ul>
+<li>相关帖子少, 如何加入不相关的帖子在带来丰富性的同时, 降低badcase</li>
+<li>创意单一</li>
+<li>帖子质量差, 导致口碑不好(这个需要针对性的项目引导, 在推cash或转化为目标时不适合优化)</li>
+<li>冷启动用户较多, 有pv但没有点击的用户多</li>
+<li>软件体验白/黑名单</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h3 id="如何利用深度上下文兴趣网络提升点击率">如何利用「深度上下文兴趣网络」提升点击率？</h3>
+<p><a href="https://mp.weixin.qq.com/s/O3V57CX_d5a_--EZh-piUQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/O3V57CX_d5a_--EZh-piUQ</a> arxiv: <a href="https://arxiv.org/abs/2301.12402" target="_blank" rel="noopener noreffer ">https://arxiv.org/abs/2301.12402</a></p>
+<p>仍然使用多个模块去解决点击率预估中存在的问题(优化空间)</p>
+<ol>
+<li>
+<p>上下文聚合模块(PCAM), 类似与深度时空网络, 把历史没有点击的上下文广告信息作为了输入</p>
+<ol>
+<li>貌似这里并没有说明在预估过程中, 如何把没有点击和有点击的上下文作为预估的输入?</li>
+</ol>
+</li>
+<li>
+<p>上下文融合模块(FCFM)</p>
+</li>
+<li>
+<p>兴趣匹配模块(IMM), 仍然是用的DIN</p>
+<ol>
+<li>TODO: DIN是否存在更多优化的地方</li>
+</ol>
+</li>
+<li>
+<p>线上优化</p>
+<ol>
+<li>与目标item无关的embedding计算由离线完成(提前计算用户的上下文感知兴趣),在线服务时直接将其作为模型的输⼊ -&gt; 所以这里把上下文作为输入是和点击序列一样的把<code>历史</code>上下文+点击作为模型的输入, 而不是把当次的上下文作为模型的输入, 这是和深度时空网络有所区别的</li>
+</ol>
+</li>
+</ol>
+<h4 id="附深度时空网络">附深度时空网络</h4>
+<p>阿里 深度时空网络(同一个主题有3个分享人)</p>
+<ol>
+<li><a href="https://mp.weixin.qq.com/s/VHRV1Z6F8-3o6b-3v-5_BA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/VHRV1Z6F8-3o6b-3v-5_BA</a> 秀武</li>
+<li><a href="https://mp.weixin.qq.com/s/Y2pkH0i3n2yUkJFbgyRqTQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/Y2pkH0i3n2yUkJFbgyRqTQ</a> 擎苍</li>
+<li><a href="https://mp.weixin.qq.com/s/p-kTzgcu7U6x4QBxQh8AwQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/p-kTzgcu7U6x4QBxQh8AwQ</a> 邹衡</li>
+</ol>
+<h2 id="2023-10">2023-10</h2>
 <h3 id="线上多参数调整--预估排序">线上多参数调整  预估排序</h3>
 <ol>
 <li>
@@ -544,7 +612,7 @@ The platform where the machine learning community collaborates on models, datase
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-11-10 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-11-15 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
