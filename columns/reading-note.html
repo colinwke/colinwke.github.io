@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>阅读笔记 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="阅读笔记" />
-<meta property="og:description" content="2023-11 thinking in chat-gpt https://github.com/AntonOsika/gpt-engineer gpt的应用在于如何把GLM中的信息给串联起来, 且以什么样的方式串联起来 为了特定的某个问题(应用), gpt可能并没有创建针对性的连" />
+<meta property="og:description" content="2023-12 不规范的枚举类代码引发的一场事故 https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg 推荐的几个方法及插件 第一件事确定线上代码的一致性 arthas jad, 插件 arthas 命令插件 Arthas Idea by 汪小哥 首要的是写代码还是要注意规" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/columns/reading-note.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="columns" />
 <meta property="article:published_time" content="2023-01-10T00:35:57+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="阅读笔记"/>
-<meta name="twitter:description" content="2023-11 thinking in chat-gpt https://github.com/AntonOsika/gpt-engineer gpt的应用在于如何把GLM中的信息给串联起来, 且以什么样的方式串联起来 为了特定的某个问题(应用), gpt可能并没有创建针对性的连"/>
+<meta name="twitter:description" content="2023-12 不规范的枚举类代码引发的一场事故 https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg 推荐的几个方法及插件 第一件事确定线上代码的一致性 arthas jad, 插件 arthas 命令插件 Arthas Idea by 汪小哥 首要的是写代码还是要注意规"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/columns/reading-note.html" /><link rel="prev" href="https://example.com/columns/reading-note-2022.html" /><link rel="next" href="https://example.com/columns/good-post.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/columns\/reading-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  7737 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  8271 ,
         "url": "https:\/\/example.com\/columns\/reading-note.html","datePublished": "2023-01-10T00:35:57+08:00","dateModified": "2023-09-28T14:53:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -105,11 +105,18 @@
         </div>
         <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#2023-12">2023-12</a>
+      <ul>
+        <li><a href="#不规范的枚举类代码引发的一场事故">不规范的枚举类代码引发的一场事故</a></li>
+        <li><a href="#10年前-word2vec经典论就预定了今天的neurips时间检验奖">10年前, word2vec经典论⽂就预定了今天的NeurIPS时间检验奖</a></li>
+      </ul>
+    </li>
     <li><a href="#2023-11">2023-11</a>
       <ul>
+        <li><a href="#chatgpt是如何产生的---时间线">ChatGPT是如何产生的 - 时间线</a></li>
         <li><a href="#thinking-in-chat-gpt">thinking in chat-gpt</a></li>
-        <li><a href="#推荐算法线上最成功的一次提升是什么">推荐算法线上最成功的一次提升是什么？</a></li>
-        <li><a href="#如何利用深度上下文兴趣网络提升点击率">如何利用「深度上下文兴趣网络」提升点击率？</a>
+        <li><a href="#推荐算法线上最成功的一次提升是什么">推荐算法线上最成功的一次提升是什么?</a></li>
+        <li><a href="#如何利用深度上下文兴趣网络提升点击率">如何利用「深度上下文兴趣网络」提升点击率?</a>
           <ul>
             <li><a href="#附深度时空网络">附深度时空网络</a></li>
           </ul>
@@ -118,7 +125,7 @@
     </li>
     <li><a href="#2023-10">2023-10</a>
       <ul>
-        <li><a href="#线上多参数调整--预估排序">线上多参数调整  预估排序</a></li>
+        <li><a href="#线上多参数调整-预估排序">线上多参数调整 预估排序</a></li>
       </ul>
     </li>
     <li><a href="#2023-08">2023-08</a>
@@ -147,16 +154,16 @@
     </li>
     <li><a href="#2023-04">2023-04</a>
       <ul>
-        <li><a href="#如何评价-openai-的超级对话模型-chatgpt-">如何评价 OpenAI 的超级对话模型 ChatGPT ？</a></li>
-        <li><a href="#从腾讯离职了四年工作总结">从腾讯离职了，四年工作总结</a></li>
+        <li><a href="#如何评价-openai-的超级对话模型-chatgpt-">如何评价 OpenAI 的超级对话模型 ChatGPT ?</a></li>
+        <li><a href="#从腾讯离职了-四年工作总结">从腾讯离职了, 四年工作总结</a></li>
       </ul>
     </li>
     <li><a href="#2023-03">2023-03</a>
       <ul>
         <li><a href="#多场景多任务学习在美团到店餐饮推荐的实践">多场景多任务学习在美团到店餐饮推荐的实践</a></li>
         <li><a href="#快手精排模型实践">快手精排模型实践</a></li>
-        <li><a href="#从用户体验洞察到商业价值变现以京东为例">从用户体验洞察到商业价值变现，以京东为例</a></li>
-        <li><a href="#复旦邱锡鹏深度剖析-chatgpt-类大语言模型的关键技术">复旦邱锡鹏：深度剖析 ChatGPT 类大语言模型的关键技术</a></li>
+        <li><a href="#从用户体验洞察到商业价值变现-以京东为例">从用户体验洞察到商业价值变现, 以京东为例</a></li>
+        <li><a href="#复旦邱锡鹏-深度剖析-chatgpt-类大语言模型的关键技术">复旦邱锡鹏: 深度剖析 ChatGPT 类大语言模型的关键技术</a></li>
         <li><a href="#gpt-4-一张手绘草图能生一个网站-60-秒搞定一个游戏开发">GPT-4: 一张手绘草图能生一个网站, 60 秒搞定一个游戏开发!</a></li>
         <li><a href="#openai-发布多模态-gpt-4-模型-会开创哪些新的研究方向">OpenAI 发布多模态 GPT-4 模型, 会开创哪些新的研究方向?</a></li>
         <li><a href="#sigir22--大规模推荐系统中冷启动用户预热的融合序列建模">SIGIR'22 | 大规模推荐系统中冷启动用户预热的融合序列建模</a></li>
@@ -180,33 +187,81 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">阅读笔记</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/column.html" title="column"><i class="fas fa-folder fa-fw"></i>&nbsp;column</a></span>&nbsp;<span class="post-category"><a href="/tags/column.html" title="column"><i class="fas fa-tags fa-fw"></i>&nbsp;column</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 7737 字&nbsp;
- <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 16 分钟&nbsp;</div>
-    </div><div class="content" id="content"><h2 id="2023-11">2023-11</h2>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 8271 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 17 分钟&nbsp;</div>
+    </div><div class="content" id="content"><h2 id="2023-12">2023-12</h2>
+<h3 id="不规范的枚举类代码引发的一场事故">不规范的枚举类代码引发的一场事故</h3>
+<p><a href="https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg</a></p>
+<ul>
+<li>推荐的几个方法及插件</li>
+<li>第一件事确定线上代码的一致性
+<ul>
+<li>arthas jad,</li>
+</ul>
+</li>
+<li>插件
+<ul>
+<li>arthas 命令插件 <code>Arthas Idea</code> by 汪小哥</li>
+<li>首要的是写代码还是要注意规范, 最好本地装一些扫描工具, 例如 <code>sonar</code>风险一定要尽快按照建议修复.</li>
+</ul>
+</li>
+</ul>
+<h3 id="10年前-word2vec经典论就预定了今天的neurips时间检验奖">10年前, word2vec经典论⽂就预定了今天的NeurIPS时间检验奖</h3>
+<p><a href="https://mp.weixin.qq.com/s/CI-s6I-l7CwiVIKo4p0IKA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/CI-s6I-l7CwiVIKo4p0IKA</a></p>
+<p>word2vec引用的文章</p>
+<ol>
+<li><a href="https://mp.weixin.qq.com/s/dKbGR4sCkNpik0Xw41QLVw" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/dKbGR4sCkNpik0Xw41QLVw</a> 从word2vec开始, 说下GPT庞大的家族系谱</li>
+<li><a href="https://mp.weixin.qq.com/s/P2Ff8IpvrOXOAwhIyoh5RA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/P2Ff8IpvrOXOAwhIyoh5RA</a> 词嵌入的经典方法, 六篇论文遍历Word2vec的另类应用</li>
+</ol>
+<p>⼤语⾔模型「涌现」出了在⼩规模模型中不存在的能⼒</p>
+<ol>
+<li>论⽂证明了所谓的「涌现」能⼒会随着不同的度量或统计⽅式消失(监督方式? 算法方式), ⽽并⾮ ⼈⼯智能的基本属性得到了扩展.</li>
+</ol>
+<p>训练数据集的规模可能很快就会受互联⽹上可⽤⽂本数据量的限制</p>
+<ol>
+<li>随着重复次数的增加, 增加计算量的价值最终会降⾄ 零. 研究者们进⽽提出并实证验证了⼀个计算最优化的扩展定律(scaling law), 该定律考虑了重复 token 和多余参数价值递减的问题.</li>
+</ol>
+<h2 id="2023-11">2023-11</h2>
+<h3 id="chatgpt是如何产生的---时间线">ChatGPT是如何产生的 - 时间线</h3>
+<p>你认为『ChatGPT 之父』是 Sam Altman 还是 Ilya Sutskever? - 刘斯坦的回答 - 知乎
+<a href="https://www.zhihu.com/question/630824378/answer/3294956204" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/630824378/answer/3294956204</a></p>
+<ul>
+<li>
+<p>ChatGPT的发展历史</p>
+</li>
+<li>
+<p>ChatGPT和Bert的竞争</p>
+<ul>
+<li>MLM VS 自回归 <a href="https://zhuanlan.zhihu.com/p/335099242" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/335099242</a></li>
+</ul>
+</li>
+</ul>
+<p>微软称 OpenAI 创始人 Sam Altman, Greg Brockman 将加入, 带来哪些影响? - 西門Leo的回答 - 知乎
+<a href="https://www.zhihu.com/question/630962018/answer/3295871251" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/630962018/answer/3295871251</a></p>
+<ul>
+<li>同上</li>
+</ul>
 <h3 id="thinking-in-chat-gpt">thinking in chat-gpt</h3>
 <p><a href="https://github.com/AntonOsika/gpt-engineer" target="_blank" rel="noopener noreffer ">https://github.com/AntonOsika/gpt-engineer</a></p>
 <p>gpt的应用在于如何把GLM中的信息给串联起来, 且以什么样的方式串联起来</p>
 <p>为了特定的某个问题(应用), gpt可能并没有创建针对性的连接, 为了创建这个连接, 你可能需要输入一定的prompt并给出答案, 来训练模型.</p>
 <p>但是对于已经针对某一问题训练而成的gpt, 这时可以变成一个应用, 这个应用基于已有的连接, 把你需要的答案检索出来.</p>
 <p>例如应用1: 输入某一个公司的财报, 输出财报的可视化解读及是否值得投资(这里还需要注意模型的实时性问题)</p>
-<h3 id="推荐算法线上最成功的一次提升是什么">推荐算法线上最成功的一次提升是什么？</h3>
+<h3 id="推荐算法线上最成功的一次提升是什么">推荐算法线上最成功的一次提升是什么?</h3>
 <p><a href="https://www.zhihu.com/question/487938087/answer/3276892449" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/487938087/answer/3276892449</a></p>
 <blockquote>
 <p>算法优化核心是要找到关键问题, 而不是 follow 最新的模型.</p>
 <p>这类优化可以叫做问题驱动型优化, 优点是基本上都能拿到收益.</p>
 <ul>
-<li>WB排序的关键问题是什么?
-<ul>
+<li>WB排序的关键问题是什么?</li>
 <li>相关帖子少, 如何加入不相关的帖子在带来丰富性的同时, 降低badcase</li>
 <li>创意单一</li>
 <li>帖子质量差, 导致口碑不好(这个需要针对性的项目引导, 在推cash或转化为目标时不适合优化)</li>
 <li>冷启动用户较多, 有pv但没有点击的用户多</li>
 <li>软件体验白/黑名单</li>
 </ul>
-</li>
-</ul>
 </blockquote>
-<h3 id="如何利用深度上下文兴趣网络提升点击率">如何利用「深度上下文兴趣网络」提升点击率？</h3>
+<h3 id="如何利用深度上下文兴趣网络提升点击率">如何利用「深度上下文兴趣网络」提升点击率?</h3>
 <p><a href="https://mp.weixin.qq.com/s/O3V57CX_d5a_--EZh-piUQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/O3V57CX_d5a_--EZh-piUQ</a> arxiv: <a href="https://arxiv.org/abs/2301.12402" target="_blank" rel="noopener noreffer ">https://arxiv.org/abs/2301.12402</a></p>
 <p>仍然使用多个模块去解决点击率预估中存在的问题(优化空间)</p>
 <ol>
@@ -240,7 +295,7 @@
 <li><a href="https://mp.weixin.qq.com/s/p-kTzgcu7U6x4QBxQh8AwQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/p-kTzgcu7U6x4QBxQh8AwQ</a> 邹衡</li>
 </ol>
 <h2 id="2023-10">2023-10</h2>
-<h3 id="线上多参数调整--预估排序">线上多参数调整  预估排序</h3>
+<h3 id="线上多参数调整-预估排序">线上多参数调整 预估排序</h3>
 <ol>
 <li>
 <p><a href="https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu" target="_blank" rel="noopener noreffer ">https://www.infoq.cn/article/nozs4xy7bvbcf34vzhhu</a> 复杂多目标: Ensemble Sort 和在线自动调参</p>
@@ -249,7 +304,7 @@
 <p><a href="https://zhuanlan.zhihu.com/p/441117034" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/441117034</a> 推荐系统中的多任务学习与多目标排序工程实践(下)</p>
 </li>
 <li>
-<p><a href="https://tech.meituan.com/2015/12/07/rerank-solution-offline.html" target="_blank" rel="noopener noreffer ">https://tech.meituan.com/2015/12/07/rerank-solution-offline.html</a> 美团O2O排序解决方案——线下篇</p>
+<p><a href="https://tech.meituan.com/2015/12/07/rerank-solution-offline.html" target="_blank" rel="noopener noreffer ">https://tech.meituan.com/2015/12/07/rerank-solution-offline.html</a> 美团O2O排序解决方案&ndash;线下篇</p>
 </li>
 <li>
 <p><a href="https://help.aliyun.com/document_detail/419538.html" target="_blank" rel="noopener noreffer ">https://help.aliyun.com/document_detail/419538.html</a> 推荐全链路 / 深度定制开放平台 / 选型指导</p>
@@ -264,7 +319,7 @@
 <p><a href="https://mx-1024.github.io/posts/2020/02/09/62333/" target="_blank" rel="noopener noreffer ">https://mx-1024.github.io/posts/2020/02/09/62333/</a> 推荐系统排序优化迭代的一些经验</p>
 </li>
 <li>
-<p><a href="https://zhuanlan.zhihu.com/p/500237779" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/500237779</a> 推荐系统多目标优化专题(2)—融合公式设计思路</p>
+<p><a href="https://zhuanlan.zhihu.com/p/500237779" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/500237779</a> 推荐系统多目标优化专题(2)-融合公式设计思路</p>
 </li>
 </ol>
 <h2 id="2023-08">2023-08</h2>
@@ -289,14 +344,14 @@ The platform where the machine learning community collaborates on models, datase
 </blockquote>
 <h3 id="llm">LLM</h3>
 <ol>
-<li><a href="https://zhuanlan.zhihu.com/p/589747432" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/589747432</a> ChatGPT内核：InstructGPT，基于反馈指令的PPO强化学习</li>
+<li><a href="https://zhuanlan.zhihu.com/p/589747432" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/589747432</a> ChatGPT内核: InstructGPT, 基于反馈指令的PPO强化学习</li>
 </ol>
 <h3 id="多场景多目标">多场景/多目标</h3>
 <ol>
 <li><a href="https://zhuanlan.zhihu.com/p/639351273" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/639351273</a> 多目标 or 多场景? &ndash; 推荐系统的细枝末节(第四章)</li>
 <li><a href="https://zhuanlan.zhihu.com/p/580951049" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/580951049</a> 动态权重在推荐系统中的应用</li>
 <li><a href="https://zhuanlan.zhihu.com/p/472726462" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/472726462</a> poso</li>
-<li><a href="https://mp.weixin.qq.com/s/GdB4le5ZSFHAAETHYxbJSA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/GdB4le5ZSFHAAETHYxbJSA</a>  POSO方法的实际应用和分析思考
+<li><a href="https://mp.weixin.qq.com/s/GdB4le5ZSFHAAETHYxbJSA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/GdB4le5ZSFHAAETHYxbJSA</a> POSO方法的实际应用和分析思考
 <ol>
 <li>POSO: Personalized Cold Start Modules for Large-scale Recommender Systems</li>
 <li><a href="https://t.zsxq.com/10fQsAzPr" target="_blank" rel="noopener noreffer ">https://t.zsxq.com/10fQsAzPr</a> 知识星球链接</li>
@@ -380,7 +435,7 @@ The platform where the machine learning community collaborates on models, datase
 <p><a href="https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main" target="_blank" rel="noopener noreffer ">https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main</a></p>
 <p><a href="https://github.com/qiaoguan/deep-ctr-prediction" target="_blank" rel="noopener noreffer ">https://github.com/qiaoguan/deep-ctr-prediction</a></p>
 <p><a href="https://github.com/openbenchmark/BARS" target="_blank" rel="noopener noreffer ">https://github.com/openbenchmark/BARS</a></p>
-<p>scholar  TODO(整理迭代路径)</p>
+<p>scholar TODO(整理迭代路径)</p>
 <ul>
 <li><a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=click-through&#43;rate&#43;prediction" target="_blank" rel="noopener noreffer ">https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=click-through+rate+prediction</a></li>
 <li><a href="https://scholar.google.com/citations?user=PXO4ygEAAAAJ" target="_blank" rel="noopener noreffer ">https://scholar.google.com/citations?user=PXO4ygEAAAAJ</a> gaikun</li>
@@ -393,15 +448,15 @@ The platform where the machine learning community collaborates on models, datase
 </ul>
 <p>可以实践</p>
 <h2 id="2023-04">2023-04</h2>
-<h3 id="如何评价-openai-的超级对话模型-chatgpt-">如何评价 OpenAI 的超级对话模型 ChatGPT ？</h3>
+<h3 id="如何评价-openai-的超级对话模型-chatgpt-">如何评价 OpenAI 的超级对话模型 ChatGPT ?</h3>
 <p><a href="https://www.zhihu.com/question/570189639/answer/2804667785" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/570189639/answer/2804667785</a></p>
-<p><strong>ChatGPT如何解决 “AI校正(Alignment)“这个问题</strong></p>
+<p><strong>ChatGPT如何解决 &ldquo;AI校正(Alignment)&ldquo;这个问题</strong></p>
 <blockquote>
-<p>感觉驱动器: Alignment就是对模型的校正，使其精度更高。
-至于如何进行alignment，总体来说就是人工干预，防止模型自主学习过程中的“好坏通吃”。
-就相当于你小时候吃东西（样本），什么都吃，不知道什么是好是坏，这时候父母一方面告诉你什么是好的食物，什么是坏的食物（强监督式学习），另一方面惩罚你吃垃圾食品的行为，奖励你吃健康食品的行为（强化学习）。(RLHF)</p>
+<p>感觉驱动器: Alignment就是对模型的校正, 使其精度更高.
+至于如何进行alignment, 总体来说就是人工干预, 防止模型自主学习过程中的&quot;好坏通吃&rdquo;.
+就相当于你小时候吃东西(样本), 什么都吃, 不知道什么是好是坏, 这时候父母一方面告诉你什么是好的食物, 什么是坏的食物(强监督式学习), 另一方面惩罚你吃垃圾食品的行为, 奖励你吃健康食品的行为(强化学习). (RLHF)</p>
 </blockquote>
-<h3 id="从腾讯离职了四年工作总结">从腾讯离职了，四年工作总结</h3>
+<h3 id="从腾讯离职了-四年工作总结">从腾讯离职了, 四年工作总结</h3>
 <p><a href="https://mp.weixin.qq.com/s/s0hnAdLHIQYxUXQV4aIJLA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/s0hnAdLHIQYxUXQV4aIJLA</a></p>
 <p>普普通通吧, 虽然没有醍醐灌顶, 但是怎么也会有可借鉴之处.</p>
 <p>前面一段时间, 和同事闲谈了一个结论, 就是不要替老板操心, 更不能也不可能替老板做决策. 我们能做的是做好自己, 实现自己的价值与在公司的价值. 也即精进自我专业技能, 提升自我核心竞争力, 这样才能无论到哪里, 都有口饭吃.</p>
@@ -413,7 +468,7 @@ The platform where the machine learning community collaborates on models, datase
 <p><a href="https://mp.weixin.qq.com/s/v-GN1ors-bWutfsIJcZYbQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/v-GN1ors-bWutfsIJcZYbQ</a></p>
 <h3 id="快手精排模型实践">快手精排模型实践</h3>
 <p><a href="https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/SsgVqei9sL5y7N1GUXOJLg</a></p>
-<h3 id="从用户体验洞察到商业价值变现以京东为例">从用户体验洞察到商业价值变现，以京东为例</h3>
+<h3 id="从用户体验洞察到商业价值变现-以京东为例">从用户体验洞察到商业价值变现, 以京东为例</h3>
 <p><a href="https://mp.weixin.qq.com/s/NG39SvW4TGlU0_4I6TfJdQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/NG39SvW4TGlU0_4I6TfJdQ</a></p>
 <blockquote>
 <p>焦文健 京东 技术与数据中心 数据产品专家 京东零售数据产品专家, 十年大数据和算法智能领域的产品经验, 在客户体验管理, 用户洞察方面有丰富经验, 擅长通过数智化手段助力业务创新.</p>
@@ -442,17 +497,17 @@ The platform where the machine learning community collaborates on models, datase
 </ul>
 <p>在传统的行为分析(是否达成服务, 基于行为日志数据)的基础上, 可以增加一些<code>心智分析</code>(达成服务的质量, 基于文本数据), 这些对于算法工程师来讲都是easy的.</p>
 <p>最后一点是数据产品经理的自我修养. 我理解算法工程师还是可以持续在算法上深入, 可以通过一些case去打开思路, 至于系统的数据分析/产品管理的学习, 需要自己衡量其在实际工作中的重要程度了, 如果主要仍是算法方向, 就得不偿失了.</p>
-<h3 id="复旦邱锡鹏深度剖析-chatgpt-类大语言模型的关键技术">复旦邱锡鹏：深度剖析 ChatGPT 类大语言模型的关键技术</h3>
+<h3 id="复旦邱锡鹏-深度剖析-chatgpt-类大语言模型的关键技术">复旦邱锡鹏: 深度剖析 ChatGPT 类大语言模型的关键技术</h3>
 <p><a href="https://mp.weixin.qq.com/s/S8gPrKzvzpYH1pCJCzGyzA" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/S8gPrKzvzpYH1pCJCzGyzA</a></p>
 <blockquote>
 <p>通常以百亿/千亿级参数量作为 LLM 研究的分水岭. 大规模语言模型也被看作是实现通用人工智能(AGI)的希望.</p>
 </blockquote>
 <blockquote>
 <p>ChatGPT 的三个关键技术为: 情景学习, 思维链, 自然指令学习</p>
-<p><strong>情景学习(In-context learning)</strong>: 对于一些 LLM 没有见过的新任务，只需要设计一些任务的语言描述，并给出几个任务实例，作为模型的输入，即可让模型从给定的情景中学习新任务并给出满意的回答结果。这种训练方式能够有效提升模型小样本学习的能力。(QA: 这个和word2vec所具有的距离关系是否相似? 模型学习的的知识具备一定的数据结构, 而这个数据结构是通用的, 可以通过部分少数描述来组合这种数据结构?)</p>
-<p><strong>思维链(Chain-of-Thought, CoT)</strong>: 对于一些逻辑较为复杂的问题，直接向大规模语言模型提问可能会得到不准确的回答，但是如果以提示的方式在输入中给出有逻辑的解题步骤的示例后再提出问题，大模型就能给出正确题解。也就是说将复杂问题拆解为多个子问题解决再从中抽取答案，就可以得到正确的答案。由于 CoT 技术能够激发大规模语言模型对复杂问题的求解能力，该技术也被认为是打破比例定律的关键。</p>
-<p><strong>自然指令学习(Learning from Natural Instructions)</strong>: 早期研究人员希望把所有的自然语言处理任务都能够指令化，对每个任务标注数据。这种训练方式就是会在前面添加一个“指令”，该指令能够以自然语言的形式描述任务内容，从而使得大模型根据输入来输出任务期望的答案。该方式将下游任务进一步和自然语言形式对齐，能显著提升模型对未知任务的泛化能力。(QA: 指令对于多任务模型来说, 就是监督的label(task), 但是对于LLM模型来说, 他也可以成为label下的input, 所以已经弱化了多任务学习, 而是学习一个task, 但是这个task是复合的)</p>
-<p>人们把 NLP 任务做到 1000 多种，目前最新模型可以做到 2000 多种 NLP 任务，接下来再对 NLP 任务进行分类，比如能力 A、能力 B，大模型指令能力、泛化能力非常强，学到四五十个任务时就可以泛化到上百种任务。但距离真正的 ChatGPT 还有一步，那就是和真实的人类意图对齐，这就是 OpenAI 做的 GPT。核心逻辑非常简单，一开始时让人写答案，但是成本太高，改成让人来选答案，这样对标注员的能力要求稍微低一点，可以迅速提升迭代和规模。基于打分再训练一个打分器，通过打分器自动评价模型的好坏，然后用强化学习开始迭代，这种方法可以大规模地把数据模型迭代给转起来，这是 OpenAI 做的 Instruct GPT 逻辑，<strong>强化学习的人类反馈(RLHF)</strong>。</p>
+<p><strong>情景学习(In-context learning)</strong>: 对于一些 LLM 没有见过的新任务, 只需要设计一些任务的语言描述, 并给出几个任务实例, 作为模型的输入, 即可让模型从给定的情景中学习新任务并给出满意的回答结果. 这种训练方式能够有效提升模型小样本学习的能力. (QA: 这个和word2vec所具有的距离关系是否相似? 模型学习的的知识具备一定的数据结构, 而这个数据结构是通用的, 可以通过部分少数描述来组合这种数据结构?)</p>
+<p><strong>思维链(Chain-of-Thought, CoT)</strong>: 对于一些逻辑较为复杂的问题, 直接向大规模语言模型提问可能会得到不准确的回答, 但是如果以提示的方式在输入中给出有逻辑的解题步骤的示例后再提出问题, 大模型就能给出正确题解. 也就是说将复杂问题拆解为多个子问题解决再从中抽取答案, 就可以得到正确的答案. 由于 CoT 技术能够激发大规模语言模型对复杂问题的求解能力, 该技术也被认为是打破比例定律的关键.</p>
+<p><strong>自然指令学习(Learning from Natural Instructions)</strong>: 早期研究人员希望把所有的自然语言处理任务都能够指令化, 对每个任务标注数据. 这种训练方式就是会在前面添加一个&quot;指令&rdquo;, 该指令能够以自然语言的形式描述任务内容, 从而使得大模型根据输入来输出任务期望的答案. 该方式将下游任务进一步和自然语言形式对齐, 能显著提升模型对未知任务的泛化能力. (QA: 指令对于多任务模型来说, 就是监督的label(task), 但是对于LLM模型来说, 他也可以成为label下的input, 所以已经弱化了多任务学习, 而是学习一个task, 但是这个task是复合的)</p>
+<p>人们把 NLP 任务做到 1000 多种, 目前最新模型可以做到 2000 多种 NLP 任务, 接下来再对 NLP 任务进行分类, 比如能力 A, 能力 B, 大模型指令能力, 泛化能力非常强, 学到四五十个任务时就可以泛化到上百种任务. 但距离真正的 ChatGPT 还有一步, 那就是和真实的人类意图对齐, 这就是 OpenAI 做的 GPT. 核心逻辑非常简单, 一开始时让人写答案, 但是成本太高, 改成让人来选答案, 这样对标注员的能力要求稍微低一点, 可以迅速提升迭代和规模. 基于打分再训练一个打分器, 通过打分器自动评价模型的好坏, 然后用强化学习开始迭代, 这种方法可以大规模地把数据模型迭代给转起来, 这是 OpenAI 做的 Instruct GPT 逻辑, <strong>强化学习的人类反馈(RLHF)</strong>.</p>
 </blockquote>
 <p>总结: LLM模型是走向AGI的一个途径, 在图片领域飞速发展后, NLP也迎来了快速发展(Transformer, Bert, GPT), 文本和图像因为数据结构的特殊性, 在模型训练上有更多的挑战和可能. 另外, GPT的应用在特定的垂直领域, 仍然是一个发展的方向.</p>
 <h3 id="gpt-4-一张手绘草图能生一个网站-60-秒搞定一个游戏开发">GPT-4: 一张手绘草图能生一个网站, 60 秒搞定一个游戏开发!</h3>
@@ -612,7 +667,7 @@ The platform where the machine learning community collaborates on models, datase
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-11-25 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-12-21 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">

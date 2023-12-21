@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/2211031619-ssh-git-github-permission-denied-problem.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "git, github, ssh","wordcount":  1058 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "git, github, ssh","wordcount":  1063 ,
         "url": "https:\/\/example.com\/posts\/2211031619-ssh-git-github-permission-denied-problem.html","datePublished": "2022-11-03T16:19:41+08:00","dateModified": "2023-09-28T14:53:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -116,7 +116,7 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ssh git github permission denied problem</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/git.html" title="git"><i class="fas fa-tags fa-fw"></i>&nbsp;git</a>&nbsp;<a href="/tags/github.html" title="github"><i class="fas fa-tags fa-fw"></i>&nbsp;github</a>&nbsp;<a href="/tags/ssh.html" title="ssh"><i class="fas fa-tags fa-fw"></i>&nbsp;ssh</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-03">2022-11-03</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1058 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-11-03">2022-11-03</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1063 字&nbsp;
  <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
     </div><div class="content" id="content"><h2 id="问题描述">问题描述</h2>
 <p>原来在/etc/hosts配置了github的ip解析, 突然有一天push很慢, 甚至经常timeout. 然后自己把hosts中关于github的映射都删除了, 但是链接不上了github了, 自己有用飞机软件.</p>
@@ -283,7 +283,7 @@ fatal: Need to specify how to reconcile divergent branches.
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># https://stackoverflow.com/questions/20467179/git-push-rejected-non-fast-forward</span>
 git fetch
-git rebase feature/my_feature_branch
+git rebase YOUR_BRANCH_NAME
 git push origin feature/my_feature_branch
 
 or 
@@ -363,7 +363,7 @@ fatal: Not possible to fast-forward, aborting.
 
 <span class="c1"># git pull --no-ff</span>
 or
-git pull --rebase
+git pull --rebase <span class="c1">## Git push rejected &#34;non-fast-forward&#34;</span>
 
 <span class="c1"># then </span>
 git push
@@ -396,7 +396,7 @@ git push
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-11-25 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-12-21 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
