@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>阅读笔记 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="阅读笔记" />
-<meta property="og:description" content="2023-12 不规范的枚举类代码引发的一场事故 https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg 推荐的几个方法及插件 第一件事确定线上代码的一致性 arthas jad, 插件 arthas 命令插件 Arthas Idea by 汪小哥 首要的是写代码还是要注意规" />
+<meta property="og:description" content="2023-12 混合专家模型 (MoE) 详解 https://huggingface.co/blog/zh/moe https://mp.weixin.qq.com/s/I1D-mVQCseL4gW9sJLzY2w 微信公众号链接(没有引用的链接) 引用 https://scholar.google.com/citations?user=kukA0LcAAAAJ&hl=en Yoshua Bengio Google scholar https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard chatbot leaderboard https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard open LLM leaderboard https://www.superclueai.com/ https://github.com/CLUEbenchmark/SuperCLUE 中文排行 https://cevalbenchmark.com/static/leaderboard.html 美团外卖推荐情境化智能流量分发的实践与探索" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/columns/reading-note.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="columns" />
 <meta property="article:published_time" content="2023-01-10T00:35:57+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="阅读笔记"/>
-<meta name="twitter:description" content="2023-12 不规范的枚举类代码引发的一场事故 https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg 推荐的几个方法及插件 第一件事确定线上代码的一致性 arthas jad, 插件 arthas 命令插件 Arthas Idea by 汪小哥 首要的是写代码还是要注意规"/>
+<meta name="twitter:description" content="2023-12 混合专家模型 (MoE) 详解 https://huggingface.co/blog/zh/moe https://mp.weixin.qq.com/s/I1D-mVQCseL4gW9sJLzY2w 微信公众号链接(没有引用的链接) 引用 https://scholar.google.com/citations?user=kukA0LcAAAAJ&hl=en Yoshua Bengio Google scholar https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard chatbot leaderboard https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard open LLM leaderboard https://www.superclueai.com/ https://github.com/CLUEbenchmark/SuperCLUE 中文排行 https://cevalbenchmark.com/static/leaderboard.html 美团外卖推荐情境化智能流量分发的实践与探索"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/columns/reading-note.html" /><link rel="prev" href="https://example.com/columns/reading-note-2022.html" /><link rel="next" href="https://example.com/columns/good-post.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/columns\/reading-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  8271 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  8909 ,
         "url": "https:\/\/example.com\/columns\/reading-note.html","datePublished": "2023-01-10T00:35:57+08:00","dateModified": "2023-09-28T14:53:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -107,6 +107,13 @@
   <ul>
     <li><a href="#2023-12">2023-12</a>
       <ul>
+        <li><a href="#混合专家模型-moe-详解">混合专家模型 (MoE) 详解</a>
+          <ul>
+            <li><a href="#引用">引用</a></li>
+          </ul>
+        </li>
+        <li><a href="#美团外卖推荐情境化智能流量分发的实践与探索-5">美团外卖推荐情境化智能流量分发的实践与探索 5⭐️</a></li>
+        <li><a href="#大模型langchain框架基础与使用示例">大模型LangChain框架基础与使用示例</a></li>
         <li><a href="#不规范的枚举类代码引发的一场事故">不规范的枚举类代码引发的一场事故</a></li>
         <li><a href="#10年前-word2vec经典论就预定了今天的neurips时间检验奖">10年前, word2vec经典论⽂就预定了今天的NeurIPS时间检验奖</a></li>
       </ul>
@@ -187,9 +194,83 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">阅读笔记</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/column.html" title="column"><i class="fas fa-folder fa-fw"></i>&nbsp;column</a></span>&nbsp;<span class="post-category"><a href="/tags/column.html" title="column"><i class="fas fa-tags fa-fw"></i>&nbsp;column</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 8271 字&nbsp;
- <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 17 分钟&nbsp;</div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 8909 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 18 分钟&nbsp;</div>
     </div><div class="content" id="content"><h2 id="2023-12">2023-12</h2>
+<h3 id="混合专家模型-moe-详解">混合专家模型 (MoE) 详解</h3>
+<p><a href="https://huggingface.co/blog/zh/moe" target="_blank" rel="noopener noreffer ">https://huggingface.co/blog/zh/moe</a></p>
+<p><a href="https://mp.weixin.qq.com/s/I1D-mVQCseL4gW9sJLzY2w" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/I1D-mVQCseL4gW9sJLzY2w</a> 微信公众号链接(没有引用的链接)</p>
+<h4 id="引用">引用</h4>
+<ol>
+<li><a href="https://scholar.google.com/citations?user=kukA0LcAAAAJ&amp;hl=en" target="_blank" rel="noopener noreffer ">https://scholar.google.com/citations?user=kukA0LcAAAAJ&hl=en</a> Yoshua Bengio Google scholar</li>
+<li><a href="https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard" target="_blank" rel="noopener noreffer ">https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard</a> chatbot leaderboard</li>
+<li><a href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard" target="_blank" rel="noopener noreffer ">https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard</a> open LLM leaderboard</li>
+<li><a href="https://www.superclueai.com/" target="_blank" rel="noopener noreffer ">https://www.superclueai.com/</a> <a href="https://github.com/CLUEbenchmark/SuperCLUE" target="_blank" rel="noopener noreffer ">https://github.com/CLUEbenchmark/SuperCLUE</a> 中文排行</li>
+<li><a href="https://cevalbenchmark.com/static/leaderboard.html" target="_blank" rel="noopener noreffer ">https://cevalbenchmark.com/static/leaderboard.html</a></li>
+</ol>
+<h3 id="美团外卖推荐情境化智能流量分发的实践与探索-5">美团外卖推荐情境化智能流量分发的实践与探索 5⭐️</h3>
+<p><a href="https://mp.weixin.qq.com/s/SufYXcqJCo1osjWnhECO1A" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/SufYXcqJCo1osjWnhECO1A</a></p>
+<p><a href="https://tech.meituan.com/2022/12/08/scenario-aware-ranking-model-for-personalized-recommender-system.html" target="_blank" rel="noopener noreffer ">https://tech.meituan.com/2022/12/08/scenario-aware-ranking-model-for-personalized-recommender-system.html</a></p>
+<p>其他</p>
+<ol>
+<li><a href="https://github.com/liutaohz/daily-blog-post" target="_blank" rel="noopener noreffer ">https://github.com/liutaohz/daily-blog-post</a> 技术导航</li>
+<li><a href="https://github.com/eryajf/read-list" target="_blank" rel="noopener noreffer ">https://github.com/eryajf/read-list</a> 技术导航</li>
+<li>&ndash;</li>
+<li><a href="https://mp.weixin.qq.com/s/4ZVXdrK1h9zXuxoxw1bHfw" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/4ZVXdrK1h9zXuxoxw1bHfw</a> 美团多场景建模的探索与实践</li>
+<li><a href="https://mp.weixin.qq.com/s/v-GN1ors-bWutfsIJcZYbQ" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/v-GN1ors-bWutfsIJcZYbQ</a> 多场景多任务学习在美团到店餐饮推荐的实践(done)</li>
+<li><a href="https://mp.weixin.qq.com/s/8tECsjN4WQN0YRUwNCNRAg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/8tECsjN4WQN0YRUwNCNRAg</a> “美团大脑”在美团推荐场景中有哪些知识应用？</li>
+</ol>
+<p>引用的论文列表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-R" data-lang="R"><span class="n">[1]</span> <span class="n">Zhou</span> <span class="n">G</span><span class="p">,</span> <span class="n">Zhu</span> <span class="n">X</span><span class="p">,</span> <span class="n">Song</span> <span class="n">C</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Deep</span> <span class="n">interest</span> <span class="n">network</span> <span class="n">for</span> <span class="n">click</span><span class="o">-</span><span class="n">through</span> <span class="n">rate</span> <span class="n">prediction.</span> <span class="n">SIGKDD</span> <span class="m">2018</span><span class="n">.
+</span><span class="n">[2]</span> <span class="n">Zhou</span> <span class="n">G</span><span class="p">,</span> <span class="n">Mou</span> <span class="n">N</span><span class="p">,</span> <span class="n">Fan</span> <span class="n">Y</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Deep</span> <span class="n">interest</span> <span class="n">evolution</span> <span class="n">network</span> <span class="n">for</span> <span class="n">click</span><span class="o">-</span><span class="n">through</span> <span class="n">rate</span> <span class="n">prediction.</span> <span class="n">AAAI</span> <span class="m">2019</span><span class="n">.
+</span><span class="n">[3]</span> <span class="n">Pi</span> <span class="n">Q</span><span class="p">,</span> <span class="n">Bian</span> <span class="n">W</span><span class="p">,</span> <span class="n">Zhou</span> <span class="n">G</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Practice</span> <span class="n">on</span> <span class="n">long</span> <span class="n">sequential</span> <span class="n">user</span> <span class="n">behavior</span> <span class="n">modeling</span> <span class="n">for</span> <span class="n">click</span><span class="o">-</span><span class="n">through</span> <span class="n">rate</span> <span class="n">prediction.</span> <span class="n">SIGKDD</span> <span class="m">2019</span><span class="n">.
+</span><span class="n">[4]</span> <span class="n">Pi</span> <span class="n">Q</span><span class="p">,</span> <span class="n">Zhou</span> <span class="n">G</span><span class="p">,</span> <span class="n">Zhang</span> <span class="n">Y</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Search</span><span class="o">-</span><span class="n">based</span> <span class="n">user</span> <span class="n">interest</span> <span class="n">modeling</span> <span class="n">with</span> <span class="n">lifelong</span> <span class="n">sequential</span> <span class="n">behavior</span> <span class="n">data</span> <span class="n">for</span> <span class="n">click</span><span class="o">-</span><span class="n">through</span> <span class="n">rate</span> <span class="n">prediction.</span> <span class="n">CIKM</span> <span class="m">2020</span><span class="n">.
+</span><span class="n">[5]</span> <span class="n">Qu</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Cai</span> <span class="n">H</span><span class="p">,</span> <span class="n">Ren</span> <span class="n">K</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Product</span><span class="o">-</span><span class="n">based</span> <span class="n">neural</span> <span class="n">networks</span> <span class="n">for</span> <span class="n">user</span> <span class="n">response</span> <span class="n">prediction.</span> <span class="n">ICDM</span> <span class="m">2016</span><span class="n">.
+</span><span class="n">[6]</span> <span class="n">Guo</span> <span class="n">H</span><span class="p">,</span> <span class="n">Tang</span> <span class="n">R</span><span class="p">,</span> <span class="n">Ye</span> <span class="n">Y</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">DeepFM</span><span class="o">:</span> <span class="n">a</span> <span class="n">factorization</span><span class="o">-</span><span class="n">machine</span> <span class="n">based</span> <span class="n">neural</span> <span class="n">network</span> <span class="n">for</span> <span class="n">CTR</span> <span class="n">prediction.</span> <span class="n">arXiv</span><span class="o">:</span><span class="m">1703.04247</span><span class="p">,</span> <span class="m">2017</span><span class="n">.
+</span><span class="n">[7]</span> <span class="n">Jianxun</span> <span class="n">Lian</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">xdeepfm</span><span class="o">:</span> <span class="n">Combining</span> <span class="n">explicit</span> <span class="n">and</span> <span class="n">implicit</span> <span class="n">feature</span> <span class="n">interactions</span> <span class="n">for</span> <span class="n">recommender</span> <span class="n">systems.</span> <span class="n">KDD</span> <span class="m">2018</span><span class="n">.
+</span><span class="n">[8]</span> <span class="n">Wang</span> <span class="n">R</span><span class="p">,</span> <span class="n">Shivanna</span> <span class="n">R</span><span class="p">,</span> <span class="n">Cheng</span> <span class="n">D</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Dcn</span> <span class="n">v2</span><span class="o">:</span> <span class="n">Improved</span> <span class="n">deep</span> <span class="o">&amp;</span> <span class="n">cross</span> <span class="n">network</span> <span class="n">and</span> <span class="n">practical</span> <span class="n">lessons</span> <span class="n">for</span> <span class="n">web</span><span class="o">-</span><span class="n">scale</span> <span class="n">learning</span> <span class="n">to</span> <span class="n">rank</span> <span class="n">systems.</span> <span class="n">WWW</span> <span class="m">2021</span><span class="n">.
+</span><span class="n">[9]</span> <span class="n">Devlin</span> <span class="n">J</span><span class="p">,</span> <span class="n">Chang</span> <span class="n">M</span> <span class="n">W</span><span class="p">,</span> <span class="n">Lee</span> <span class="n">K</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Bert</span><span class="o">:</span> <span class="n">Pre</span><span class="o">-</span><span class="n">training</span> <span class="n">of</span> <span class="n">deep</span> <span class="n">bidirectional</span> <span class="n">transformers</span> <span class="n">for</span> <span class="n">language</span> <span class="n">understanding.</span> <span class="n">arXiv</span><span class="o">:</span><span class="m">1810.04805</span><span class="p">,</span> <span class="m">2018</span><span class="n">.
+</span><span class="n">[10]</span> <span class="n">Ma</span> <span class="n">J</span><span class="p">,</span> <span class="n">Zhao</span> <span class="n">Z</span><span class="p">,</span> <span class="n">Yi</span> <span class="n">X</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Modeling</span> <span class="n">Task</span> <span class="n">Relationships</span> <span class="n">in</span> <span class="n">Multi</span><span class="o">-</span><span class="n">task</span> <span class="n">Learning</span> <span class="n">with</span> <span class="n">Multi</span><span class="o">-</span><span class="n">gate</span> <span class="n">Mixture</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">experts.</span> <span class="n">KDD</span> <span class="m">2018</span><span class="n">.
+</span><span class="n">[11]</span> <span class="n">Sheng</span> <span class="n">X</span> <span class="n">R</span><span class="p">,</span> <span class="n">Zhao</span> <span class="n">L</span><span class="p">,</span> <span class="n">Zhou</span> <span class="n">G</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">One</span> <span class="n">model</span> <span class="n">to</span> <span class="n">serve</span> <span class="n">all</span><span class="o">:</span> <span class="n">Star</span> <span class="n">topology</span> <span class="n">adaptive</span> <span class="n">recommender</span> <span class="n">for</span> <span class="n">multi</span><span class="o">-</span><span class="n">domain</span> <span class="n">ctr</span> <span class="n">prediction.</span> <span class="n">CIKM</span> <span class="m">2021</span><span class="n">.
+</span><span class="n">[12]</span> <span class="n">Fedus</span> <span class="n">W</span><span class="p">,</span> <span class="n">Zoph</span> <span class="n">B</span><span class="p">,</span> <span class="n">Shazeer</span> <span class="n">N.</span> <span class="n">Switch</span> <span class="n">Transformers</span><span class="o">:</span> <span class="n">Scaling</span> <span class="n">to</span> <span class="n">Trillion</span> <span class="n">Parameter</span> <span class="n">Models</span> <span class="n">with</span> <span class="n">Simple</span> <span class="n">and</span> <span class="n">Efficient</span> <span class="n">Sparsity.</span> <span class="n">arXiv</span><span class="o">:</span><span class="m">2101.03961</span><span class="p">,</span> <span class="m">2021</span><span class="n">.
+</span><span class="n">[13]</span> <span class="n">Zoph</span> <span class="n">B</span><span class="p">,</span> <span class="n">Bello</span> <span class="n">I</span><span class="p">,</span> <span class="n">Kumar</span> <span class="n">S</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Designing</span> <span class="n">effective</span> <span class="n">sparse</span> <span class="n">expert</span> <span class="n">models.</span> <span class="n">arXiv</span> <span class="m">2202.08906</span><span class="p">,</span> <span class="m">2022</span><span class="n">.
+</span><span class="n">[14]</span> <span class="n">Chen</span> <span class="n">Z</span><span class="p">,</span> <span class="n">Deng</span> <span class="n">H</span> <span class="n">Wu</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Gu</span> <span class="n">Q.</span> <span class="n">Towards</span> <span class="n">Understanding</span> <span class="n">Mixture</span> <span class="n">of</span> <span class="n">Experts</span> <span class="n">in</span> <span class="n">Deep</span> <span class="n">Learning.</span> <span class="n">arXiv</span><span class="o">:</span><span class="m">2208.02813</span><span class="p">,</span> <span class="m">2022</span><span class="n">.
+</span><span class="n">[15]</span> <span class="n">Zhou</span> <span class="n">M</span><span class="p">,</span> <span class="n">Ding</span> <span class="n">Z</span><span class="p">,</span> <span class="n">Tang</span> <span class="n">J</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Micro</span> <span class="n">behaviors</span><span class="o">:</span> <span class="n">A</span> <span class="n">new</span> <span class="n">perspective</span> <span class="n">in</span> <span class="n">e</span><span class="o">-</span><span class="n">commerce</span> <span class="n">recommender</span> <span class="n">systems.</span> <span class="n">WSDM</span> <span class="m">2018</span><span class="n">.
+</span><span class="n">[16]</span> <span class="n">Zou</span> <span class="n">X</span><span class="p">,</span> <span class="n">Hu</span> <span class="n">Z</span><span class="p">,</span> <span class="n">Zhao</span> <span class="n">Y</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">Automatic</span> <span class="n">Expert</span> <span class="n">Selection</span> <span class="n">for</span> <span class="n">Multi</span><span class="o">-</span><span class="n">Scenario</span> <span class="n">and</span> <span class="n">Multi</span><span class="o">-</span><span class="n">Task</span> <span class="n">Search.</span> <span class="n">SIGIR</span> <span class="m">2022</span><span class="n">.
+</span><span class="n">[17]</span> <span class="n">Bai</span> <span class="bp">T</span><span class="p">,</span> <span class="n">Xiao</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Wu</span> <span class="n">B</span><span class="p">,</span> <span class="n">et</span> <span class="n">al.</span> <span class="n">A</span> <span class="n">Contrastive</span> <span class="n">Sharing</span> <span class="n">Model</span> <span class="n">for</span> <span class="n">Multi</span><span class="o">-</span><span class="n">Task</span> <span class="n">Recommendation.</span> <span class="n">WWW</span> <span class="m">2022</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="大模型langchain框架基础与使用示例">大模型LangChain框架基础与使用示例</h3>
+<p><a href="https://mp.weixin.qq.com/s/KrWM3cMywMvYUiawRZ94Gg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/KrWM3cMywMvYUiawRZ94Gg</a></p>
+<p>LLM best practice</p>
+<blockquote>
+<p>Prompt指⽤户的⼀系列指令和输⼊, 是决定 Language Model 输出内容的唯⼀输⼊, 主要⽤于帮助模型理解上下⽂并⽣成相关且连贯的输出, 如回答问题, 拓写句⼦和总结问题.</p>
+</blockquote>
+<p>refs:</p>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/643824681" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/643824681</a> 每个LLM开发者都应该知道的数字</li>
+</ol>
 <h3 id="不规范的枚举类代码引发的一场事故">不规范的枚举类代码引发的一场事故</h3>
 <p><a href="https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/38teLuhPe17h0yuTa9dbcg</a></p>
 <ul>
@@ -667,7 +748,7 @@ The platform where the machine learning community collaborates on models, datase
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-12-21 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2023-12-28 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
