@@ -18,7 +18,7 @@
     <pubDate>Tue, 10 Jan 2023 00:35:57 &#43;0800</pubDate>
     <author>wangke</author>
     <guid>https://example.com/columns/reading-note.html</guid>
-    <description><![CDATA[2024-01 推荐算法优化闲聊 https://zhuanlan.zhihu.com/p/665102155 算法优化核心是要找到关键问题, 而不是 follow 最新的模型. 2023年底跳槽记录 phd, google, Data Scientist, 准备: leetcode, 机器学习八股文 https://zhuanlan.zhihu.com/p/673229826 引用资料 https://web.stanford.edu/class/cs224n/slides/ cs224n 课件 http://cs231n.stanford.edu/slides/2023/]]></description>
+    <description><![CDATA[2024-01 百度推荐排序技术的思考与实践 https://mp.weixin.qq.com/s/JTNmYJNgoQr26fkT-Oy35g 内容其实一般, 但是很多问题还是非常值得思考的 推荐中的马太效应 embedding中的马太效应导致的问题 id类特]]></description>
 </item>
 <item>
     <title>阅读笔记2022</title>

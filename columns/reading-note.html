@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>阅读笔记 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="阅读笔记" />
-<meta property="og:description" content="2024-01 推荐算法优化闲聊 https://zhuanlan.zhihu.com/p/665102155 算法优化核心是要找到关键问题, 而不是 follow 最新的模型. 2023年底跳槽记录 phd, google, Data Scientist, 准备: leetcode, 机器学习八股文 https://zhuanlan.zhihu.com/p/673229826 引用资料 https://web.stanford.edu/class/cs224n/slides/ cs224n 课件 http://cs231n.stanford.edu/slides/2023/" />
+<meta property="og:description" content="2024-01 百度推荐排序技术的思考与实践 https://mp.weixin.qq.com/s/JTNmYJNgoQr26fkT-Oy35g 内容其实一般, 但是很多问题还是非常值得思考的 推荐中的马太效应 embedding中的马太效应导致的问题 id类特" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/columns/reading-note.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="columns" />
 <meta property="article:published_time" content="2023-01-10T00:35:57+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="阅读笔记"/>
-<meta name="twitter:description" content="2024-01 推荐算法优化闲聊 https://zhuanlan.zhihu.com/p/665102155 算法优化核心是要找到关键问题, 而不是 follow 最新的模型. 2023年底跳槽记录 phd, google, Data Scientist, 准备: leetcode, 机器学习八股文 https://zhuanlan.zhihu.com/p/673229826 引用资料 https://web.stanford.edu/class/cs224n/slides/ cs224n 课件 http://cs231n.stanford.edu/slides/2023/"/>
+<meta name="twitter:description" content="2024-01 百度推荐排序技术的思考与实践 https://mp.weixin.qq.com/s/JTNmYJNgoQr26fkT-Oy35g 内容其实一般, 但是很多问题还是非常值得思考的 推荐中的马太效应 embedding中的马太效应导致的问题 id类特"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/columns/reading-note.html" /><link rel="prev" href="https://example.com/columns/reading-note-2022.html" /><link rel="next" href="https://example.com/columns/good-post.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/columns\/reading-note.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  9137 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "columns","keywords": "column","wordcount":  9308 ,
         "url": "https:\/\/example.com\/columns\/reading-note.html","datePublished": "2023-01-10T00:35:57+08:00","dateModified": "2023-09-28T14:53:08+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -107,9 +107,10 @@
   <ul>
     <li><a href="#2024-01">2024-01</a>
       <ul>
+        <li><a href="#百度推荐排序技术的思考与实践">百度推荐排序技术的思考与实践</a></li>
         <li><a href="#推荐算法优化闲聊">推荐算法优化闲聊</a></li>
         <li><a href="#2023年底跳槽记录">2023年底跳槽记录</a></li>
-        <li><a href="#2023-开源大模型之年">2023, 开源大模型之年</a></li>
+        <li><a href="#2023开源大模型之年">2023开源大模型之年</a></li>
       </ul>
     </li>
     <li><a href="#2023-12">2023-12</a>
@@ -201,9 +202,21 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">阅读笔记</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/column.html" title="column"><i class="fas fa-folder fa-fw"></i>&nbsp;column</a></span>&nbsp;<span class="post-category"><a href="/tags/column.html" title="column"><i class="fas fa-tags fa-fw"></i>&nbsp;column</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 9137 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-01-10">2023-01-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 9308 字&nbsp;
  <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 19 分钟&nbsp;</div>
     </div><div class="content" id="content"><h2 id="2024-01">2024-01</h2>
+<h3 id="百度推荐排序技术的思考与实践">百度推荐排序技术的思考与实践</h3>
+<p><a href="https://mp.weixin.qq.com/s/JTNmYJNgoQr26fkT-Oy35g" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/JTNmYJNgoQr26fkT-Oy35g</a></p>
+<p>内容其实一般, 但是很多问题还是非常值得思考的</p>
+<ol>
+<li>推荐中的马太效应
+<ol>
+<li>embedding中的马太效应导致的问题</li>
+</ol>
+</li>
+<li>id类特征的记忆能力和如何做到id更新的泛化能力(例如, 这个id&lt;用户|帖子&gt;是有生命周期的)</li>
+<li>特征质量: 特征覆盖率, 单特征AUC</li>
+</ol>
 <h3 id="推荐算法优化闲聊">推荐算法优化闲聊</h3>
 <p><a href="https://zhuanlan.zhihu.com/p/665102155" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/665102155</a></p>
 <blockquote>
@@ -218,7 +231,7 @@
 <li><a href="http://cs231n.stanford.edu/slides/2023/" target="_blank" rel="noopener noreffer ">http://cs231n.stanford.edu/slides/2023/</a> cs231n 课件</li>
 <li>Keep looking, don&rsquo;t settle</li>
 </ol>
-<h3 id="2023-开源大模型之年">2023, 开源大模型之年</h3>
+<h3 id="2023开源大模型之年">2023开源大模型之年</h3>
 <p><a href="https://huggingface.co/blog/zh/2023-in-llms" target="_blank" rel="noopener noreffer ">https://huggingface.co/blog/zh/2023-in-llms</a></p>
 <h2 id="2023-12">2023-12</h2>
 <p>本地部署chatbot</p>
@@ -558,15 +571,17 @@ The platform where the machine learning community collaborates on models, datase
 <p>2023-06-08 update</p>
 <p>点击率预估的目标维度我想是人, 而不是物品. 所以在正样本中, 丢弃掉没有点击(非冷启动)用户的样本(没有指导意义的样本)是业务上正确的选择, 因为你还是预估的是有点击(正常用户)对于这些帖子的点击率 &hellip;</p>
 <h3 id="canco-action-network">CAN(Co-Action Network)</h3>
-<p><a href="https://mp.weixin.qq.com/s/XFXBgMhf5TGCprF46kOOJg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/XFXBgMhf5TGCprF46kOOJg</a> 点击率模型特征交叉方向的发展及CAN模型介绍</p>
-<p><a href="https://github.com/CAN-Paper/Co-Action-Network" target="_blank" rel="noopener noreffer ">https://github.com/CAN-Paper/Co-Action-Network</a> can code</p>
-<p><a href="https://github.com/UIC-Paper/MIMN" target="_blank" rel="noopener noreffer ">https://github.com/UIC-Paper/MIMN</a> mimn code</p>
-<p><a href="https://github.com/mouna99/dien" target="_blank" rel="noopener noreffer ">https://github.com/mouna99/dien</a> dien code</p>
-<p><a href="https://github.com/tttwwy/sim" target="_blank" rel="noopener noreffer ">https://github.com/tttwwy/sim</a> sim code</p>
-<p><a href="https://github.com/ruozhichen/deep_learning/tree/master" target="_blank" rel="noopener noreffer ">https://github.com/ruozhichen/deep_learning/tree/master</a> mmoe</p>
-<p><a href="https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main" target="_blank" rel="noopener noreffer ">https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main</a></p>
-<p><a href="https://github.com/qiaoguan/deep-ctr-prediction" target="_blank" rel="noopener noreffer ">https://github.com/qiaoguan/deep-ctr-prediction</a></p>
-<p><a href="https://github.com/openbenchmark/BARS" target="_blank" rel="noopener noreffer ">https://github.com/openbenchmark/BARS</a></p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/XFXBgMhf5TGCprF46kOOJg" target="_blank" rel="noopener noreffer ">https://mp.weixin.qq.com/s/XFXBgMhf5TGCprF46kOOJg</a> 点击率模型特征交叉方向的发展及CAN模型介绍</li>
+<li><a href="https://github.com/CAN-Paper/Co-Action-Network" target="_blank" rel="noopener noreffer ">https://github.com/CAN-Paper/Co-Action-Network</a> can code</li>
+<li><a href="https://github.com/UIC-Paper/MIMN" target="_blank" rel="noopener noreffer ">https://github.com/UIC-Paper/MIMN</a> mimn code</li>
+<li><a href="https://github.com/mouna99/dien" target="_blank" rel="noopener noreffer ">https://github.com/mouna99/dien</a> dien code</li>
+<li><a href="https://github.com/tttwwy/sim" target="_blank" rel="noopener noreffer ">https://github.com/tttwwy/sim</a> sim code</li>
+<li><a href="https://github.com/ruozhichen/deep_learning/tree/master" target="_blank" rel="noopener noreffer ">https://github.com/ruozhichen/deep_learning/tree/master</a> mmoe</li>
+<li><a href="https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main" target="_blank" rel="noopener noreffer ">https://github.com/ShowMeAI-Hub/multi-task-learning/tree/main</a></li>
+<li><a href="https://github.com/qiaoguan/deep-ctr-prediction" target="_blank" rel="noopener noreffer ">https://github.com/qiaoguan/deep-ctr-prediction</a></li>
+<li><a href="https://github.com/openbenchmark/BARS" target="_blank" rel="noopener noreffer ">https://github.com/openbenchmark/BARS</a></li>
+</ul>
 <p>scholar TODO(整理迭代路径)</p>
 <ul>
 <li><a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=click-through&#43;rate&#43;prediction" target="_blank" rel="noopener noreffer ">https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=click-through+rate+prediction</a></li>
@@ -783,6 +798,12 @@ The platform where the machine learning community collaborates on models, datase
 <p>神级程序员都在用什么工具? - 狐哥的回答 - 知乎
 <a href="https://www.zhihu.com/question/465346075/answer/2048804228" target="_blank" rel="noopener noreffer ">https://www.zhihu.com/question/465346075/answer/2048804228</a></p>
 </li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/667616967" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/667616967</a> 汇总｜6篇文章带你了解CVR去偏现状</p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/660797252" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/660797252</a> 快手内容冷启动推荐模型实践</p>
+</li>
 <li></li>
 </ol>
 <p>[TOC]</p>
@@ -813,7 +834,7 @@ The platform where the machine learning community collaborates on models, datase
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2024-01-08 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2024-01-13 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
