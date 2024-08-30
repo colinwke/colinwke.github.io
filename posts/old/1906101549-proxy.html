@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/old\/1906101549-proxy.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  301 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  593 ,
         "url": "https:\/\/example.com\/posts\/old\/1906101549-proxy.html","datePublished": "2019-06-10T15:49:35+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -95,16 +95,28 @@
     <div class="search-dropdown mobile">
         <div id="search-dropdown-mobile"></div>
     </div><main class="main">
-                <div class="container"><div class="details toc" id="toc-static"  data-kept="">
+                <div class="container"><div class="toc" id="toc-auto" style="overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
         <div class="details-summary toc-title">
             <span>目录</span>
             <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
         </div>
-        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading"></a></li>
+        <li><a href="#2024-06-03-update">2024-06-03 update</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">proxy</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2019-06-10">2019-06-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 301 字&nbsp;
- <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2019-06-10">2019-06-10</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 593 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
     </div><div class="content" id="content"><p>用了一个很久的(从18年到现在23年, 稳定, 简单), 名字叫<code>MEWU</code>, <strong>强烈推荐</strong></p>
 <p><img
         class="lazyload"
@@ -153,6 +165,65 @@
 </ul>
 </li>
 </ul>
+<h3 id="heading"></h3>
+<p>clashX download: <a href="https://github.com/yichengchen/clashX/releases" target="_blank" rel="noopener noreffer ">https://github.com/yichengchen/clashX/releases</a></p>
+<p>with switch omega</p>
+<ul>
+<li><a href="https://github.com/Dreamacro/clash/issues/173" target="_blank" rel="noopener noreffer ">https://github.com/Dreamacro/clash/issues/173</a></li>
+<li><a href="https://maofun.com/739.html" target="_blank" rel="noopener noreffer ">https://maofun.com/739.html</a></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">网址协议	代理协议	代理服务器	代理端口	
+(默认)	SOCKS5 127.0.0.1 7897
+
+# 不代理的地址列表
+127.0.0.1
+::1
+localhost
+*.58corp.com*
+10.*
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2024-06-03-update">2024-06-03 update</h3>
+<p>使用系统代理, Safari可以访问Google, 否则不能访问, 所以系统代理就是底层完全代理?</p>
+<p>但是在系统代理下Chrome使用SwitchyOmega的[直接连接]仍然不能访问Google? 需要使用[系统代理]才能访问</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">## 在终端里面输入
+ping maven.58corp.com ## 成功
+ping google.com ## 全局模式失败, 规则模式成功
+
+
+
+</code></pre></td></tr></table>
+</div>
+</div><p>系统代理 -&gt; 系统层面的代理, 由其他扩展或系统层面控制</p>
+<p>proxy -&gt; proxy是映射到了本地的一个端口进行代理</p>
+<p>当配置成功后, 需要开启系统代理才能使用, 否则无法正常使用代理(代理软件为灰色)!</p>
+<p><a href="https://clashxpro.org/all-proxy-client/" target="_blank" rel="noopener noreffer ">https://clashxpro.org/all-proxy-client/</a></p>
+<p><a href="https://clashverge.org/" target="_blank" rel="noopener noreffer ">https://clashverge.org/</a></p>
+<p><a href="https://clashverge.org/clash-verge-download/" target="_blank" rel="noopener noreffer ">https://clashverge.org/clash-verge-download/</a></p>
+<p>[TOC]</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -180,7 +251,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2024-01-13 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2024-08-30 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
@@ -188,6 +259,10 @@
         <a href="/posts.html" title="click ok" >最近文章</a>
     </h3>
     <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html" title="conda-env-clone-install-create-error-with-mirror-custom-channel">conda-env-clone-install-create-error-with-mirror-custom-channel</a>
+        </li>
         
         <li>
             <a href="/posts/2304271038-dataframe-create-hive-table.html" title="save DataFrame as partition of hive table">save DataFrame as partition of hive table</a>
@@ -223,10 +298,6 @@
         
         <li>
             <a href="/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
         </li>
         
     </ul>

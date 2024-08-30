@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>多git协作 | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="多git协作" />
-<meta property="og:description" content="多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 条件: git版本号高于2.13(git --version) 编辑" />
+<meta property="og:description" content="多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 前提: git版本号(git --version)&gt;=2.13 vim ~/.gitconfig 注意: 路径g" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://example.com/posts/old/2104031558-multi-git.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-04-03T15:58:49+08:00" />
@@ -15,7 +15,7 @@
 <meta name="twitter:image" content="https://example.com/logo.png"/>
 
 <meta name="twitter:title" content="多git协作"/>
-<meta name="twitter:description" content="多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 条件: git版本号高于2.13(git --version) 编辑"/>
+<meta name="twitter:description" content="多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 前提: git版本号(git --version)&gt;=2.13 vim ~/.gitconfig 注意: 路径g"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/old/2104031558-multi-git.html" /><link rel="prev" href="https://example.com/posts/old/1906101549-proxy.html" /><link rel="next" href="https://example.com/posts/2104040035-hello.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -28,7 +28,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/example.com\/posts\/old\/2104031558-multi-git.html"
-        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  288 ,
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  322 ,
         "url": "https:\/\/example.com\/posts\/old\/2104031558-multi-git.html","datePublished": "2021-04-03T15:58:49+08:00","dateModified": "2022-04-18T23:00:58+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
@@ -111,7 +111,7 @@
 </nav></div>
     </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">多git协作</h1><div class="post-meta">
         <div class="post-meta-line"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-04-03">2021-04-03</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 288 字&nbsp;
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-04-03">2021-04-03</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 322 字&nbsp;
  <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
     </div><div class="content" id="content"><p>多git有两种状态</p>
 <ul>
@@ -119,8 +119,9 @@
 <li>多个认证(identities)</li>
 </ul>
 <h2 id="设置多个git账号">设置多个git账号</h2>
-<p>条件: git版本号高于2.13(<code>git --version</code>)</p>
-<p>编辑<code>~/.gitconfig</code>. 注意: 路径后面要加斜杠<code>/</code></p>
+<p>前提: git版本号(<code>git --version</code>)&gt;=2.13</p>
+<p><code>vim ~/.gitconfig</code></p>
+<p>注意: 路径<code>gitdir:</code>后面要加斜杠<code>/</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -139,28 +140,46 @@
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># specify multiple users with git</span>
 <span class="c"># refs: https://stackoverflow.com/a/43654115 and https://stackoverflow.com/a/48088291</span>
 <span class="c"># use `git config --get user.email` to check config is working</span>
 
-<span class="c"># default</span>
+<span class="c"># default user config</span>
+<span class="c"># specify multiple users with git</span>
+<span class="c"># refs: https://stackoverflow.com/a/43654115 and https://stackoverflow.com/a/48088291</span>
+<span class="c"># use `git config --get user.email` to check config is working</span>
+
+
+<span class="p">[</span><span class="nx">core</span><span class="p">]</span>
+    <span class="c"># git show chinese charactor # https://stackoverflow.com/a/4416780/6494418</span>
+    <span class="nx">quotepath</span> <span class="p">=</span> <span class="kc">false</span>
+
 <span class="p">[</span><span class="nx">user</span><span class="p">]</span>
   <span class="nx">name</span> <span class="p">=</span> <span class="nx">wangke</span>
   <span class="nx">email</span> <span class="p">=</span> <span class="nx">wangkest</span><span class="err">@</span><span class="nx">qq</span><span class="p">.</span><span class="nx">com</span>
 
 <span class="c"># specific for working</span>
 <span class="p">[</span><span class="nx">includeIf</span> <span class="s2">&#34;gitdir:/Users/wangke/working/&#34;</span><span class="p">]</span>  <span class="c"># 末尾加斜杠</span>
-  <span class="nx">path</span> <span class="p">=</span> <span class="err">~/</span><span class="p">.</span><span class="nx">gitconfig_58corp</span>
+  <span class="nx">path</span> <span class="p">=</span> <span class="err">~/</span><span class="p">.</span><span class="nx">gitconfig_working</span>
   
 <span class="c"># specific for working2</span>
-<span class="p">[</span><span class="nx">includeIf</span> <span class="s2">&#34;gitdir:/Users/wangke/working/2/&#34;</span><span class="p">]</span>  <span class="c"># 末尾加斜杠</span>
-  <span class="nx">path</span> <span class="p">=</span> <span class="err">~/</span><span class="p">.</span><span class="nx">gitconfig_58corp2</span>
+<span class="c"># [includeIf &#34;gitdir:/Users/wangke/working/2/&#34;]  # 末尾加斜杠</span>
+<span class="c">#   path = ~/.gitconfig_working2</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>然后配置刚才指定的配置文件</p>
-<p>vim <code>.gitconfig_working</code></p>
+<p><code>vim ~/.gitconfig_working</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -173,7 +192,7 @@
   <span class="nx">email</span> <span class="p">=</span> <span class="nx">working_name</span><span class="err">@</span><span class="nx">working_name</span><span class="p">.</span><span class="nx">com</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>vim <code>.gitconfig_working2</code></p>
+</div><p><code>vim ~/.gitconfig_working2</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -228,7 +247,7 @@ git config --get user.email
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2024-01-13 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2024-08-30 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
@@ -236,6 +255,10 @@ git config --get user.email
         <a href="/posts.html" title="click ok" >最近文章</a>
     </h3>
     <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html" title="conda-env-clone-install-create-error-with-mirror-custom-channel">conda-env-clone-install-create-error-with-mirror-custom-channel</a>
+        </li>
         
         <li>
             <a href="/posts/2304271038-dataframe-create-hive-table.html" title="save DataFrame as partition of hive table">save DataFrame as partition of hive table</a>
@@ -271,10 +294,6 @@ git config --get user.email
         
         <li>
             <a href="/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/1905071330-mecab.html" title="mecab">mecab</a>
         </li>
         
     </ul>

@@ -4,7 +4,15 @@
         <link>https://example.com/tags/unsort.html</link>
         <description>unsort | 标签 | Alphaks</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>wangkest@qq.com (Alphaks)</managingEditor>
-            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/unsort.html" rel="self" type="application/rss+xml" /><item>
+            <webMaster>wangkest@qq.com (Alphaks)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 30 Aug 2024 17:01:30 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/unsort.html" rel="self" type="application/rss+xml" /><item>
+    <title>conda-env-clone-install-create-error-with-mirror-custom-channel</title>
+    <link>https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html</link>
+    <pubDate>Fri, 30 Aug 2024 17:01:30 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html</guid>
+    <description><![CDATA[[TOC] 问题原因 突然不能克隆base环境了 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 rm-rfpyspark3602;condacreate--name pyspark3602 --clone base Source:/home/hdp_lbg_ectech/wangke/app/anaconda3Destination:/home/hdp_lbg_ectech/wangke/app/anaconda3/envs/pyspark3602Thefollowingpackagescannotbeclonedoutoftherootenvironment:-http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64::conda-4.9.2-py36h5fab9bb_0-defaults/linux-64::conda-build-3.10.5-py36_0Packages:195Files:64657...CondaHTTPError:HTTP404NOTFOUNDforurl&lt;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.tar.bz2&gt;Elapsed:00:00.351600AnHTTPerroroccurredwhentryingtoretrievethisURL.HTTPerrorsareoftenintermittent,andasimpleretrywillgetyouonyourway. 第一个问题 这里的主要问题是使用了清华的镜像. 清华镜像只有文件.]]></description>
+</item>
+<item>
     <title>pyspark udf udaf with jar</title>
     <link>https://example.com/posts/2210211456-pyspark-udf-udaf-jar.html</link>
     <pubDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</pubDate>
@@ -26,7 +34,7 @@
     <pubDate>Sat, 03 Apr 2021 15:58:49 &#43;0800</pubDate>
     <author>wangke</author>
     <guid>https://example.com/posts/old/2104031558-multi-git.html</guid>
-    <description><![CDATA[多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 条件: git版本号高于2.13(git --version) 编辑]]></description>
+    <description><![CDATA[多git有两种状态 多个git账号(user, email) 多个认证(identities) 设置多个git账号 前提: git版本号(git --version)&gt;=2.13 vim ~/.gitconfig 注意: 路径g]]></description>
 </item>
 <item>
     <title>proxy</title>

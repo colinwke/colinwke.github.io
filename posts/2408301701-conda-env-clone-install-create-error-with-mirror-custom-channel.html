@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>conda-env-clone-install-create-error-with-mirror-custom-channel | Alphaks</title><meta name="Description" content="Let there be light"><meta property="og:title" content="conda-env-clone-install-create-error-with-mirror-custom-channel" />
+<meta property="og:description" content="[TOC] 问题原因 突然不能克隆base环境了 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 rm-rfpyspark3602;condacreate--name pyspark3602 --clone base Source:/home/hdp_lbg_ectech/wangke/app/anaconda3Destination:/home/hdp_lbg_ectech/wangke/app/anaconda3/envs/pyspark3602Thefollowingpackagescannotbeclonedoutoftherootenvironment:-http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64::conda-4.9.2-py36h5fab9bb_0-defaults/linux-64::conda-build-3.10.5-py36_0Packages:195Files:64657...CondaHTTPError:HTTP404NOTFOUNDforurl&lt;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.tar.bz2&gt;Elapsed:00:00.351600AnHTTPerroroccurredwhentryingtoretrievethisURL.HTTPerrorsareoftenintermittent,andasimpleretrywillgetyouonyourway. 第一个问题 这里的主要问题是使用了清华的镜像. 清华镜像只有文件." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html" /><meta property="og:image" content="https://example.com/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-08-30T17:01:30+08:00" />
+<meta property="article:modified_time" content="2024-08-30T17:01:30+08:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://example.com/logo.png"/>
+
+<meta name="twitter:title" content="conda-env-clone-install-create-error-with-mirror-custom-channel"/>
+<meta name="twitter:description" content="[TOC] 问题原因 突然不能克隆base环境了 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 rm-rfpyspark3602;condacreate--name pyspark3602 --clone base Source:/home/hdp_lbg_ectech/wangke/app/anaconda3Destination:/home/hdp_lbg_ectech/wangke/app/anaconda3/envs/pyspark3602Thefollowingpackagescannotbeclonedoutoftherootenvironment:-http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64::conda-4.9.2-py36h5fab9bb_0-defaults/linux-64::conda-build-3.10.5-py36_0Packages:195Files:64657...CondaHTTPError:HTTP404NOTFOUNDforurl&lt;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.tar.bz2&gt;Elapsed:00:00.351600AnHTTPerroroccurredwhentryingtoretrievethisURL.HTTPerrorsareoftenintermittent,andasimpleretrywillgetyouonyourway. 第一个问题 这里的主要问题是使用了清华的镜像. 清华镜像只有文件."/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html" /><link rel="prev" href="https://example.com/posts/2304271038-dataframe-create-hive-table.html" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "conda-env-clone-install-create-error-with-mirror-custom-channel",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/example.com\/posts\/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html"
+        },"image": ["https:\/\/example.com\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "unsort","wordcount":  2544 ,
+        "url": "https:\/\/example.com\/posts\/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html","datePublished": "2024-08-30T17:01:30+08:00","dateModified": "2024-08-30T17:01:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/example.com\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "wangke"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-1" class="typeit"></span></a></div>
+        <div class="menu">
+            <div class="menu-inner"><a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-2" class="typeit"></span></a><a class="menu-item" href="/posts.html"> 归档 </a><a class="menu-item" href="/categories.html"> 归类 </a><a class="menu-item" href="/columns/page-about.html"> 关于 </a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Alphaks"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw'></i></span><span id="id-3" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts.html" title="">归档</a><a class="menu-item" href="/categories.html" title="">归类</a><a class="menu-item" href="/columns/page-about.html" title="">关于</a><a class="menu-item" href="https://github.com/colinwke" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" style="overflow: hidden;  white-space: nowrap;  text-overflow: ellipsis;">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+        <div class="details-summary toc-title">
+            <span>目录</span>
+            <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#问题原因">问题原因</a>
+      <ul>
+        <li><a href="#第一个问题">第一个问题</a></li>
+        <li><a href="#第二个问题">第二个问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#猜想-拷贝源为原有安装源">猜想, 拷贝源为原有安装源</a>
+      <ul>
+        <li><a href="#添加---offline参数--vv为debug参数">添加 <code>--offline</code>参数, <code>-vv</code>为debug参数</a></li>
+      </ul>
+    </li>
+    <li><a href="#solution">solution</a>
+      <ul>
+        <li><a href="#1-导出全部包重新安装">1 导出全部包重新安装</a></li>
+        <li><a href="#2-删除url信息not-work">2 删除url信息(not work)</a></li>
+        <li><a href="#3-修改代码认证">3 修改代码认证</a></li>
+        <li><a href="#4-直接拷贝整个anaconda">4 直接拷贝整个anaconda</a></li>
+        <li><a href="#5-导出环境信息-重新构建推荐">5 导出环境信息, 重新构建(推荐)</a></li>
+        <li><a href="#6-指定channelnot-work">6 指定channel(not work)</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+</nav></div>
+    </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">conda-env-clone-install-create-error-with-mirror-custom-channel</h1><div class="post-meta">
+        <div class="post-meta-line"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-30">2024-08-30</time>&nbsp; <i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2544 字&nbsp;
+ <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 6 分钟&nbsp;</div>
+    </div><div class="content" id="content"><p>[TOC]</p>
+<h2 id="问题原因">问题原因</h2>
+<p>突然不能克隆<code>base</code>环境了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">rf</span><span class="w"> </span><span class="n">pyspark3602</span><span class="p">;</span><span class="w"> </span><span class="n">conda</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="c1">--name pyspark3602 --clone base
+</span><span class="c1"></span><span class="k">Source</span><span class="p">:</span><span class="w">      </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="w">
+</span><span class="w"></span><span class="n">Destination</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">pyspark3602</span><span class="w">
+</span><span class="w"></span><span class="n">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">cloned</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">environment</span><span class="p">:</span><span class="w">
+</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">conda</span><span class="o">-</span><span class="mi">4</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py36h5fab9bb_0</span><span class="w">
+</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">defaults</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">conda</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">5</span><span class="o">-</span><span class="n">py36_0</span><span class="w">
+</span><span class="w"></span><span class="n">Packages</span><span class="p">:</span><span class="w"> </span><span class="mi">195</span><span class="w">
+</span><span class="w"></span><span class="n">Files</span><span class="p">:</span><span class="w"> </span><span class="mi">64657</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="p">...</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">CondaHTTPError</span><span class="p">:</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="mi">404</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">FOUND</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">noarch</span><span class="o">/</span><span class="n">keras</span><span class="o">-</span><span class="n">applications</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="o">-</span><span class="n">py_1</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">bz2</span><span class="o">&gt;</span><span class="w">
+</span><span class="w"></span><span class="n">Elapsed</span><span class="p">:</span><span class="w"> </span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">351600</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">An</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurred</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">trying</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">retrieve</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">URL</span><span class="p">.</span><span class="w">
+</span><span class="w"></span><span class="n">HTTP</span><span class="w"> </span><span class="n">errors</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">often</span><span class="w"> </span><span class="n">intermittent</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">simple</span><span class="w"> </span><span class="n">retry</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">way</span><span class="p">.</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="第一个问题">第一个问题</h3>
+<p>这里的主要问题是使用了清华的镜像. 清华镜像只有文件<code>.conda</code>后缀, 没有<code>.tar.bz2</code>后缀的文件,所以报<code>CondaHTTPError: HTTP 404 NOT FOUND for url</code>错误导致不能创建环境</p>
+<p><a href="http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.tar.bz2" target="_blank" rel="noopener noreffer ">http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.tar.bz2</a> <em>不存在</em></p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.conda" target="_blank" rel="noopener noreffer ">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.conda</a> <em>存在</em></p>
+<h3 id="第二个问题">第二个问题</h3>
+<p>无论如何修改, 删除不了拷贝base镜像的<code>清华镜像</code>(<a href="http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64::conda-4.9.2-py36h5fab9bb_0%29" target="_blank" rel="noopener noreffer ">http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64::conda-4.9.2-py36h5fab9bb_0)</a>, 包括<code>vim ~/.bashrc</code>清空<code>channel</code>, 或者指定一个channel</p>
+<ul>
+<li><a href="https://blog.csdn.net/qq_22498427/article/details/107792922" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/qq_22498427/article/details/107792922</a> ## CondaHTTPError: HTTP ERROR 指定一个源</li>
+<li><a href="https://zhuanlan.zhihu.com/p/588734867" target="_blank" rel="noopener noreffer ">https://zhuanlan.zhihu.com/p/588734867</a></li>
+<li><a href="https://blog.csdn.net/u013249853/article/details/90287518" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/u013249853/article/details/90287518</a> ## conda 中科大与清华园都相继停止服务了 不能下载了 恢复默认源 才能下载</li>
+</ul>
+<h2 id="猜想-拷贝源为原有安装源">猜想, 拷贝源为原有安装源</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="n">conda</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">awk</span><span class="w"> </span><span class="s1">&#39;!a[$NF]++&#39;</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="w"> </span><span class="n">Name</span><span class="w">                    </span><span class="k">Version</span><span class="w">                   </span><span class="n">Build</span><span class="w">  </span><span class="n">Channel</span><span class="w">
+</span><span class="w"></span><span class="n">_libgcc_mutex</span><span class="w">             </span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w">                        </span><span class="n">main</span><span class="w">    </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="w">
+</span><span class="w"></span><span class="n">aiohttp</span><span class="w">                   </span><span class="mi">3</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">1</span><span class="w">                    </span><span class="n">pypi_0</span><span class="w">    </span><span class="n">pypi</span><span class="w">
+</span><span class="w"></span><span class="n">anaconda</span><span class="o">-</span><span class="n">navigator</span><span class="w">        </span><span class="mi">1</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">7</span><span class="w">                    </span><span class="n">py36_0</span><span class="w">    </span><span class="k">defaults</span><span class="w">
+</span><span class="w"></span><span class="n">argon2</span><span class="o">-</span><span class="n">cffi</span><span class="w">               </span><span class="mi">20</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w">           </span><span class="n">py36h1d69622_2</span><span class="w">    </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="w">
+</span><span class="w"></span><span class="n">ca</span><span class="o">-</span><span class="n">certificates</span><span class="w">           </span><span class="mi">2024</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">2</span><span class="w">             </span><span class="n">h06a4308_0</span><span class="w">    </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="w">
+</span><span class="w"></span><span class="n">findspark</span><span class="w">                 </span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w">              </span><span class="n">pyhd8ed1ab_0</span><span class="w">    </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="添加---offline参数--vv为debug参数">添加 <code>--offline</code>参数, <code>-vv</code>为debug参数</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">rf</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">pyspark3603</span><span class="p">;</span><span class="w"> </span><span class="n">conda</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="o">-</span><span class="n">vv</span><span class="w"> </span><span class="c1">--name pyspark3603 --clone base --offline
+</span><span class="c1"></span><span class="o">##</span><span class="w"> </span><span class="err">这个没有参数</span><span class="o">`</span><span class="w"> </span><span class="c1">--no-builds`
+</span><span class="c1"></span><span class="err">错误变成了如下</span><span class="p">:</span><span class="w"> 
+</span><span class="w"></span><span class="n">RuntimeError</span><span class="p">(</span><span class="s1">&#39;EnforceUnusedAdapter called with url http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64/_libgcc_mutex-0.1-main.tar.bz2\nThis command is using a remote connection in offline mode.\n&#39;</span><span class="p">,)</span><span class="w">
+</span><span class="w"></span><span class="n">RuntimeError</span><span class="p">(</span><span class="s1">&#39;EnforceUnusedAdapter called with url http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64/_tflow_select-2.3.0-mkl.tar.bz2\nThis command is using a remote connection in offline mode.\n&#39;</span><span class="p">,)</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><a href="https://github.com/conda/conda/issues/5063" target="_blank" rel="noopener noreffer ">https://github.com/conda/conda/issues/5063</a></li>
+<li><a href="https://blog.csdn.net/weixin_42414714/article/details/118107150" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/weixin_42414714/article/details/118107150</a> ## Error记录: RuntimeError:This command is using a remote connection in offline mode.[CondaError]-CSDN博客</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">rf</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">pyspark3603</span><span class="p">;</span><span class="w"> </span><span class="n">conda</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="c1">--name pyspark3603 --clone base --channel defaults
+</span><span class="c1"></span><span class="o">#</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">work</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="solution">solution</h2>
+<h3 id="1-导出全部包重新安装">1 导出全部包重新安装</h3>
+<h3 id="2-删除url信息not-work">2 删除url信息(not work)</h3>
+<p><a href="https://blog.csdn.net/weixin_42414714/article/details/118107150" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/weixin_42414714/article/details/118107150</a> ## Error记录: RuntimeError:This command is using a remote connection in offline mode.[CondaError]-CSDN博客</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="o">#</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="k">work</span><span class="w">
+</span><span class="w"></span><span class="n">find</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="p">.</span><span class="mi">6</span><span class="w"> </span><span class="o">-</span><span class="n">name</span><span class="w"> </span><span class="s1">&#39;urls*&#39;</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">conf</span><span class="o">/</span><span class="n">urls</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">admindocs</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">pyi</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">auth</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">pyi</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">flatpages</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">pyi</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">contrib</span><span class="o">/</span><span class="n">staticfiles</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">pyi</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">core</span><span class="o">/</span><span class="n">checks</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">pyi</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">django</span><span class="o">-</span><span class="n">stubs</span><span class="o">/</span><span class="n">urls</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">jedi</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="n">typeshed</span><span class="o">/</span><span class="n">third_party</span><span class="o">/</span><span class="mi">2</span><span class="n">and3</span><span class="o">/</span><span class="n">werkzeug</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">pyi</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span><span class="o">/</span><span class="n">_internal</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">__pycache__</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">36</span><span class="p">.</span><span class="n">pyc</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span><span class="o">/</span><span class="n">_internal</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">py</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">werkzeug</span><span class="o">/</span><span class="n">__pycache__</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">36</span><span class="p">.</span><span class="n">pyc</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">werkzeug</span><span class="o">/</span><span class="n">urls</span><span class="p">.</span><span class="n">py</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">grep</span><span class="w"> </span><span class="o">-</span><span class="n">rnw</span><span class="w"> </span><span class="s2">&#34;.&#34;</span><span class="w"> </span><span class="o">-</span><span class="n">e</span><span class="w"> </span><span class="s1">&#39;tsinghua&#39;</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">thulac</span><span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="n">dist</span><span class="o">-</span><span class="n">info</span><span class="o">/</span><span class="n">METADATA</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="n">Author</span><span class="o">-</span><span class="n">email</span><span class="p">:</span><span class="w"> </span><span class="n">liuzy</span><span class="o">@</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">###</span><span class="w"> </span><span class="n">bingo</span><span class="w">
+</span><span class="w"></span><span class="o">###</span><span class="w"> </span><span class="n">bingo</span><span class="w">
+</span><span class="w"></span><span class="o">###</span><span class="w"> </span><span class="n">bingo</span><span class="w">
+</span><span class="w"></span><span class="n">grep</span><span class="w"> </span><span class="o">-</span><span class="n">rnwI</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="c1">--exclude-dir={site-packages,envs} -e &#34;tsinghua&#34; | more
+</span><span class="c1"></span><span class="p">.</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">/</span><span class="n">intel</span><span class="o">-</span><span class="n">openmp</span><span class="o">-</span><span class="mi">2020</span><span class="p">.</span><span class="mi">2</span><span class="o">-</span><span class="mi">254</span><span class="p">.</span><span class="n">json</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;channel&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">/</span><span class="n">intel</span><span class="o">-</span><span class="n">openmp</span><span class="o">-</span><span class="mi">2020</span><span class="p">.</span><span class="mi">2</span><span class="o">-</span><span class="mi">254</span><span class="p">.</span><span class="n">json</span><span class="p">:</span><span class="mi">58</span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;url&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64/intel-openmp-2020.2-254.tar.bz2&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">/</span><span class="n">_libgcc_mutex</span><span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">-</span><span class="n">main</span><span class="p">.</span><span class="n">json</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;channel&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">/</span><span class="n">_libgcc_mutex</span><span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="o">-</span><span class="n">main</span><span class="p">.</span><span class="n">json</span><span class="p">:</span><span class="mi">27</span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;url&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64/_libgcc_mutex-0.1-main.tar.bz2&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">/</span><span class="n">ipykernel</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">py36he448a4c_0</span><span class="p">.</span><span class="n">json</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;channel&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">/</span><span class="n">ipykernel</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">3</span><span class="o">-</span><span class="n">py36he448a4c_0</span><span class="p">.</span><span class="n">json</span><span class="p">:</span><span class="mi">1122</span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;url&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64/ipykernel-5.4.3-py36he448a4c_0.tar.bz2&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="p">.</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">/</span><span class="n">_tflow_select</span><span class="o">-</span><span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mkl</span><span class="p">.</span><span class="n">json</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;channel&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/linux-64&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">mv</span><span class="w"> </span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="w"> </span><span class="n">conda</span><span class="o">-</span><span class="n">meta</span><span class="o">-</span><span class="n">bak</span><span class="o">-</span><span class="mi">2024</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">30</span><span class="w">
+</span><span class="w"></span><span class="n">conda</span><span class="w"> </span><span class="n">list</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">EnvironmentLocationNotFound</span><span class="p">:</span><span class="w"> </span><span class="k">Not</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">conda</span><span class="w"> </span><span class="n">environment</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">pyspark3602</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">!!!</span><span class="n">conda</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="err">可以添加</span><span class="w"> </span><span class="c1">--no-builds 参数
+</span><span class="c1"></span><span class="w"> 
+</span><span class="w"></span><span class="o">##</span><span class="w"> </span><span class="err">看来直接删除时不行的</span><span class="o">!!</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="err">替换</span><span class="w">
+</span><span class="w"></span><span class="n">vim</span><span class="w"> </span><span class="n">anaconda</span><span class="o">-</span><span class="n">navigator</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">7</span><span class="o">-</span><span class="n">py36_0</span><span class="p">.</span><span class="n">json</span><span class="w">
+</span><span class="w"></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="p">.</span><span class="n">anaconda</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="o">/</span><span class="n">anaconda</span><span class="o">-</span><span class="n">navigator</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">7</span><span class="o">-</span><span class="n">py36_0</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">bz2</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="s2">&#34;channel&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/noarch&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w"></span><span class="s2">&#34;url&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/noarch/findspark-2.0.1-pyhd8ed1ab_0.tar.bz2&#34;</span><span class="p">,</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-修改代码认证">3 修改代码认证</h3>
+<h3 id="4-直接拷贝整个anaconda">4 直接拷贝整个anaconda</h3>
+<p>其实这样不好, 因为大家都在base上安装的, 但是可以保证一致性</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">tar --exclude<span class="o">=</span><span class="s1">&#39;./envs&#39;</span> --exclude<span class="o">=</span>**/site-packages/torch --exclude<span class="o">=</span>**/site-packages/xgboost --exclude<span class="o">=</span>**/site-packages/thulac -zcvf pyspark3602.tar.gz .
+
+mkdir pyspark3602<span class="p">;</span> tar -xvf pyspark3602.tar.gz -C pyspark3602 --strip-components<span class="o">=</span><span class="m">1</span>
+
+<span class="nb">source</span> activate pyspark3602
+conda env list <span class="c1">## 也正常了</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="5-导出环境信息-重新构建推荐">5 导出环境信息, 重新构建(推荐)</h3>
+<p><a href="https://www.codeleading.com/article/99734905584/" target="_blank" rel="noopener noreffer ">https://www.codeleading.com/article/99734905584/</a> fxxk</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="n">conda</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">export</span><span class="w"> </span><span class="c1">--no-builds | grep -v &#34;^prefix: &#34; &gt; environment.yml
+</span><span class="c1"></span><span class="w">
+</span><span class="w"></span><span class="o">#</span><span class="w"> </span><span class="err">修改文件</span><span class="w">
+</span><span class="w"></span><span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free
+</span><span class="c1"></span><span class="n">conda</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="c1">--set show_channel_urls yes
+</span><span class="c1"></span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">conda</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">environment</span><span class="p">.</span><span class="n">yml</span><span class="w">
+</span><span class="w"></span><span class="n">conda</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="o">-</span><span class="n">f</span><span class="w"> </span><span class="n">environment</span><span class="p">.</span><span class="n">yml</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="k">user</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">env_name</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">ResolvePackageNotFound</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">jupyter_client</span><span class="o">=</span><span class="mi">6</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">11</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">prompt</span><span class="o">-</span><span class="n">toolkit</span><span class="o">=</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">14</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">findspark</span><span class="o">=</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">python_abi</span><span class="o">=</span><span class="mi">3</span><span class="p">.</span><span class="mi">6</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">parso</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">1</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">nodejs</span><span class="o">=</span><span class="mi">12</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">ipykernel</span><span class="o">=</span><span class="mi">5</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">3</span><span class="w">
+</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">pandoc</span><span class="o">=</span><span class="mi">2</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">4</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="o">##</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">mean</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">failed</span><span class="w">
+</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="6-指定channelnot-work">6 指定channel(not work)</h3>
+<p><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/channels.html" target="_blank" rel="noopener noreffer ">https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/channels.html</a> ## Channels — conda 24.7.2.dev64 documentation</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">conda install scipy --channel conda-forge --channel bioconda
+conda search scipy --channel file:/&lt;path to&gt;/local-channel --override-channels
+
+
+conda create -vv --name pyspark3603 --clone base --channel conda-forge --override-channels
+
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参考">参考</h2>
+<ul>
+<li><a href="https://blog.csdn.net/qq128252/article/details/127064929" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/qq128252/article/details/127064929</a></li>
+<li><a href="https://stackoverflow.com/questions/60077137/conda-how-to-ignore-if-a-conda-channel-is-not-reachable-ignore-unavailableinva" target="_blank" rel="noopener noreffer ">https://stackoverflow.com/questions/60077137/conda-how-to-ignore-if-a-conda-channel-is-not-reachable-ignore-unavailableinva</a> ## python - Conda: How to ignore if a conda channel is not reachable? Ignore UnavailableInvalidChannel? - Stack Overflow</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod" style="opacity: 0.8;">
+                <span>更新于 2024-08-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more" style="opacity: 0.4;">
+        <section class="post-tags"><span class="post-category"><a href="/categories/unsort.html" title="unsort"><i class="fas fa-folder fa-fw"></i>&nbsp;unsort</a></span>&nbsp;<span class="post-category"><a href="/tags/unsort.html" title="unsort"><i class="fas fa-tags fa-fw"></i>&nbsp;unsort</a></span>&nbsp;</section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/2304271038-dataframe-create-hive-table.html" class="prev" rel="prev" title="save DataFrame as partition of hive table"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>save DataFrame as partition of hive table</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Alphaks</a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2024-08-30 updated</a></span></div>
+        </div>
+    </footer></div><div id="sidebar">
+    <section class="widget">
+    <h3 class="widget-title">
+        <a href="/posts.html" title="click ok" >最近文章</a>
+    </h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel.html" title="conda-env-clone-install-create-error-with-mirror-custom-channel">conda-env-clone-install-create-error-with-mirror-custom-channel</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2304271038-dataframe-create-hive-table.html" title="save DataFrame as partition of hive table">save DataFrame as partition of hive table</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2211031619-ssh-git-github-permission-denied-problem.html" title="ssh git github permission denied problem">ssh git github permission denied problem</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2210211456-pyspark-udf-udaf-jar.html" title="pyspark udf udaf with jar">pyspark udf udaf with jar</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104271104-dropout-note.html" title="dropout笔记">dropout笔记</a>
+        </li>
+        
+        <li>
+            <a href="/posts/2104040035-hello.html" title="hello">hello</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/2104031558-multi-git.html" title="多git协作">多git协作</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1906101549-proxy.html" title="proxy">proxy</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905272156-autohotkey.html" title="AutoHotKey">AutoHotKey</a>
+        </li>
+        
+        <li>
+            <a href="/posts/old/1905121610-reading-may.html" title="五月阅读">五月阅读</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+    
+<section class="widget">
+    <h3 class="widget-title" title="特别的爱给特别的你">
+        <a href="/categories/column.html">特栏</a>
+    </h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/columns/good-except.html" title="阅读摘抄">阅读摘抄</a>
+        </li>
+        
+        <li>
+            <a href="/columns/reading-note.html" title="bingo">阅读笔记</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-post.html" title="文章推荐">文章推荐</a>
+        </li>
+        
+        <li>
+            <a href="/columns/good-blog.html" title="博主推荐">博主推荐</a>
+        </li>
+        
+    </ul>
+</section>
+
+    
+<section class="widget">
+    <ul class="widget-list">
+        
+        <li>
+            <a href="/colin.html" title="" target="_blank" style="color:red">
+                
+                <img src="https://avatars1.githubusercontent.com/u/20012472?s=460&amp;v=4" width="100%" height="100%">
+                
+            </a>
+        </li>
+        
+    </ul>
+</section>
+
+</div><div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":999},"comment":{},"data":{"id-1":"Alphaks","id-2":"Alphaks","id-3":"Alphaks"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"],"id-2":["id-2"],"id-3":["id-3"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
