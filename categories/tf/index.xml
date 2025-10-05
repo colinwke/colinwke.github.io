@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tf on Alphaks</title>
+    <link>https://example.com/categories/tf/</link>
+    <description>Recent content in Tf on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 28 Sep 2023 14:53:08 +0800</lastBuildDate>
+    <atom:link href="https://example.com/categories/tf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dropout笔记</title>
+      <link>https://example.com/posts/2104271104-dropout-note/</link>
+      <pubDate>Tue, 27 Apr 2021 11:04:05 +0800</pubDate>
+      <guid>https://example.com/posts/2104271104-dropout-note/</guid>
+      <description>&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;&#xA;&lt;p&gt;dropout原理, 随机丢弃一些(输入)神经元, 防止参数过拟合&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Applies Dropout to the input.&lt;/p&gt;&#xA;&lt;p&gt;Dropout consists in randomly setting a fraction &lt;code&gt;rate&lt;/code&gt; of input units to 0&#xA;at each update during training time, which helps prevent overfitting.&#xA;The units that are kept are scaled by &lt;code&gt;1 / (1 - rate)&lt;/code&gt;, so that their&#xA;sum is unchanged at training time and inference time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

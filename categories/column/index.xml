@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Column on Alphaks</title>
+    <link>https://example.com/categories/column/</link>
+    <description>Recent content in Column on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 28 Sep 2023 14:53:08 +0800</lastBuildDate>
+    <atom:link href="https://example.com/categories/column/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>阅读推荐</title>
+      <link>https://example.com/columns/good-post/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0800</pubDate>
+      <guid>https://example.com/columns/good-post/</guid>
+      <description>&lt;h2 id=&#34;2023-06&#34;&gt;2023-06&lt;/h2&gt;&#xA;&lt;h3 id=&#34;雷军武大演讲-相信自己-每个人的人生都有无限可能&#34;&gt;雷军武大演讲: &lt;strong&gt;相信自己&lt;/strong&gt;, 每个人的人生都有无限可能!&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/poKFingit1zMAf-tkbvLOw&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://mp.weixin.qq.com/s/poKFingit1zMAf-tkbvLOw&lt;/a&gt;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;相信自己&lt;/strong&gt;, 每个人的人生都有无限可能;&lt;/li&gt;&#xA;&lt;li&gt;不仅要有梦想, 更要有&lt;strong&gt;一步一步可实现的目标&lt;/strong&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;2023-03&#34;&gt;2023-03&lt;/h2&gt;&#xA;&lt;h3 id=&#34;第一次在九届全国人大会议的记者招待会上回答中外记者提问&#34;&gt;第一次在九届全国人大会议的记者招待会上回答中外记者提问&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=6N5vEbhODdY&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.youtube.com/watch?v=6N5vEbhODdY&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;总理华语群众大会演讲完整视频national-day-rally-2019---chinese&#34;&gt;总理华语群众大会演讲完整视频（National Day Rally 2019 - Chinese)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=d6SOV4FX1DE&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.youtube.com/watch?v=d6SOV4FX1DE&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>阅读笔记</title>
+      <link>https://example.com/columns/reading-note/</link>
+      <pubDate>Tue, 10 Jan 2023 00:35:57 +0800</pubDate>
+      <guid>https://example.com/columns/reading-note/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;&#xA;&lt;h2 id=&#34;daily-reading-list&#34;&gt;daily reading list&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://weibo.com/u/page/fav/3204084435&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://weibo.com/u/page/fav/3204084435&lt;/a&gt; 微博收藏&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://weibo.com/u/5722964389&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://weibo.com/u/5722964389&lt;/a&gt; GithubDaily&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://weibo.com/u/2194035935&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://weibo.com/u/2194035935&lt;/a&gt; 蚁工厂&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://weibo.com/u/5648162302&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://weibo.com/u/5648162302&lt;/a&gt; 黄建同学&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/collection/688307973&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/collection/688307973&lt;/a&gt; 知乎收藏 这个是&lt;code&gt;7693&lt;/code&gt;登录的&lt;/li&gt;&#xA;&lt;li&gt;http://localhost:4000/dash/feeds wechat rss&#xA;&lt;ol&gt;&#xA;&lt;li&gt;http://localhost:4000/dash/feeds/MP_WXS_3520012476 京东零售技术&lt;/li&gt;&#xA;&lt;li&gt;http://localhost:4000/dash/feeds/MP_WXS_3885737868 阿里技术&lt;/li&gt;&#xA;&lt;li&gt;http://localhost:4000/dash/feeds/MP_WXS_3014106999 大淘宝技术&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;= = = &lt;strong&gt;在这后面添加&lt;/strong&gt; = = =&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>阅读笔记2022</title>
+      <link>https://example.com/columns/reading-note-2022/</link>
+      <pubDate>Thu, 10 Mar 2022 00:35:57 +0800</pubDate>
+      <guid>https://example.com/columns/reading-note-2022/</guid>
+      <description>&lt;h2 id=&#34;2022-12&#34;&gt;2022-12&lt;/h2&gt;&#xA;&lt;h3 id=&#34;机器学习工程方面的最佳做法&#34;&gt;机器学习工程方面的最佳做法&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://developers.google.com/machine-learning/guides/rules-of-ml&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://developers.google.com/machine-learning/guides/rules-of-ml&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;你一生的故事-不论怎样-未来都会爱你&#34;&gt;你一生的故事: 不论怎样, 未来都会爱你&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.xiaoyuzhoufm.com/episode/63aa28e83c5c5f89defdd606&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.xiaoyuzhoufm.com/episode/63aa28e83c5c5f89defdd606&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;我们注定要失去, 所以我们可以用多重视角看待我们经历的事, 我们所面对的问题:&lt;/p&gt;&#xA;&lt;p&gt;原因论, 追溯过去, 但过去无法改变, 我们会增加更多的负面情绪&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>博客推荐</title>
+      <link>https://example.com/columns/good-blog/</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0800</pubDate>
+      <guid>https://example.com/columns/good-blog/</guid>
+      <description>&lt;h2 id=&#34;知乎订阅&#34;&gt;知乎订阅&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;知乎&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/tttwwy&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/tttwwy&lt;/a&gt; 萧瑟 5️⃣&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/xieyangyi&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/xieyangyi&lt;/a&gt; 谢杨易 腾讯T11推荐算法 5️⃣&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/yang-xu-dong-6&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/yang-xu-dong-6&lt;/a&gt; 杨旭东 4️⃣&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/wang-zhe-58&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/wang-zhe-58&lt;/a&gt; 王喆 2️⃣&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/si-ta-xi&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/si-ta-xi&lt;/a&gt; 石塔西 2️⃣&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/wu-hai-bo&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/wu-hai-bo&lt;/a&gt; 吴海波 1️⃣ 更新缓慢&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/rtb_susan&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/rtb_susan&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/iamkissg&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/iamkissg&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/charmby&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/charmby&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.zhihu.com/people/zico-53-18&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.zhihu.com/people/zico-53-18&lt;/a&gt; 阿里算法 1️⃣ 久未更新&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;博客&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于</title>
+      <link>https://example.com/columns/page-about/</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0800</pubDate>
+      <guid>https://example.com/columns/page-about/</guid>
+      <description>&lt;p&gt;&lt;img&#xA;        class=&#34;lazyload&#34;&#xA;        src=&#34;https://example.com/svg/loading.min.svg&#34;&#xA;        data-src=&#34;assets/img/profile.png&#34;&#xA;        data-srcset=&#34;assets/img/profile.png, assets/img/profile.png 1.5x, assets/img/profile.png 2x&#34;&#xA;        data-sizes=&#34;auto&#34;&#xA;        alt=&#34;assets/img/profile.png&#34;&#xA;        title=&#34;img&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;前方漫漫 愿我成风&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;欢迎关注&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新浪微博: &lt;a href=&#34;http://weibo.com/778931015&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;王虚极&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;github: &lt;a href=&#34;https://github.com/colinwke&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;colinwke&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;最后更新：2016-05-13&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>阅读笔记2019</title>
+      <link>https://example.com/columns/reading-note-2019/</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0800</pubDate>
+      <guid>https://example.com/columns/reading-note-2019/</guid>
+      <description>&lt;h2 id=&#34;2021-05&#34;&gt;2021-05&lt;/h2&gt;&#xA;&lt;p&gt;真感觉太崇拜雷军了, 简直快成为了他的教徒了!&lt;/p&gt;&#xA;&lt;p&gt;今天偶人看了两个视频:&lt;/p&gt;&#xA;&lt;h3 id=&#34;许知远vs雷军灵魂对话&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=1jXcNKsoxlo&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;许知远vs雷军《灵魂对话》&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;这里很打动的两个点是&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;要适当跳出自己的舒适圈, 说服自己与培养兴趣, 只有深入调研, 才有发言权.&lt;/li&gt;&#xA;&lt;li&gt;创业, 要有信仰, 自己相信, 还要别人相信. 所有, 就有了说服自己和说服别人, 要让别人不仅能和你站在同一艘船上, 而且要心甘情愿, 信心满满的, 全力以赴的支持你. 不仅想到了在公司低谷的时候, 老大是如何的所谓别人口中的画饼, 现在也慢慢理解了, 如果不能说服你认真努力工作, 那leader用来干嘛呢? 所以, 不仅是创业, 到后面带领团队也一样, 一定要有一个很好的说服能力, 能够很好的组织工作, 高效工作.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h3 id=&#34;雷军创业第一课&#34;&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cZgTCsOYaHI&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;雷军：创业第一课&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;内容很多, 干货也很多, 没有看完, 创业必看!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>阅读推荐2021</title>
+      <link>https://example.com/columns/good-post-2021/</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0800</pubDate>
+      <guid>https://example.com/columns/good-post-2021/</guid>
+      <description>&lt;h2 id=&#34;2021-05&#34;&gt;2021-05&lt;/h2&gt;&#xA;&lt;h3 id=&#34;李沐-工作五年反思&#34;&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/374777591&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;李沐: 工作五年反思&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;李沐大神这篇文章对工作中的&lt;strong&gt;价值&lt;/strong&gt;进行了剖析, 也是工作五年的反思总结, 其中最难为可贵为对自己价值和&lt;strong&gt;对他人的价值&lt;/strong&gt;, 对自己的价值很好理解, 但是对他人的价值才更为重要, 影响的人的数量与影响的程度, 可以是工作产出, 也可以是其他的形式. &lt;strong&gt;专注于最有价值的事情&lt;/strong&gt;, 在工作和生活中多选择的场景下, 是一个不错的指导方针.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>阅读摘抄</title>
+      <link>https://example.com/columns/good-except/</link>
+      <pubDate>Thu, 05 May 2016 20:19:59 +0800</pubDate>
+      <guid>https://example.com/columns/good-except/</guid>
+      <description>&lt;h2 id=&#34;2023-04&#34;&gt;2023-04&lt;/h2&gt;&#xA;&lt;p&gt;人类的悲欢并不相通，我只觉得他们吵闹  &amp;ndash; 鲁迅&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/BV14t411f7X7&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://www.bilibili.com/video/BV14t411f7X7&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;天上梦龙, 地上酷玩&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Queue: &lt;code&gt;5&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;ImagineDragons: &lt;code&gt;5&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;ColdPlay: &lt;code&gt;4&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;TwoStepsFromHell: &lt;code&gt;3&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;FallOutBoy: &lt;code&gt;3&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;OneRepuplic: &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;Beyond: &lt;code&gt;16&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;许巍: &lt;code&gt;9&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;2023-02&#34;&gt;2023-02&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://so.gushiwen.cn/mingju/juv_0678a4494431.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://so.gushiwen.cn/mingju/juv_0678a4494431.aspx&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;眼看他起朱楼，眼看他宴宾客，眼看他楼塌了。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

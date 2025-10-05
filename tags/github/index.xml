@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Alphaks</title>
+    <link>https://example.com/tags/github/</link>
+    <description>Recent content in Github on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 28 Sep 2023 14:53:08 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ssh git github permission denied problem</title>
+      <link>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem/</link>
+      <pubDate>Thu, 03 Nov 2022 16:19:41 +0800</pubDate>
+      <guid>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem/</guid>
+      <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;&#xA;&lt;p&gt;原来在/etc/hosts配置了github的ip解析, 突然有一天push很慢, 甚至经常timeout. 然后自己把hosts中关于github的映射都删除了, 但是链接不上了github了, 自己有用飞机软件.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

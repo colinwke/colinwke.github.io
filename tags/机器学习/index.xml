@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on Alphaks</title>
+    <link>https://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 23:00:58 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KNN算法的C语言实现</title>
+      <link>https://example.com/posts/old/machine-learning/knn-in-c/</link>
+      <pubDate>Sat, 14 May 2016 20:38:20 +0800</pubDate>
+      <guid>https://example.com/posts/old/machine-learning/knn-in-c/</guid>
+      <description>&lt;h2 id=&#34;k-nnk-nearest-neighbors-k-近邻算法&#34;&gt;k-NN(k-Nearest Neighbors) k-近邻算法&lt;/h2&gt;&#xA;&lt;p&gt;概述&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;k-近邻算法采用测量不同的特征值之间的距离方法进行分类&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;k-近邻算法的一般流程&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;收集数据：可以使用任何方法&lt;/li&gt;&#xA;&lt;li&gt;准备数据：距离计算所需要的数值，最好是结构化的数据格式&lt;/li&gt;&#xA;&lt;li&gt;分析数据：可以使用任何方法&lt;/li&gt;&#xA;&lt;li&gt;训练算法：此步骤不适用于k-近邻算法&lt;/li&gt;&#xA;&lt;li&gt;测试算法：计算错误率&lt;/li&gt;&#xA;&lt;li&gt;使用算法：首先需要输入样本数据和结构化的输出结果，然后使用k-近邻算法判定输入数据分别属于哪个分类，最后应用对计算出的分类执行后续的处理&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;对未知类别属性的数据集中的每个点依次执行以下操作&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reading on Alphaks</title>
+    <link>https://example.com/categories/reading/</link>
+    <description>Recent content in Reading on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 23:00:58 +0800</lastBuildDate>
+    <atom:link href="https://example.com/categories/reading/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>五月阅读</title>
+      <link>https://example.com/posts/old/1905121610-reading-may/</link>
+      <pubDate>Sun, 12 May 2019 16:10:25 +0800</pubDate>
+      <guid>https://example.com/posts/old/1905121610-reading-may/</guid>
+      <description>&lt;h2 id=&#34;2019-5-12&#34;&gt;2019-5-12&lt;/h2&gt;&#xA;&lt;p&gt;最近计划学习一下深度学习框架, kaggle是个不错的平台, 就找了其中的比赛&lt;a href=&#34;https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Jigsaw Unintended Bias in Toxicity Classification&lt;/a&gt;. 在比赛的第四段, 描述了比赛的背景, 和技术中存在的问题:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>web reading</title>
+      <link>https://example.com/posts/old/reading-web/web/</link>
+      <pubDate>Thu, 18 Oct 2018 14:23:22 +0800</pubDate>
+      <guid>https://example.com/posts/old/reading-web/web/</guid>
+      <description>&lt;h2 id=&#34;2018-11-20&#34;&gt;2018-11-20&lt;/h2&gt;&#xA;&lt;h2 id=&#34;数据标注人工智能背后的人&#34;&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/26181394&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;数据标注|人工智能背后的人&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;之前有了解过ImageNet有过巨大的标记成本, 找了些资料看了看, 这篇文章的信息量还是非常巨大的, 无论是从人工智能的技术角度, 还是社会角度, 都有所涉及.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

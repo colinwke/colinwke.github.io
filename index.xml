@@ -1,0 +1,211 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Alphaks</title>
+        <link>https://example.com/</link>
+        <description>Let there be light</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 30 Jun 2025 17:48:35 &#43;0800</lastBuildDate>
+            <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>conda-env-clone-install-create-error-with-mirror-custom-channel</title>
+    <link>https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/</link>
+    <pubDate>Fri, 30 Aug 2024 17:01:30 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/</guid>
+    <description><![CDATA[<p>[TOC]</p>
+<h2 id="问题原因">问题原因</h2>
+<p>突然不能克隆<code>base</code>环境了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">rf</span><span class="w"> </span><span class="n">pyspark3602</span><span class="p">;</span><span class="w"> </span><span class="n">conda</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="c1">--name pyspark3602 --clone base
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">Source</span><span class="p">:</span><span class="w">      </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Destination</span><span class="p">:</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">hdp_lbg_ectech</span><span class="o">/</span><span class="n">wangke</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">pyspark3602</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">packages</span><span class="w"> </span><span class="n">cannot</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">cloned</span><span class="w"> </span><span class="k">out</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">cloud</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">forge</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">conda</span><span class="o">-</span><span class="mi">4</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py36h5fab9bb_0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">defaults</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="mi">64</span><span class="p">::</span><span class="n">conda</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="mi">3</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">5</span><span class="o">-</span><span class="n">py36_0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Packages</span><span class="p">:</span><span class="w"> </span><span class="mi">195</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Files</span><span class="p">:</span><span class="w"> </span><span class="mi">64657</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">...</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">CondaHTTPError</span><span class="p">:</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="mi">404</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">FOUND</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mirrors</span><span class="p">.</span><span class="n">tuna</span><span class="p">.</span><span class="n">tsinghua</span><span class="p">.</span><span class="n">edu</span><span class="p">.</span><span class="n">cn</span><span class="o">/</span><span class="n">anaconda</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">noarch</span><span class="o">/</span><span class="n">keras</span><span class="o">-</span><span class="n">applications</span><span class="o">-</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="o">-</span><span class="n">py_1</span><span class="p">.</span><span class="n">tar</span><span class="p">.</span><span class="n">bz2</span><span class="o">&gt;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Elapsed</span><span class="p">:</span><span class="w"> </span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">.</span><span class="mi">351600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">An</span><span class="w"> </span><span class="n">HTTP</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurred</span><span class="w"> </span><span class="k">when</span><span class="w"> </span><span class="n">trying</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">retrieve</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">URL</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">HTTP</span><span class="w"> </span><span class="n">errors</span><span class="w"> </span><span class="k">are</span><span class="w"> </span><span class="n">often</span><span class="w"> </span><span class="n">intermittent</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">simple</span><span class="w"> </span><span class="n">retry</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">way</span><span class="p">.</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="第一个问题">第一个问题</h3>
+<p>这里的主要问题是使用了清华的镜像. 清华镜像只有文件<code>.conda</code>后缀, 没有<code>.tar.bz2</code>后缀的文件,所以报<code>CondaHTTPError: HTTP 404 NOT FOUND for url</code>错误导致不能创建环境</p>]]></description>
+</item>
+<item>
+    <title>save DataFrame as partition of hive table</title>
+    <link>https://example.com/posts/2304271038-dataframe-create-hive-table/</link>
+    <pubDate>Thu, 27 Apr 2023 10:38:16 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2304271038-dataframe-create-hive-table/</guid>
+    <description><![CDATA[<p>使用DataFrame直接创建hive表, 并作为其中的一个分区数据</p>
+<h3 id="test-1">test 1</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="n">table</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">write</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">format</span><span class="o">(</span><span class="s">&#34;hive&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">mode</span><span class="o">(</span><span class="s">&#34;overwrite&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">option</span><span class="o">(</span><span class="s">&#34;path&#34;</span><span class="o">,</span> <span class="n">inputPath</span> <span class="o">+</span> <span class="s">&#34;_table&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">.</span><span class="n">insertInto</span><span class="o">(</span><span class="n">tableName</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>error, 需要先创建表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Exception in thread &#34;main&#34; org.apache.spark.sql.AnalysisException: Table not found: hdp_lbg_ectech_ads.zp_compensate_ad_detail_test1;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="test-2">test 2</h3>
+<p>首先判别表是否存在</p>]]></description>
+</item>
+<item>
+    <title>ssh git github permission denied problem</title>
+    <link>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem/</link>
+    <pubDate>Thu, 03 Nov 2022 16:19:41 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2211031619-ssh-git-github-permission-denied-problem/</guid>
+    <description><![CDATA[<h2 id="问题描述">问题描述</h2>
+<p>原来在/etc/hosts配置了github的ip解析, 突然有一天push很慢, 甚至经常timeout. 然后自己把hosts中关于github的映射都删除了, 但是链接不上了github了, 自己有用飞机软件.</p>]]></description>
+</item>
+<item>
+    <title>pyspark udf udaf with jar</title>
+    <link>https://example.com/posts/2210211456-pyspark-udf-udaf-jar/</link>
+    <pubDate>Fri, 21 Oct 2022 14:56:11 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2210211456-pyspark-udf-udaf-jar/</guid>
+    <description><![CDATA[<h2 id="问题描述">问题描述</h2>
+<p>使用scala开发了udaf, 在scala程序中能使用, 无法在pyspark中使用</p>
+<p>使用udaf有两种方法:</p>
+<p><em>第一种是hive使用</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ss</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&#34;CREATE TEMPORARY FUNCTION MostFreq22 AS &#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39; USING JAR &#39;</span><span class="si">%s</span><span class="s2">&#39;&#34;</span> <span class="o">%</span> <span class="n">jar_path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># SparkConf未指定spark.jars</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># error</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># pyspark.sql.utils.AnalysisException: Can not load class &#39;com.company.strategy.rank.bussiness.util.udf.MostFreqUDAF&#39; when registering the function &#39;MostFreq22&#39;, please make sure it is on the classpath</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当指定了spark.jars, 仍然报错</p>]]></description>
+</item>
+<item>
+    <title>dropout笔记</title>
+    <link>https://example.com/posts/2104271104-dropout-note/</link>
+    <pubDate>Tue, 27 Apr 2021 11:04:05 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2104271104-dropout-note/</guid>
+    <description><![CDATA[<h2 id="原理">原理</h2>
+<p>dropout原理, 随机丢弃一些(输入)神经元, 防止参数过拟合</p>
+<blockquote>
+<p>Applies Dropout to the input.</p>
+<p>Dropout consists in randomly setting a fraction <code>rate</code> of input units to 0
+at each update during training time, which helps prevent overfitting.
+The units that are kept are scaled by <code>1 / (1 - rate)</code>, so that their
+sum is unchanged at training time and inference time.</p>]]></description>
+</item>
+<item>
+    <title>hello</title>
+    <link>https://example.com/posts/2104040035-hello/</link>
+    <pubDate>Sun, 04 Apr 2021 00:35:57 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2104040035-hello/</guid>
+    <description><![CDATA[<p>相信未来, 拥抱未来!</p>]]></description>
+</item>
+<item>
+    <title>多git协作</title>
+    <link>https://example.com/posts/old/2104031558-multi-git/</link>
+    <pubDate>Sat, 03 Apr 2021 15:58:49 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/old/2104031558-multi-git/</guid>
+    <description><![CDATA[<p>多git有两种状态</p>
+<ul>
+<li>多个git账号(user, email)</li>
+<li>多个认证(identities)</li>
+</ul>
+<h2 id="设置多个git账号">设置多个git账号</h2>
+<p>前提: git版本号(<code>git --version</code>)&gt;=2.13</p>
+<p><code>vim ~/.gitconfig</code></p>
+<p>注意: 路径<code>gitdir:</code>后面要加斜杠<code>/</code></p>]]></description>
+</item>
+<item>
+    <title>proxy</title>
+    <link>https://example.com/posts/old/1906101549-proxy/</link>
+    <pubDate>Mon, 10 Jun 2019 15:49:35 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/old/1906101549-proxy/</guid>
+    <description><![CDATA[<h2 id="2025-09-21-update">2025-09-21 update</h2>
+<p>clash X可能不在维护, macos 推荐clash-party</p>
+<ul>
+<li>
+<p><a href="https://github.com/mihomo-party-org/clash-party/releases" target="_blank" rel="noopener noreffer ">https://github.com/mihomo-party-org/clash-party/releases</a></p>
+</li>
+<li>
+<p><a href="https://github.com/clashdownload/Clash/tree/main" target="_blank" rel="noopener noreffer ">https://github.com/clashdownload/Clash/tree/main</a></p>
+</li>
+</ul>
+<h2 id="原文">原文</h2>
+<p>用了一个很久的(从18年到现在(25年), 稳定, 简单), 名字叫<code>MEWU</code>, <strong>强烈推荐</strong></p>]]></description>
+</item>
+<item>
+    <title>AutoHotKey</title>
+    <link>https://example.com/posts/old/1905272156-autohotkey/</link>
+    <pubDate>Mon, 27 May 2019 21:56:17 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/old/1905272156-autohotkey/</guid>
+    <description><![CDATA[<h2 id="1-下载autohotkey">1 下载AutoHotKey</h2>
+<p><a href="https://www.autohotkey.com/" target="_blank" rel="noopener noreffer ">官网</a>, <a href="https://www.autohotkey.com/download/1.1/AutoHotkey_1.1.30.03.zip" target="_blank" rel="noopener noreffer ">点我直接官网下载</a></p>
+<p></p>
+<h2 id="2-编辑脚本">2 编辑脚本</h2>
+<p>另存下面脚本为<code>capslock_plus.ahk</code></p>]]></description>
+</item>
+<item>
+    <title>五月阅读</title>
+    <link>https://example.com/posts/old/1905121610-reading-may/</link>
+    <pubDate>Sun, 12 May 2019 16:10:25 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/old/1905121610-reading-may/</guid>
+    <description><![CDATA[<h2 id="2019-5-12">2019-5-12</h2>
+<p>最近计划学习一下深度学习框架, kaggle是个不错的平台, 就找了其中的比赛<a href="https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification" target="_blank" rel="noopener noreffer ">Jigsaw Unintended Bias in Toxicity Classification</a>. 在比赛的第四段, 描述了比赛的背景, 和技术中存在的问题:</p>]]></description>
+</item>
+</channel>
+</rss>

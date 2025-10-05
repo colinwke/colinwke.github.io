@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper on Alphaks</title>
+    <link>https://example.com/tags/paper/</link>
+    <description>Recent content in Paper on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 23:00:58 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/paper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>迁移学习资源整理</title>
+      <link>https://example.com/posts/old/transfer-learning/transfer-scholar/</link>
+      <pubDate>Wed, 31 Oct 2018 16:54:23 +0800</pubDate>
+      <guid>https://example.com/posts/old/transfer-learning/transfer-scholar/</guid>
+      <description>&lt;h2 id=&#34;2018-11-5&#34;&gt;2018-11-5&lt;/h2&gt;&#xA;&lt;p&gt;关于迁移学习, 领域适应, 对抗学习的论文, 代码汇总&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/zhaoxin94/awsome-domain-adaptation&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;zhaoxin94 / awsome-domain-adaptation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/jindongwang/transferlearning&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;jindongwang / transferlearning&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/artix41/awesome-transfer-learning&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;artix41 / awesome-transfer-learning&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/zhaoxin94/awsome-domain-adaptation&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;zhaoxin94 / awsome-domain-adaptation&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/barebell/DA&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;barebell / DA&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/zhangqianhui/AdversarialNetsPapers&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;zhangqianhui / AdversarialNetsPapers&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2019-1-3-update&#34;&gt;2019-1-3 update&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://xiaosean.github.io/posts/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://xiaosean.github.io/posts/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;台湾一名学生的主页, 主要包含一些阅读笔记, 包含的领域有领域适应, 生成对抗网络等.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

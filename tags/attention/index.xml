@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Attention on Alphaks</title>
+    <link>https://example.com/tags/attention/</link>
+    <description>Recent content in Attention on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 23:00:58 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/attention/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Attention</title>
+      <link>https://example.com/posts/old/deep-learning/attention/</link>
+      <pubDate>Thu, 18 Oct 2018 16:12:43 +0800</pubDate>
+      <guid>https://example.com/posts/old/deep-learning/attention/</guid>
+      <description>&lt;p&gt;传说BERT牛皮得不行, 好奇看了看.&lt;/p&gt;&#xA;&lt;p&gt;里面用到了Transformer Block, 这是什么结构? 其实也就是Attention as all you need的Transformer.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

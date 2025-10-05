@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>涉猎 on Alphaks</title>
+    <link>https://example.com/categories/%E6%B6%89%E7%8C%8E/</link>
+    <description>Recent content in 涉猎 on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Thu, 28 Sep 2023 14:53:08 +0800</lastBuildDate>
+    <atom:link href="https://example.com/categories/%E6%B6%89%E7%8C%8E/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hexo之旅</title>
+      <link>https://example.com/posts/old/dabble/hexo-note/</link>
+      <pubDate>Sat, 14 May 2016 11:05:57 +0800</pubDate>
+      <guid>https://example.com/posts/old/dabble/hexo-note/</guid>
+      <description>&lt;p&gt;经过好多天的努力，博客基本上也达到了自己满意的样子。博客以&lt;a href=&#34;http://cgmartin.github.io/hexo-theme-bootstrap-blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Bootstrap-Blog&lt;/a&gt;为蓝本，在此基础上增增减减，修修改改。因为自己并不是很懂网页，大多时候都是摸索和调试，所以费时还是挺多的。现在终于能踏踏实实的写文章了。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

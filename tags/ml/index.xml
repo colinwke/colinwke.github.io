@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ml on Alphaks</title>
+    <link>https://example.com/tags/ml/</link>
+    <description>Recent content in Ml on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 23:00:58 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>谈一谈熵</title>
+      <link>https://example.com/posts/old/cross-entropy-loss/</link>
+      <pubDate>Wed, 28 Nov 2018 13:59:15 +0800</pubDate>
+      <guid>https://example.com/posts/old/cross-entropy-loss/</guid>
+      <description>&lt;p&gt;在迁移学习中, 领域判别损失如下:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img&#xA;        class=&#34;lazyload&#34;&#xA;        src=&#34;https://example.com/svg/loading.min.svg&#34;&#xA;        data-src=&#34;assets/cross-entropy-loss/1543385011496.png&#34;&#xA;        data-srcset=&#34;assets/cross-entropy-loss/1543385011496.png, assets/cross-entropy-loss/1543385011496.png 1.5x, assets/cross-entropy-loss/1543385011496.png 2x&#34;&#xA;        data-sizes=&#34;auto&#34;&#xA;        alt=&#34;assets/cross-entropy-loss/1543385011496.png&#34;&#xA;        title=&#34;1543385011496&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;咋一看还看不懂了, 交叉熵损失也就是logloss不是这个样子的吗:&lt;/p&gt;&#xA;&lt;p&gt;$$&#xA;H(x)\ =\ -\sum_{i}p_{i}\log q_{i}\ =\ -y\log{\hat{y}}-(1-y)\log(1-{\hat{y}})&#xA;$$&#xA;其实也是啊, 可以从两个角度进行解释:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

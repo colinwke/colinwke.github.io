@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Alphaks</title>
+    <link>https://example.com/tags/</link>
+    <description>Recent content in Tags on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 30 Aug 2024 17:01:30 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unsort</title>
+      <link>https://example.com/tags/unsort/</link>
+      <pubDate>Fri, 30 Aug 2024 17:01:30 +0800</pubDate>
+      <guid>https://example.com/tags/unsort/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>https://example.com/tags/data/</link>
+      <pubDate>Thu, 27 Apr 2023 10:38:16 +0800</pubDate>
+      <guid>https://example.com/tags/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Column</title>
+      <link>https://example.com/tags/column/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0800</pubDate>
+      <guid>https://example.com/tags/column/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://example.com/tags/git/</link>
+      <pubDate>Thu, 03 Nov 2022 16:19:41 +0800</pubDate>
+      <guid>https://example.com/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Github</title>
+      <link>https://example.com/tags/github/</link>
+      <pubDate>Thu, 03 Nov 2022 16:19:41 +0800</pubDate>
+      <guid>https://example.com/tags/github/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>https://example.com/tags/ssh/</link>
+      <pubDate>Thu, 03 Nov 2022 16:19:41 +0800</pubDate>
+      <guid>https://example.com/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dl</title>
+      <link>https://example.com/tags/dl/</link>
+      <pubDate>Tue, 27 Apr 2021 11:04:05 +0800</pubDate>
+      <guid>https://example.com/tags/dl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tf</title>
+      <link>https://example.com/tags/tf/</link>
+      <pubDate>Tue, 27 Apr 2021 11:04:05 +0800</pubDate>
+      <guid>https://example.com/tags/tf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reading</title>
+      <link>https://example.com/tags/reading/</link>
+      <pubDate>Sun, 12 May 2019 16:10:25 +0800</pubDate>
+      <guid>https://example.com/tags/reading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Win</title>
+      <link>https://example.com/tags/win/</link>
+      <pubDate>Sat, 29 Dec 2018 14:05:17 +0800</pubDate>
+      <guid>https://example.com/tags/win/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gan</title>
+      <link>https://example.com/tags/gan/</link>
+      <pubDate>Fri, 21 Dec 2018 21:49:16 +0800</pubDate>
+      <guid>https://example.com/tags/gan/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ml</title>
+      <link>https://example.com/tags/ml/</link>
+      <pubDate>Wed, 28 Nov 2018 13:59:15 +0800</pubDate>
+      <guid>https://example.com/tags/ml/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>感受</title>
+      <link>https://example.com/tags/%E6%84%9F%E5%8F%97/</link>
+      <pubDate>Sun, 04 Nov 2018 22:23:17 +0800</pubDate>
+      <guid>https://example.com/tags/%E6%84%9F%E5%8F%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paper</title>
+      <link>https://example.com/tags/paper/</link>
+      <pubDate>Wed, 31 Oct 2018 16:54:23 +0800</pubDate>
+      <guid>https://example.com/tags/paper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transfer-Learning</title>
+      <link>https://example.com/tags/transfer-learning/</link>
+      <pubDate>Wed, 31 Oct 2018 16:54:23 +0800</pubDate>
+      <guid>https://example.com/tags/transfer-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pytorch</title>
+      <link>https://example.com/tags/pytorch/</link>
+      <pubDate>Wed, 24 Oct 2018 11:40:58 +0800</pubDate>
+      <guid>https://example.com/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Attention</title>
+      <link>https://example.com/tags/attention/</link>
+      <pubDate>Thu, 18 Oct 2018 16:12:43 +0800</pubDate>
+      <guid>https://example.com/tags/attention/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>机器学习</title>
+      <link>https://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sat, 14 May 2016 20:38:20 +0800</pubDate>
+      <guid>https://example.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>算法</title>
+      <link>https://example.com/tags/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 14 May 2016 20:38:20 +0800</pubDate>
+      <guid>https://example.com/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hexo</title>
+      <link>https://example.com/tags/hexo/</link>
+      <pubDate>Sat, 14 May 2016 11:05:57 +0800</pubDate>
+      <guid>https://example.com/tags/hexo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>博客搭建</title>
+      <link>https://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sat, 14 May 2016 11:05:57 +0800</pubDate>
+      <guid>https://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>生活</title>
+      <link>https://example.com/tags/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Sun, 03 Apr 2016 15:31:00 +0800</pubDate>
+      <guid>https://example.com/tags/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

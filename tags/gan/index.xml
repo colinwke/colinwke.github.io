@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gan on Alphaks</title>
+    <link>https://example.com/tags/gan/</link>
+    <description>Recent content in Gan on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 23:00:58 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/gan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>adversarial-model</title>
+      <link>https://example.com/posts/old/2018-12-21-adversarial-model/</link>
+      <pubDate>Fri, 21 Dec 2018 21:49:16 +0800</pubDate>
+      <guid>https://example.com/posts/old/2018-12-21-adversarial-model/</guid>
+      <description>&lt;h2 id=&#34;损失函数&#34;&gt;损失函数&lt;/h2&gt;&#xA;&lt;p&gt;在GAN中, Adversarial Model的功能是判别样本是否来自于Generative Model.&lt;/p&gt;&#xA;&lt;p&gt;而Generative Model的目标是最大化的混淆Adversarial Model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>survey-of-gans</title>
+      <link>https://example.com/posts/old/deep-learning/gans/</link>
+      <pubDate>Fri, 26 Oct 2018 14:55:20 +0800</pubDate>
+      <guid>https://example.com/posts/old/deep-learning/gans/</guid>
+      <description>&lt;h2 id=&#34;深入浅出gan原理与应用入门介绍&#34;&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/YnOF9CCUFvtaiTY8HXYOuw&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;深入浅出：GAN原理与应用入门介绍&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;是一类在无监督学习中使用的神经网络&lt;/p&gt;&#xA;&lt;p&gt;致力于通过学习恒等函数 f（x）= x 从数据中提取特征，且都依赖马尔可夫链来训练或生成样本。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

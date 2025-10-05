@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活 on Alphaks</title>
+    <link>https://example.com/tags/%E7%94%9F%E6%B4%BB/</link>
+    <description>Recent content in 生活 on Alphaks</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 18 Apr 2022 23:00:58 +0800</lastBuildDate>
+    <atom:link href="https://example.com/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学会工作，学会生活</title>
+      <link>https://example.com/posts/old/essay/work-and-another/</link>
+      <pubDate>Sun, 03 Apr 2016 15:31:00 +0800</pubDate>
+      <guid>https://example.com/posts/old/essay/work-and-another/</guid>
+      <description>&lt;p&gt;很多时候发现自己过于浮躁，一些简单的事都不能好好的完成。总是一会看看这里，一会又做做那里，最后什么也没有做。或者是整天都循环的、重复的看一些无用的内容，没有认真的去思考，也没有深入的去理解。这个时候，我想自己更应该静下心来，好好做一个规划，然后认真的实行。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
