@@ -137,14 +137,10 @@
 <p>想要学习生成器的分布，应该定义数据 $x$ 的参数 $p_g$，以及输入噪声变量 $p_z（z）$的分布。然后 $G（z，θ_g）$将 $z$ 从潜在空间 $Z$ 映射到数据空间，$D（x，θ_d）$输出单个标量——一个 $x$ 来自真实数据而不是 $p_g$ 的概率。</p>
 <p>训练判别器以最大化正确标注实际数据和生成样本的概率。训练生成器用于最小化 $log（1-D（G（z）））$。换句话说，尽量减少判别器得出正确答案的概率。</p>
 <p>可以将这样的训练任务看作具有值函数 $V（G，D）$的极大极小博弈：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="assets/GANs/640.webp"
-        data-srcset="assets/GANs/640.webp, assets/GANs/640.webp 1.5x, assets/GANs/640.webp 2x"
-        data-sizes="auto"
-        alt="assets/GANs/640.webp"
-        title="img" /></p>
+<p>
+
+
+<img src="/posts/old/deep-learning/assets/GANs/640.webp" alt="img"  /></p>
 <p>换句话说，生成器努力生成判别器难以辨认的图像，判别器也愈加聪明，以免被生成器欺骗。</p>
 <blockquote>
 <p>「对抗训练是继切片面包之后最酷的事情。」- Yann LeCun</p></blockquote>
@@ -187,7 +183,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2025-10-05 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2025-10-07 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">
