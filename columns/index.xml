@@ -7,7 +7,7 @@
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 28 Sep 2023 14:53:08 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Oct 2025 19:00:24 +0800</lastBuildDate>
     <atom:link href="https://example.com/columns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>阅读推荐</title>
@@ -42,7 +42,7 @@
       <link>https://example.com/columns/page-about/</link>
       <pubDate>Thu, 05 May 2016 20:19:59 +0800</pubDate>
       <guid>https://example.com/columns/page-about/</guid>
-      <description>&lt;p&gt;&#xA;&#xA;&#xA;&lt;img src=&#34;https://example.com/columns/assets/img/profile.png&#34; alt=&#34;img&#34;  /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;前方漫漫 愿我成风&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;欢迎关注&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新浪微博: &lt;a href=&#34;http://weibo.com/778931015&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;王虚极&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;github: &lt;a href=&#34;https://github.com/colinwke&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;colinwke&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;最后更新：2016-05-13&lt;/p&gt;</description>
+      <description>&lt;p&gt;&#xA;&#xA;&#xA;&lt;img src=&#34;columns/assets/img/profile.png&#34; alt=&#34;img&#34;  /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;前方漫漫 愿我成风&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;欢迎关注&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新浪微博: &lt;a href=&#34;http://weibo.com/778931015&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;王虚极&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;github: &lt;a href=&#34;https://github.com/colinwke&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;colinwke&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;最后更新：2016-05-13&lt;/p&gt;</description>
     </item>
     <item>
       <title>阅读笔记2019</title>
