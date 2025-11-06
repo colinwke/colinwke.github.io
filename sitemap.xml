@@ -3,12 +3,13 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
             <loc>https://example.com/</loc><lastmod>2025-11-07T00:28:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/categories/</loc><lastmod>2025-11-07T00:28:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/posts/</loc><lastmod>2025-11-07T00:28:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://example.com/categories/</loc><lastmod>2025-10-07T19:00:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
+            <loc>https://example.com/tags/</loc><lastmod>2025-11-07T00:28:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/categories/unsort/</loc><lastmod>2025-11-07T00:28:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/tags/unsort/</loc><lastmod>2025-11-07T00:28:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://example.com/posts/2511070028-growth-mindset200/</loc><lastmod>2025-11-07T00:28:23&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/</loc><lastmod>2024-08-30T17:01:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://example.com/tags/</loc><lastmod>2025-10-07T19:00:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://example.com/categories/unsort/</loc><lastmod>2025-10-07T19:00:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://example.com/tags/unsort/</loc><lastmod>2025-10-07T19:00:24&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://example.com/categories/data/</loc><lastmod>2023-04-27T10:38:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/tags/data/</loc><lastmod>2023-04-27T10:38:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://example.com/posts/2304271038-dataframe-create-hive-table/</loc><lastmod>2023-04-27T10:38:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

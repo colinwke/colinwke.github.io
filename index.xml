@@ -6,6 +6,21 @@
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 07 Nov 2025 00:28:23 &#43;0800</lastBuildDate>
             <atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>成长思维200</title>
+    <link>https://example.com/posts/2511070028-growth-mindset200/</link>
+    <pubDate>Fri, 07 Nov 2025 00:28:23 &#43;0800</pubDate>
+    <author>wangke</author>
+    <guid>https://example.com/posts/2511070028-growth-mindset200/</guid>
+    <description><![CDATA[<p>[TOC]</p>
+<p>振作起来, 迈出第一步!</p>
+<h2 id="学习力与不断成长">学习力与不断成长</h2>
+<h3 id="费曼学习法">费曼学习法</h3>
+<p><strong>明确</strong>目标: 为什么学, 学什么? 怎么学? WhyWhatHow</p>
+<blockquote>
+<p>学习大模型 -&gt; Why?提升工作能力 -&gt; What?大模型相关技术 -&gt; How?书籍</p>
+<p>提升社交能力 -&gt; Why? 自己社交薄弱 -&gt; What? 实践沟通能力, 建立自信 -&gt; How?积极参加活动, 积极认识朋友</p>]]></description>
+</item>
+<item>
     <title>conda-env-clone-install-create-error-with-mirror-custom-channel</title>
     <link>https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/</link>
     <pubDate>Fri, 30 Aug 2024 17:01:30 &#43;0800</pubDate>
@@ -201,15 +216,6 @@ sum is unchanged at training time and inference time.</p>]]></description>
 <h2 id="2-编辑脚本">2 编辑脚本</h2>
 <p>另存下面脚本为<code>capslock_plus.ahk</code></p>
 <p><strong>注:</strong> 下面脚本只适用于AutoHotKey1.XXX, 不使用于2.XXX(V2和其他版本有区别!)<a href="assets/1905272156-AutoHotKey/capslock_plus.ahk" rel="">直接下载</a></p>]]></description>
-</item>
-<item>
-    <title>五月阅读</title>
-    <link>https://example.com/posts/old/1905121610-reading-may/</link>
-    <pubDate>Sun, 12 May 2019 16:10:25 &#43;0800</pubDate>
-    <author>wangke</author>
-    <guid>https://example.com/posts/old/1905121610-reading-may/</guid>
-    <description><![CDATA[<h2 id="2019-5-12">2019-5-12</h2>
-<p>最近计划学习一下深度学习框架, kaggle是个不错的平台, 就找了其中的比赛<a href="https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification" target="_blank" rel="noopener noreffer ">Jigsaw Unintended Bias in Toxicity Classification</a>. 在比赛的第四段, 描述了比赛的背景, 和技术中存在的问题:</p>]]></description>
 </item>
 </channel>
 </rss>

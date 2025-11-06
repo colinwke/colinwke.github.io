@@ -25,7 +25,7 @@
 问题原因 突然不能克隆base环境了
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 rm -rf pyspark3602; conda create --name pyspark3602 --clone base Source: /home/hdp_lbg_ectech/wangke/app/anaconda3 Destination: /home/hdp_lbg_ectech/wangke/app/anaconda3/envs/pyspark3602 The following packages cannot be cloned out of the root environment: - http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/linux-64::conda-4.9.2-py36h5fab9bb_0 - defaults/linux-64::conda-build-3.10.5-py36_0 Packages: 195 Files: 64657 ... CondaHTTPError: HTTP 404 NOT FOUND for url &lt;http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/noarch/keras-applications-1.0.8-py_1.tar.bz2&gt; Elapsed: 00:00.351600 An HTTP error occurred when trying to retrieve this URL. HTTP errors are often intermittent, and a simple retry will get you on your way. 第一个问题 这里的主要问题是使用了清华的镜像. 清华镜像只有文件.conda后缀, 没有.tar.bz2后缀的文件,所以报CondaHTTPError: HTTP 404 NOT FOUND for url错误导致不能创建环境">
 <meta name="application-name" content="LoveIt">
-<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/" /><link rel="prev" href="https://example.com/posts/2304271038-dataframe-create-hive-table/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/" /><link rel="prev" href="https://example.com/posts/2304271038-dataframe-create-hive-table/" /><link rel="next" href="https://example.com/posts/2511070028-growth-mindset200/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -630,7 +630,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/2304271038-dataframe-create-hive-table/" class="prev" rel="prev" title="save DataFrame as partition of hive table"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>save DataFrame as partition of hive table</a></div>
+    <div class="post-nav"><a href="/posts/2304271038-dataframe-create-hive-table/" class="prev" rel="prev" title="save DataFrame as partition of hive table"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>save DataFrame as partition of hive table</a>
+            <a href="/posts/2511070028-growth-mindset200/" class="next" rel="next" title="成长思维200">成长思维200<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
@@ -642,6 +643,10 @@
         <a href="/posts.html" title="click ok" >最近文章</a>
     </h3>
     <ul class="widget-list">
+        
+        <li>
+            <a href="/posts/2511070028-growth-mindset200/" title="成长思维200">成长思维200</a>
+        </li>
         
         <li>
             <a href="/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/" title="conda-env-clone-install-create-error-with-mirror-custom-channel">conda-env-clone-install-create-error-with-mirror-custom-channel</a>
@@ -677,10 +682,6 @@
         
         <li>
             <a href="/posts/old/1905272156-autohotkey/" title="AutoHotKey">AutoHotKey</a>
-        </li>
-        
-        <li>
-            <a href="/posts/old/1905121610-reading-may/" title="五月阅读">五月阅读</a>
         </li>
         
     </ul>

@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>zh-CN</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 07 Oct 2025 19:00:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Nov 2025 00:28:23 +0800</lastBuildDate>
     <atom:link href="https://example.com/tags/unsort/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>成长思维200</title>
+      <link>https://example.com/posts/2511070028-growth-mindset200/</link>
+      <pubDate>Fri, 07 Nov 2025 00:28:23 +0800</pubDate>
+      <guid>https://example.com/posts/2511070028-growth-mindset200/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;&#xA;&lt;p&gt;振作起来, 迈出第一步!&lt;/p&gt;&#xA;&lt;h2 id=&#34;学习力与不断成长&#34;&gt;学习力与不断成长&lt;/h2&gt;&#xA;&lt;h3 id=&#34;费曼学习法&#34;&gt;费曼学习法&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;明确&lt;/strong&gt;目标: 为什么学, 学什么? 怎么学? WhyWhatHow&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;学习大模型 -&amp;gt; Why?提升工作能力 -&amp;gt; What?大模型相关技术 -&amp;gt; How?书籍&lt;/p&gt;&#xA;&lt;p&gt;提升社交能力 -&amp;gt; Why? 自己社交薄弱 -&amp;gt; What? 实践沟通能力, 建立自信 -&amp;gt; How?积极参加活动, 积极认识朋友&lt;/p&gt;</description>
+    </item>
     <item>
       <title>conda-env-clone-install-create-error-with-mirror-custom-channel</title>
       <link>https://example.com/posts/2408301701-conda-env-clone-install-create-error-with-mirror-custom-channel/</link>
