@@ -118,13 +118,23 @@ CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经�
 <p>
 
 
-<img src="posts/old/deep-learning/assets/2018-12-26-CNN-feature-map/20131230210240250.jpg" alt="img"  /></p>
+
+
+
+
+
+<img src="/posts/old/deep-learning/assets/2018-12-26-CNN-feature-map/20131230210240250.jpg" alt="img"  /></p>
 <p>​       我们知道，隐含层的每一个神经元都连接10x10个图像区域，也就是说每一个神经元存在10x10=100个连接权值参数。那如果我们每个神经元这100个参数是相同的呢？也就是说每个神经元用的是同一个卷积核去卷积图像。这样我们就只有多少个参数？？只有100个参数啊！不管你隐层的神经元个数有多少，两层间的连接我只有100个参数啊！这就是权值共享。
 好了，你就会想，这样提取特征也忒不靠谱吧，这样你只提取了一种特征啊？对了，真聪明，我们需要提取多种特征对不？假如一种滤波器，也就是一种卷积核就是提出图像的一种特征，例如某个方向的边缘。那么我们需要提取不同的特征，怎么办，加多几种滤波器不就行了吗？对了。所以假设我们加到100种滤波器，每种滤波器的参数不一样，表示它提出输入图像的不同特征，例如不同的边缘。这样每种滤波器去卷积图像就得到对图像的不同特征的放映，我们称之为Feature Map。所以100种卷积核就有100个Feature Map。这100个Feature Map就组成了一层神经元。到这个时候明了了吧。我们这一层有多少个参数了？100种卷积核x每种卷积核共享100个参数=100x100=10K，也就是1万个参数。才1万个参数。见下图右：不同的颜色表达不同的滤波器。</p>
 <p>
 
 
-<img src="posts/old/deep-learning/assets/2018-12-26-CNN-feature-map/20131230210323484.jpg" alt="img"  /></p>
+
+
+
+
+
+<img src="/posts/old/deep-learning/assets/2018-12-26-CNN-feature-map/20131230210323484.jpg" alt="img"  /></p>
 <p>​       嘿哟，遗漏一个问题了。刚才说隐层的参数个数和隐层的神经元个数无关，只和滤波器的大小和滤波器种类的多少有关。那么隐层的神经元个数怎么确定呢？它和原图像，也就是输入的大小（神经元个数）、滤波器的大小和滤波器在图像中的滑动步长都有关！例如，我的图像是1000x1000像素，而滤波器大小是10x10，假设滤波器没有重叠，也就是步长为10，这样隐层的神经元个数就是(1000x1000 )/ (10x10)=100x100个神经元了，假设步长是8，也就是卷积核会重叠两个像素，那么……我就不算了，思想懂了就好。注意了，这只是一种滤波器，也就是一个Feature Map的神经元个数哦，如果100个Feature Map就是100倍了。由此可见，图像越大，神经元个数和需要训练的权值参数个数的贫富差距就越大。</p>
 <p>feature map计算方法：</p>
 <p>在CNN网络中roi从原图映射到feature map中的计算方法</p>
@@ -173,7 +183,7 @@ CNN一个牛逼的地方就在于通过感受野和权值共享减少了神经�
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2025-11-07 updated</a></span></div>
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span><br><span class="license" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">2025-11-08 updated</a></span></div>
         </div>
     </footer></div><div id="sidebar">
     <section class="widget">

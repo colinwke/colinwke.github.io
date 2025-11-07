@@ -212,6 +212,11 @@ sum is unchanged at training time and inference time.</p>]]></description>
 <p>
 
 
+
+
+
+
+
 </p>
 <h2 id="2-编辑脚本">2 编辑脚本</h2>
 <p>另存下面脚本为<code>capslock_plus.ahk</code></p>
